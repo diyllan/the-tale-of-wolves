@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=9 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
+[ext_resource type="PackedScene" uid="uid://blotcr7cu0nqf" path="res://Assets/Player/LittleRedCap.fbx" id="2_acjw8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xtjem"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -12,6 +13,8 @@ sky_material = SubResource("ProceduralSkyMaterial_xtjem")
 [sub_resource type="Environment" id="Environment_uuhho"]
 background_mode = 2
 sky = SubResource("Sky_cvnii")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
 tonemap_mode = 2
 glow_enabled = true
 
@@ -21,22 +24,33 @@ size = Vector2(50, 50)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kw4mc"]
 data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25)
 
+[sub_resource type="BoxMesh" id="BoxMesh_pr31l"]
+size = Vector3(3.025, 3.065, 4.32)
+
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_uuhho")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, -0.0465317, 1.90735e-06, -0.00394726)
+visible = false
 shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_i4sih")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_kw4mc")
 
 [node name="Player" parent="." instance=ExtResource("1_6k6ey")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0187596, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38864, 1.96357, 7.68549)
+mesh = SubResource("BoxMesh_pr31l")
+
+[node name="LittleRedCap" parent="." instance=ExtResource("2_acjw8")]
+transform = Transform3D(-0.998497, 0, 0.0548109, 0, 1, 0, -0.0548109, 0, -0.998497, 0, 0, 5.49154)
