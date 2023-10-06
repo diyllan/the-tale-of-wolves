@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=11 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
-[ext_resource type="PackedScene" uid="uid://blotcr7cu0nqf" path="res://Assets/Player/LittleRedCap.fbx" id="2_acjw8"]
+[ext_resource type="PackedScene" uid="uid://3f8gq0dg8tov" path="res://Scenes/Fox/fox.tscn" id="2_fspat"]
+[ext_resource type="PackedScene" uid="uid://b6lqvkt2guyf6" path="res://Scenes/Wolf/wolf.tscn" id="3_7ba5j"]
+[ext_resource type="PackedScene" uid="uid://cyihadqmcrgwy" path="res://Scenes/Player/little_red_cap.tscn" id="4_o8gsq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xtjem"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -52,5 +54,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0187596, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38864, 1.96357, 7.68549)
 mesh = SubResource("BoxMesh_pr31l")
 
-[node name="LittleRedCap" parent="." instance=ExtResource("2_acjw8")]
-transform = Transform3D(-0.998497, 0, 0.0548109, 0, 1, 0, -0.0548109, 0, -0.998497, 0, 0, 5.49154)
+[node name="Fox" parent="." instance=ExtResource("2_fspat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25758, 0, -1.10526)
+
+[node name="Wolf" parent="." instance=ExtResource("3_7ba5j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.96502, 0, -7.94152)
+
+[node name="LittleRedCap" parent="." instance=ExtResource("4_o8gsq")]
+transform = Transform3D(-0.0762144, 0, 0.997091, 0, 1, 0, -0.997091, 0, -0.0762144, -7.10359, 0, 3.16203)

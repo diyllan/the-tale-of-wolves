@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cuaeywdbin27w"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_x0tal"]
-[ext_resource type="PackedScene" uid="uid://blotcr7cu0nqf" path="res://Assets/Player/LittleRedCap.fbx" id="2_sk1bc"]
+[ext_resource type="PackedScene" uid="uid://cyihadqmcrgwy" path="res://Scenes/Player/little_red_cap.tscn" id="2_c51hd"]
 [ext_resource type="Shader" path="res://Scenes/Player/pixelate.gdshader" id="3_81isr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p0fya"]
@@ -16,7 +16,7 @@ material = SubResource("ShaderMaterial_33015")
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_x0tal")
 
-[node name="LittleRedCap" parent="." instance=ExtResource("2_sk1bc")]
+[node name="LittleRedCap" parent="." instance=ExtResource("2_c51hd")]
 
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.02679, 1.65326, 0)
@@ -31,4 +31,5 @@ current = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Neck/Camera3D"]
 transform = Transform3D(2.4397, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0301274, -0.0447097, -0.181395)
+visible = false
 mesh = SubResource("PlaneMesh_n2cv5")

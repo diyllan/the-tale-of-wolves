@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://3f8gq0dg8tov"]
+
+[ext_resource type="PackedScene" uid="uid://ddxytes3qgy7i" path="res://Assets/Models/Fox/Fox.fbx" id="1_du8cy"]
+
+[node name="Fox" instance=ExtResource("1_du8cy")]
+
+[node name="Torso" parent="RootNode/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, -4.1211e-07, -4.69465e-08, 5.26197e-07, 1, 2.08151e-07, -5.53911e-08, -2.71306e-07, 1, 0.0056134, -0.00266614, 0.00307444)
+bone_idx = 1
+
+[node name="Neck" parent="RootNode/Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, -4.19745e-07, -1.49012e-07, 4.54321e-07, 1, 2.12206e-07, -2.98023e-08, -2.68157e-07, 1, 0.0183921, -0.00266614, 0.0037174)
+bone_idx = 3
+
+[node name="Head" parent="RootNode/Armature/Skeleton3D" index="2"]
+transform = Transform3D(1, -5.32717e-07, -1.45519e-08, 5.19678e-07, 1, 3.78117e-07, -7.41566e-08, -3.98606e-07, 1, 0.0198279, -0.00266614, 0.00497684)
+bone_idx = 5
+
+[node name="Ears" parent="RootNode/Armature/Skeleton3D" index="3"]
+transform = Transform3D(1, -5.32717e-07, -1.45519e-08, 5.19678e-07, 1, 3.78117e-07, -7.41566e-08, -3.98606e-07, 1, 0.0186111, -0.00266614, 0.0115484)
+bone_idx = 6
+
+[node name="Front Upper Legs left" parent="RootNode/Armature/Skeleton3D" index="4"]
+transform = Transform3D(0.999999, -2.49178e-07, 2.08525e-07, 2.89225e-07, 1, 6.23011e-08, -2.38513e-07, -2.51151e-07, 1, 0.0117102, -0.00266614, -0.00689946)
+bone_idx = 9
+
+[node name="Front Lower Legs left" parent="RootNode/Armature/Skeleton3D" index="5"]
+transform = Transform3D(1, -5.87725e-07, 8.95766e-08, 6.37887e-07, 1, 2.54672e-07, -1.19043e-07, -3.14938e-07, 1, 0.0117102, -0.00266614, -0.0101817)
+bone_idx = 11
+
+[node name="Right Front Paw" parent="RootNode/Armature/Skeleton3D" index="6"]
+transform = Transform3D(1, -7.51452e-07, 3.00666e-08, 7.21954e-07, 1, 1.91067e-07, 3.00793e-08, -2.30373e-07, 1, 0.0120349, -0.00266614, -0.0126562)
+bone_idx = 13
+
+[node name="Behind Upper Legs left" parent="RootNode/Armature/Skeleton3D" index="7"]
+transform = Transform3D(1.21411, -6.55651e-07, 2.08616e-07, 7.15256e-07, 1.21411, 3.20375e-07, -2.38419e-07, -3.20375e-07, 1.21411, -0.00138363, -0.00266615, -0.0071129)
+bone_idx = 16
+
+[node name="Behind Lower Legs left" parent="RootNode/Armature/Skeleton3D" index="8"]
+transform = Transform3D(1, -5.36442e-07, 2.98023e-08, 5.06639e-07, 1, 1.49012e-07, -5.96046e-08, -2.68221e-07, 1, -0.00215983, -0.00266615, -0.0101817)
+bone_idx = 18
+
+[node name="Left Back Paw" parent="RootNode/Armature/Skeleton3D" index="9"]
+transform = Transform3D(1, -4.91738e-07, -1.19209e-07, 4.02331e-07, 1, 8.97795e-07, 7.45058e-08, -8.49366e-07, 1, -0.0059205, -0.00266615, -0.0103672)
+bone_idx = 20
+
+[node name="Front Upper Legs right" parent="RootNode/Armature/Skeleton3D" index="10"]
+transform = Transform3D(1, -2.82958e-07, -2.9894e-08, 3.266e-07, 1, 1.13139e-07, -7.54692e-09, -2.98287e-07, 1, 0.0117102, -0.00266614, -0.00689946)
+bone_idx = 23
+
+[node name="Front Lower Legs right" parent="RootNode/Armature/Skeleton3D" index="11"]
+transform = Transform3D(1, -6.08716e-07, 1.69813e-10, 6.57577e-07, 1, 2.93466e-07, -8.92413e-08, -2.4268e-07, 1, 0.0117102, -0.00266614, -0.0101817)
+bone_idx = 25
+
+[node name="Left Front Paw" parent="RootNode/Armature/Skeleton3D" index="12"]
+transform = Transform3D(1, -5.27392e-07, -3.2756e-07, 6.24679e-07, 1, 4.03799e-07, 2.98297e-07, -4.48956e-07, 1, 0.0120349, -0.00266614, -0.0126562)
+bone_idx = 27
+
+[node name="Behind Upper Legs right" parent="RootNode/Armature/Skeleton3D" index="13"]
+transform = Transform3D(1.21411, -4.76837e-07, 2.08616e-07, 6.25849e-07, 1.21411, 1.3411e-07, -4.17233e-07, -3.7998e-07, 1.21411, -0.00138362, -0.00266615, -0.0071129)
+bone_idx = 30
+
+[node name="Behind Lower Legs right" parent="RootNode/Armature/Skeleton3D" index="14"]
+transform = Transform3D(1, -1.63913e-07, 5.96046e-08, 3.42727e-07, 1, 1.19209e-07, -2.68221e-07, -2.38419e-07, 1, -0.00215984, -0.00266615, -0.0101817)
+bone_idx = 32
+
+[node name="Right Back Paw" parent="RootNode/Armature/Skeleton3D" index="15"]
+transform = Transform3D(1, -6.85453e-07, -3.57628e-07, 7.89762e-07, 0.999999, -4.84288e-08, 2.38419e-07, -4.84288e-08, 1, -0.0059205, -0.00266615, -0.0103672)
+bone_idx = 34
+
+[node name="Tail" parent="RootNode/Armature/Skeleton3D" index="16"]
+transform = Transform3D(1, -9.20139e-07, 9.23871e-07, 9.65375e-07, 1, 8.58937e-07, -2.98024e-08, -8.88201e-07, 1, -0.0150507, -0.00266616, -0.00632626)
+bone_idx = 37
