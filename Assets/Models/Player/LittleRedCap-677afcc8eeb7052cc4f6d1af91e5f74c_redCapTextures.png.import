@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn84xmrlmt5dh"
-path.s3tc="res://.godot/imported/FoxUVMapTextures.png-162c0dd413a1809ddf43e878124b8cc3.s3tc.ctex"
+uid="uid://i44e4mclhxkd"
+path.s3tc="res://.godot/imported/LittleRedCap-677afcc8eeb7052cc4f6d1af91e5f74c_redCapTextures.png-073294b7ab273c02955b073fa2102b73.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/Models/Fox/Fox.fbm/FoxUVMapTextures.png"
-dest_files=["res://.godot/imported/FoxUVMapTextures.png-162c0dd413a1809ddf43e878124b8cc3.s3tc.ctex"]
+source_file="res://Assets/Models/Player/LittleRedCap-677afcc8eeb7052cc4f6d1af91e5f74c_redCapTextures.png"
+dest_files=["res://.godot/imported/LittleRedCap-677afcc8eeb7052cc4f6d1af91e5f74c_redCapTextures.png-073294b7ab273c02955b073fa2102b73.s3tc.ctex"]
 
 [params]
 

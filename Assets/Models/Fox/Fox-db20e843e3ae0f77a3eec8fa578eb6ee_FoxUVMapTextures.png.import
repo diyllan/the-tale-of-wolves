@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn84xmrlmt5dh"
-path.s3tc="res://.godot/imported/FoxUVMapTextures.png-162c0dd413a1809ddf43e878124b8cc3.s3tc.ctex"
+uid="uid://cqk7omsjd7sn1"
+path.s3tc="res://.godot/imported/Fox-db20e843e3ae0f77a3eec8fa578eb6ee_FoxUVMapTextures.png-f55a6b430e402b7f3086e68960d4abb0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/Models/Fox/Fox.fbm/FoxUVMapTextures.png"
-dest_files=["res://.godot/imported/FoxUVMapTextures.png-162c0dd413a1809ddf43e878124b8cc3.s3tc.ctex"]
+source_file="res://Assets/Models/Fox/Fox-db20e843e3ae0f77a3eec8fa578eb6ee_FoxUVMapTextures.png"
+dest_files=["res://.godot/imported/Fox-db20e843e3ae0f77a3eec8fa578eb6ee_FoxUVMapTextures.png-f55a6b430e402b7f3086e68960d4abb0.s3tc.ctex"]
 
 [params]
 

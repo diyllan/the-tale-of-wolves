@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=12 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
-[ext_resource type="PackedScene" uid="uid://3f8gq0dg8tov" path="res://Scenes/Fox/fox.tscn" id="2_fspat"]
-[ext_resource type="PackedScene" uid="uid://b6lqvkt2guyf6" path="res://Scenes/Wolf/wolf.tscn" id="3_7ba5j"]
-[ext_resource type="PackedScene" uid="uid://cyihadqmcrgwy" path="res://Scenes/Player/little_red_cap.tscn" id="4_o8gsq"]
+[ext_resource type="PackedScene" uid="uid://cdq64gxnl3byt" path="res://Assets/Models/Wolf/wolf.tscn" id="1_15lva"]
+[ext_resource type="PackedScene" uid="uid://b7qbp4r27pssi" path="res://Assets/Models/Werewolf/werewolf.tscn" id="1_kd8dl"]
+[ext_resource type="PackedScene" uid="uid://sx2hv084xckl" path="res://Assets/Models/Player/little_red_cap.tscn" id="2_7gxvk"]
+[ext_resource type="PackedScene" uid="uid://dj34euacp8oj4" path="res://Assets/Models/Fox/fox.tscn" id="2_q8cb0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xtjem"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -16,7 +17,7 @@ sky_material = SubResource("ProceduralSkyMaterial_xtjem")
 background_mode = 2
 sky = SubResource("Sky_cvnii")
 ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_color = Color(0.360784, 0.360784, 0.360784, 1)
 tonemap_mode = 2
 glow_enabled = true
 
@@ -30,6 +31,15 @@ data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0,
 size = Vector3(3.025, 3.065, 4.32)
 
 [node name="World" type="Node3D"]
+
+[node name="Wolf" parent="." instance=ExtResource("1_15lva")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.89695)
+
+[node name="werewolf" parent="." instance=ExtResource("1_kd8dl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7401, 0, 0)
+
+[node name="Fox" parent="." instance=ExtResource("2_q8cb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.18026, 0, -5.45733)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_uuhho")
@@ -54,11 +64,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0187596, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38864, 1.96357, 7.68549)
 mesh = SubResource("BoxMesh_pr31l")
 
-[node name="Fox" parent="." instance=ExtResource("2_fspat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25758, 0, -1.10526)
-
-[node name="Wolf" parent="." instance=ExtResource("3_7ba5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.96502, 0, -7.94152)
-
-[node name="LittleRedCap" parent="." instance=ExtResource("4_o8gsq")]
-transform = Transform3D(-0.0762144, 0, 0.997091, 0, 1, 0, -0.997091, 0, -0.0762144, -7.10359, 0, 3.16203)
+[node name="LittleRedCap" parent="." instance=ExtResource("2_7gxvk")]
+transform = Transform3D(-0.997881, 0, 0.0650722, 0, 1, 0, -0.0650722, 0, -0.997881, 0, 0, 7.09484)

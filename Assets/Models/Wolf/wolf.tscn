@@ -1,73 +1,139 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6lqvkt2guyf6"]
+[gd_scene load_steps=5 format=3 uid="uid://cdq64gxnl3byt"]
 
-[ext_resource type="PackedScene" path="res://Assets/Models/Wolf/Wolf.fbx" id="1_ydtdj"]
+[ext_resource type="PackedScene" uid="uid://cltppaep6kxf7" path="res://Assets/Models/Wolf/Wolf.fbx" id="1_v8abq"]
+[ext_resource type="Shader" path="res://Shader/pixelate.gdshader" id="2_7i4v2"]
+[ext_resource type="Texture2D" uid="uid://bwstnielhpx32" path="res://Assets/Models/Wolf/Wolf.fbm/Wolf.png" id="3_6dr5u"]
 
-[node name="Wolf" instance=ExtResource("1_ydtdj")]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vkokm"]
+render_priority = 0
+shader = ExtResource("2_7i4v2")
+shader_parameter/jitter = 0.0
+shader_parameter/jitter_z_coordinate = true
+shader_parameter/jitter_depth_independent = true
+shader_parameter/affine_texture_mapping = true
+shader_parameter/alpha_scissor = 1.0
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/emission_color = Color(1, 1, 1, 1)
+shader_parameter/texture_size = Vector2(1, 1)
+shader_parameter/albedo = ExtResource("3_6dr5u")
+
+[node name="Wolf" instance=ExtResource("1_v8abq")]
 
 [node name="Torso" parent="RootNode/Armature/Skeleton3D" index="0"]
 transform = Transform3D(-0.0312886, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240782, 0.0392129, -0.000109906, 8.51399e-05, -0.000447566)
 bone_idx = 1
 
+[node name="Torso" parent="RootNode/Armature/Skeleton3D/Torso" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
+
 [node name="Neck" parent="RootNode/Armature/Skeleton3D" index="1"]
 transform = Transform3D(-0.0312885, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240782, 0.039213, -0.00112624, -0.00282575, 0.0119703)
 bone_idx = 3
+
+[node name="Neck" parent="RootNode/Armature/Skeleton3D/Neck" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
 
 [node name="Ears" parent="RootNode/Armature/Skeleton3D" index="2"]
 transform = Transform3D(-0.0312885, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969786, 0.240782, 0.0392129, -0.00864185, -0.000676792, 0.0124897)
 bone_idx = 6
 
+[node name="Ears" parent="RootNode/Armature/Skeleton3D/Ears" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
+
 [node name="Head" parent="RootNode/Armature/Skeleton3D" index="3"]
 transform = Transform3D(-0.0312885, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969786, 0.240782, 0.0392129, -0.00237878, -0.00281898, 0.013412)
 bone_idx = 7
+
+[node name="Head" parent="RootNode/Armature/Skeleton3D/Head" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
 
 [node name="Jaw" parent="RootNode/Armature/Skeleton3D" index="4"]
 transform = Transform3D(-0.0312883, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240782, 0.0392132, -0.00237878, -0.00281899, 0.013412)
 bone_idx = 10
 
+[node name="Jaw" parent="RootNode/Armature/Skeleton3D/Jaw" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
+
 [node name="Front Upper Legs left" parent="RootNode/Armature/Skeleton3D" index="5"]
 transform = Transform3D(-0.0312884, 0.282174, -0.958853, -0.24194, 0.928656, 0.281183, 0.969787, 0.240782, 0.0392129, 0.00926284, -0.00419439, 0.00507389)
 bone_idx = 13
+
+[node name="Front Upper Legs left" parent="RootNode/Armature/Skeleton3D/Front Upper Legs left" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
 
 [node name="Front Lower Legs left" parent="RootNode/Armature/Skeleton3D" index="6"]
 transform = Transform3D(-0.0312885, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240783, 0.039213, 0.01241, -0.0051173, 0.00494518)
 bone_idx = 15
 
+[node name="Front Lower Legs left" parent="RootNode/Armature/Skeleton3D/Front Lower Legs left" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
+
 [node name="Right Front Paw" parent="RootNode/Armature/Skeleton3D" index="7"]
 transform = Transform3D(-0.0312884, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240783, 0.0392128, 0.0147726, -0.00589166, 0.00516305)
 bone_idx = 17
+
+[node name="Right Front Paw" parent="RootNode/Armature/Skeleton3D/Right Front Paw" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
 
 [node name="Behind Lower Legs left" parent="RootNode/Armature/Skeleton3D" index="8"]
 transform = Transform3D(-0.0312886, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240782, 0.0392126, 0.012844, -0.00176159, -0.00850575)
 bone_idx = 21
 
+[node name="Behind Lower Legs left" parent="RootNode/Armature/Skeleton3D/Behind Lower Legs left" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
+
 [node name="Left Back Paw" parent="RootNode/Armature/Skeleton3D" index="9"]
 transform = Transform3D(-0.0312885, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240782, 0.0392127, 0.0131395, -0.000903904, -0.0121601)
 bone_idx = 23
+
+[node name="Left Back Paw" parent="RootNode/Armature/Skeleton3D/Left Back Paw" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
 
 [node name="Tail" parent="RootNode/Armature/Skeleton3D" index="10"]
 transform = Transform3D(-0.0312884, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240782, 0.0392129, 0.00955053, 0.0024413, -0.020856)
 bone_idx = 26
 
+[node name="Tail" parent="RootNode/Armature/Skeleton3D/Tail" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
+
 [node name="Front Upper Legs right" parent="RootNode/Armature/Skeleton3D" index="11"]
 transform = Transform3D(-0.0312885, 0.282175, -0.958853, -0.241939, 0.928656, 0.281183, 0.969787, 0.240782, 0.039213, 0.00926284, -0.00419439, 0.00507389)
 bone_idx = 29
+
+[node name="Front Upper Legs right" parent="RootNode/Armature/Skeleton3D/Front Upper Legs right" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
 
 [node name="Front Lower Legs right" parent="RootNode/Armature/Skeleton3D" index="12"]
 transform = Transform3D(-0.0312887, 0.282174, -0.958853, -0.241939, 0.928656, 0.281182, 0.969787, 0.240782, 0.0392127, 0.01241, -0.00511729, 0.00494518)
 bone_idx = 31
 
+[node name="Front Lower Legs right" parent="RootNode/Armature/Skeleton3D/Front Lower Legs right" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
+
 [node name="Left Front Paw" parent="RootNode/Armature/Skeleton3D" index="13"]
 transform = Transform3D(-0.0312887, 0.282174, -0.958853, -0.241939, 0.928656, 0.281182, 0.969786, 0.240782, 0.0392128, 0.0147726, -0.00589166, 0.00516305)
 bone_idx = 33
+
+[node name="Left Front Paw" parent="RootNode/Armature/Skeleton3D/Left Front Paw" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
 
 [node name="Behind Upper Legs right" parent="RootNode/Armature/Skeleton3D" index="14"]
 transform = Transform3D(-0.0379878, 0.34259, -1.16415, -0.293741, 1.12749, 0.341386, 1.17743, 0.292336, 0.0476087, 0.00987718, -0.0010865, -0.00763266)
 bone_idx = 36
 
+[node name="Behind Upper Legs right" parent="RootNode/Armature/Skeleton3D/Behind Upper Legs right" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
+
 [node name="Behind Lower Legs right" parent="RootNode/Armature/Skeleton3D" index="15"]
 transform = Transform3D(-0.0312883, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240782, 0.039213, 0.012844, -0.00176159, -0.00850575)
 bone_idx = 38
 
+[node name="Behind Lower Legs right" parent="RootNode/Armature/Skeleton3D/Behind Lower Legs right" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")
+
 [node name="Right Back Paw" parent="RootNode/Armature/Skeleton3D" index="16"]
 transform = Transform3D(-0.0312883, 0.282174, -0.958853, -0.24194, 0.928656, 0.281182, 0.969787, 0.240782, 0.0392129, 0.0131395, -0.000903906, -0.0121601)
 bone_idx = 40
+
+[node name="Right Back Paw" parent="RootNode/Armature/Skeleton3D/Right Back Paw" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_vkokm")

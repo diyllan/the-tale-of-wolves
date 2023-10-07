@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bv4qtd7ayt1ah"
-path="res://.godot/imported/Fox.fbx-fcf11877b3592a9e9305777fa2ab1f77.scn"
+uid="uid://bnepf0v83qkvw"
+path="res://.godot/imported/werewolf.fbx-6bc9986612971e7635c87766854ac59d.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Fox/Fox.fbx"
-dest_files=["res://.godot/imported/Fox.fbx-fcf11877b3592a9e9305777fa2ab1f77.scn"]
+source_file="res://Assets/Models/Werewolf/werewolf.fbx"
+dest_files=["res://.godot/imported/werewolf.fbx-6bc9986612971e7635c87766854ac59d.scn"]
 
 [params]
 
