@@ -29,7 +29,7 @@ project/assembly_name="twisted Fairytale"
 
 [gui]
 
-theme/custom_font="res://Assets/Fonts/Gingerbread House.ttf"
+theme/custom_font="res://Assets/Fonts/GrusskartenGotisch.ttf"
 
 [input]
 

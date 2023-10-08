@@ -1,0 +1,43 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cafwn0v5cxjf3"]
+
+[ext_resource type="Texture2D" uid="uid://b0m61tv87oyq7" path="res://Assets/UI/Menu/DropDownPanel.png" id="1_1nk5r"]
+[ext_resource type="Texture2D" uid="uid://bn3ywj6lxysmx" path="res://Assets/UI/Menu/CheckBox.png" id="1_5wkgn"]
+[ext_resource type="Texture2D" uid="uid://bf5go5ea0wto0" path="res://Assets/UI/Menu/CheckBoxUnchecked.png" id="2_4h4ll"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ev2mn"]
+texture = ExtResource("1_1nk5r")
+texture_margin_left = 50.0
+texture_margin_top = 20.0
+texture_margin_right = 50.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nhql"]
+texture = ExtResource("1_1nk5r")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[resource]
+CheckBox/icons/checked = ExtResource("1_5wkgn")
+CheckBox/icons/checked_disabled = ExtResource("2_4h4ll")
+CheckBox/icons/radio_checked = ExtResource("1_5wkgn")
+CheckBox/icons/radio_checked_disabled = ExtResource("2_4h4ll")
+CheckBox/icons/radio_unchecked = ExtResource("2_4h4ll")
+OptionButton/colors/font_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+OptionButton/colors/font_focus_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_hover_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_outline_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+PopupMenu/colors/font_color = Color(0, 0, 0, 1)
+PopupMenu/font_sizes/font_size = 36
+PopupMenu/icons/checked = ExtResource("1_5wkgn")
+PopupMenu/icons/radio_checked = ExtResource("1_5wkgn")
+PopupMenu/icons/radio_unchecked = ExtResource("2_4h4ll")
+PopupMenu/styles/hover = SubResource("StyleBoxTexture_ev2mn")
+PopupMenu/styles/labeled_separator_left = null
+PopupMenu/styles/labeled_separator_right = null
+PopupMenu/styles/panel = SubResource("StyleBoxTexture_8nhql")
+PopupMenu/styles/panel_disabled = null
