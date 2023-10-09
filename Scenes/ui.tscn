@@ -1,18 +1,21 @@
-[gd_scene load_steps=48 format=3 uid="uid://b2wexk6jwyi2o"]
+[gd_scene load_steps=51 format=3 uid="uid://b2wexk6jwyi2o"]
 
 [ext_resource type="Texture2D" uid="uid://tv4rpk6bgncn" path="res://Assets/UI/Menu/Book.png" id="1_jrlyx"]
 [ext_resource type="Script" path="res://Scenes/ui.gd" id="1_kjabk"]
-[ext_resource type="Texture2D" uid="uid://bvobqeqhy4a8u" path="res://Assets/UI/Menu/Tab.png" id="2_3m766"]
 [ext_resource type="Texture2D" uid="uid://uaexqxdel7bq" path="res://Assets/UI/Menu/Scroll.png" id="2_b7tmq"]
-[ext_resource type="Texture2D" uid="uid://c2ryau2s70j3c" path="res://Assets/UI/Menu/TabSelected.png" id="3_cyt74"]
-[ext_resource type="Texture2D" uid="uid://ca5l4aiasl747" path="res://Assets/UI/Menu/TabHover.png" id="4_2ko4i"]
-[ext_resource type="Texture2D" uid="uid://brajimsym6cyj" path="res://Assets/UI/Menu/General.png" id="5_cc8nj"]
+[ext_resource type="Texture2D" uid="uid://cpe0ntt0vui26" path="res://Assets/UI/Menu/GeneralTab.png" id="4_ynno0"]
+[ext_resource type="Texture2D" uid="uid://cskytopjmqsay" path="res://Assets/UI/Menu/GeneralTabSelected.png" id="5_ervh2"]
+[ext_resource type="Texture2D" uid="uid://xjlx4w4hmpt1" path="res://Assets/UI/Menu/GeneralTabHover.png" id="6_gf611"]
 [ext_resource type="Texture2D" uid="uid://dt6cgrygubwgk" path="res://Assets/UI/Menu/SliderKnob.png" id="6_l0yut"]
-[ext_resource type="Texture2D" uid="uid://1hsb3k1xvsnt" path="res://Assets/UI/Menu/Sound.png" id="6_x6c6n"]
-[ext_resource type="Texture2D" uid="uid://dhlslh2pplsg7" path="res://Assets/UI/Menu/Grapics.png" id="7_to3hx"]
 [ext_resource type="Texture2D" uid="uid://c834q6ifsm8qa" path="res://Assets/UI/Menu/SliderKnobActive.png" id="7_tsira"]
+[ext_resource type="Texture2D" uid="uid://dyo61laukm8a7" path="res://Assets/UI/Menu/SoundTab.png" id="7_xit51"]
+[ext_resource type="Texture2D" uid="uid://1o0f4jrk7djo" path="res://Assets/UI/Menu/SoundTabSelected.png" id="8_1ud53"]
 [ext_resource type="Texture2D" uid="uid://68ckbun0h48e" path="res://Assets/UI/Menu/Slider.png" id="8_7cnlo"]
+[ext_resource type="Texture2D" uid="uid://dixecebgui6lp" path="res://Assets/UI/Menu/SoundTabHover.png" id="9_b0yjl"]
 [ext_resource type="Texture2D" uid="uid://crx2ouspkr1x4" path="res://Assets/UI/Menu/SliderFill.png" id="9_j81di"]
+[ext_resource type="Texture2D" uid="uid://bohaclyiwwf3b" path="res://Assets/UI/Menu/GraphicsTab.png" id="10_micdt"]
+[ext_resource type="Texture2D" uid="uid://bv046r0tp2xc0" path="res://Assets/UI/Menu/GraphicsTabSelected.png" id="11_725kd"]
+[ext_resource type="Texture2D" uid="uid://knj0onob31x5" path="res://Assets/UI/Menu/GraphicsTabHover.png" id="12_6j54d"]
 [ext_resource type="Script" path="res://Scenes/Volume.gd" id="14_7bx3m"]
 [ext_resource type="Texture2D" uid="uid://bf5go5ea0wto0" path="res://Assets/UI/Menu/CheckBoxUnchecked.png" id="14_ohm1b"]
 [ext_resource type="Texture2D" uid="uid://bn3ywj6lxysmx" path="res://Assets/UI/Menu/CheckBox.png" id="14_rxagv"]
@@ -331,54 +334,26 @@ offset_bottom = 417.0
 [node name="General" type="TextureButton" parent="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons"]
 layout_mode = 2
 toggle_mode = true
-texture_normal = ExtResource("2_3m766")
-texture_pressed = ExtResource("3_cyt74")
-texture_hover = ExtResource("4_2ko4i")
-texture_focused = ExtResource("3_cyt74")
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/General"]
-layout_mode = 0
-offset_right = 113.0
-offset_bottom = 107.0
-pivot_offset = Vector2(51.5, 64)
-texture = ExtResource("5_cc8nj")
-expand_mode = 1
+texture_normal = ExtResource("4_ynno0")
+texture_pressed = ExtResource("5_ervh2")
+texture_hover = ExtResource("6_gf611")
+texture_focused = ExtResource("5_ervh2")
 
 [node name="Sound" type="TextureButton" parent="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons"]
 layout_mode = 2
 toggle_mode = true
-texture_normal = ExtResource("2_3m766")
-texture_pressed = ExtResource("3_cyt74")
-texture_hover = ExtResource("4_2ko4i")
-texture_focused = ExtResource("3_cyt74")
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/Sound"]
-layout_mode = 0
-offset_left = 2.5
-offset_top = 7.0
-offset_right = 124.5
-offset_bottom = 123.0
-pivot_offset = Vector2(51.5, 64)
-texture = ExtResource("6_x6c6n")
-stretch_mode = 2
+texture_normal = ExtResource("7_xit51")
+texture_pressed = ExtResource("8_1ud53")
+texture_hover = ExtResource("9_b0yjl")
+texture_focused = ExtResource("8_1ud53")
 
 [node name="Graphics" type="TextureButton" parent="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons"]
 layout_mode = 2
 toggle_mode = true
-texture_normal = ExtResource("2_3m766")
-texture_pressed = ExtResource("3_cyt74")
-texture_hover = ExtResource("4_2ko4i")
-texture_focused = ExtResource("3_cyt74")
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/Graphics"]
-layout_mode = 0
-offset_left = 2.5
-offset_top = 7.0
-offset_right = 115.5
-offset_bottom = 114.0
-pivot_offset = Vector2(51.5, 64)
-texture = ExtResource("7_to3hx")
-expand_mode = 1
+texture_normal = ExtResource("10_micdt")
+texture_pressed = ExtResource("11_725kd")
+texture_hover = ExtResource("12_6j54d")
+texture_focused = ExtResource("11_725kd")
 
 [node name="General" type="Control" parent="CanvasLayer/BookMenu"]
 layout_mode = 3
