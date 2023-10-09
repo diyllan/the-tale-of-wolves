@@ -1,6 +1,7 @@
-[gd_scene load_steps=36 format=3 uid="uid://b2wexk6jwyi2o"]
+[gd_scene load_steps=48 format=3 uid="uid://b2wexk6jwyi2o"]
 
 [ext_resource type="Texture2D" uid="uid://tv4rpk6bgncn" path="res://Assets/UI/Menu/Book.png" id="1_jrlyx"]
+[ext_resource type="Script" path="res://Scenes/ui.gd" id="1_kjabk"]
 [ext_resource type="Texture2D" uid="uid://bvobqeqhy4a8u" path="res://Assets/UI/Menu/Tab.png" id="2_3m766"]
 [ext_resource type="Texture2D" uid="uid://uaexqxdel7bq" path="res://Assets/UI/Menu/Scroll.png" id="2_b7tmq"]
 [ext_resource type="Texture2D" uid="uid://c2ryau2s70j3c" path="res://Assets/UI/Menu/TabSelected.png" id="3_cyt74"]
@@ -17,6 +18,17 @@
 [ext_resource type="Texture2D" uid="uid://b8w145kco5osr" path="res://Assets/UI/Menu/DropDownArrow.png" id="15_8s5q8"]
 [ext_resource type="Theme" uid="uid://cafwn0v5cxjf3" path="res://Assets/UI/OptionMenu.tres" id="15_k0uhr"]
 [ext_resource type="Texture2D" uid="uid://cq1xnt23lpe0t" path="res://Assets/UI/Menu/DropDown.png" id="16_xumdc"]
+[ext_resource type="Texture2D" uid="uid://cpt2ynuidmh2i" path="res://Assets/UI/DayCycle/Frame.png" id="18_8svsh"]
+[ext_resource type="Texture2D" uid="uid://c2gbl5swaj6lf" path="res://Assets/UI/DayCycle/MoonGradient.png" id="19_6oig4"]
+[ext_resource type="Texture2D" uid="uid://bo7jnpgy4ph3g" path="res://Assets/UI/DayCycle/FullMoonIcon.png" id="20_uykwl"]
+[ext_resource type="Texture2D" uid="uid://0p37yjwfjw1k" path="res://Assets/UI/DayCycle/2ndDayMoonIcon.png" id="21_4ch8y"]
+[ext_resource type="Texture2D" uid="uid://dicmxuovk3axc" path="res://Assets/UI/DayCycle/1stDayMoonIcon.png" id="22_qvq3f"]
+[ext_resource type="Texture2D" uid="uid://dlxqhdkfubosq" path="res://Assets/UI/DayCycle/DawnGradient.png" id="23_npmsi"]
+[ext_resource type="Texture2D" uid="uid://cfp6omboa33lk" path="res://Assets/UI/DayCycle/DawnIcon.png" id="24_cqvtd"]
+[ext_resource type="Texture2D" uid="uid://bam2aqga5k5gi" path="res://Assets/UI/DayCycle/DayGradient.png" id="25_pky44"]
+[ext_resource type="Texture2D" uid="uid://ck1heqn4edpov" path="res://Assets/UI/DayCycle/DayIcon.png" id="26_o8er1"]
+[ext_resource type="Texture2D" uid="uid://du3vcc5h7eh4q" path="res://Assets/UI/DayCycle/MorningGradient.png" id="27_edtwp"]
+[ext_resource type="Texture2D" uid="uid://bypx4ww264ixp" path="res://Assets/UI/DayCycle/MorningIcon.png" id="28_x8fnj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8si4k"]
 
@@ -51,18 +63,6 @@ texture_margin_right = 30.0
 texture_margin_bottom = 30.0
 expand_margin_right = 17.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6wmnt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tirv4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ieggq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2cjo"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mt063"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ongl"]
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jcls6"]
 texture = ExtResource("16_xumdc")
 texture_margin_left = 20.0
@@ -96,13 +96,27 @@ texture_margin_right = 20.0
 texture_margin_bottom = 20.0
 expand_margin_right = 25.0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6wmnt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tirv4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ieggq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2cjo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mt063"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ongl"]
+
 [node name="UI" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kjabk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -137,6 +151,7 @@ offset_bottom = 417.0
 
 [node name="General" type="TextureButton" parent="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons"]
 layout_mode = 2
+toggle_mode = true
 texture_normal = ExtResource("2_3m766")
 texture_pressed = ExtResource("3_cyt74")
 texture_hover = ExtResource("4_2ko4i")
@@ -152,6 +167,7 @@ expand_mode = 1
 
 [node name="Sound" type="TextureButton" parent="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons"]
 layout_mode = 2
+toggle_mode = true
 texture_normal = ExtResource("2_3m766")
 texture_pressed = ExtResource("3_cyt74")
 texture_hover = ExtResource("4_2ko4i")
@@ -169,6 +185,7 @@ stretch_mode = 2
 
 [node name="Graphics" type="TextureButton" parent="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons"]
 layout_mode = 2
+toggle_mode = true
 texture_normal = ExtResource("2_3m766")
 texture_pressed = ExtResource("3_cyt74")
 texture_hover = ExtResource("4_2ko4i")
@@ -334,6 +351,7 @@ theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
 
 [node name="Graphics" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -354,22 +372,14 @@ text = "Graphics"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FullScreen Check" type="CheckBox" parent="CanvasLayer/Graphics/VBoxContainer"]
+[node name="ResolutionLabel" type="Label" parent="CanvasLayer/Graphics/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
-theme_override_icons/checked = ExtResource("14_rxagv")
-theme_override_icons/unchecked = ExtResource("14_ohm1b")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_6wmnt")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_tirv4")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ieggq")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_r2cjo")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_mt063")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_0ongl")
-text = "Fullscreen
+text = "Resolution
 "
 
-[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Graphics/VBoxContainer"]
+[node name="ResolutionButton" type="OptionButton" parent="CanvasLayer/Graphics/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("15_k0uhr")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -385,3 +395,112 @@ popup/item_0/text = "Test"
 popup/item_0/id = 0
 popup/item_1/text = "Test 2"
 popup/item_1/id = 1
+
+[node name="FullScreen Check" type="CheckBox" parent="CanvasLayer/Graphics/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_icons/checked = ExtResource("14_rxagv")
+theme_override_icons/unchecked = ExtResource("14_ohm1b")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6wmnt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tirv4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ieggq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r2cjo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_mt063")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ongl")
+text = "Fullscreen
+"
+
+[node name="DayCycle" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="DayCycleFrame" type="TextureRect" parent="CanvasLayer/DayCycle"]
+layout_mode = 0
+offset_left = -205.0
+offset_top = -7.0
+offset_right = -60.0
+offset_bottom = 115.0
+texture = ExtResource("18_8svsh")
+
+[node name="MoonGradient" type="TextureRect" parent="CanvasLayer/DayCycle/DayCycleFrame"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("19_6oig4")
+
+[node name="FullMoonIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/MoonGradient"]
+visible = false
+offset_right = 145.0
+offset_bottom = 122.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("20_uykwl")
+
+[node name="2ndDayMoonIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/MoonGradient"]
+visible = false
+offset_right = 145.0
+offset_bottom = 122.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("21_4ch8y")
+
+[node name="1stDayMoonIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/MoonGradient"]
+visible = false
+offset_right = 145.0
+offset_bottom = 122.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("22_qvq3f")
+
+[node name="DawnGradient" type="TextureRect" parent="CanvasLayer/DayCycle/DayCycleFrame"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("23_npmsi")
+
+[node name="DawnIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/DawnGradient"]
+offset_right = 145.0
+offset_bottom = 122.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("24_cqvtd")
+
+[node name="DayGradient" type="TextureRect" parent="CanvasLayer/DayCycle/DayCycleFrame"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("25_pky44")
+
+[node name="DayIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/DayGradient"]
+offset_right = 145.0
+offset_bottom = 122.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("26_o8er1")
+
+[node name="MorningBG" type="TextureRect" parent="CanvasLayer/DayCycle/DayCycleFrame"]
+visible = false
+layout_mode = 0
+offset_right = 145.0
+offset_bottom = 122.0
+texture = ExtResource("27_edtwp")
+
+[node name="MorningIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/MorningBG"]
+layout_mode = 0
+offset_right = 145.0
+offset_bottom = 122.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("28_x8fnj")
+
+[connection signal="pressed" from="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/General" to="." method="_on_general_pressed"]
+[connection signal="pressed" from="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/Sound" to="." method="_on_sound_pressed"]
+[connection signal="pressed" from="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/Graphics" to="." method="_on_graphics_pressed"]
+[connection signal="pressed" from="CanvasLayer/General/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/General/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
