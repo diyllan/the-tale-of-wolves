@@ -11,6 +11,7 @@ extends Control
 @onready var _bookmenu = $CanvasLayer/BookMenu
 @onready var DayCycleIconAnim = $CanvasLayer/DayCycle/DayCycleIcons
 @onready var _resolutionOptions = $CanvasLayer/BookMenu/Graphics/VBoxContainer/ResolutionButton
+@onready var _fullscreen_checkbox = $"CanvasLayer/BookMenu/Graphics/VBoxContainer/FullScreen Check"
 
 var isPaused = false
 
@@ -23,10 +24,9 @@ var resolutions = {"1280x720":Vector2i(1280,720),
 var screensize = DisplayServer.screen_get_size()
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(screensize)
+#	_fullscreen_checkbox.button_pressed = true
 	DayCycleIconAnim.play("FloatingIcons")
 	AddResolutions()
-	_resolutionOptions.select(2)
 	
 func AddResolutions():
 	var index = 0
