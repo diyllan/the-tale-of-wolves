@@ -10,6 +10,7 @@ var isPaused = false
 #define camera-movement objects
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3D
+@onready var anim_play = $Neck/Camera3D/AnimationPlayer
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
@@ -45,4 +46,5 @@ func _physics_process(delta):
 		
 	move_and_slide()
 	
-	
+	if direction != Vector3():
+		anim_play.play("Head Bob")
