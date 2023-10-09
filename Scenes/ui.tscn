@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://b2wexk6jwyi2o"]
+[gd_scene load_steps=48 format=3 uid="uid://b2wexk6jwyi2o"]
 
 [ext_resource type="Texture2D" uid="uid://tv4rpk6bgncn" path="res://Assets/UI/Menu/Book.png" id="1_jrlyx"]
 [ext_resource type="Script" path="res://Scenes/ui.gd" id="1_kjabk"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://du3vcc5h7eh4q" path="res://Assets/UI/DayCycle/MorningGradient.png" id="27_edtwp"]
 [ext_resource type="Texture2D" uid="uid://bypx4ww264ixp" path="res://Assets/UI/DayCycle/MorningIcon.png" id="28_x8fnj"]
 [ext_resource type="AudioStream" uid="uid://ciecxnc6m8856" path="res://Assets/Sound/SoundEffects/pageTurn.wav" id="29_8xo55"]
+[ext_resource type="Texture2D" uid="uid://c2qykd8w4x78g" path="res://Assets/UI/Menu/Crosshair.png" id="29_eo06n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8si4k"]
 
@@ -680,6 +681,39 @@ texture_progress = ExtResource("28_x8fnj")
 libraries = {
 "": SubResource("AnimationLibrary_y6o7l")
 }
+
+[node name="Prompt" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = 41.0
+offset_right = 22.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 36
+text = "[Key]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Crosshair" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -60.0
+offset_right = 34.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("29_eo06n")
+expand_mode = 1
 
 [node name="PageTurn" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_8xo55")

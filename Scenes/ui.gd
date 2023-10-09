@@ -12,6 +12,7 @@ extends Control
 @onready var DayCycleIconAnim = $CanvasLayer/DayCycle/DayCycleIcons
 @onready var _resolutionOptions = $CanvasLayer/BookMenu/Graphics/VBoxContainer/ResolutionButton
 @onready var _fullscreen_checkbox = $"CanvasLayer/BookMenu/Graphics/VBoxContainer/FullScreen Check"
+@onready var crosshair = $CanvasLayer/Crosshair
 
 var isPaused = false
 
@@ -53,6 +54,7 @@ func _process(_delta):
 			_sound_settings.hide()
 			_graphic_settings.hide()
 			_settings.show()
+			crosshair.hide()
 			_general_tab.button_pressed = true
 			_sound_tab.button_pressed = false
 			_graphics_tab.button_pressed = false
@@ -62,6 +64,7 @@ func _process(_delta):
 		isPaused = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		_bookmenu.hide()
+		crosshair.show()
 		get_tree().paused = false
 
 func _on_start_pressed():
@@ -105,6 +108,7 @@ func _on_continue_pressed():
 	isPaused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	_bookmenu.hide()
+	crosshair.show()
 	get_tree().paused = false
 
 
