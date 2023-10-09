@@ -10,13 +10,36 @@ extends Control
 @onready var _start_button = $CanvasLayer/BookMenu/General/VBoxContainer/Start
 @onready var _bookmenu = $CanvasLayer/BookMenu
 @onready var DayCycleIconAnim = $CanvasLayer/DayCycle/DayCycleIcons
+@onready var _resolutionOptions = $CanvasLayer/BookMenu/Graphics/VBoxContainer/ResolutionButton
 
 var isPaused = false
 
+var resolutions = {"1280x720":Vector2i(1280,720),
+"1920x1080":Vector2i(1920,1080),
+"2560x1440":Vector2i(2560,1440),
+"3840x2160":Vector2i(3840,2160),
+"5120x1440":Vector2i(5120,1440)
+}
+var screensize = DisplayServer.screen_get_size()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(screensize)
 	DayCycleIconAnim.play("FloatingIcons")
-
+	AddResolutions()
+	_resolutionOptions.select(2)
+	
+func AddResolutions():
+	var index = 0
+	for r in resolutions:
+		_resolutionOptions.add_item(r)
+		if resolutions[r] == screensize:
+			_resolutionOptions.select(index)
+		index +=1
+		
+		
+func _on_resolution_button_item_selected(index):
+	var sizeRes = resolutions.get(_resolutionOptions.get_item_text(_resolutionOptions.get_selected_id()))
+	DisplayServer.window_set_size(sizeRes)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -82,3 +105,12 @@ func _on_continue_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	_bookmenu.hide()
 	get_tree().paused = false
+
+
+func _on_full_screen_check_toggled(button_pressed):
+	if button_pressed:
+		_resolutionOptions.disabled = true
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	if !button_pressed:
+		_resolutionOptions.disabled = false
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

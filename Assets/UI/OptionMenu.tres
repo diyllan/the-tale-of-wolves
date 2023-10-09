@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=14 format=3 uid="uid://cafwn0v5cxjf3"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://cafwn0v5cxjf3"]
 
 [ext_resource type="Texture2D" uid="uid://b0m61tv87oyq7" path="res://Assets/UI/Menu/DropDownPanel.png" id="1_1nk5r"]
 [ext_resource type="Texture2D" uid="uid://bn3ywj6lxysmx" path="res://Assets/UI/Menu/CheckBox.png" id="1_5wkgn"]
@@ -6,6 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://b8w145kco5osr" path="res://Assets/UI/Menu/DropDownArrow.png" id="3_60hfh"]
 [ext_resource type="Texture2D" uid="uid://b2a62pd60x36d" path="res://Assets/UI/Menu/CheckBoxCheck.png" id="3_bybke"]
 [ext_resource type="Texture2D" uid="uid://cq1xnt23lpe0t" path="res://Assets/UI/Menu/DropDown.png" id="4_vg8ff"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5p22"]
+texture = ExtResource("4_vg8ff")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+modulate_color = Color(0.121569, 0.121569, 0.121569, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mkk0w"]
 
@@ -58,6 +66,7 @@ OptionButton/colors/font_outline_color = Color(0, 0, 0, 1)
 OptionButton/colors/font_pressed_color = Color(0, 0, 0, 1)
 OptionButton/constants/arrow_margin = 30
 OptionButton/icons/arrow = ExtResource("3_60hfh")
+OptionButton/styles/disabled = SubResource("StyleBoxTexture_o5p22")
 OptionButton/styles/focus = SubResource("StyleBoxTexture_mkk0w")
 OptionButton/styles/hover = SubResource("StyleBoxTexture_5opam")
 OptionButton/styles/normal = SubResource("StyleBoxTexture_t20vy")
