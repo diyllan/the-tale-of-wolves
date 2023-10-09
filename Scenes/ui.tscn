@@ -550,7 +550,6 @@ text = "Resolution
 layout_mode = 2
 theme = ExtResource("15_k0uhr")
 theme_override_font_sizes/font_size = 36
-selected = 0
 
 [node name="FullScreen Check" type="CheckBox" parent="CanvasLayer/BookMenu/Graphics/VBoxContainer"]
 layout_mode = 2

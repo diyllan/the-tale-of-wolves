@@ -11,8 +11,9 @@ extends Control
 @onready var _bookmenu = $CanvasLayer/BookMenu
 @onready var DayCycleIconAnim = $CanvasLayer/DayCycle/DayCycleIcons
 @onready var _resolutionOptions = $CanvasLayer/BookMenu/Graphics/VBoxContainer/ResolutionButton
-@onready var _fullscreen_checkbox = $"CanvasLayer/BookMenu/Graphics/VBoxContainer/FullScreen Check"
+#@onready var _fullscreen_checkbox = $"CanvasLayer/BookMenu/Graphics/VBoxContainer/FullScreen Check"
 @onready var crosshair = $CanvasLayer/Crosshair
+@onready var _prompt = $CanvasLayer/Prompt
 
 var isPaused = false
 
@@ -39,7 +40,7 @@ func AddResolutions():
 		index +=1
 		
 		
-func _on_resolution_button_item_selected(index):
+func _on_resolution_button_item_selected(_index):
 	var sizeRes = resolutions.get(_resolutionOptions.get_item_text(_resolutionOptions.get_selected_id()))
 	DisplayServer.window_set_size(sizeRes)
 
@@ -55,6 +56,7 @@ func _process(_delta):
 			_graphic_settings.hide()
 			_settings.show()
 			crosshair.hide()
+			_prompt.hide()
 			_general_tab.button_pressed = true
 			_sound_tab.button_pressed = false
 			_graphics_tab.button_pressed = false
@@ -65,6 +67,7 @@ func _process(_delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		_bookmenu.hide()
 		crosshair.show()
+		_prompt.show()
 		get_tree().paused = false
 
 func _on_start_pressed():
@@ -109,6 +112,7 @@ func _on_continue_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	_bookmenu.hide()
 	crosshair.show()
+	_prompt.show()
 	get_tree().paused = false
 
 

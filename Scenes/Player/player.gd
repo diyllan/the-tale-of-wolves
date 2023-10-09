@@ -10,7 +10,6 @@ var isPaused = false
 #define camera-movement objects
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3D
-@onready var ui = $UI
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
