@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Ui="*res://Scenes/ui.tscn"
+DialogueManager="*res://Scenes/DialogueManager.gd"
 
 [display]
 
@@ -33,7 +34,7 @@ project/assembly_name="twisted Fairytale"
 
 [gui]
 
-theme/custom_font="res://Assets/Fonts/GrusskartenGotisch.ttf"
+theme/custom_font="res://Assets/Fonts/GothicPixels.ttf"
 
 [input]
 

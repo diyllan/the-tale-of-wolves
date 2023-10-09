@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://b2wexk6jwyi2o"]
+[gd_scene load_steps=54 format=3 uid="uid://b2wexk6jwyi2o"]
 
 [ext_resource type="Texture2D" uid="uid://tv4rpk6bgncn" path="res://Assets/UI/Menu/Book.png" id="1_jrlyx"]
 [ext_resource type="Script" path="res://Scenes/ui.gd" id="1_kjabk"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://bypx4ww264ixp" path="res://Assets/UI/DayCycle/MorningIcon.png" id="28_x8fnj"]
 [ext_resource type="AudioStream" uid="uid://ciecxnc6m8856" path="res://Assets/Sound/SoundEffects/pageTurn.wav" id="29_8xo55"]
 [ext_resource type="Texture2D" uid="uid://c2qykd8w4x78g" path="res://Assets/UI/Menu/Crosshair.png" id="29_eo06n"]
+[ext_resource type="Script" path="res://Scenes/Dialogue.gd" id="33_o5fdm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8si4k"]
 
@@ -261,6 +262,27 @@ _data = {
 "RESET": SubResource("Animation_lblna")
 }
 
+[sub_resource type="Animation" id="Animation_akg1v"]
+resource_name = "Indicator"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Indicator:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.333333), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0mj26"]
+_data = {
+"Indicator": SubResource("Animation_akg1v")
+}
+
 [node name="UI" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -297,7 +319,7 @@ offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 24
 text = "Test Objective go do something"
 vertical_alignment = 1
 
@@ -374,7 +396,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.466667, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.72549, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.72549, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8si4k")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ikxlr")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_i2fmx")
@@ -389,7 +411,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.466667, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.72549, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.72549, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8si4k")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ikxlr")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_i2fmx")
@@ -403,7 +425,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.466667, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.72549, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.72549, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8si4k")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ikxlr")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_i2fmx")
@@ -436,7 +458,7 @@ vertical_alignment = 1
 [node name="Volume Label" type="Label" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 30
 text = "General Volume"
 
 [node name="GeneralVolume" type="HSlider" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
@@ -455,7 +477,7 @@ bus_name = "Master"
 [node name="MusicLabel" type="Label" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 30
 text = "Music
 "
 
@@ -475,7 +497,7 @@ bus_name = "Music"
 [node name="SoundEffectsLabel" type="Label" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 30
 text = "Sound Effects
 "
 
@@ -517,7 +539,7 @@ vertical_alignment = 1
 [node name="ResolutionLabel" type="Label" parent="CanvasLayer/BookMenu/Graphics/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 30
 text = "Resolution
 "
 
@@ -529,7 +551,7 @@ theme_override_font_sizes/font_size = 36
 [node name="FullScreen Check" type="CheckBox" parent="CanvasLayer/BookMenu/Graphics/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 30
 theme_override_icons/checked = ExtResource("14_rxagv")
 theme_override_icons/unchecked = ExtResource("14_ohm1b")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6wmnt")
@@ -543,12 +565,12 @@ text = "Fullscreen
 
 [node name="Label" type="Label" parent="CanvasLayer/BookMenu"]
 layout_mode = 0
-offset_left = 577.0
-offset_top = 366.0
-offset_right = 927.0
-offset_bottom = 648.0
+offset_left = 538.0
+offset_top = 426.0
+offset_right = 1126.0
+offset_bottom = 708.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 128
+theme_override_font_sizes/font_size = 80
 text = "The Tale 
 of Wolves"
 
@@ -662,10 +684,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -22.0
+offset_left = -49.5
 offset_top = 41.0
-offset_right = 22.0
-offset_bottom = 84.0
+offset_right = 49.5
+offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 1
@@ -688,6 +710,63 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("29_eo06n")
 expand_mode = 1
+
+[node name="Dialogue" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("33_o5fdm")
+
+[node name="Text" type="RichTextLabel" parent="CanvasLayer/Dialogue"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -293.0
+offset_top = -68.0
+offset_right = 293.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0.839216, 0.839216, 0.839216, 1)
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "
+"
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Dialogue"]
+
+[node name="Indicator" type="Label" parent="CanvasLayer/Dialogue"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.0
+offset_top = -19.0
+offset_right = 169.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.839216, 0.839216, 0.839216, 1)
+theme_override_font_sizes/font_size = 16
+text = "press E to continue or hold space to skip"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Dialogue/Indicator"]
+root_node = NodePath("../../Timer")
+libraries = {
+"": SubResource("AnimationLibrary_0mj26")
+}
 
 [node name="PageTurn" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_8xo55")

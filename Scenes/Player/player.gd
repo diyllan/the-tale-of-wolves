@@ -7,6 +7,7 @@ const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var isPaused = false
+var dialogueActive = false
 #define camera-movement objects
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3D

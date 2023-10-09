@@ -77,6 +77,7 @@ transform = Transform3D(-0.997881, 0, 0.0650722, 0, 1, 0, -0.0650722, 0, -0.9978
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66221, 0)
 collision_layer = 8
 script = ExtResource("5_fk6m7")
+Interaction_Text = "res://Assets/Dialogues/Dialog0.json"
 prompt_message = "Little red cap"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LittleRedCap/StaticBody3D"]

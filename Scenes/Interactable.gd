@@ -1,6 +1,7 @@
 class_name Interactable
 extends StaticBody3D
 
+@export var Interaction_Text = "none"
 @export var prompt_message = "Interact"
 @export var prompt_action = "interact"
 
@@ -12,4 +13,4 @@ func get_prompt():
 	return prompt_message + "\n[" + key_name + "]"
 	
 func interact(_body):
-	print("test")
+	DialogueManager.showDialogue(Interaction_Text)
