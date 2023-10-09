@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://b2wexk6jwyi2o"]
+[gd_scene load_steps=55 format=3 uid="uid://b2wexk6jwyi2o"]
 
 [ext_resource type="Texture2D" uid="uid://tv4rpk6bgncn" path="res://Assets/UI/Menu/Book.png" id="1_jrlyx"]
 [ext_resource type="Script" path="res://Scenes/ui.gd" id="1_kjabk"]
@@ -34,6 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://ciecxnc6m8856" path="res://Assets/Sound/SoundEffects/pageTurn.wav" id="29_8xo55"]
 [ext_resource type="Texture2D" uid="uid://c2qykd8w4x78g" path="res://Assets/UI/Menu/Crosshair.png" id="29_eo06n"]
 [ext_resource type="Script" path="res://Scenes/Dialogue.gd" id="33_o5fdm"]
+[ext_resource type="Texture2D" uid="uid://bep5e50dcenfw" path="res://Assets/UI/Menu/ProgressCircle.png" id="34_ib4q8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8si4k"]
 
@@ -312,10 +313,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -190.5
-offset_top = -43.0
-offset_right = 190.5
-offset_bottom = 43.0
+offset_left = -199.5
+offset_top = -42.5
+offset_right = 200.5
+offset_bottom = 43.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -719,8 +720,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -20.0
-offset_top = -40.0
+offset_top = -96.0
 offset_right = 20.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("33_o5fdm")
@@ -732,10 +734,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -293.0
-offset_top = -68.0
-offset_right = 293.0
-offset_bottom = -28.0
+offset_left = -354.0
+offset_top = -112.0
+offset_right = 354.0
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/default_color = Color(0.839216, 0.839216, 0.839216, 1)
@@ -746,7 +748,11 @@ text = "
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Dialogue"]
 
+[node name="SkipTimer" type="Timer" parent="CanvasLayer/Dialogue"]
+one_shot = true
+
 [node name="Indicator" type="Label" parent="CanvasLayer/Dialogue"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -768,6 +774,35 @@ libraries = {
 "": SubResource("AnimationLibrary_0mj26")
 }
 
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/Dialogue"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = -30.0
+offset_right = 111.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 5.0
+rounded = true
+fill_mode = 4
+texture_progress = ExtResource("34_ib4q8")
+radial_initial_angle = 180.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Dialogue/TextureProgressBar"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 11.0
+offset_right = -2.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.839216, 0.839216, 0.839216, 1)
+text = "hold for 5 seconds"
+
 [node name="PageTurn" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_8xo55")
 pitch_scale = 0.69
@@ -781,3 +816,4 @@ bus = &"SoundEffects"
 [connection signal="pressed" from="CanvasLayer/BookMenu/General/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="item_selected" from="CanvasLayer/BookMenu/Graphics/VBoxContainer/ResolutionButton" to="." method="_on_resolution_button_item_selected"]
 [connection signal="toggled" from="CanvasLayer/BookMenu/Graphics/VBoxContainer/FullScreen Check" to="." method="_on_full_screen_check_toggled"]
+[connection signal="timeout" from="CanvasLayer/Dialogue/SkipTimer" to="CanvasLayer/Dialogue" method="_on_skip_timer_timeout"]
