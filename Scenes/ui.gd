@@ -12,10 +12,10 @@ extends Control
 @onready var DayCycleIconAnim = $CanvasLayer/DayCycle/DayCycleIcons
 
 var isPaused = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	DayCycleIconAnim.play("FloatingIcons")
-	_general_tab.button_pressed = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -44,6 +44,7 @@ func _on_start_pressed():
 	print("start game")
 
 func _on_general_pressed():
+	$PageTurn.play()
 	_general_tab.button_pressed = true
 	_sound_tab.button_pressed = false
 	_graphics_tab.button_pressed = false
@@ -53,6 +54,7 @@ func _on_general_pressed():
 
 
 func _on_sound_pressed():
+	$PageTurn.play()
 	_general_tab.button_pressed = false
 	_sound_tab.button_pressed = true
 	_graphics_tab.button_pressed = false
@@ -62,6 +64,7 @@ func _on_sound_pressed():
 
 
 func _on_graphics_pressed():
+	$PageTurn.play()
 	_general_tab.button_pressed = false
 	_sound_tab.button_pressed = false
 	_graphics_tab.button_pressed = true

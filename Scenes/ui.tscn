@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://b2wexk6jwyi2o"]
+[gd_scene load_steps=47 format=3 uid="uid://b2wexk6jwyi2o"]
 
 [ext_resource type="Texture2D" uid="uid://tv4rpk6bgncn" path="res://Assets/UI/Menu/Book.png" id="1_jrlyx"]
 [ext_resource type="Script" path="res://Scenes/ui.gd" id="1_kjabk"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c834q6ifsm8qa" path="res://Assets/UI/Menu/SliderKnobActive.png" id="7_tsira"]
 [ext_resource type="Texture2D" uid="uid://68ckbun0h48e" path="res://Assets/UI/Menu/Slider.png" id="8_7cnlo"]
 [ext_resource type="Texture2D" uid="uid://crx2ouspkr1x4" path="res://Assets/UI/Menu/SliderFill.png" id="9_j81di"]
+[ext_resource type="Script" path="res://Scenes/Volume.gd" id="14_7bx3m"]
 [ext_resource type="Texture2D" uid="uid://bf5go5ea0wto0" path="res://Assets/UI/Menu/CheckBoxUnchecked.png" id="14_ohm1b"]
 [ext_resource type="Texture2D" uid="uid://bn3ywj6lxysmx" path="res://Assets/UI/Menu/CheckBox.png" id="14_rxagv"]
 [ext_resource type="Theme" uid="uid://cafwn0v5cxjf3" path="res://Assets/UI/OptionMenu.tres" id="15_k0uhr"]
@@ -27,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://ck1heqn4edpov" path="res://Assets/UI/DayCycle/DayIcon.png" id="26_o8er1"]
 [ext_resource type="Texture2D" uid="uid://du3vcc5h7eh4q" path="res://Assets/UI/DayCycle/MorningGradient.png" id="27_edtwp"]
 [ext_resource type="Texture2D" uid="uid://bypx4ww264ixp" path="res://Assets/UI/DayCycle/MorningIcon.png" id="28_x8fnj"]
+[ext_resource type="AudioStream" uid="uid://ciecxnc6m8856" path="res://Assets/Sound/SoundEffects/pageTurn.wav" id="29_8xo55"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8si4k"]
 
@@ -468,6 +470,11 @@ theme_override_icons/grabber_highlight = ExtResource("7_tsira")
 theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("14_7bx3m")
+bus_name = "Master"
 
 [node name="MusicLabel" type="Label" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
@@ -483,6 +490,11 @@ theme_override_icons/grabber_highlight = ExtResource("7_tsira")
 theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("14_7bx3m")
+bus_name = "Music"
 
 [node name="SoundEffectsLabel" type="Label" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
@@ -498,6 +510,11 @@ theme_override_icons/grabber_highlight = ExtResource("7_tsira")
 theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("14_7bx3m")
+bus_name = "SoundEffects"
 
 [node name="Graphics" type="Control" parent="CanvasLayer/BookMenu"]
 visible = false
@@ -668,6 +685,12 @@ texture_progress = ExtResource("28_x8fnj")
 libraries = {
 "": SubResource("AnimationLibrary_y6o7l")
 }
+
+[node name="PageTurn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_8xo55")
+pitch_scale = 0.69
+stream_paused = true
+bus = &"SoundEffects"
 
 [connection signal="pressed" from="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/General" to="." method="_on_general_pressed"]
 [connection signal="pressed" from="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/Sound" to="." method="_on_sound_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=16 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://cdq64gxnl3byt" path="res://Assets/Models/Wolf/wolf.tscn" id="1_15lva"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://sx2hv084xckl" path="res://Assets/Models/Player/little_red_cap.tscn" id="2_7gxvk"]
 [ext_resource type="PackedScene" uid="uid://dj34euacp8oj4" path="res://Assets/Models/Fox/fox.tscn" id="2_q8cb0"]
 [ext_resource type="Script" path="res://Scenes/Interactable.gd" id="5_fk6m7"]
+[ext_resource type="AudioStream" uid="uid://w7ivm45o5gav" path="res://Assets/Sound/Music/DarkForrestAmbience.wav" id="8_5x5xe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xtjem"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -84,3 +85,9 @@ prompt_message = "Little red cap"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LittleRedCap/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.85174, 0)
 shape = SubResource("CapsuleShape3D_r3rct")
+
+[node name="DarkForrestAmbience" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("8_5x5xe")
+autoplay = true
+bus = &"Music"
