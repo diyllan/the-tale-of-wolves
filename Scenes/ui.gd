@@ -24,6 +24,7 @@ var resolutions = {"1280x720":Vector2i(1280,720),
 var screensize = DisplayServer.screen_get_size()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+## REMOVE COMMENT FOR FINAL BUILD
 #	_fullscreen_checkbox.button_pressed = true
 	DayCycleIconAnim.play("FloatingIcons")
 	AddResolutions()
