@@ -11,5 +11,5 @@ func get_prompt():
 			key_name = OS.get_keycode_string(action.physical_keycode)
 	return prompt_message + "\n[" + key_name + "]"
 	
-func interact(body):
+func interact(_body):
 	print("test")

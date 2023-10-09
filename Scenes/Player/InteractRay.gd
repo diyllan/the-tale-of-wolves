@@ -2,7 +2,7 @@ extends RayCast3D
 
 @onready var prompt = $Prompt
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	prompt.text = ""
 	if is_colliding():
 		var detected = get_collider()

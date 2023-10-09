@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=15 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://cdq64gxnl3byt" path="res://Assets/Models/Wolf/wolf.tscn" id="1_15lva"]
+[ext_resource type="PackedScene" uid="uid://b2wexk6jwyi2o" path="res://Scenes/ui.tscn" id="1_jbp4a"]
 [ext_resource type="PackedScene" uid="uid://b7qbp4r27pssi" path="res://Assets/Models/Werewolf/werewolf.tscn" id="1_kd8dl"]
 [ext_resource type="PackedScene" uid="uid://sx2hv084xckl" path="res://Assets/Models/Player/little_red_cap.tscn" id="2_7gxvk"]
 [ext_resource type="PackedScene" uid="uid://dj34euacp8oj4" path="res://Assets/Models/Fox/fox.tscn" id="2_q8cb0"]
@@ -36,6 +37,8 @@ radius = 0.826504
 height = 3.50285
 
 [node name="World" type="Node3D"]
+
+[node name="UI" parent="." instance=ExtResource("1_jbp4a")]
 
 [node name="Wolf" parent="." instance=ExtResource("1_15lva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.89695)

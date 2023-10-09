@@ -73,6 +73,155 @@ expand_margin_right = 17.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ongl"]
 
+[sub_resource type="Animation" id="Animation_2fluf"]
+resource_name = "FloatingIcons"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DayCycleFrame/MorningBG/MorningIconFIll:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 16), Vector2(0, 5), Vector2(0, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DayCycleFrame/MorningBG/MorningIconFIll:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DayCycleFrame/DayGradient/DayIconFIll:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DayCycleFrame/DayGradient/DayIconFIll:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DayCycleFrame/DawnGradient/DawnIconFIll:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DayCycleFrame/DawnGradient/DawnIconFIll:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DayCycleFrame/MoonGradient/1stDayMoonIconFIll:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DayCycleFrame/MoonGradient/1stDayMoonIconFIll:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DayCycleFrame/MoonGradient/2ndDayMoonIconFIll:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DayCycleFrame/MoonGradient/2ndDayMoonIconFIll:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DayCycleFrame/MoonGradient/FullMoonIconFIll:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("DayCycleFrame/MoonGradient/FullMoonIconFIll:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+
 [sub_resource type="Animation" id="Animation_lblna"]
 length = 0.001
 tracks/0/type = "value"
@@ -100,154 +249,6 @@ tracks/1/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_2fluf"]
-resource_name = "FloatingIcons"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("DayCycleFrame/MorningBG/MorningIconFIll:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 16), Vector2(0, 5), Vector2(0, 16)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("DayCycleFrame/MorningBG/MorningIconFIll:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("DayCycleFrame/DayGradient/DayIconFIll:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("DayCycleFrame/DayGradient/DayIconFIll:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("DayCycleFrame/DawnGradient/DawnIconFIll:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("DayCycleFrame/DawnGradient/DawnIconFIll:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("DayCycleFrame/MoonGradient/1stDayMoonIconFIll:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("DayCycleFrame/MoonGradient/1stDayMoonIconFIll:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.0]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("DayCycleFrame/MoonGradient/2ndDayMoonIconFIll:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("DayCycleFrame/MoonGradient/2ndDayMoonIconFIll:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.0]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("DayCycleFrame/MoonGradient/FullMoonIconFIll:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("DayCycleFrame/MoonGradient/FullMoonIconFIll:rotation")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y6o7l"]
 _data = {
 "FloatingIcons": SubResource("Animation_2fluf"),
@@ -257,16 +258,45 @@ _data = {
 [node name="UI" type="Control"]
 process_mode = 3
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_kjabk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Objective" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ObjectiveTexture" type="TextureRect" parent="CanvasLayer/Objective"]
+layout_mode = 0
+offset_left = -33.0
+offset_top = 38.0
+offset_right = 430.0
+offset_bottom = 153.0
+texture = ExtResource("2_b7tmq")
+
+[node name="ObjectiveLabel" type="Label" parent="CanvasLayer/Objective/ObjectiveTexture"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.5
+offset_top = -43.0
+offset_right = 190.5
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Test Objective go do something"
+vertical_alignment = 1
+
 [node name="BookMenu" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -347,62 +377,20 @@ pivot_offset = Vector2(51.5, 64)
 texture = ExtResource("7_to3hx")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 577.0
-offset_top = 366.0
-offset_right = 927.0
-offset_bottom = 648.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 128
-text = "The Tale 
-of Wolves"
-
-[node name="Objective" type="Control" parent="CanvasLayer"]
+[node name="General" type="Control" parent="CanvasLayer/BookMenu"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ObjectiveTexture" type="TextureRect" parent="CanvasLayer/Objective"]
-layout_mode = 0
-offset_left = -33.0
-offset_top = 38.0
-offset_right = 430.0
-offset_bottom = 153.0
-texture = ExtResource("2_b7tmq")
-
-[node name="ObjectiveLabel" type="Label" parent="CanvasLayer/Objective/ObjectiveTexture"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -190.5
-offset_top = -43.0
-offset_right = 190.5
-offset_bottom = 43.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-text = "Test Objective go do something"
-vertical_alignment = 1
-
-[node name="General" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/General"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/BookMenu/General"]
 layout_mode = 0
 offset_left = 984.0
 offset_top = 448.0
 offset_right = 1432.0
 offset_bottom = 556.0
 
-[node name="Start" type="Button" parent="CanvasLayer/General/VBoxContainer"]
+[node name="Start" type="Button" parent="CanvasLayer/BookMenu/General/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.466667, 0, 0, 1)
@@ -416,7 +404,22 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_7dbxe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_88t1h")
 text = "Start"
 
-[node name="Quit" type="Button" parent="CanvasLayer/General/VBoxContainer"]
+[node name="Continue" type="Button" parent="CanvasLayer/BookMenu/General/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.466667, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.72549, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.72549, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8si4k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ikxlr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_i2fmx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7dbxe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_88t1h")
+text = "Continue"
+
+[node name="Quit" type="Button" parent="CanvasLayer/BookMenu/General/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.466667, 0, 0, 1)
@@ -430,21 +433,21 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_7dbxe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_88t1h")
 text = "Quit"
 
-[node name="SoundSettings" type="Control" parent="CanvasLayer"]
+[node name="SoundSettings" type="Control" parent="CanvasLayer/BookMenu"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 399.0
 offset_bottom = 72.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SoundSettings"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/BookMenu/SoundSettings"]
 layout_mode = 2
 offset_left = 976.0
 offset_top = 220.0
 offset_right = 1416.0
 offset_bottom = 895.0
 
-[node name="SoundLabel" type="Label" parent="CanvasLayer/SoundSettings/VBoxContainer"]
+[node name="SoundLabel" type="Label" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
@@ -452,13 +455,13 @@ text = "Sound"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Volume Label" type="Label" parent="CanvasLayer/SoundSettings/VBoxContainer"]
+[node name="Volume Label" type="Label" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "General Volume"
 
-[node name="GeneralVolume" type="HSlider" parent="CanvasLayer/SoundSettings/VBoxContainer"]
+[node name="GeneralVolume" type="HSlider" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_icons/grabber = ExtResource("6_l0yut")
 theme_override_icons/grabber_highlight = ExtResource("7_tsira")
@@ -466,14 +469,14 @@ theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
 
-[node name="MusicLabel" type="Label" parent="CanvasLayer/SoundSettings/VBoxContainer"]
+[node name="MusicLabel" type="Label" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "Music
 "
 
-[node name="Music" type="HSlider" parent="CanvasLayer/SoundSettings/VBoxContainer"]
+[node name="Music" type="HSlider" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_icons/grabber = ExtResource("6_l0yut")
 theme_override_icons/grabber_highlight = ExtResource("7_tsira")
@@ -481,14 +484,14 @@ theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
 
-[node name="SoundEffectsLabel" type="Label" parent="CanvasLayer/SoundSettings/VBoxContainer"]
+[node name="SoundEffectsLabel" type="Label" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "Sound Effects
 "
 
-[node name="SoundEffects" type="HSlider" parent="CanvasLayer/SoundSettings/VBoxContainer"]
+[node name="SoundEffects" type="HSlider" parent="CanvasLayer/BookMenu/SoundSettings/VBoxContainer"]
 layout_mode = 2
 theme_override_icons/grabber = ExtResource("6_l0yut")
 theme_override_icons/grabber_highlight = ExtResource("7_tsira")
@@ -496,21 +499,21 @@ theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
 
-[node name="Graphics" type="Control" parent="CanvasLayer"]
+[node name="Graphics" type="Control" parent="CanvasLayer/BookMenu"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Graphics"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/BookMenu/Graphics"]
 layout_mode = 0
 offset_left = 976.0
 offset_top = 220.0
 offset_right = 1416.0
 offset_bottom = 895.0
 
-[node name="GraphicsLabel" type="Label" parent="CanvasLayer/Graphics/VBoxContainer"]
+[node name="GraphicsLabel" type="Label" parent="CanvasLayer/BookMenu/Graphics/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
@@ -518,14 +521,14 @@ text = "Graphics"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ResolutionLabel" type="Label" parent="CanvasLayer/Graphics/VBoxContainer"]
+[node name="ResolutionLabel" type="Label" parent="CanvasLayer/BookMenu/Graphics/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "Resolution
 "
 
-[node name="ResolutionButton" type="OptionButton" parent="CanvasLayer/Graphics/VBoxContainer"]
+[node name="ResolutionButton" type="OptionButton" parent="CanvasLayer/BookMenu/Graphics/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("15_k0uhr")
 theme_override_font_sizes/font_size = 36
@@ -536,7 +539,7 @@ popup/item_0/id = 0
 popup/item_1/text = "Test 2"
 popup/item_1/id = 1
 
-[node name="FullScreen Check" type="CheckBox" parent="CanvasLayer/Graphics/VBoxContainer"]
+[node name="FullScreen Check" type="CheckBox" parent="CanvasLayer/BookMenu/Graphics/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
@@ -550,6 +553,22 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_mt063")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0ongl")
 text = "Fullscreen
 "
+
+[node name="Label" type="Label" parent="CanvasLayer/BookMenu"]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 366.0
+offset_right = 927.0
+offset_bottom = 648.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "The Tale 
+of Wolves"
+
+[node name="Control" type="Control" parent="CanvasLayer/BookMenu"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="DayCycle" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -575,6 +594,7 @@ offset_bottom = 40.0
 texture = ExtResource("19_6oig4")
 
 [node name="FullMoonIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/MoonGradient"]
+layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
 value = 100.0
@@ -583,6 +603,7 @@ texture_progress = ExtResource("20_uykwl")
 
 [node name="2ndDayMoonIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/MoonGradient"]
 visible = false
+layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
 value = 100.0
@@ -591,6 +612,7 @@ texture_progress = ExtResource("21_4ch8y")
 
 [node name="1stDayMoonIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/MoonGradient"]
 visible = false
+layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
 value = 100.0
@@ -599,11 +621,13 @@ texture_progress = ExtResource("22_qvq3f")
 
 [node name="DawnGradient" type="TextureRect" parent="CanvasLayer/DayCycle/DayCycleFrame"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("23_npmsi")
 
 [node name="DawnIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/DawnGradient"]
+layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
 value = 100.0
@@ -612,11 +636,13 @@ texture_progress = ExtResource("24_cqvtd")
 
 [node name="DayGradient" type="TextureRect" parent="CanvasLayer/DayCycle/DayCycleFrame"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("25_pky44")
 
 [node name="DayIconFIll" type="TextureProgressBar" parent="CanvasLayer/DayCycle/DayCycleFrame/DayGradient"]
+layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
 value = 100.0
@@ -646,5 +672,6 @@ libraries = {
 [connection signal="pressed" from="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/General" to="." method="_on_general_pressed"]
 [connection signal="pressed" from="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/Sound" to="." method="_on_sound_pressed"]
 [connection signal="pressed" from="CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/Graphics" to="." method="_on_graphics_pressed"]
-[connection signal="pressed" from="CanvasLayer/General/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CanvasLayer/General/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/BookMenu/General/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/BookMenu/General/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="CanvasLayer/BookMenu/General/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
