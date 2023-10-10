@@ -34,6 +34,7 @@ project/assembly_name="twisted Fairytale"
 
 [gui]
 
+theme/custom="res://Assets/UI/theme.tres"
 theme/custom_font="res://Assets/Fonts/GothicPixels.ttf"
 
 [input]

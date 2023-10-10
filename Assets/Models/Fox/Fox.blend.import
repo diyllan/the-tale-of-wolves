@@ -1,0 +1,102 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://byxf6n8788tjd"
+path="res://.godot/imported/Fox.blend-b8f5afe179035a8b5f43e9ccc2797d94.scn"
+
+[deps]
+
+source_file="res://Assets/Models/Fox/Fox.blend"
+dest_files=["res://.godot/imported/Fox.blend-b8f5afe179035a8b5f43e9ccc2797d94.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Armature/Skeleton3D/Behind Lower Legs left/Behind Lower Legs left": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Behind Lower Legs right/Behind Lower Legs right": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Behind Upper Legs left/Behind Upper Legs left": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Behind Upper Legs right/Behind Upper Legs right": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Ears/Ears": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Front Lower Legs left/Front Lower Legs left": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Front Lower Legs right/Front Lower Legs right": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Front Upper Legs left/Front Upper Legs left": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Front Upper Legs right/Front Upper Legs right": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Head/Head": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Left Back Paw/Left Back Paw": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Left Front Paw/Left Front Paw": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Neck/Neck": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Right Back Paw/Right Back Paw": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Right Front Paw/Right Front Paw": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Tail/Tail": {
+"generate/physics": true
+},
+"PATH:Armature/Skeleton3D/Torso/Torso": {
+"generate/physics": true
+}
+}
+}
+gltf/embedded_image_handling=1
+blender/nodes/visible=0
+blender/nodes/punctual_lights=true
+blender/nodes/cameras=true
+blender/nodes/custom_properties=true
+blender/nodes/modifiers=1
+blender/meshes/colors=false
+blender/meshes/uvs=true
+blender/meshes/normals=true
+blender/meshes/tangents=true
+blender/meshes/skins=2
+blender/meshes/export_bones_deforming_mesh_only=false
+blender/materials/unpack_enabled=true
+blender/materials/export_materials=1
+blender/animation/limit_playback=true
+blender/animation/always_sample=true
+blender/animation/group_tracks=true

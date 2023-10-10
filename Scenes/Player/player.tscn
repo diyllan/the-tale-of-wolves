@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://cuaeywdbin27w"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_x0tal"]
-[ext_resource type="PackedScene" uid="uid://sx2hv084xckl" path="res://Assets/Models/Player/little_red_cap.tscn" id="2_wlw33"]
-[ext_resource type="Shader" path="res://Scenes/Player/camerapixelation.gdshader" id="3_yx0k3"]
+[ext_resource type="PackedScene" uid="uid://b1s538i3lob8d" path="res://Assets/Models/Player/LittleRedCap.blend" id="2_of4cu"]
+[ext_resource type="Shader" path="res://Shader/camerapixelation.gdshader" id="3_hrreo"]
 [ext_resource type="Script" path="res://Scenes/Player/InteractRay.gd" id="4_2l74s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p0fya"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vra6j"]
 render_priority = 0
-shader = ExtResource("3_yx0k3")
+shader = ExtResource("3_hrreo")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_n2cv5"]
 material = SubResource("ShaderMaterial_vra6j")
@@ -54,14 +54,15 @@ _data = {
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_x0tal")
 
-[node name="LittleRedCap" parent="." instance=ExtResource("2_wlw33")]
+[node name="LittleRedCap" parent="." instance=ExtResource("2_of4cu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.02679, 1.65326, 0)
 shape = SubResource("CapsuleShape3D_p0fya")
 
 [node name="Neck" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.93873, 0.122919)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.72012, -0.0633119)
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78191e-08, 0, -0.318214)

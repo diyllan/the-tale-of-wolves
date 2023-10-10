@@ -1,14 +1,14 @@
 [gd_resource type="Theme" load_steps=15 format=3 uid="uid://cafwn0v5cxjf3"]
 
-[ext_resource type="Texture2D" uid="uid://b0m61tv87oyq7" path="res://Assets/UI/Menu/DropDownPanel.png" id="1_1nk5r"]
-[ext_resource type="Texture2D" uid="uid://bn3ywj6lxysmx" path="res://Assets/UI/Menu/CheckBox.png" id="1_5wkgn"]
-[ext_resource type="Texture2D" uid="uid://bf5go5ea0wto0" path="res://Assets/UI/Menu/CheckBoxUnchecked.png" id="2_4h4ll"]
-[ext_resource type="Texture2D" uid="uid://b8w145kco5osr" path="res://Assets/UI/Menu/DropDownArrow.png" id="3_60hfh"]
-[ext_resource type="Texture2D" uid="uid://b2a62pd60x36d" path="res://Assets/UI/Menu/CheckBoxCheck.png" id="3_bybke"]
-[ext_resource type="Texture2D" uid="uid://cq1xnt23lpe0t" path="res://Assets/UI/Menu/DropDown.png" id="4_vg8ff"]
+[ext_resource type="Texture2D" uid="uid://bn3ywj6lxysmx" path="res://Assets/UI/Menu/CheckBox.png" id="1_txcsm"]
+[ext_resource type="Texture2D" uid="uid://bf5go5ea0wto0" path="res://Assets/UI/Menu/CheckBoxUnchecked.png" id="2_sdqgq"]
+[ext_resource type="Texture2D" uid="uid://b8w145kco5osr" path="res://Assets/UI/Menu/DropDownArrow.png" id="3_cyqum"]
+[ext_resource type="Texture2D" uid="uid://cq1xnt23lpe0t" path="res://Assets/UI/Menu/DropDown.png" id="4_2f3k5"]
+[ext_resource type="Texture2D" uid="uid://b2a62pd60x36d" path="res://Assets/UI/Menu/CheckBoxCheck.png" id="5_y5pqr"]
+[ext_resource type="Texture2D" uid="uid://b0m61tv87oyq7" path="res://Assets/UI/Menu/DropDownPanel.png" id="6_0xrq2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5p22"]
-texture = ExtResource("4_vg8ff")
+texture = ExtResource("4_2f3k5")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
@@ -18,7 +18,7 @@ modulate_color = Color(0.121569, 0.121569, 0.121569, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mkk0w"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5opam"]
-texture = ExtResource("4_vg8ff")
+texture = ExtResource("4_2f3k5")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
@@ -26,14 +26,14 @@ texture_margin_bottom = 20.0
 modulate_color = Color(0.65098, 0.65098, 0.65098, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t20vy"]
-texture = ExtResource("4_vg8ff")
+texture = ExtResource("4_2f3k5")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7xiod"]
-texture = ExtResource("4_vg8ff")
+texture = ExtResource("4_2f3k5")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
@@ -45,18 +45,21 @@ texture_margin_bottom = 20.0
 bg_color = Color(0.75, 0.699219, 0.617188, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nhql"]
-texture = ExtResource("1_1nk5r")
+texture = ExtResource("6_0xrq2")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
 
 [resource]
-CheckBox/icons/checked = ExtResource("1_5wkgn")
-CheckBox/icons/checked_disabled = ExtResource("2_4h4ll")
-CheckBox/icons/radio_checked = ExtResource("1_5wkgn")
-CheckBox/icons/radio_checked_disabled = ExtResource("2_4h4ll")
-CheckBox/icons/radio_unchecked = ExtResource("2_4h4ll")
+CheckBox/icons/checked = ExtResource("1_txcsm")
+CheckBox/icons/checked_disabled = ExtResource("2_sdqgq")
+CheckBox/icons/radio_checked = ExtResource("1_txcsm")
+CheckBox/icons/radio_checked_disabled = ExtResource("2_sdqgq")
+CheckBox/icons/radio_unchecked = ExtResource("2_sdqgq")
+Label/colors/font_color = Color(0.839216, 0.839216, 0.839216, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/shadow_outline_size = 5
 OptionButton/colors/font_color = Color(0, 0, 0, 1)
 OptionButton/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 OptionButton/colors/font_focus_color = Color(0, 0, 0, 1)
@@ -65,7 +68,7 @@ OptionButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 OptionButton/colors/font_outline_color = Color(0, 0, 0, 1)
 OptionButton/colors/font_pressed_color = Color(0, 0, 0, 1)
 OptionButton/constants/arrow_margin = 30
-OptionButton/icons/arrow = ExtResource("3_60hfh")
+OptionButton/icons/arrow = ExtResource("3_cyqum")
 OptionButton/styles/disabled = SubResource("StyleBoxTexture_o5p22")
 OptionButton/styles/focus = SubResource("StyleBoxTexture_mkk0w")
 OptionButton/styles/hover = SubResource("StyleBoxTexture_5opam")
@@ -75,11 +78,14 @@ PopupMenu/colors/font_color = Color(0, 0, 0, 1)
 PopupMenu/constants/h_separation = 4
 PopupMenu/constants/v_separation = 0
 PopupMenu/font_sizes/font_size = 36
-PopupMenu/icons/checked = ExtResource("1_5wkgn")
-PopupMenu/icons/radio_checked = ExtResource("3_bybke")
+PopupMenu/icons/checked = ExtResource("1_txcsm")
+PopupMenu/icons/radio_checked = ExtResource("5_y5pqr")
 PopupMenu/icons/radio_unchecked = SubResource("ImageTexture_25f4t")
 PopupMenu/styles/hover = SubResource("StyleBoxFlat_1uge7")
 PopupMenu/styles/labeled_separator_left = null
 PopupMenu/styles/labeled_separator_right = null
 PopupMenu/styles/panel = SubResource("StyleBoxTexture_8nhql")
 PopupMenu/styles/panel_disabled = null
+RichTextLabel/colors/default_color = Color(0.839216, 0.839216, 0.839216, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/shadow_outline_size = 5

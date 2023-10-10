@@ -44,7 +44,7 @@ func _on_skip_timer_timeout():
 	dialog = []
 	nextPhrase()
 	
-func _process(delta):
+func _process(_delta):
 
 	if Input.is_action_just_pressed("interact") and finished:
 		nextPhrase()
@@ -90,12 +90,12 @@ func nextPhrase() -> void:
 	
 	$Indicator.hide()
 	
-#	$Name.bbcode_text = dialog[phraseNum]["Name"]
+	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
 	
 	$Text.visible_characters = 0
 	
-	var f = FileAccess.open(dialoguePath,FileAccess.READ)
+#	var f = FileAccess.open(dialoguePath,FileAccess.READ)
 #	var img = "res://Sprites/Portraits/" + dialog[phraseNum]["Name"] + dialog[phraseNum]["Emotion"] + ".png"
 #	if f.file_exists(img):
 #		$Portrait.texture = load(img)

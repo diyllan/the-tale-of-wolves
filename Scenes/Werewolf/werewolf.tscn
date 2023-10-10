@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvjuks7llhcdr"]
+
+[ext_resource type="PackedScene" uid="uid://b27kh3kimmhr1" path="res://Assets/Models/Werewolf/werewolf.blend" id="1_u36fi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6n2ja"]
+radius = 1.16334
+height = 5.5992
+
+[node name="Werewolf" type="CharacterBody3D"]
+
+[node name="werewolf" parent="." instance=ExtResource("1_u36fi")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.91889, 0)
+shape = SubResource("CapsuleShape3D_6n2ja")

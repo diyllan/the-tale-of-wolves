@@ -1,7 +1,7 @@
 [
-	{"Text":" Lil RedCap: [shake rate=5 level=10]I'm a Test Text Sad [/shake]"},
-	{"Text":" Lil RedCap: yes"},
-	{"Text":" Lil RedCap: slay or something"},
-	{"Text":" Lil RedCap: fuck you honestly"},
-	{"Text":" Lil RedCap: Stop TESTING!!!"}
+	{"Name":"[center]Lil RedCap[/center]", "Text":"[center][shake rate=5 level=10]I'm a Test Text Sad [/shake][/center]"},
+	{"Name":"[center]Lil RedCap[/center]", "Text":"[center]yes[/center]"},
+	{"Name":"[center]Peter[/center]", "Text":"[center]slay or something[/center]"},
+	{"Name":"[center]Hans[/center]", "Text":"[center]fuck you honestly[/center]"},
+	{"Name":"[center]Joeri[/center]", "Text":"[center]Stop TESTING!!![/center]"}
 ]

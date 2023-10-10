@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8yhyp1jssn7m"
-path.s3tc="res://.godot/imported/redCapTextures.png-a972b0ab9e064c57e19c38232fc0161a.s3tc.ctex"
+uid="uid://dreda0xe8l4qb"
+path.s3tc="res://.godot/imported/WerewolfUPVMap.png-3a28b69e293ba9727de6e87dfd734dfc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Models/Player/LittleRedCap.fbm/redCapTextures.png"
-dest_files=["res://.godot/imported/redCapTextures.png-a972b0ab9e064c57e19c38232fc0161a.s3tc.ctex"]
+source_file="res://Assets/Models/Werewolf/WerewolfUPVMap.png"
+dest_files=["res://.godot/imported/WerewolfUPVMap.png-3a28b69e293ba9727de6e87dfd734dfc.s3tc.ctex"]
 
 [params]
 
