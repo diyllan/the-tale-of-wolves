@@ -1,0 +1,36 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://dl7cl5ihx4h5m"]
+
+[ext_resource type="Texture2D" uid="uid://y1wqpp3togkp" path="res://Assets/Models/Environment/Bushes/bush001_texture.png" id="1_205n8"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_b8254"]
+expanded_output_ports = [0]
+texture = ExtResource("1_205n8")
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_always, cull_disabled, diffuse_burley, specular_schlick_ggx;
+
+uniform sampler2D tex_frg_2;
+
+
+
+void fragment() {
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, UV);
+	float n_out2p4 = n_out2p0.a;
+
+
+// Output:0
+	ALBEDO = vec3(n_out2p0.xyz);
+	ALPHA = n_out2p4;
+
+
+}
+"
+graph_offset = Vector2(-177.469, 75.4579)
+modes/depth_draw = 1
+modes/cull = 2
+modes/diffuse = 2
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_b8254")
+nodes/fragment/2/position = Vector2(100, 160)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 2, 4, 0, 1)
