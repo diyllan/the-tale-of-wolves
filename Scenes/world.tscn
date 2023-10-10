@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=16 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://byxf6n8788tjd" path="res://Assets/Models/Fox/Fox.blend" id="3_a8frt"]
 [ext_resource type="Script" path="res://Scenes/Interactable.gd" id="5_fk6m7"]
 [ext_resource type="AudioStream" uid="uid://w7ivm45o5gav" path="res://Assets/Sound/Music/DarkForrestAmbience.wav" id="8_5x5xe"]
+[ext_resource type="PackedScene" uid="uid://qhig1kh8ilqq" path="res://Assets/Models/Environment/Bridge/Bridge.blend" id="8_e16tx"]
 [ext_resource type="PackedScene" uid="uid://b1s538i3lob8d" path="res://Assets/Models/Player/LittleRedCap.blend" id="8_mqp0v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xtjem"]
@@ -25,9 +26,7 @@ ssao_enabled = true
 ssao_horizon = 0.25
 ssil_radius = 3.3
 sdfgi_use_occlusion = true
-fog_enabled = true
 fog_light_color = Color(0.65098, 0.682353, 0.729412, 1)
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.0821
 volumetric_fog_emission = Color(0.796078, 0.796078, 0.796078, 1)
 adjustment_brightness = 0.78
@@ -103,3 +102,8 @@ process_mode = 3
 stream = ExtResource("8_5x5xe")
 autoplay = true
 bus = &"Music"
+
+[node name="Bridge" parent="." instance=ExtResource("8_e16tx")]
+transform = Transform3D(2, 0, 0, 0, 4.684, 0, 0, 0, 4.684, -17.6609, -0.205567, -15.7074)
+
+[editable path="Bridge"]
