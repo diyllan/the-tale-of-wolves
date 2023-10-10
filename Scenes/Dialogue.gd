@@ -109,10 +109,14 @@ func nextPhrase() -> void:
 		$Text.visible_characters += 1
 		
 		$Timer.start()
-		await get_tree().create_timer(textSpeed).timeout
+		await $Timer.timeout
 		finished = true
 		
 	phraseNum += 1
 	return
 
 
+
+
+func _on_timer_timeout():
+	pass
