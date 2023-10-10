@@ -28,7 +28,7 @@ func start():
 	$Indicator/AnimationPlayer.play("Indicator")
 	
 func track_time_button():
-	var button_time = 5
+	var button_time = 3
 	if Input.is_action_just_pressed("Skip") and dialog:
 		$SkipTimer.start(button_time)
 		
@@ -39,15 +39,13 @@ func track_time_button():
 		
 		$SkipTimer.stop()
 		$TextureProgressBar.hide()
-		print("fail")
 
 func _on_skip_timer_timeout():
 	dialog = []
 	nextPhrase()
-	print("success")
 	
 func _process(delta):
-#	print(finished)
+
 	if Input.is_action_just_pressed("interact") and finished:
 		nextPhrase()
 	elif Input.is_action_just_pressed("interact") and !finished and !interactDelay:
@@ -57,7 +55,7 @@ func _process(delta):
 	
 	if skipping:
 		$TextureProgressBar.show()
-		$TextureProgressBar.value = 5 - $SkipTimer.time_left
+		$TextureProgressBar.value = 20 - $SkipTimer.time_left*6
 		if finished:
 			$Indicator.hide()
 	else:
@@ -66,7 +64,7 @@ func _process(delta):
 		if finished:
 			$Indicator.show()
 		
-#	$Indicator.visible = finished
+
 	
 func _on_interact_delay_timeout():
 	interactDelay = false
@@ -91,7 +89,6 @@ func nextPhrase() -> void:
 		return
 	
 	$Indicator.hide()
-#	finished = false
 	
 #	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]

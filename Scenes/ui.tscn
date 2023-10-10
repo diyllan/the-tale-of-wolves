@@ -780,7 +780,6 @@ libraries = {
 }
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/Dialogue"]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -793,7 +792,7 @@ offset_right = 111.0
 offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 0
-max_value = 5.0
+max_value = 20.0
 rounded = true
 fill_mode = 4
 texture_progress = ExtResource("34_ib4q8")
