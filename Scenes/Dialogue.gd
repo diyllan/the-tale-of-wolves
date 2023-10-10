@@ -8,13 +8,17 @@ var dialog
 var phraseNum = 0
 var finished = false
 var skipping = false
-
+var interactDelay = true
 func _ready():
 	self.hide()
 #	start()
 	
 func start():
+	skipping = false
+	interactDelay = true
+	$InteractDelay.start()
 	$Timer.wait_time = textSpeed
+	$TextureProgressBar.value = 0
 	player.dialogueActive = true
 	phraseNum = 0
 	self.show()
@@ -25,14 +29,14 @@ func start():
 	
 func track_time_button():
 	var button_time = 5
-	if Input.is_action_just_pressed("Skip"):
+	if Input.is_action_just_pressed("Skip") and dialog:
 		$SkipTimer.start(button_time)
-		$Indicator.hide()
-		$TextureProgressBar.show()
+		
+		
 		skipping = true
-	if Input.is_action_just_released("Skip"):
+	if Input.is_action_just_released("Skip") and dialog:
 		skipping = false
-		$Indicator.show()
+		
 		$SkipTimer.stop()
 		$TextureProgressBar.hide()
 		print("fail")
@@ -42,21 +46,30 @@ func _on_skip_timer_timeout():
 	nextPhrase()
 	print("success")
 	
-func _process(delta):	
-	if Input.is_action_just_pressed("interact"):
-		if finished:
-			nextPhrase()
-		else:
-			$Text.visible_characters = len($Text.text)
+func _process(delta):
+#	print(finished)
+	if Input.is_action_just_pressed("interact") and finished:
+		nextPhrase()
+	elif Input.is_action_just_pressed("interact") and !finished and !interactDelay:
+		$Text.visible_characters = len($Text.text)
+		
 	track_time_button()
 	
 	if skipping:
+		$TextureProgressBar.show()
 		$TextureProgressBar.value = 5 - $SkipTimer.time_left
+		if finished:
+			$Indicator.hide()
 	else:
-		$Indicator.visible = finished
+		$TextureProgressBar.hide()
 		$TextureProgressBar.value = 0
+		if finished:
+			$Indicator.show()
+		
+#	$Indicator.visible = finished
 	
-
+func _on_interact_delay_timeout():
+	interactDelay = false
 
 func getDialog() -> Array:
 	var f = FileAccess.open(dialoguePath,FileAccess.READ)
@@ -77,7 +90,8 @@ func nextPhrase() -> void:
 		player.dialogueActive = false
 		return
 	
-	finished = false
+	$Indicator.hide()
+#	finished = false
 	
 #	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
@@ -89,14 +103,18 @@ func nextPhrase() -> void:
 #	if f.file_exists(img):
 #		$Portrait.texture = load(img)
 #	else: $Portrait.texture = null
+	var regex = RegEx.new()
+	regex.compile("\\[.*?\\]")
+	var text_without_tags = regex.sub($Text.text, "", true)
 	
-	while $Text.visible_characters < len($Text.text):
+	while $Text.visible_characters < len(text_without_tags):
+		finished = false
 		$Text.visible_characters += 1
 		
 		$Timer.start()
 		await get_tree().create_timer(textSpeed).timeout
+		finished = true
 		
-	finished = true
 	phraseNum += 1
 	return
 
