@@ -54,6 +54,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.07036, 0, 0)
 [node name="Wolf" parent="." instance=ExtResource("2_crcmj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.835, 0, 0)
 
+[node name="Fox2" parent="." instance=ExtResource("3_a8frt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.0964)
+
 [node name="Fox" parent="." instance=ExtResource("3_a8frt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.04818)
 
