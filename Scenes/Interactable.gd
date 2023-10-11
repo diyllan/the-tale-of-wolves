@@ -1,8 +1,8 @@
 class_name Interactable
 extends StaticBody3D
 
-@export var Interaction_Text = "none"
-@export var prompt_message = "Interact"
+@export var Dialogue_Path = ""
+@export var prompt_message = ""
 @export var prompt_action = "interact"
 
 func get_prompt():
@@ -12,5 +12,11 @@ func get_prompt():
 			key_name = OS.get_keycode_string(action.keycode)
 	return prompt_message + "\n[" + key_name + "]"
 	
-func interact(_body):
-	DialogueManager.showDialogue(Interaction_Text)
+func interact(body):
+	if Dialogue_Path != "":
+		DialogueManager.showDialogue(Dialogue_Path)
+	
+	if prompt_message == "hide":
+		body.hiding = true
+#		if body.hiding:
+#			prompt_message = "leave"

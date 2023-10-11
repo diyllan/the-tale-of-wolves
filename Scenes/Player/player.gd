@@ -8,10 +8,12 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var isPaused = false
 var dialogueActive = false
+var hiding = false
 #define camera-movement objects
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3D
-@onready var anim_play = $Neck/Camera3D/AnimationPlayer
+@onready var camera_anim_play = $Neck/Camera3D/AnimationPlayer
+@onready var anim_play = $LittleRedCapAnim/AnimationPlayer
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
@@ -48,4 +50,5 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if direction != Vector3():
-		anim_play.play("Head Bob")
+		anim_play.play("Walking")
+		camera_anim_play.play("Head Bob")

@@ -6,7 +6,7 @@ func _physics_process(_delta):
 	if is_colliding():
 		var detected = get_collider()
 		
-		if detected is Interactable: 
+		if detected is Interactable:
 			Ui.get_node("CanvasLayer/Prompt").text = detected.get_prompt()
 			Ui.get_node("CanvasLayer/Crosshair").self_modulate = Color("#770000")
 			if Input.is_action_just_pressed(detected.prompt_action) and !get_parent().get_parent().get_parent().dialogueActive:

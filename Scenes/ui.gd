@@ -60,6 +60,7 @@ func _process(_delta):
 			_general_tab.button_pressed = true
 			_sound_tab.button_pressed = false
 			_graphics_tab.button_pressed = false
+			$BookOpen_Close.play()
 			get_tree().paused = true
 
 	elif Input.is_action_just_pressed("Pause") and isPaused:
@@ -68,6 +69,7 @@ func _process(_delta):
 		_bookmenu.hide()
 		crosshair.show()
 		_prompt.show()
+		$BookOpen_Close.play()
 		get_tree().paused = false
 
 func _on_start_pressed():
@@ -104,6 +106,8 @@ func _on_graphics_pressed():
 
 
 func _on_quit_pressed():
+	$BookOpen_Close.play()
+	await $BookOpen_Close.finished
 	get_tree().quit()
 
 
@@ -113,6 +117,7 @@ func _on_continue_pressed():
 	_bookmenu.hide()
 	crosshair.show()
 	_prompt.show()
+	$BookOpen_Close.play()
 	get_tree().paused = false
 
 
