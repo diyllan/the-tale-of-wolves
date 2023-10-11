@@ -25,6 +25,9 @@ var currentCamPosHiding
 @onready var anim_play = $LittleRedCapAnim/AnimationPlayer
 @onready  var model = $LittleRedCapAnim
 
+#Audio
+@onready var HeavyBreathing = $HeavyBreathing
+var HeavyBreathingPlaying = false
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -69,18 +72,21 @@ func _physics_process(delta):
 	
 func playerHide():
 	if hiding:
+		if !HeavyBreathingPlaying:
+			HeavyBreathingPlaying = true
+			HeavyBreathing.play()
 		model.hide()
 		var HidingTween = create_tween()
 		HidingTween.tween_property(self, "global_position", hidingPos.global_position, 0.2)
 #		HidingTween.chain().tween_property(self, "global_rotation", hidingPos.global_rotation, 0.2)
-		print(currentCamPosHiding)
 		camera.fov = 45
 		xMaxRotation = 30
 		xMinRotation = -30
 
 	if hiding and Input.is_action_just_pressed("interact"):
-		print(self.global_rotation)
-		print("hiding and interacting")
+		if HeavyBreathingPlaying:
+			HeavyBreathingPlaying = false
+			HeavyBreathing.stop()
 		hiding = false
 		var LeavingTween = create_tween()
 		LeavingTween.tween_property(self, "global_position", currentCamPosHiding, 0.5)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cuaeywdbin27w"]
+[gd_scene load_steps=12 format=3 uid="uid://cuaeywdbin27w"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_x0tal"]
 [ext_resource type="PackedScene" uid="uid://ccm5cl2x4l7rg" path="res://Assets/Models/Player/LittleRedCapAnim.blend" id="2_id4cr"]
 [ext_resource type="Shader" path="res://Shader/camerapixelation.gdshader" id="3_hrreo"]
 [ext_resource type="Script" path="res://Scenes/Player/InteractRay.gd" id="4_2l74s"]
+[ext_resource type="AudioStream" uid="uid://dapgogsu1cbua" path="res://Assets/Sound/SoundEffects/Player/female-breathing-heavily.wav" id="5_5j5ia"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p0fya"]
 
@@ -174,5 +175,9 @@ script = ExtResource("4_2l74s")
 libraries = {
 "": SubResource("AnimationLibrary_qc3ug")
 }
+
+[node name="HeavyBreathing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_5j5ia")
+bus = &"SoundEffects"
 
 [editable path="LittleRedCapAnim"]

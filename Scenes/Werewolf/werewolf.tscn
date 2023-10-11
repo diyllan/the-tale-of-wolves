@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvjuks7llhcdr"]
+[gd_scene load_steps=10 format=3 uid="uid://dvjuks7llhcdr"]
 
 [ext_resource type="Script" path="res://Scenes/Werewolf/werewolf.gd" id="1_64sjf"]
 [ext_resource type="PackedScene" uid="uid://bh8ftpvfynreu" path="res://Assets/Models/Werewolf/WerewolfAnim.blend" id="2_siml5"]
+[ext_resource type="AudioStream" uid="uid://n2gnde6qshe2" path="res://Assets/Sound/Music/Werewolf/chaseMusic.wav" id="3_e6b02"]
+[ext_resource type="AudioStream" uid="uid://c87g3d20p6e6y" path="res://Assets/Sound/SoundEffects/Werewolf/werewolf_growl.wav" id="3_ixbd6"]
+[ext_resource type="AudioStream" uid="uid://c54dbnfpxlc5s" path="res://Assets/Sound/SoundEffects/Werewolf/werewolf-breathing-and-sniffing.wav" id="4_ygpqp"]
+[ext_resource type="AudioStream" uid="uid://bcpcbg52eydlj" path="res://Assets/Sound/SoundEffects/Werewolf/scream.wav" id="6_jqwge"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6n2ja"]
 radius = 1.0
@@ -20,83 +24,83 @@ script = ExtResource("1_64sjf")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Armature" parent="WerewolfAnim" index="0"]
-transform = Transform3D(-0.0358823, 0.0341566, -0.998772, 0.00352647, 0.999414, 0.0340518, 0.99935, -0.00230028, -0.0359818, -0.018258, 1.70296, 0.201032)
+transform = Transform3D(-0.0251661, -0.0440957, -0.99871, 0.0534748, 0.997537, -0.0453914, 0.998252, -0.0545482, -0.0227461, 0.00312287, 1.3041, 0.182251)
 
 [node name="Skeleton3D" parent="WerewolfAnim/Armature" index="0"]
-bones/1/rotation = Quaternion(0.00193821, -0.00353489, -0.29259, 0.956229)
-bones/2/rotation = Quaternion(0.0145275, -0.0351495, -0.335451, 0.94129)
-bones/3/rotation = Quaternion(-0.00333955, -0.00461087, 0.194162, 0.980953)
-bones/7/rotation = Quaternion(-0.991011, 0.0302885, -0.0180848, 0.129048)
-bones/8/rotation = Quaternion(-0.0766485, -0.0275247, -0.217438, 0.972671)
-bones/9/rotation = Quaternion(0.0382989, -0.623752, 0.0137149, 0.780563)
-bones/14/rotation = Quaternion(0.986684, 0.0407805, 0.131225, 0.087015)
-bones/15/rotation = Quaternion(0.098574, -0.0234185, -0.203208, 0.973879)
-bones/16/rotation = Quaternion(-0.066308, 0.690366, -0.027364, 0.719896)
-bones/22/rotation = Quaternion(-0.984941, -0.122616, -0.0138622, 0.121095)
-bones/23/rotation = Quaternion(-0.0454195, -0.0614042, 0.61687, 0.783351)
-bones/24/rotation = Quaternion(0.0331802, -0.0754296, -0.861963, 0.500229)
-bones/29/rotation = Quaternion(0.972762, 0.140719, 0.135448, 0.124845)
-bones/30/rotation = Quaternion(0.000558398, -0.0194856, 0.59472, 0.803697)
-bones/31/rotation = Quaternion(0.0318752, 0.0392942, -0.842367, 0.536525)
+bones/1/rotation = Quaternion(0.0713679, -0.0379236, -0.613707, 0.785387)
+bones/2/rotation = Quaternion(0.0150111, 0.00913683, -0.362128, 0.931963)
+bones/3/rotation = Quaternion(-0.0225167, 0.0164282, 0.241464, 0.970009)
+bones/7/rotation = Quaternion(-0.872536, -0.234499, -0.024718, 0.427878)
+bones/8/rotation = Quaternion(-0.07737, -0.0409208, -0.219484, 0.971682)
+bones/9/rotation = Quaternion(-0.0747282, -0.941932, -0.0223386, 0.32662)
+bones/14/rotation = Quaternion(0.795967, 0.512652, 0.25541, 0.195937)
+bones/15/rotation = Quaternion(0.111809, -0.00846789, -0.230493, 0.966592)
+bones/16/rotation = Quaternion(0.152473, 0.891398, 0.012065, 0.426634)
+bones/22/rotation = Quaternion(-0.911458, -0.382385, -0.0278644, 0.149161)
+bones/23/rotation = Quaternion(-0.0411899, -0.0163311, 0.893965, 0.44594)
+bones/24/rotation = Quaternion(0.0506233, 0.0277464, -0.796146, 0.602344)
+bones/29/rotation = Quaternion(0.919493, 0.33737, 0.0861036, 0.182481)
+bones/30/rotation = Quaternion(0.0107745, -0.077651, 0.807621, 0.584468)
+bones/31/rotation = Quaternion(0.0439307, 0.020589, -0.879662, 0.473119)
 
 [node name="Head" parent="WerewolfAnim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.973997, -0.209519, -0.0862067, 0.210909, 0.977479, 0.0072426, 0.0827478, -0.0252361, 0.996251, -0.60715, 3.42923, -0.0048344)
+transform = Transform3D(0.890545, 0.450407, -0.0637441, -0.454243, 0.87299, -0.177628, -0.0243568, 0.187141, 0.982031, 1.11388, 2.68233, 0.463351)
 bone_idx = 5
 
 [node name="Neck" parent="WerewolfAnim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.976518, -0.199215, -0.0820137, 0.199618, 0.979868, -0.00333715, 0.0810274, -0.0131126, 0.996626, -0.416943, 2.52703, 0.0155736)
+transform = Transform3D(0.831564, 0.543222, -0.115806, -0.555358, 0.816513, -0.157745, 0.00886591, 0.195489, 0.980666, 0.689051, 1.92328, 0.276793)
 bone_idx = 6
 
 [node name="Hand Left" parent="WerewolfAnim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.190721, -0.146857, 0.970597, 0.367955, 0.927353, 0.0680111, -0.910074, 0.344165, 0.230903, 0.716938, -0.00739177, -0.175125)
+transform = Transform3D(-0.40517, -0.244043, 0.881067, 0.469337, 0.771511, 0.429528, -0.784577, 0.587549, -0.198055, 2.1894, 0.270202, -1.54534)
 bone_idx = 11
 
 [node name="Arm Lower Left" parent="WerewolfAnim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.999567, 0.0108829, -0.0273222, -0.0135961, 0.994777, -0.101164, 0.0260786, 0.101492, 0.994494, -1.0718, -0.763091, -0.290762)
+transform = Transform3D(0.894818, -0.0281696, -0.445541, -0.287396, 0.72735, -0.623189, 0.341619, 0.685688, 0.642751, -0.226517, -0.709903, -2.33629)
 bone_idx = 12
 
 [node name="Arm Upper Left" parent="WerewolfAnim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.921679, 0.38789, 0.00698987, -0.386107, 0.9189, -0.0809002, -0.0378034, 0.0718652, 0.996698, -0.430693, 2.0395, -0.00484616)
+transform = Transform3D(0.837623, 0.32549, -0.438686, -0.543811, 0.572679, -0.61344, 0.0515574, 0.752394, 0.656693, 0.231042, 1.18082, -0.209353)
 bone_idx = 13
 
 [node name="Hand Right" parent="WerewolfAnim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(-0.209276, -0.179528, -0.961235, 0.317493, 0.917271, -0.24044, 0.924879, -0.355504, -0.134965, 1.25967, 0.19638, 0.418686)
+transform = Transform3D(-0.639669, -0.683546, -0.351552, -0.327154, 0.65598, -0.680191, 0.695553, -0.320085, -0.643236, 2.26774, 0.708879, 1.96811)
 bone_idx = 18
 
 [node name="Arm Lower Right" parent="WerewolfAnim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.977897, -0.115849, -0.174059, 0.116747, 0.993149, -0.00510744, 0.173458, -0.0153263, 0.984722, -0.516446, -0.792045, -0.0767409)
+transform = Transform3D(0.854599, -0.37796, -0.3561, 0.46502, 0.862216, 0.200849, 0.231123, -0.337239, 0.912608, 1.25692, -1.61735, 1.12283)
 bone_idx = 19
 
 [node name="Arm Upper Right" parent="WerewolfAnim/Armature/Skeleton3D" index="7"]
-transform = Transform3D(0.94803, 0.241049, -0.20769, -0.248188, 0.968673, -0.00862865, 0.199104, 0.0597264, 0.978157, -0.264172, 2.06012, -0.0220672)
+transform = Transform3D(0.925756, 0.0177609, -0.377704, 0.0713513, 0.972745, 0.220624, 0.371328, -0.231194, 0.899258, 0.74998, 1.06539, 0.302987)
 bone_idx = 20
 
 [node name="Body Upper" parent="WerewolfAnim/Armature/Skeleton3D" index="8"]
-transform = Transform3D(0.97063, -0.2405, -0.00604643, 0.240469, 0.970642, -0.00533372, 0.00715168, 0.00372309, 0.999968, -0.23029, 1.77811, 0.00768969)
+transform = Transform3D(0.881293, 0.462847, -0.0953705, -0.472008, 0.87198, -0.129847, 0.023062, 0.159448, 0.986937, 0.335277, 1.25224, 0.154891)
 bone_idx = 21
 
 [node name="Feet Left" parent="WerewolfAnim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.718959, -0.585435, 0.374654, 0.648716, 0.758715, -0.0593149, -0.249527, 0.28569, 0.925262, 0.30156, -1.199, -0.240834)
+transform = Transform3D(0.984133, -0.0630307, 0.165858, 0.0970176, 0.973819, -0.205582, -0.148559, 0.218413, 0.964479, 0.340185, -0.925251, -0.109723)
 bone_idx = 26
 
 [node name="Leg Lower left" parent="WerewolfAnim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.947187, -0.212154, 0.240475, 0.248826, 0.959262, -0.133793, -0.202292, 0.186565, 0.961386, 0.0686016, -0.863537, -0.0235719)
+transform = Transform3D(0.969475, 0.121509, 0.212966, -0.086516, 0.982226, -0.166571, -0.229422, 0.143063, 0.962752, 0.228553, -0.319403, -0.0178924)
 bone_idx = 27
 
 [node name="Leg Upper Left" parent="WerewolfAnim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.969872, -0.228128, 0.0854758, 0.232272, 0.971742, -0.0420217, -0.0734744, 0.0606126, 0.995449, 0.0610748, -0.109826, -0.0278368)
+transform = Transform3D(0.716806, -0.692258, 0.0834666, 0.697183, 0.709648, -0.101659, 0.0111423, 0.131065, 0.991307, 0.0959153, 0.0183111, -0.0248806)
 bone_idx = 28
 
 [node name="Feet Right" parent="WerewolfAnim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.722817, -0.601642, -0.339941, 0.630834, 0.775305, -0.0308244, 0.282105, -0.192168, 0.939933, 0.400438, -1.21777, 0.198447)
+transform = Transform3D(0.796283, -0.564163, -0.218291, 0.58738, 0.807369, 0.0560377, 0.144629, -0.172844, 0.974266, 0.326021, -0.81644, 0.274568)
 bone_idx = 33
 
 [node name="Leg Lower Right" parent="WerewolfAnim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.908868, -0.292389, -0.297431, 0.319165, 0.946645, 0.0446809, 0.268501, -0.13554, 0.953688, 0.117728, -0.851394, 0.030439)
+transform = Transform3D(0.974383, -0.0929877, -0.204766, 0.120902, 0.984337, 0.128309, 0.189631, -0.14978, 0.970356, 0.185819, -0.48314, 0.159355)
 bone_idx = 34
 
 [node name="Leg Upper Right" parent="WerewolfAnim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.947701, -0.249569, -0.198939, 0.253376, 0.967346, -0.00650685, 0.19407, -0.0442411, 0.979982, 0.0970647, -0.0905121, 0.0545645)
+transform = Transform3D(0.784114, -0.58042, -0.219718, 0.613906, 0.77732, 0.137445, 0.0910175, -0.242662, 0.965824, 0.134876, -0.0211303, 0.0767222)
 bone_idx = 35
 
 [node name="Body Lower" parent="WerewolfAnim/Armature/Skeleton3D" index="15"]
@@ -122,6 +126,26 @@ shape = SubResource("BoxShape3D_280fq")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_height_offset = 0.5
 path_max_distance = 10.71
+
+[node name="chaseMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_e6b02")
+bus = &"Music"
+
+[node name="Growl" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_ixbd6")
+unit_size = 7.87
+pitch_scale = 0.72
+bus = &"SoundEffects"
+
+[node name="Breathing_Sniffing" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_ygpqp")
+unit_size = 4.33
+pitch_scale = 0.63
+bus = &"Music"
+
+[node name="Scream" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_jqwge")
+bus = &"SoundEffects"
 
 [connection signal="body_entered" from="BiteRange" to="." method="_on_bite_range_body_entered"]
 [connection signal="body_exited" from="BiteRange" to="." method="_on_bite_range_body_exited"]

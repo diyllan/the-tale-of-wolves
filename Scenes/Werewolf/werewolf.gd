@@ -25,6 +25,16 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var anim_player = $WerewolfAnim/AnimationPlayer
 @onready var test = $Marker3D
 
+#Audio
+@onready var chaseMusic = $chaseMusic
+@onready var Growl = $Growl
+@onready var Breathing_Sniffling = $Breathing_Sniffing
+@onready var Scream = $Scream
+var chasePlaying = false
+var growlPlaying = false
+var Breathing_SnifflingPLaying = false
+var ScreamPlaying = false
+
 func _ready():
 	nav_agent.debug_enabled = true
 
@@ -37,6 +47,9 @@ func _physics_process(delta):
 	match state:
 		IDLE:
 			print("IDLE")
+			if !Breathing_SnifflingPLaying:
+				Breathing_SnifflingPLaying = true
+				Breathing_Sniffling.play()
 			anim_player.play("Scratch")
 			await anim_player.animation_finished
 			update_target_position()
@@ -44,18 +57,36 @@ func _physics_process(delta):
 
 		WANDER:
 			print("WANDER")
+			if !Breathing_SnifflingPLaying:
+				Breathing_SnifflingPLaying = true
+				Breathing_Sniffling.play()
 			random_roaming_position()
 			if nav_agent.is_navigation_finished():
 				state = IDLE
 		GROWL:
+			if Breathing_SnifflingPLaying:
+				Breathing_SnifflingPLaying = false
+				Breathing_Sniffling.stop()
+			if !growlPlaying:
+				growlPlaying = true
+				Growl.play()
 			print("GROWL")
 			anim_player.play("Growl")
 			await anim_player.animation_finished
 			state = CHASE
 		CHASE:
+			if !chasePlaying:
+				chasePlaying = true
+				chaseMusic.play()
 			print("CHASE")
 			chase()
 		BITE:
+			if Breathing_SnifflingPLaying:
+				Breathing_SnifflingPLaying = false
+				Breathing_Sniffling.stop()
+			if !ScreamPlaying:
+				ScreamPlaying = true
+				Scream.play()
 			print("BITE")
 			anim_player.play("NeckBite")
 			await anim_player.animation_finished
