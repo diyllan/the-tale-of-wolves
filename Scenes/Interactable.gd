@@ -18,5 +18,9 @@ func interact(body):
 	
 	if prompt_message == "hide":
 		body.hiding = true
+		body.hidingPos = get_parent().get_node("HidingPos")
+		body.currentCamPosHiding = body.global_position
+		body.yMaxRotation = 100
+		body.yMinRotation = -10
 #		if body.hiding:
 #			prompt_message = "leave"

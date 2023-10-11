@@ -106,8 +106,6 @@ func _on_graphics_pressed():
 
 
 func _on_quit_pressed():
-	$BookOpen_Close.play()
-	await $BookOpen_Close.finished
 	get_tree().quit()
 
 
