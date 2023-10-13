@@ -12,6 +12,7 @@ var hiding = false
 var leaveHiding = false
 var death = false
 
+
 var hidingPos
 var xMaxRotation = 60
 var xMinRotation = -60
@@ -24,7 +25,8 @@ var currentCamPosHiding
 @onready var camera = $Neck/Camera3D
 @onready var camera_anim_play = $Neck/Camera3D/AnimationPlayer
 @onready var anim_play = $LittleRedCapAnim/AnimationPlayer
-@onready  var model = $LittleRedCapAnim
+@onready var model = $LittleRedCapAnim
+@onready var collision = $Collision
 
 #Audio
 @onready var HeavyBreathing = $HeavyBreathing
@@ -80,6 +82,7 @@ func playerHide():
 	if hiding:
 		
 		model.hide()
+#		collision.disabled = true
 		var HidingTween = create_tween()
 		HidingTween.tween_property(self, "global_position", hidingPos.global_position, 0.2)
 #		HidingTween.chain().tween_property(self, "global_rotation", hidingPos.global_rotation, 0.2)
@@ -103,8 +106,12 @@ func playerHide():
 			HeavyBreathingPlaying = false
 			HeavyBreathing.stop()
 		hiding = false
+		
 		var LeavingTween = create_tween()
 		LeavingTween.tween_property(self, "global_position", currentCamPosHiding, 0.5)
+		await LeavingTween.finished
+		model.show()
+#		collision.disabled = false
 #		LeavingTween.chain().tween_property(self, "global_rotation", currentCamPosHiding.global_rotation, 0.5)
 		xMaxRotation = 60
 		xMinRotation = -60
