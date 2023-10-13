@@ -8,12 +8,12 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p0fya"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vra6j"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4vnny"]
 render_priority = 0
 shader = ExtResource("3_hrreo")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_n2cv5"]
-material = SubResource("ShaderMaterial_vra6j")
+material = SubResource("ShaderMaterial_4vnny")
 
 [sub_resource type="Animation" id="Animation_om646"]
 resource_name = "Head Bob"
@@ -179,5 +179,7 @@ libraries = {
 [node name="HeavyBreathing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_5j5ia")
 bus = &"SoundEffects"
+
+[node name="BreathingTImer" type="Timer" parent="."]
 
 [editable path="LittleRedCapAnim"]

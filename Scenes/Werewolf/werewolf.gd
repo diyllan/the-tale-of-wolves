@@ -24,6 +24,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var nav_agent = $NavigationAgent3D
 @onready var anim_player = $WerewolfAnim/AnimationPlayer
 @onready var test = $Marker3D
+@onready var camera = $"WerewolfAnim/Armature/Skeleton3D/Body Upper/Camera3D"
 
 #Audio
 @onready var chaseMusic = $chaseMusic
@@ -34,6 +35,7 @@ var chasePlaying = false
 var growlPlaying = false
 var Breathing_SnifflingPLaying = false
 var ScreamPlaying = false
+var playerTooClose = false
 
 func _ready():
 	nav_agent.debug_enabled = true
@@ -43,54 +45,88 @@ func _ready():
 func _physics_process(delta):
 	velocity = Vector3.ZERO
 	setGravity(delta)
-	
 	match state:
 		IDLE:
-			print("IDLE")
+			print("idle")
 			if !Breathing_SnifflingPLaying:
 				Breathing_SnifflingPLaying = true
 				Breathing_Sniffling.play()
-			anim_player.play("Scratch")
-			await anim_player.animation_finished
-			update_target_position()
-			state = WANDER
+			if _player != null:
+				if !_player.hiding and !playerTooClose:
+					anim_player.play("Scratch")
+					await anim_player.animation_finished
+					update_target_position()
+					state = WANDER
+				if _player.hiding and !playerTooClose:
+					anim_player.play("LookinAround")
+					await anim_player.animation_finished
+					update_target_position()
+					state = WANDER
+			else:
+				anim_player.play("Scratch")
+				await anim_player.animation_finished
+				update_target_position()
+				state = WANDER
+			
 
 		WANDER:
-			print("WANDER")
+			print("wander")
 			if !Breathing_SnifflingPLaying:
 				Breathing_SnifflingPLaying = true
 				Breathing_Sniffling.play()
+			
 			random_roaming_position()
 			if nav_agent.is_navigation_finished():
 				state = IDLE
 		GROWL:
+			print("growl")
+			if _player.hiding and !playerTooClose:
+				anim_player.play("LookinAround")
+				await anim_player.animation_finished
+				state = IDLE
+				return
 			if Breathing_SnifflingPLaying:
 				Breathing_SnifflingPLaying = false
 				Breathing_Sniffling.stop()
 			if !growlPlaying:
 				growlPlaying = true
 				Growl.play()
-			print("GROWL")
+				await Growl.finished
+				growlPlaying = false
 			anim_player.play("Growl")
 			await anim_player.animation_finished
 			state = CHASE
 		CHASE:
+			print("chase")
+			if _player.hiding and !playerTooClose:
+				chaseMusic.stop()
+				chasePlaying = false
+				state = IDLE
+				
 			if !chasePlaying:
-				chasePlaying = true
-				chaseMusic.play()
-			print("CHASE")
+				if playerTooClose or _player.hiding:
+					chaseMusic.stop()
+					chasePlaying = false
+					print("stopped chase music")
+				else:
+					print("stopped chase music")
+					chasePlaying = true
+					chaseMusic.play()
 			chase()
 		BITE:
+			print("bite")
 			if Breathing_SnifflingPLaying:
 				Breathing_SnifflingPLaying = false
 				Breathing_Sniffling.stop()
 			if !ScreamPlaying:
 				ScreamPlaying = true
 				Scream.play()
-			print("BITE")
+			chaseMusic.stop()
 			anim_player.play("NeckBite")
+			camera.make_current()
+			_player.hide()
 			await anim_player.animation_finished
-			state = IDLE
+			_player.death = true
 #	if _player == null: 
 #		isWalking = true
 #		anim_player.play("Walking")
@@ -117,7 +153,6 @@ func update_target_position():
 func random_roaming_position():
 	anim_player.play("Walking")
 	last_target_vector = target_vector 
-	print("new vector" + str(target_vector) + "" + "last vector"+str(last_target_vector))
 	nav_agent.set_target_position(target_vector)
 	var next_nav_point = nav_agent.get_next_path_position()
 	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
@@ -138,21 +173,18 @@ func chase():
 	move_and_slide()
 	
 func _on_detect_player_body_entered(body):
-	if body.name == "Player" and _player == null:
-		state = GROWL
-		_player = body
-
-func _on_detect_player_body_exited(body):
 	if body.name == "Player":
-		print("Player exited")
-#		_player = null
-
+		_player = body
+		if state != CHASE and !_player.hiding:
+			state = GROWL
 
 func _on_bite_range_body_entered(body):
 	if body.name == "Player":
-		state = BITE
-		print("Player got caught")
-		await anim_player.animation_finished
+		if !_player.hiding or _player.hiding and playerTooClose:
+			state = BITE
 
-func _on_bite_range_body_exited(body):
-	pass # Replace with function body.
+func _on_player_too_close_body_entered(body):
+	if body.name == "Player":
+		if !_player.hiding:
+			print("player too close and not hiding")
+			playerTooClose = true

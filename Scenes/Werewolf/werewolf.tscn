@@ -1,21 +1,26 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvjuks7llhcdr"]
+[gd_scene load_steps=12 format=3 uid="uid://dvjuks7llhcdr"]
 
 [ext_resource type="Script" path="res://Scenes/Werewolf/werewolf.gd" id="1_64sjf"]
 [ext_resource type="PackedScene" uid="uid://bh8ftpvfynreu" path="res://Assets/Models/Werewolf/WerewolfAnim.blend" id="2_siml5"]
+[ext_resource type="Shader" path="res://Shader/camerapixelation.gdshader" id="3_62uxq"]
 [ext_resource type="AudioStream" uid="uid://n2gnde6qshe2" path="res://Assets/Sound/Music/Werewolf/chaseMusic.wav" id="3_e6b02"]
 [ext_resource type="AudioStream" uid="uid://c87g3d20p6e6y" path="res://Assets/Sound/SoundEffects/Werewolf/werewolf_growl.wav" id="3_ixbd6"]
 [ext_resource type="AudioStream" uid="uid://c54dbnfpxlc5s" path="res://Assets/Sound/SoundEffects/Werewolf/werewolf-breathing-and-sniffing.wav" id="4_ygpqp"]
 [ext_resource type="AudioStream" uid="uid://bcpcbg52eydlj" path="res://Assets/Sound/SoundEffects/Werewolf/scream.wav" id="6_jqwge"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fxrpj"]
+render_priority = 0
+shader = ExtResource("3_62uxq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rpm5k"]
+material = SubResource("ShaderMaterial_fxrpj")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6n2ja"]
 radius = 1.0
 height = 5.5992
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w256i"]
-size = Vector3(3.74378, 3.97616, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_280fq"]
-size = Vector3(6.07473, 6.4086, 7.13153)
+size = Vector3(3.74378, 5.37165, 1)
 
 [node name="Werewolf" type="CharacterBody3D"]
 script = ExtResource("1_64sjf")
@@ -24,83 +29,104 @@ script = ExtResource("1_64sjf")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Armature" parent="WerewolfAnim" index="0"]
-transform = Transform3D(-0.0251661, -0.0440957, -0.99871, 0.0534748, 0.997537, -0.0453914, 0.998252, -0.0545482, -0.0227461, 0.00312287, 1.3041, 0.182251)
+transform = Transform3D(-0.323681, -0.0138552, -0.946064, -0.192635, 0.979915, 0.0515562, 0.926349, 0.198933, -0.319849, -0.0518674, 1.56776, 0.143126)
 
 [node name="Skeleton3D" parent="WerewolfAnim/Armature" index="0"]
-bones/1/rotation = Quaternion(0.0713679, -0.0379236, -0.613707, 0.785387)
-bones/2/rotation = Quaternion(0.0150111, 0.00913683, -0.362128, 0.931963)
-bones/3/rotation = Quaternion(-0.0225167, 0.0164282, 0.241464, 0.970009)
-bones/7/rotation = Quaternion(-0.872536, -0.234499, -0.024718, 0.427878)
-bones/8/rotation = Quaternion(-0.07737, -0.0409208, -0.219484, 0.971682)
-bones/9/rotation = Quaternion(-0.0747282, -0.941932, -0.0223386, 0.32662)
-bones/14/rotation = Quaternion(0.795967, 0.512652, 0.25541, 0.195937)
-bones/15/rotation = Quaternion(0.111809, -0.00846789, -0.230493, 0.966592)
-bones/16/rotation = Quaternion(0.152473, 0.891398, 0.012065, 0.426634)
-bones/22/rotation = Quaternion(-0.911458, -0.382385, -0.0278644, 0.149161)
-bones/23/rotation = Quaternion(-0.0411899, -0.0163311, 0.893965, 0.44594)
-bones/24/rotation = Quaternion(0.0506233, 0.0277464, -0.796146, 0.602344)
-bones/29/rotation = Quaternion(0.919493, 0.33737, 0.0861036, 0.182481)
-bones/30/rotation = Quaternion(0.0107745, -0.077651, 0.807621, 0.584468)
-bones/31/rotation = Quaternion(0.0439307, 0.020589, -0.879662, 0.473119)
+bones/1/rotation = Quaternion(0.0100247, -0.00838711, -0.301666, 0.953324)
+bones/2/rotation = Quaternion(0.00170087, 0.00974926, -0.389399, 0.921016)
+bones/3/rotation = Quaternion(-0.0331413, 0.0137764, 0.238644, 0.970444)
+bones/7/rotation = Quaternion(-0.914648, -0.0987304, -0.00823275, 0.391922)
+bones/8/rotation = Quaternion(-0.207393, -0.266356, -0.588342, 0.734776)
+bones/9/rotation = Quaternion(-0.0152446, -0.52561, -0.256715, 0.810925)
+bones/14/rotation = Quaternion(0.945224, 0.160465, 0.108984, 0.262538)
+bones/15/rotation = Quaternion(0.282671, 0.237621, -0.582728, 0.723921)
+bones/16/rotation = Quaternion(0.166789, 0.534326, -0.0298236, 0.828123)
+bones/22/rotation = Quaternion(-0.905221, -0.313891, 0.0326695, 0.284571)
+bones/23/rotation = Quaternion(-0.0559066, -0.0431442, 0.630471, 0.772994)
+bones/24/rotation = Quaternion(-0.0740098, -0.105307, -0.791285, 0.597747)
+bones/29/rotation = Quaternion(0.933151, 0.264212, 0.12894, 0.206871)
+bones/30/rotation = Quaternion(-0.0144027, -0.00284099, 0.623385, 0.781777)
+bones/31/rotation = Quaternion(0.112419, 0.105801, -0.812136, 0.562675)
 
 [node name="Head" parent="WerewolfAnim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.890545, 0.450407, -0.0637441, -0.454243, 0.87299, -0.177628, -0.0243568, 0.187141, 0.982031, 1.11388, 2.68233, 0.463351)
+transform = Transform3D(0.983241, -0.170146, 0.0654836, 0.170475, 0.985362, 0.000565473, -0.0646213, 0.0106073, 0.997854, -0.5077, 3.3972, 0.0797301)
 bone_idx = 5
 
+[node name="LeftEye" type="OmniLight3D" parent="WerewolfAnim/Armature/Skeleton3D/Head" index="0"]
+transform = Transform3D(-0.0219443, -0.404398, -0.91432, 0.236729, 0.88643, -0.397744, 0.971328, -0.225175, 0.0762808, 1.23127, -0.0844474, -0.287888)
+light_color = Color(0.466667, 0, 0, 1)
+light_energy = 16.0
+light_volumetric_fog_energy = 16.0
+omni_range = 0.2
+
+[node name="RightEye" type="OmniLight3D" parent="WerewolfAnim/Armature/Skeleton3D/Head" index="1"]
+transform = Transform3D(-0.0219443, -0.404398, -0.91432, 0.236729, 0.88643, -0.397744, 0.971328, -0.225175, 0.0762808, 1.24966, -0.0301294, 0.282623)
+light_color = Color(0.466667, 0, 0, 1)
+light_energy = 16.0
+light_volumetric_fog_energy = 16.0
+omni_range = 0.2
+
 [node name="Neck" parent="WerewolfAnim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.831564, 0.543222, -0.115806, -0.555358, 0.816513, -0.157745, 0.00886591, 0.195489, 0.980666, 0.689051, 1.92328, 0.276793)
+transform = Transform3D(0.997742, -0.0670845, 0.00336364, 0.0671615, 0.997115, -0.0353703, -0.000981143, 0.0355163, 0.999369, -0.384812, 2.51498, 0.0419194)
 bone_idx = 6
 
 [node name="Hand Left" parent="WerewolfAnim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(-0.40517, -0.244043, 0.881067, 0.469337, 0.771511, 0.429528, -0.784577, 0.587549, -0.198055, 2.1894, 0.270202, -1.54534)
+transform = Transform3D(-0.581304, -0.808063, -0.0955057, 0.38423, -0.376063, 0.843175, -0.717254, 0.453444, 0.529088, 1.35391, 1.91595, -0.541875)
 bone_idx = 11
 
 [node name="Arm Lower Left" parent="WerewolfAnim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.894818, -0.0281696, -0.445541, -0.287396, 0.72735, -0.623189, 0.341619, 0.685688, 0.642751, -0.226517, -0.709903, -2.33629)
+transform = Transform3D(0.380085, -0.92338, 0.0539014, 0.918181, 0.369623, -0.142557, 0.111711, 0.103675, 0.988318, 1.49419, 0.0449564, -0.877497)
 bone_idx = 12
 
 [node name="Arm Upper Left" parent="WerewolfAnim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.837623, 0.32549, -0.438686, -0.543811, 0.572679, -0.61344, 0.0515574, 0.752394, 0.656693, 0.231042, 1.18082, -0.209353)
+transform = Transform3D(0.99095, 0.133633, 0.0126355, -0.099976, 0.79761, -0.59483, -0.0895674, 0.588184, 0.803752, -0.337204, 1.66507, -0.241577)
 bone_idx = 13
 
 [node name="Hand Right" parent="WerewolfAnim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(-0.639669, -0.683546, -0.351552, -0.327154, 0.65598, -0.680191, 0.695553, -0.320085, -0.643236, 2.26774, 0.708879, 1.96811)
+transform = Transform3D(-0.179109, -0.957818, 0.224731, 0.174487, -0.255729, -0.950871, 0.968232, -0.131097, 0.21293, 0.941542, 2.09537, 0.519382)
 bone_idx = 18
 
 [node name="Arm Lower Right" parent="WerewolfAnim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.854599, -0.37796, -0.3561, 0.46502, 0.862216, 0.200849, 0.231123, -0.337239, 0.912608, 1.25692, -1.61735, 1.12283)
+transform = Transform3D(0.223779, -0.9706, -0.0886551, 0.940359, 0.238925, -0.242155, 0.256217, -0.0291786, 0.966179, 1.74829, 0.403055, 0.333397)
 bone_idx = 19
 
 [node name="Arm Upper Right" parent="WerewolfAnim/Armature/Skeleton3D" index="7"]
-transform = Transform3D(0.925756, 0.0177609, -0.377704, 0.0713513, 0.972745, 0.220624, 0.371328, -0.231194, 0.899258, 0.74998, 1.06539, 0.302987)
+transform = Transform3D(0.982787, 0.0678456, -0.17183, -0.0102141, 0.948655, 0.316147, 0.184457, -0.30895, 0.93302, -0.223648, 1.77208, 0.143975)
 bone_idx = 20
 
 [node name="Body Upper" parent="WerewolfAnim/Armature/Skeleton3D" index="8"]
-transform = Transform3D(0.881293, 0.462847, -0.0953705, -0.472008, 0.87198, -0.129847, 0.023062, 0.159448, 0.986937, 0.335277, 1.25224, 0.154891)
+transform = Transform3D(0.974955, -0.222068, -0.0121842, 0.22175, 0.974829, -0.0231254, 0.0170129, 0.0198444, 0.999658, -0.211364, 1.77027, 0.0279876)
 bone_idx = 21
 
+[node name="Camera3D" type="Camera3D" parent="WerewolfAnim/Armature/Skeleton3D/Body Upper" index="1"]
+transform = Transform3D(-0.0809454, 0.0527999, 0.995319, -0.00581138, 0.998554, -0.0534442, -0.996702, -0.0101102, -0.0805215, 2.8465, 1.14429, -0.0530888)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WerewolfAnim/Armature/Skeleton3D/Body Upper/Camera3D"]
+transform = Transform3D(2.4397, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0301274, -0.0447097, -0.181395)
+mesh = SubResource("PlaneMesh_rpm5k")
+
 [node name="Feet Left" parent="WerewolfAnim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.984133, -0.0630307, 0.165858, 0.0970176, 0.973819, -0.205582, -0.148559, 0.218413, 0.964479, 0.340185, -0.925251, -0.109723)
+transform = Transform3D(0.505008, -0.70921, 0.491923, 0.774224, 0.624138, 0.105012, -0.3815, 0.327832, 0.86428, 0.74351, -0.867115, -0.789791)
 bone_idx = 26
 
 [node name="Leg Lower left" parent="WerewolfAnim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.969475, 0.121509, 0.212966, -0.086516, 0.982226, -0.166571, -0.229422, 0.143063, 0.962752, 0.228553, -0.319403, -0.0178924)
+transform = Transform3D(0.728125, -0.477462, 0.491796, 0.627456, 0.753104, -0.197818, -0.275923, 0.452619, 0.847937, 0.409798, -0.682349, -0.331601)
 bone_idx = 27
 
 [node name="Leg Upper Left" parent="WerewolfAnim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.716806, -0.692258, 0.0834666, 0.697183, 0.709648, -0.101659, 0.0111423, 0.131065, 0.991307, 0.0959153, 0.0183111, -0.0248806)
+transform = Transform3D(0.755224, -0.54477, 0.3645, 0.631922, 0.75284, -0.18413, -0.174103, 0.369399, 0.912813, 0.155826, -0.0266796, -0.130216)
 bone_idx = 28
 
 [node name="Feet Right" parent="WerewolfAnim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.796283, -0.564163, -0.218291, 0.58738, 0.807369, 0.0560377, 0.144629, -0.172844, 0.974266, 0.326021, -0.81644, 0.274568)
+transform = Transform3D(0.551824, -0.693621, -0.463007, 0.724092, 0.673937, -0.146619, 0.413737, -0.254356, 0.874135, 0.612144, -1.00009, 0.605163)
 bone_idx = 33
 
 [node name="Leg Lower Right" parent="WerewolfAnim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.974383, -0.0929877, -0.204766, 0.120902, 0.984337, 0.128309, 0.189631, -0.14978, 0.970356, 0.185819, -0.48314, 0.159355)
+transform = Transform3D(0.802199, -0.40153, -0.441866, 0.50595, 0.850111, 0.146032, 0.317002, -0.340712, 0.885106, 0.327578, -0.765409, 0.216026)
 bone_idx = 34
 
 [node name="Leg Upper Right" parent="WerewolfAnim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.784114, -0.58042, -0.219718, 0.613906, 0.77732, 0.137445, 0.0910175, -0.242662, 0.965824, 0.134876, -0.0211303, 0.0767222)
+transform = Transform3D(0.842364, -0.446357, -0.301969, 0.496735, 0.860399, 0.113873, 0.208989, -0.245924, 0.946484, 0.144574, -0.0547196, 0.107332)
 bone_idx = 35
 
 [node name="Body Lower" parent="WerewolfAnim/Armature/Skeleton3D" index="15"]
@@ -111,17 +137,25 @@ bone_idx = 36
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.91889, 0)
 shape = SubResource("CapsuleShape3D_6n2ja")
 
+[node name="PlayerTooClose" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="PlayerTooClose"]
+transform = Transform3D(1, 0, 0, 0, 0.0618499, 0.998085, 0, -0.998085, 0.0618499, 0, 2.2034, 1.1569)
+depth = 5.0
+polygon = PackedVector2Array(-0.964603, 0.512069, 0.942863, 0.599505, 2.52664, 8.84695, -2.87089, 8.84601)
+
 [node name="BiteRange" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BiteRange"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.40382, -2.73321)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.28451, -2.73321)
 shape = SubResource("BoxShape3D_w256i")
 
 [node name="DetectPlayer" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectPlayer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.40382, -3.98102)
-shape = SubResource("BoxShape3D_280fq")
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="DetectPlayer"]
+transform = Transform3D(1, 0, 0, 0, 0.0618499, 0.998085, 0, -0.998085, 0.0618499, 0, 2.2034, 1.1569)
+depth = 5.0
+polygon = PackedVector2Array(-0.964603, 0.512069, 0.942863, 0.599505, 15.1154, 14.877, -14.3672, 15.7806)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_height_offset = 0.5
@@ -147,8 +181,16 @@ bus = &"Music"
 stream = ExtResource("6_jqwge")
 bus = &"SoundEffects"
 
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.562483)
+light_color = Color(0.466667, 0, 0, 1)
+light_energy = 10.0
+light_volumetric_fog_energy = 5.0
+spot_range = 13.8714
+spot_angle = 46.9678
+
+[connection signal="body_entered" from="PlayerTooClose" to="." method="_on_player_too_close_body_entered"]
 [connection signal="body_entered" from="BiteRange" to="." method="_on_bite_range_body_entered"]
-[connection signal="body_exited" from="BiteRange" to="." method="_on_bite_range_body_exited"]
 [connection signal="body_entered" from="DetectPlayer" to="." method="_on_detect_player_body_entered"]
 [connection signal="body_exited" from="DetectPlayer" to="." method="_on_detect_player_body_exited"]
 

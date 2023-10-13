@@ -23,16 +23,18 @@ sky_material = SubResource("ProceduralSkyMaterial_xtjem")
 background_mode = 2
 sky = SubResource("Sky_cvnii")
 ambient_light_source = 2
-ambient_light_color = Color(0.356863, 0.356863, 0.356863, 1)
+ambient_light_color = Color(0.231373, 0.231373, 0.231373, 1)
 ssao_enabled = true
 ssao_horizon = 0.25
 ssil_radius = 3.3
 sdfgi_use_occlusion = true
 fog_enabled = true
-fog_light_color = Color(0.65098, 0.682353, 0.729412, 1)
+fog_light_color = Color(0.764706, 0.768627, 0.768627, 1)
+fog_light_energy = 0.74
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0821
-volumetric_fog_emission = Color(0.796078, 0.796078, 0.796078, 1)
+volumetric_fog_emission = Color(0.580392, 0.580392, 0.580392, 1)
+volumetric_fog_ambient_inject = 1.39
 adjustment_brightness = 0.78
 adjustment_contrast = 1.51
 
@@ -122,7 +124,9 @@ environment = SubResource("Environment_uuhho")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 2.02026, 7.52714, -14.7461)
-light_energy = 0.423
+light_color = Color(0.141176, 0.141176, 0.141176, 1)
+light_energy = 1.911
+light_volumetric_fog_energy = 0.473
 shadow_enabled = true
 sky_mode = 1
 
@@ -223,6 +227,8 @@ shape = SubResource("CapsuleShape3D_r3rct")
 [node name="DarkForrestAmbience" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("8_5x5xe")
+volume_db = -24.681
+autoplay = true
 bus = &"Music"
 
 [editable path="NavigationRegion3D/bush001"]

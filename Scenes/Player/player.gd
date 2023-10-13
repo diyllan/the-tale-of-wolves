@@ -10,6 +10,7 @@ var isPaused = false
 var dialogueActive = false
 var hiding = false
 var leaveHiding = false
+var death = false
 
 var hidingPos
 var xMaxRotation = 60
@@ -27,6 +28,7 @@ var currentCamPosHiding
 
 #Audio
 @onready var HeavyBreathing = $HeavyBreathing
+@onready var BreathingTimer = $BreathingTImer
 var HeavyBreathingPlaying = false
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
@@ -46,7 +48,11 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
+	
+	if death:
+	#change toreload the checkpoint
+		get_tree().reload_current_scene()
+		
 	# Handle Jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 	#	velocity.y = JUMP_VELOCITY
@@ -72,9 +78,7 @@ func _physics_process(delta):
 	
 func playerHide():
 	if hiding:
-		if !HeavyBreathingPlaying:
-			HeavyBreathingPlaying = true
-			HeavyBreathing.play()
+		
 		model.hide()
 		var HidingTween = create_tween()
 		HidingTween.tween_property(self, "global_position", hidingPos.global_position, 0.2)
@@ -82,6 +86,17 @@ func playerHide():
 		camera.fov = 45
 		xMaxRotation = 30
 		xMinRotation = -30
+		
+		if !HeavyBreathingPlaying:
+			HeavyBreathingPlaying = true
+			var randomTime = randi_range(0.8, 2)
+			var randomPitch = randi_range(0.7, 2)
+			BreathingTimer.wait_time= randomTime
+			BreathingTimer.start()
+			HeavyBreathing.pitch_scale = randomPitch
+			HeavyBreathing.play()
+			await BreathingTimer.timeout
+			HeavyBreathingPlaying = false
 
 	if hiding and Input.is_action_just_pressed("interact"):
 		if HeavyBreathingPlaying:
