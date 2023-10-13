@@ -80,7 +80,9 @@ func _physics_process(delta):
 	
 func playerHide():
 	if hiding:
-		
+		Ui.get_node("CanvasLayer/Prompt").hide()
+		Ui.get_node("CanvasLayer/HiddenPrompt").text = "Leave\n[E]"
+		Ui.get_node("CanvasLayer/Crosshair").hide()
 		model.hide()
 #		collision.disabled = true
 		var HidingTween = create_tween()
@@ -92,8 +94,8 @@ func playerHide():
 		
 		if !HeavyBreathingPlaying:
 			HeavyBreathingPlaying = true
-			var randomTime = randi_range(0.8, 2)
-			var randomPitch = randi_range(0.7, 2)
+			var randomTime = randf_range(1, 3)
+			var randomPitch = randf_range(0.80, 1.20)
 			BreathingTimer.wait_time= randomTime
 			BreathingTimer.start()
 			HeavyBreathing.pitch_scale = randomPitch
@@ -106,7 +108,9 @@ func playerHide():
 			HeavyBreathingPlaying = false
 			HeavyBreathing.stop()
 		hiding = false
-		
+		Ui.get_node("CanvasLayer/Prompt").show()
+		Ui.get_node("CanvasLayer/HiddenPrompt").text = ""
+		Ui.get_node("CanvasLayer/Crosshair").show()
 		var LeavingTween = create_tween()
 		LeavingTween.tween_property(self, "global_position", currentCamPosHiding, 0.5)
 		await LeavingTween.finished

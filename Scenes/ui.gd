@@ -14,6 +14,7 @@ extends Control
 #@onready var _fullscreen_checkbox = $"CanvasLayer/BookMenu/Graphics/VBoxContainer/FullScreen Check"
 @onready var crosshair = $CanvasLayer/Crosshair
 @onready var _prompt = $CanvasLayer/Prompt
+@onready var _HiddenPrompt = $CanvasLayer/HiddenPrompt
 
 var isPaused = false
 
@@ -57,6 +58,7 @@ func _process(_delta):
 			_settings.show()
 			crosshair.hide()
 			_prompt.hide()
+			_HiddenPrompt.hide()
 			_general_tab.button_pressed = true
 			_sound_tab.button_pressed = false
 			_graphics_tab.button_pressed = false
@@ -69,6 +71,7 @@ func _process(_delta):
 		_bookmenu.hide()
 		crosshair.show()
 		_prompt.show()
+		_HiddenPrompt.show()
 		$BookOpen_Close.play()
 		get_tree().paused = false
 
@@ -115,6 +118,7 @@ func _on_continue_pressed():
 	_bookmenu.hide()
 	crosshair.show()
 	_prompt.show()
+	_HiddenPrompt.show()
 	$BookOpen_Close.play()
 	get_tree().paused = false
 

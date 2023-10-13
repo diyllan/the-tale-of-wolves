@@ -178,6 +178,7 @@ libraries = {
 
 [node name="HeavyBreathing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_5j5ia")
+pitch_scale = 1.88
 bus = &"SoundEffects"
 
 [node name="BreathingTImer" type="Timer" parent="."]

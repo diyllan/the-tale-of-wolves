@@ -7,7 +7,7 @@ enum {
 	GROWL,
 	BITE,
 }
-const SPEED = 2
+const SPEED = 3
 const JUMP_VELOCITY = 4.5
 const TOLERANCE = 4.0
 
@@ -38,8 +38,6 @@ var ScreamPlaying = false
 var playerTooClose = false
 
 func _ready():
-	nav_agent.debug_enabled = true
-
 	update_target_position()
 
 func _physics_process(delta):
@@ -57,51 +55,46 @@ func _physics_process(delta):
 					await anim_player.animation_finished
 					update_target_position()
 					state = WANDER
-					print_debug("WANDER")
+
 
 				elif _player.hiding and !playerTooClose and "LookinAround" != anim_player.get_current_animation() and "Scratch" != anim_player.get_current_animation():
 					anim_player.play("LookinAround")
 					await anim_player.animation_finished
 					update_target_position()
 					state = WANDER
-					print_debug("WANDER")
+
 
 			elif "Scratch" != anim_player.get_current_animation():
 				anim_player.play("Scratch")
 				await anim_player.animation_finished
 				update_target_position()
 				state = WANDER
-				print_debug("WANDER")
+
 
 		WANDER:
 			if "Walking" != anim_player.get_current_animation():
 				anim_player.play("Walking")
 			
-			random_roaming_position()
+			random_roaming()
 			
 			if !Breathing_SnifflingPLaying:
 				Breathing_SnifflingPLaying = true
 				Breathing_Sniffling.play()
 			
 			if nav_agent.is_navigation_finished():
-				print_debug("nav finished")
 				state = IDLE
-				print_debug("IDLE")
+
 				
 		GROWL:
 			if _player.hiding and !playerTooClose and "LookinAround" != anim_player.get_current_animation():
 				anim_player.play("LookinAround")
 				await anim_player.animation_finished
-				print_debug("IDLE")
 				state = IDLE
 				
 			elif !_player.hiding and state != CHASE and "Growl" != anim_player.get_current_animation():
 				anim_player.play("Growl")
 				await anim_player.animation_finished
 				state = CHASE
-				print_debug("CHASE")
-				
-
 			
 			if Breathing_SnifflingPLaying:
 				Breathing_SnifflingPLaying = false
@@ -119,19 +112,15 @@ func _physics_process(delta):
 				chaseMusicFadeOut.tween_property(chaseMusic, "volume_db", -80, 2)
 				await chaseMusicFadeOut.finished
 				chaseMusic.stop()
-				print_debug("stopped chase music")
 				state = IDLE
-				print_debug("IDLE")
 			elif _player.hiding and playerTooClose and chasePlaying:
 				chasePlaying = false
 				var chaseMusicFadeOut = create_tween()
 				chaseMusicFadeOut.tween_property(chaseMusic, "volume_db", -80, 2)
 				await chaseMusicFadeOut.finished
 				chaseMusic.stop()
-				print_debug("stopped chase music")
 			elif !_player.hiding and !chasePlaying:
 				chaseMusic.play()
-				print_debug("started chase music")
 				var chaseMusicFadeIn = create_tween()
 				chaseMusicFadeIn.tween_property(chaseMusic, "volume_db", 0, 1)
 				chasePlaying = true
@@ -161,7 +150,7 @@ func update_target_position():
 	if target_vector == last_target_vector:
 		target_vector = Vector3(randi_range(-radius, radius), randi_range(-radius, radius), 0)
 		
-func random_roaming_position():
+func random_roaming():
 	last_target_vector = target_vector 
 	nav_agent.set_target_position(target_vector)
 	var next_nav_point = nav_agent.get_next_path_position()
@@ -170,12 +159,10 @@ func random_roaming_position():
 	move_and_slide()
 	
 func is_at_target_position(): 
-	print_debug("reached position")
 	# Stop moving when at target +/- tolerance
 	return (target_vector - global_position).length() < TOLERANCE
 
 func chase():
-	
 	nav_agent.set_target_position(_player.global_transform.origin)
 	var next_nav_point = nav_agent.get_next_path_position()
 	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
@@ -185,20 +172,16 @@ func chase():
 func _on_detect_player_body_entered(body):
 	if body.name == "Player":
 		_player = body
-		print_debug(_player)
 		if state != CHASE and !_player.hiding:
 			state = GROWL
 			growlPlaying = false
-			print_debug("GROWL")
 
 func _on_bite_range_body_entered(body):
 	if body.name == "Player":
 		if !_player.hiding or _player.hiding and playerTooClose:
 			state = BITE
-			print_debug("BITE")
 
 func _on_player_too_close_body_entered(body):
 	if body.name == "Player":
 		if !_player.hiding:
-			print_debug("player too close and not hiding")
 			playerTooClose = true
