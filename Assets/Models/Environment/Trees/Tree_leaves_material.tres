@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ngf2vx0stuql"]
+
+[ext_resource type="Texture2D" uid="uid://72ctj2j8e8xu" path="res://Assets/Models/Environment/Trees/Tree Branch.png" id="1_ne0cj"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.3
+alpha_antialiasing_mode = 0
+cull_mode = 2
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_ne0cj")

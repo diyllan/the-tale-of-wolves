@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=27 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://qhig1kh8ilqq" path="res://Assets/Models/Environment/Bridge/Bridge.blend" id="8_e16tx"]
 [ext_resource type="PackedScene" uid="uid://b8alcn57x1576" path="res://Assets/Models/Environment/Bushes/bush001.blend" id="9_xgpue"]
 [ext_resource type="Texture2D" uid="uid://y1wqpp3togkp" path="res://Assets/Models/Environment/Bushes/bush001_texture.png" id="10_6cydm"]
+[ext_resource type="PackedScene" uid="uid://cjpf4vs30vb3s" path="res://Assets/Models/Environment/Trees/Tree001.blend" id="11_1duxw"]
+[ext_resource type="Material" uid="uid://ngf2vx0stuql" path="res://Assets/Models/Environment/Trees/Tree_leaves_material.tres" id="12_aeuco"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xtjem"]
 sky_top_color = Color(0.0196078, 0.0745098, 0.25098, 1)
@@ -300,6 +302,12 @@ volume_db = -24.681
 autoplay = true
 bus = &"Music"
 
+[node name="Tree001" parent="." instance=ExtResource("11_1duxw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.38978, 0, 15.603)
+
+[node name="Tree Branch" parent="Tree001" index="0"]
+surface_material_override/0 = ExtResource("12_aeuco")
+
 [editable path="NavigationRegion3D/bush001"]
 [editable path="NavigationRegion3D/bush001/bush001"]
 [editable path="NavigationRegion3D/bush001/bush002"]
@@ -309,3 +317,4 @@ bus = &"Music"
 [editable path="NavigationRegion3D/bush003"]
 [editable path="NavigationRegion3D/bush003/bush001"]
 [editable path="NavigationRegion3D/bush003/bush002"]
+[editable path="Tree001"]
