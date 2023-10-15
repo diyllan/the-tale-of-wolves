@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=30 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://y1wqpp3togkp" path="res://Assets/Models/Environment/Bushes/bush001_texture.png" id="10_6cydm"]
 [ext_resource type="PackedScene" uid="uid://cjpf4vs30vb3s" path="res://Assets/Models/Environment/Trees/Tree001.blend" id="11_1duxw"]
 [ext_resource type="Material" uid="uid://ngf2vx0stuql" path="res://Assets/Models/Environment/Trees/Tree_leaves_material.tres" id="12_aeuco"]
+[ext_resource type="PackedScene" uid="uid://crqdffr1ooked" path="res://Assets/Models/Environment/Trees/tree002.blend" id="16_hnted"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xtjem"]
 sky_top_color = Color(0.0196078, 0.0745098, 0.25098, 1)
@@ -304,6 +305,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.38978, 0, 15.603)
 [node name="Tree Branch" parent="Tree001" index="0"]
 surface_material_override/0 = ExtResource("12_aeuco")
 
+[node name="tree002" parent="." instance=ExtResource("16_hnted")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5006, 0, 13.2296)
+
 [editable path="NavigationRegion3D/bush001"]
 [editable path="NavigationRegion3D/bush001/bush001"]
 [editable path="NavigationRegion3D/bush001/bush002"]
@@ -314,3 +318,4 @@ surface_material_override/0 = ExtResource("12_aeuco")
 [editable path="NavigationRegion3D/bush003/bush001"]
 [editable path="NavigationRegion3D/bush003/bush002"]
 [editable path="Tree001"]
+[editable path="tree002"]
