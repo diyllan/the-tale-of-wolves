@@ -49,7 +49,7 @@ bones/30/rotation = Quaternion(-0.0208449, -0.00541934, 0.656016, 0.75444)
 bones/31/rotation = Quaternion(0.116914, 0.108417, -0.818576, 0.551824)
 
 [node name="Head" parent="WerewolfAnim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.983665, -0.167729, 0.0653462, 0.168115, 0.985767, -0.000415321, -0.0643465, 0.0113942, 0.997863, -0.5047, 3.39754, 0.0822076)
+transform = Transform3D(0.983665, -0.167731, 0.0653462, 0.168117, 0.985767, -0.000415153, -0.0643465, 0.0113942, 0.997863, -0.504702, 3.39754, 0.0822074)
 bone_idx = 5
 
 [node name="LeftEye" type="OmniLight3D" parent="WerewolfAnim/Armature/Skeleton3D/Head" index="0"]
@@ -67,35 +67,35 @@ light_volumetric_fog_energy = 16.0
 omni_range = 0.2
 
 [node name="Neck" parent="WerewolfAnim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.997833, -0.0656851, 0.00372179, 0.0657771, 0.997175, -0.0362671, -0.00132906, 0.0364333, 0.999335, -0.383645, 2.51473, 0.0438334)
+transform = Transform3D(0.997833, -0.0656861, 0.00372178, 0.065778, 0.997175, -0.036267, -0.00132903, 0.0364332, 0.999335, -0.383646, 2.51473, 0.0438333)
 bone_idx = 6
 
 [node name="Hand Left" parent="WerewolfAnim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(-0.248798, -0.964441, 0.08918, 0.489454, -0.0457414, 0.870828, -0.835783, 0.26031, 0.48343, 1.04433, 1.47543, 0.0729706)
+transform = Transform3D(-0.248799, -0.964441, 0.0891801, 0.489455, -0.0457417, 0.870829, -0.835783, 0.260311, 0.483431, 1.04433, 1.47543, 0.0729699)
 bone_idx = 11
 
 [node name="Arm Lower Left" parent="WerewolfAnim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.475243, -0.842548, -0.253491, 0.85405, 0.511007, -0.0973087, 0.211523, -0.170249, 0.962431, 0.817619, -0.360473, -0.188864)
+transform = Transform3D(0.475242, -0.842548, -0.25349, 0.854051, 0.511007, -0.0973099, 0.211524, -0.170248, 0.962431, 0.817621, -0.360474, -0.188867)
 bone_idx = 12
 
 [node name="Arm Upper Left" parent="WerewolfAnim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.959621, 0.276359, 0.0524812, -0.245094, 0.912994, -0.326144, -0.138048, 0.300112, 0.943862, -0.341491, 1.84869, -0.0560184)
+transform = Transform3D(0.959621, 0.276358, 0.0524814, -0.245093, 0.912995, -0.326144, -0.138048, 0.300112, 0.943862, -0.341492, 1.84869, -0.0560185)
 bone_idx = 13
 
 [node name="Hand Right" parent="WerewolfAnim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(0.158216, -0.986924, 0.0308047, 0.257945, 0.0111971, -0.966094, 0.953117, 0.160797, 0.256344, 0.710213, 1.83728, -0.190563)
+transform = Transform3D(0.158215, -0.986924, 0.0308049, 0.257945, 0.0111966, -0.966094, 0.953117, 0.160797, 0.256344, 0.710213, 1.83729, -0.190562)
 bone_idx = 18
 
 [node name="Arm Lower Right" parent="WerewolfAnim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.338054, -0.913064, 0.22811, 0.930177, 0.287291, -0.22855, 0.143147, 0.289445, 0.946431, 1.13272, 0.151805, -0.503711)
+transform = Transform3D(0.338054, -0.913064, 0.228109, 0.930177, 0.287291, -0.22855, 0.143147, 0.289444, 0.946431, 1.13272, 0.151806, -0.50371)
 bone_idx = 19
 
 [node name="Arm Upper Right" parent="WerewolfAnim/Armature/Skeleton3D" index="7"]
-transform = Transform3D(0.964634, 0.17943, -0.193097, -0.178511, 0.983685, 0.0222965, 0.193948, 0.0129621, 0.980926, -0.234706, 1.99973, 0.0205488)
+transform = Transform3D(0.964634, 0.17943, -0.193098, -0.17851, 0.983685, 0.0222964, 0.193948, 0.0129622, 0.980926, -0.234707, 1.99973, 0.0205487)
 bone_idx = 20
 
 [node name="Body Upper" parent="WerewolfAnim/Armature/Skeleton3D" index="8"]
-transform = Transform3D(0.975113, -0.221411, -0.0114847, 0.221088, 0.974951, -0.0242978, 0.0165768, 0.0211539, 0.999639, -0.210687, 1.76997, 0.0288745)
+transform = Transform3D(0.975113, -0.221412, -0.0114847, 0.221089, 0.974951, -0.0242977, 0.0165768, 0.0211538, 0.999639, -0.210688, 1.76997, 0.0288744)
 bone_idx = 21
 
 [node name="Camera3D" type="Camera3D" parent="WerewolfAnim/Armature/Skeleton3D/Body Upper" index="1"]
@@ -106,27 +106,27 @@ transform = Transform3D(2.4397, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0
 mesh = SubResource("PlaneMesh_rpm5k")
 
 [node name="Feet Left" parent="WerewolfAnim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.504882, -0.712771, 0.486878, 0.765909, 0.630048, 0.128141, -0.398089, 0.308214, 0.864016, 0.741317, -0.821943, -0.797772)
+transform = Transform3D(0.504883, -0.712771, 0.486878, 0.765909, 0.630049, 0.12814, -0.398088, 0.308214, 0.864017, 0.741316, -0.821943, -0.797771)
 bone_idx = 26
 
 [node name="Leg Lower left" parent="WerewolfAnim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.736146, -0.46987, 0.487145, 0.618302, 0.759631, -0.201647, -0.275303, 0.449648, 0.849717, 0.4177, -0.641355, -0.328073)
+transform = Transform3D(0.736146, -0.469869, 0.487145, 0.618301, 0.759632, -0.201647, -0.275303, 0.449647, 0.849718, 0.4177, -0.641356, -0.328072)
 bone_idx = 27
 
 [node name="Leg Upper Left" parent="WerewolfAnim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.72911, -0.580303, 0.362828, 0.667088, 0.721056, -0.187269, -0.152948, 0.378582, 0.91284, 0.156676, -0.0143434, -0.127586)
+transform = Transform3D(0.72911, -0.580303, 0.362828, 0.667087, 0.721057, -0.187269, -0.152948, 0.378582, 0.91284, 0.156676, -0.0143437, -0.127586)
 bone_idx = 28
 
 [node name="Feet Right" parent="WerewolfAnim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.551893, -0.693391, -0.463269, 0.723593, 0.67433, -0.147277, 0.414519, -0.253941, 0.873885, 0.601852, -0.944317, 0.603025)
+transform = Transform3D(0.551893, -0.693391, -0.463269, 0.723593, 0.67433, -0.147278, 0.414519, -0.253941, 0.873885, 0.601852, -0.944317, 0.603026)
 bone_idx = 33
 
 [node name="Leg Lower Right" parent="WerewolfAnim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.815212, -0.377567, -0.439168, 0.482632, 0.86204, 0.154768, 0.320149, -0.338128, 0.884964, 0.340509, -0.714559, 0.216723)
+transform = Transform3D(0.815212, -0.377567, -0.439169, 0.482632, 0.862039, 0.154768, 0.320149, -0.338128, 0.884964, 0.340509, -0.714558, 0.216724)
 bone_idx = 34
 
 [node name="Leg Upper Right" parent="WerewolfAnim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.816109, -0.494181, -0.29958, 0.546042, 0.829153, 0.119759, 0.189219, -0.261323, 0.946517, 0.147917, -0.040132, 0.106296)
+transform = Transform3D(0.816108, -0.494181, -0.299581, 0.546042, 0.829153, 0.119759, 0.189219, -0.261323, 0.946516, 0.147917, -0.0401319, 0.106297)
 bone_idx = 35
 
 [node name="Body Lower" parent="WerewolfAnim/Armature/Skeleton3D" index="15"]
