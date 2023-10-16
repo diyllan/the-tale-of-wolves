@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=47 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://crqdffr1ooked" path="res://Assets/Models/Environment/Trees/tree002.blend" id="16_hnted"]
 [ext_resource type="PackedScene" uid="uid://cj8qlfn77ehfn" path="res://Assets/Models/Environment/Buildings/Redcaphouse/Long_House.blend" id="17_p3phk"]
 [ext_resource type="PackedScene" uid="uid://r44kucqdyibb" path="res://Assets/Models/Environment/Buildings/Door/Door.blend" id="19_ud6rk"]
+[ext_resource type="Script" path="res://Scenes/Save&Load.gd" id="22_fgq4w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xtjem"]
 sky_top_color = Color(0.0196078, 0.0745098, 0.25098, 1)
@@ -428,6 +429,9 @@ stream = ExtResource("8_5x5xe")
 volume_db = -24.681
 autoplay = true
 bus = &"Music"
+
+[node name="SaveManager" type="Node3D" parent="."]
+script = ExtResource("22_fgq4w")
 
 [editable path="NavigationRegion3D/bush001"]
 [editable path="NavigationRegion3D/bush001/bush001"]

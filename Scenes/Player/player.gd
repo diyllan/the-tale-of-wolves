@@ -122,3 +122,12 @@ func playerHide():
 		yMaxRotation = 360
 		yMinRotation = -360
 		camera.fov = 75
+
+func to_dictionary():
+	return {
+		"position": [position.x, position.y, position.z]
+	}
+
+func from_dictionary(data):
+	position = Vector3(data.position[0], data.position[1], data.position[2])
+	
