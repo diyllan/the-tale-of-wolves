@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dvjuks7llhcdr"]
 
 [ext_resource type="Script" path="res://Scenes/Werewolf/werewolf.gd" id="1_64sjf"]
-[ext_resource type="PackedScene" uid="uid://bh8ftpvfynreu" path="res://Assets/Models/Werewolf/WerewolfAnim.blend" id="2_siml5"]
+[ext_resource type="PackedScene" uid="uid://bh8ftpvfynreu" path="res://Assets/Models/NPC/Werewolf/WerewolfAnim.blend" id="2_siml5"]
 [ext_resource type="Shader" path="res://Shader/camerapixelation.gdshader" id="3_62uxq"]
 [ext_resource type="AudioStream" uid="uid://n2gnde6qshe2" path="res://Assets/Sound/Music/Werewolf/chaseMusic.wav" id="3_e6b02"]
 [ext_resource type="AudioStream" uid="uid://c87g3d20p6e6y" path="res://Assets/Sound/SoundEffects/Werewolf/werewolf_growl.wav" id="3_ixbd6"]
