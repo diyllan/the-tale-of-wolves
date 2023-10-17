@@ -1,10 +1,11 @@
-[gd_scene load_steps=62 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=63 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
 [ext_resource type="PackedScene" uid="uid://wp7puaw4a6op" path="res://Assets/Models/NPC/Boy/BoyAnim.blend" id="2_6dtna"]
 [ext_resource type="PackedScene" uid="uid://dpn4oqkhv28fa" path="res://Assets/Models/NPC/Wolf/Wolf.blend" id="2_crcmj"]
 [ext_resource type="PackedScene" uid="uid://cbgmd8r0ep6ms" path="res://Assets/Models/NPC/Baker/BakerAnim.blend" id="2_dn7hd"]
+[ext_resource type="PackedScene" uid="uid://bkf3q1r1t3g8h" path="res://Assets/Models/NPC/WeirdGuy/WeirdGuyAnim.blend" id="2_iy6rk"]
 [ext_resource type="PackedScene" uid="uid://bhlxfclvx6hst" path="res://Assets/Models/NPC/Mother/MotherAnim.blend" id="2_mcknn"]
 [ext_resource type="PackedScene" uid="uid://ct03x0iaymntg" path="res://Assets/Models/NPC/Hunter/HunterAnim.blend" id="2_taonm"]
 [ext_resource type="PackedScene" uid="uid://djlo417iivuek" path="res://Assets/Models/NPC/Man1/Man1Anim.blend" id="2_wvjvm"]
@@ -188,6 +189,9 @@ sky_mode = 1
 transform = Transform3D(-0.970055, 0, 0.242887, 0, 1, 0, -0.242887, 0, -0.970055, 0, 0, 0)
 
 [node name="Villagers" type="Node3D" parent="."]
+
+[node name="WeirdGuyAnim" parent="Villagers" instance=ExtResource("2_iy6rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9289, 0, -35.3537)
 
 [node name="HunterAnim" parent="Villagers" instance=ExtResource("2_taonm")]
 transform = Transform3D(0.348981, 0, 0.93713, 0, 1, 0, -0.93713, 0, 0.348981, 41.9754, 0, -34.341)
