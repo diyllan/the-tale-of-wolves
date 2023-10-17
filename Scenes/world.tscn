@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=60 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
@@ -6,19 +6,31 @@
 [ext_resource type="PackedScene" uid="uid://dpn4oqkhv28fa" path="res://Assets/Models/NPC/Wolf/Wolf.blend" id="2_crcmj"]
 [ext_resource type="PackedScene" uid="uid://cbgmd8r0ep6ms" path="res://Assets/Models/NPC/Baker/BakerAnim.blend" id="2_dn7hd"]
 [ext_resource type="PackedScene" uid="uid://bhlxfclvx6hst" path="res://Assets/Models/NPC/Mother/MotherAnim.blend" id="2_mcknn"]
+[ext_resource type="PackedScene" uid="uid://djlo417iivuek" path="res://Assets/Models/NPC/Man1/Man1Anim.blend" id="2_wvjvm"]
 [ext_resource type="PackedScene" uid="uid://byxf6n8788tjd" path="res://Assets/Models/NPC/Fox/Fox.blend" id="3_a8frt"]
+[ext_resource type="PackedScene" uid="uid://dt6aw8qq1f06l" path="res://Assets/Models/NPC/Man2/Man2Anim.blend" id="3_n0l2k"]
 [ext_resource type="PackedScene" uid="uid://bdfrbws2tklae" path="res://Assets/Models/NPC/WineDude/WineDudeAnim.blend" id="3_ur82q"]
+[ext_resource type="PackedScene" uid="uid://do6jsfmsfajnq" path="res://Assets/Models/NPC/Man3/Man3Anim.blend" id="4_truw2"]
+[ext_resource type="PackedScene" uid="uid://ixbebn8vu6kh" path="res://Assets/Models/NPC/Man4/Man4Anim.blend" id="5_ahhmh"]
 [ext_resource type="Script" path="res://Scenes/Interactable.gd" id="5_fk6m7"]
 [ext_resource type="PackedScene" uid="uid://ccm5cl2x4l7rg" path="res://Assets/Models/Player/LittleRedCapAnim.blend" id="5_lxjey"]
+[ext_resource type="PackedScene" uid="uid://g6dhhbevbw76" path="res://Assets/Models/NPC/Man5/Man5Anim.blend" id="6_myao4"]
+[ext_resource type="PackedScene" uid="uid://ciwyoms7vxobb" path="res://Assets/Models/NPC/Woman1/Woman1Anim.blend" id="7_2yqdg"]
 [ext_resource type="AudioStream" uid="uid://w7ivm45o5gav" path="res://Assets/Sound/Music/DarkForrestAmbience.wav" id="8_5x5xe"]
 [ext_resource type="PackedScene" uid="uid://qhig1kh8ilqq" path="res://Assets/Models/Environment/Bridge/Bridge.blend" id="8_e16tx"]
+[ext_resource type="PackedScene" uid="uid://bsoby315wo12w" path="res://Assets/Models/NPC/Woman2/Woman2Anim.blend" id="8_vip0o"]
+[ext_resource type="PackedScene" uid="uid://cahqvoicff5yx" path="res://Assets/Models/NPC/Woman3/Woman3Anim.blend" id="9_7010s"]
 [ext_resource type="Material" uid="uid://c68kmuy5fm1ey" path="res://Assets/Models/Environment/Bushes/bush001.tres" id="9_cvob3"]
 [ext_resource type="PackedScene" uid="uid://b8alcn57x1576" path="res://Assets/Models/Environment/Bushes/bush001.blend" id="9_xgpue"]
 [ext_resource type="Texture2D" uid="uid://y1wqpp3togkp" path="res://Assets/Models/Environment/Bushes/bush001_texture.png" id="10_6cydm"]
+[ext_resource type="PackedScene" uid="uid://dtop5b31wtybn" path="res://Assets/Models/NPC/Woman4/Woman4Anim.blend" id="10_6gblf"]
 [ext_resource type="PackedScene" uid="uid://cjpf4vs30vb3s" path="res://Assets/Models/Environment/Trees/Tree001.blend" id="11_1duxw"]
+[ext_resource type="PackedScene" uid="uid://3i1pprlkjvb8" path="res://Assets/Models/NPC/Woman5/Woman5Anim.blend" id="11_1xo13"]
+[ext_resource type="PackedScene" uid="uid://hrp2hgl0ur3w" path="res://Assets/Models/NPC/Kid1/Kid1Anim.blend" id="12_p4hhj"]
 [ext_resource type="PackedScene" uid="uid://bk8in50ymvfq8" path="res://Assets/Models/Environment/Trees/deadtree001.blend" id="13_jk1vw"]
 [ext_resource type="PackedScene" uid="uid://b6l3lx7aa2ndj" path="res://Assets/Models/Environment/Trees/Treestump.blend" id="14_nc32d"]
 [ext_resource type="PackedScene" uid="uid://crqdffr1ooked" path="res://Assets/Models/Environment/Trees/tree002.blend" id="16_hnted"]
+[ext_resource type="PackedScene" uid="uid://bby5vx3df4ra7" path="res://Assets/Models/NPC/Kid2/Kid2Anim.blend" id="17_jtciq"]
 [ext_resource type="PackedScene" uid="uid://cj8qlfn77ehfn" path="res://Assets/Models/Environment/Buildings/Redcaphouse/Long_House.blend" id="17_p3phk"]
 [ext_resource type="Terrain3DStorage" uid="uid://bt6y5i81cwucq" path="res://Assets/Models/Environment/Terrain/TerrainStorage.tres" id="19_hrk4a"]
 [ext_resource type="PackedScene" uid="uid://r44kucqdyibb" path="res://Assets/Models/Environment/Buildings/Door/Door.blend" id="19_ud6rk"]
@@ -173,17 +185,55 @@ sky_mode = 1
 [node name="Player" parent="." instance=ExtResource("1_6k6ey")]
 transform = Transform3D(-0.970055, 0, 0.242887, 0, 1, 0, -0.242887, 0, -0.970055, 0, 0, 0)
 
-[node name="BakerAnim" parent="." instance=ExtResource("2_dn7hd")]
-transform = Transform3D(-0.633651, 0, 0.773619, 0, 1, 0, -0.773619, 0, -0.633651, -3.23669, 0, 3.49066)
+[node name="Villagers" type="Node3D" parent="."]
 
-[node name="WineDudeAnim" parent="." instance=ExtResource("3_ur82q")]
-transform = Transform3D(-0.0125834, 0, -0.999921, 0, 1, 0, 0.999921, 0, -0.0125834, 7.53485, 0, 0)
+[node name="Man1Anim" parent="Villagers" instance=ExtResource("2_wvjvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.5202)
 
-[node name="BoyAnim" parent="." instance=ExtResource("2_6dtna")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 4.64063)
+[node name="Man2Anim" parent="Villagers" instance=ExtResource("3_n0l2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24712, 0, -35.7033)
 
-[node name="MotherAnim" parent="." instance=ExtResource("2_mcknn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.69227)
+[node name="Man3Anim" parent="Villagers" instance=ExtResource("4_truw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.43561, 0, -35.9359)
+
+[node name="Man4Anim" parent="Villagers" instance=ExtResource("5_ahhmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9836, 0, -35.3958)
+
+[node name="Man5Anim" parent="Villagers" instance=ExtResource("6_myao4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4167, 0, -35.7908)
+
+[node name="Woman1Anim" parent="Villagers" instance=ExtResource("7_2yqdg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.1098, 0, -34.6804)
+
+[node name="Woman2Anim" parent="Villagers" instance=ExtResource("8_vip0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22136, 0, -34.6339)
+
+[node name="Woman3Anim" parent="Villagers" instance=ExtResource("9_7010s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93695, 0, -34.6761)
+
+[node name="Woman4Anim" parent="Villagers" instance=ExtResource("10_6gblf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5589, 0, -34.4051)
+
+[node name="Woman5Anim" parent="Villagers" instance=ExtResource("11_1xo13")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.5282, 0, -35.5699)
+
+[node name="Kid1Anim" parent="Villagers" instance=ExtResource("12_p4hhj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6353, 0, -35.3815)
+
+[node name="BakerAnim" parent="Villagers" instance=ExtResource("2_dn7hd")]
+transform = Transform3D(-0.633651, 0, 0.773619, 0, 1, 0, -0.773619, 0, -0.633651, 25.7594, 0, -34.8035)
+
+[node name="BoyAnim" parent="Villagers" instance=ExtResource("2_6dtna")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 21.0967, 0, -34.7163)
+
+[node name="MotherAnim" parent="Villagers" instance=ExtResource("2_mcknn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6354, 0, -34.8296)
+
+[node name="WineDudeAnim" parent="Villagers" instance=ExtResource("3_ur82q")]
+transform = Transform3D(0.979932, 0, 0.199334, 0, 1, 0, -0.199334, 0, 0.979932, 34.7832, 0, -33.8515)
+
+[node name="Kid2Anim" parent="Villagers" instance=ExtResource("17_jtciq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.7958, 0, -34.9172)
 
 [node name="Werewolf" parent="." instance=ExtResource("1_gtt3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2632, 0, 29.7301)
