@@ -475,6 +475,7 @@ shape = SubResource("BoxShape3D_4wmbs")
 storage = ExtResource("19_hrk4a")
 texture_list = SubResource("Terrain3DTextureList_elapj")
 clipmap_levels = 5
+clipmap_size = 8
 
 [node name="Wolf" parent="." instance=ExtResource("2_crcmj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.835, 0, 0)
