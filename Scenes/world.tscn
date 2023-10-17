@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=62 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
@@ -6,8 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dpn4oqkhv28fa" path="res://Assets/Models/NPC/Wolf/Wolf.blend" id="2_crcmj"]
 [ext_resource type="PackedScene" uid="uid://cbgmd8r0ep6ms" path="res://Assets/Models/NPC/Baker/BakerAnim.blend" id="2_dn7hd"]
 [ext_resource type="PackedScene" uid="uid://bhlxfclvx6hst" path="res://Assets/Models/NPC/Mother/MotherAnim.blend" id="2_mcknn"]
+[ext_resource type="PackedScene" uid="uid://ct03x0iaymntg" path="res://Assets/Models/NPC/Hunter/HunterAnim.blend" id="2_taonm"]
 [ext_resource type="PackedScene" uid="uid://djlo417iivuek" path="res://Assets/Models/NPC/Man1/Man1Anim.blend" id="2_wvjvm"]
 [ext_resource type="PackedScene" uid="uid://byxf6n8788tjd" path="res://Assets/Models/NPC/Fox/Fox.blend" id="3_a8frt"]
+[ext_resource type="PackedScene" uid="uid://dcv78swdq0sjx" path="res://Assets/Models/NPC/Hunter/Shotgun/Shotgun.blend" id="3_mrgse"]
 [ext_resource type="PackedScene" uid="uid://dt6aw8qq1f06l" path="res://Assets/Models/NPC/Man2/Man2Anim.blend" id="3_n0l2k"]
 [ext_resource type="PackedScene" uid="uid://bdfrbws2tklae" path="res://Assets/Models/NPC/WineDude/WineDudeAnim.blend" id="3_ur82q"]
 [ext_resource type="PackedScene" uid="uid://do6jsfmsfajnq" path="res://Assets/Models/NPC/Man3/Man3Anim.blend" id="4_truw2"]
@@ -186,6 +188,12 @@ sky_mode = 1
 transform = Transform3D(-0.970055, 0, 0.242887, 0, 1, 0, -0.242887, 0, -0.970055, 0, 0, 0)
 
 [node name="Villagers" type="Node3D" parent="."]
+
+[node name="HunterAnim" parent="Villagers" instance=ExtResource("2_taonm")]
+transform = Transform3D(0.348981, 0, 0.93713, 0, 1, 0, -0.93713, 0, 0.348981, 41.9754, 0, -34.341)
+
+[node name="Shotgun" parent="Villagers/HunterAnim" instance=ExtResource("3_mrgse")]
+transform = Transform3D(0.814561, 0, 0.580078, 0, 1, 0, -0.580078, 0, 0.814561, -0.340694, 1.92034, 0.519577)
 
 [node name="Man1Anim" parent="Villagers" instance=ExtResource("2_wvjvm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.5202)
