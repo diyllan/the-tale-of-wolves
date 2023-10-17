@@ -32,6 +32,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="twisted Fairytale"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
 [gui]
 
 theme/custom="res://Assets/UI/theme.tres"
