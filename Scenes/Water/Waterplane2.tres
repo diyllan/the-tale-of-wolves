@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://hp6ij6o54s5x"]
+
+[ext_resource type="Shader" path="res://Shader/WaterSimple.gdshader" id="1_6l42c"]
+[ext_resource type="Texture2D" uid="uid://cfkup27op6opq" path="res://Scenes/Water/Water_Seamless_texture.png" id="1_ekyu7"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_6l42c")
+shader_parameter/tex_frg_2 = ExtResource("1_ekyu7")
