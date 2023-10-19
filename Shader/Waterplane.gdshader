@@ -1,5 +1,4 @@
 shader_type spatial;
-
 uniform vec3 albedo : source_color;
 uniform vec3 albedo2 : source_color;
 uniform float metallic : hint_range(0.0, 1.0) = 0;
@@ -30,6 +29,9 @@ uniform float edge_scale = 0.1;
 uniform float near = 1.0;
 uniform float far = 100.0;
 uniform vec3 edge_color : source_color;
+
+//resolution must be divisible by pixel_size
+const int pixel_size = 8; 
 
 float fresnel(float amount, vec3 normal, vec3 view) {
 	return pow((1.0 - clamp(dot(normalize(normal), normalize(view)), 0.0, 1.0)), amount);
@@ -72,8 +74,8 @@ void fragment() {
 	
 	vec3 depth_color_adj =  mix(edge_color, color, step(edge_scale, z_dif));
 	
+	vec2 pixelated_uv = round(SCREEN_UV * float(pixel_size)) / float(pixel_size);
 	vec3 finalAlbedo = clamp(surface_color + depth_color_adj, vec3(0.0), vec3(1.0));
-	
 	ALBEDO = finalAlbedo;
 	METALLIC = metallic;
 	ROUGHNESS = roughness;
