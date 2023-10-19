@@ -30,47 +30,8 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Camera": {
-"import/skip_import": true
-},
-"PATH:Cube": {
+"PATH:Cylinder_003": {
 "generate/physics": true
-},
-"PATH:Cube_001": {
-"generate/physics": true
-},
-"PATH:Cube_002": {
-"generate/physics": true
-},
-"PATH:Cube_003": {
-"generate/physics": true
-},
-"PATH:Cube_004": {
-"generate/physics": true
-},
-"PATH:Cube_005": {
-"generate/physics": true
-},
-"PATH:Cube_006": {
-"generate/physics": true
-},
-"PATH:Cube_007": {
-"generate/physics": true
-},
-"PATH:Cube_008": {
-"generate/physics": true
-},
-"PATH:Cube_009": {
-"generate/physics": true
-},
-"PATH:Cube_010": {
-"generate/physics": true
-},
-"PATH:Cube_011": {
-"generate/physics": true
-},
-"PATH:Light": {
-"import/skip_import": true
 }
 }
 }
