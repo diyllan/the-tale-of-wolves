@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://hfh70k7ef3qh"]
+
+[ext_resource type="PackedScene" uid="uid://dm75hcdjjv3uo" path="res://Scenes/Water/Waterplane.tscn" id="1_uk6kt"]
+[ext_resource type="Shader" path="res://Shader/camerapixelation.gdshader" id="2_jqcpx"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_q5kyd"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1u4sq"]
+size = Vector2(0.2, 0.2)
+orientation = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oa013"]
+render_priority = -1
+shader = ExtResource("2_jqcpx")
+
+[node name="Map" type="Node3D"]
+
+[node name="Waterplane" parent="." instance=ExtResource("1_uk6kt")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0654877, 0, 0, 0, 0.0654877, 0, 0, 0, 0.0654877, -0.0137451, 0.0262445, 0.00886774)
+mesh = SubResource("CylinderMesh_q5kyd")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.239261, 0.121811, 0)
+mesh = SubResource("PlaneMesh_1u4sq")
+surface_material_override/0 = SubResource("ShaderMaterial_oa013")

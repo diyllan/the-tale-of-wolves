@@ -9,7 +9,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p0fya"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4vnny"]
-render_priority = 0
+render_priority = -1
 shader = ExtResource("3_hrreo")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_n2cv5"]
