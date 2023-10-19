@@ -24,3 +24,7 @@ func interact(body):
 		body.yMinRotation = -10
 #		if body.hiding:
 #			prompt_message = "leave"
+	if prompt_message == "Open Door":
+		var tween = create_tween()
+		tween.tween_property(get_parent().get_parent().get_parent(), "rotation", Vector3(0,90,0), 0.5)
+	
