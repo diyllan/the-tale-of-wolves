@@ -31,6 +31,8 @@ var currentCamPosHiding
 #Audio
 @onready var HeavyBreathing = $HeavyBreathing
 @onready var BreathingTimer = $BreathingTImer
+
+
 var HeavyBreathingPlaying = false
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
