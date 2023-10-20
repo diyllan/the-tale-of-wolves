@@ -164,6 +164,7 @@ current = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Neck/Camera3D"]
 transform = Transform3D(2.4397, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0301274, -0.0447097, -0.181395)
+visible = false
 mesh = SubResource("PlaneMesh_n2cv5")
 
 [node name="InteractRay" type="RayCast3D" parent="Neck/Camera3D"]

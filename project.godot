@@ -92,3 +92,10 @@ load={
 [layer_names]
 
 3d_physics/layer_4="Interaction Layer"
+
+[shader_globals]
+
+precision_multiplier={
+"type": "float",
+"value": 1.0
+}
