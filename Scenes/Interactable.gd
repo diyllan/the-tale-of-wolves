@@ -4,6 +4,7 @@ extends StaticBody3D
 @export var Dialogue_Path = ""
 @export var prompt_message = ""
 @export var prompt_action = "interact"
+var player
 
 func get_prompt():
 	var key_name = ""
@@ -14,7 +15,7 @@ func get_prompt():
 	
 func interact(body):
 	if Dialogue_Path != "":
-		DialogueManager.showDialogue(Dialogue_Path)
+		DialogueManager.showDialogue(Dialogue_Path, player)
 	
 	if prompt_message == "hide":
 		body.hiding = true

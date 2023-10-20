@@ -2,7 +2,7 @@ extends Control
 
 @export var dialoguePath = ""
 @export var textSpeed = 0.05
-@onready var player = get_tree().root.get_node("/root/World/Player")
+var player
 
 var dialog
 var phraseNum = 0
