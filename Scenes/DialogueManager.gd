@@ -1,6 +1,8 @@
 extends Node
 
-func showDialogue(dialoguepath, player):
-	Ui.get_node("CanvasLayer/Dialogue").dialoguePath = dialoguepath
-	Ui.get_node("CanvasLayer/Dialogue").player = player
-	Ui.get_node("CanvasLayer/Dialogue").start()
+signal dialogue_started
+signal dialogue_ended
+
+func showDialogue(dialoguepath):
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/Dialogue").dialoguePath = dialoguepath
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/Dialogue").start()

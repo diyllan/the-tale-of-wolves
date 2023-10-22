@@ -15,7 +15,7 @@ func get_prompt():
 	
 func interact(body):
 	if Dialogue_Path != "":
-		DialogueManager.showDialogue(Dialogue_Path, player)
+		DialogueManager.showDialogue(Dialogue_Path)
 	
 	if prompt_message == "hide":
 		body.hiding = true

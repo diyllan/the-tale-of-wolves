@@ -2,24 +2,26 @@ extends Control
 
 @export var dialoguePath = ""
 @export var textSpeed = 0.05
-var player
 
 var dialog
 var phraseNum = 0
 var finished = false
 var skipping = false
 var interactDelay = true
+
+
+
 func _ready():
 	self.hide()
 #	start()
 	
 func start():
+	DialogueManager.dialogue_started.emit()
 	skipping = false
 	interactDelay = true
 	$InteractDelay.start()
 	$Timer.wait_time = textSpeed
 	$TextureProgressBar.value = 0
-	player.dialogueActive = true
 	phraseNum = 0
 	self.show()
 	dialog = getDialog()
@@ -85,7 +87,7 @@ func getDialog() -> Array:
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		self.hide()
-		player.dialogueActive = false
+		DialogueManager.dialogue_ended.emit()
 		return
 	
 	$Indicator.hide()
@@ -100,6 +102,9 @@ func nextPhrase() -> void:
 #	if f.file_exists(img):
 #		$Portrait.texture = load(img)
 #	else: $Portrait.texture = null
+	var voice = dialog[phraseNum]["Voice"]
+	if voice != "":
+		SoundManager.playVoice(voice)
 	var regex = RegEx.new()
 	regex.compile("\\[.*?\\]")
 	var text_without_tags = regex.sub($Text.text, "", true)

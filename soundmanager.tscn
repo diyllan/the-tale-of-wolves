@@ -1,0 +1,61 @@
+[gd_scene load_steps=13 format=3 uid="uid://jfbavi4d2cyo"]
+
+[ext_resource type="Script" path="res://soundmanager.gd" id="1_ef6dy"]
+[ext_resource type="AudioStream" uid="uid://b32a325vhwxsb" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_1.ogg" id="1_uv58p"]
+[ext_resource type="AudioStream" uid="uid://31naht64umu4" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_2.ogg" id="2_maxv1"]
+[ext_resource type="AudioStream" uid="uid://d0qiovseeewlo" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_3.ogg" id="3_2ihw4"]
+[ext_resource type="AudioStream" uid="uid://br7mkd60tyxgf" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_4.ogg" id="4_7sgfk"]
+[ext_resource type="AudioStream" uid="uid://dfpfsaml5tkaw" path="res://Assets/Sound/VoiceLines/Prologue/Prologue2_1.ogg" id="5_w21e0"]
+[ext_resource type="AudioStream" uid="uid://cbeto6v0060l4" path="res://Assets/Sound/VoiceLines/Prologue/Prologue3_1.ogg" id="6_btxn3"]
+[ext_resource type="AudioStream" uid="uid://cqehp2klieo7" path="res://Assets/Sound/VoiceLines/Prologue/Prologue4_1.ogg" id="7_60yki"]
+[ext_resource type="AudioStream" uid="uid://cnb48sdq5jijn" path="res://Assets/Sound/VoiceLines/Prologue/Prologue4_2.ogg" id="8_s8mg0"]
+[ext_resource type="AudioStream" uid="uid://c314wkehbo6vg" path="res://Assets/Sound/VoiceLines/Prologue/Prologue5_1.ogg" id="9_7aau1"]
+[ext_resource type="AudioStream" uid="uid://s1d24jlxvvpk" path="res://Assets/Sound/VoiceLines/Prologue/Prologue5_2.ogg" id="10_7a16d"]
+[ext_resource type="AudioStream" uid="uid://fsy47qkvmnvr" path="res://Assets/Sound/VoiceLines/Prologue/Prologue5_3.ogg" id="11_o1tp8"]
+
+[node name="soundmanager" type="Node"]
+script = ExtResource("1_ef6dy")
+
+[node name="Prologue1_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_uv58p")
+bus = &"Voice"
+
+[node name="Prologue1_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_maxv1")
+bus = &"Voice"
+
+[node name="Prologue1_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2ihw4")
+bus = &"Voice"
+
+[node name="Prologue1_4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7sgfk")
+bus = &"Voice"
+
+[node name="Prologue2_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_w21e0")
+bus = &"Voice"
+
+[node name="Prologue3_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_btxn3")
+bus = &"Voice"
+
+[node name="Prologue4_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_60yki")
+bus = &"Voice"
+
+[node name="Prologue4_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_s8mg0")
+bus = &"Voice"
+
+[node name="Prologue5_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_7aau1")
+bus = &"Voice"
+
+[node name="Prologue5_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_7a16d")
+bus = &"Voice"
+
+[node name="Prologue5_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_o1tp8")
+bus = &"Voice"

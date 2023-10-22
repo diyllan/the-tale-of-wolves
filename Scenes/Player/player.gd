@@ -7,7 +7,6 @@ const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var isPaused = false
-var dialogueActive = false
 var hiding = false
 var leaveHiding = false
 var death = false
@@ -37,8 +36,6 @@ var HeavyBreathingPlaying = false
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	elif event.is_action_pressed("Pause"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
@@ -82,9 +79,9 @@ func _physics_process(delta):
 	
 func playerHide():
 	if hiding:
-		Ui.get_node("CanvasLayer/Prompt").hide()
-		Ui.get_node("CanvasLayer/HiddenPrompt").text = "Leave\n[E]"
-		Ui.get_node("CanvasLayer/Crosshair").hide()
+		get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/Prompt").hide()
+		get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/HiddenPrompt").text = "Leave\n[E]"
+		get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/Crosshair").hide()
 		model.hide()
 #		collision.disabled = true
 		var HidingTween = create_tween()
@@ -110,9 +107,9 @@ func playerHide():
 			HeavyBreathingPlaying = false
 			HeavyBreathing.stop()
 		hiding = false
-		Ui.get_node("CanvasLayer/Prompt").show()
-		Ui.get_node("CanvasLayer/HiddenPrompt").text = ""
-		Ui.get_node("CanvasLayer/Crosshair").show()
+		get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/Prompt").show()
+		get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/HiddenPrompt").text = ""
+		get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/Crosshair").show()
 		var LeavingTween = create_tween()
 		LeavingTween.tween_property(self, "global_position", currentCamPosHiding, 0.5)
 		await LeavingTween.finished

@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2k23ewh6ck4f"]
+[gd_scene load_steps=11 format=3 uid="uid://b2k23ewh6ck4f"]
 
 [ext_resource type="Shader" path="res://Shader/shaders_demo_project/post_process_blur.gdshader" id="1_wvubp"]
 [ext_resource type="Script" path="res://PushViewport.gd" id="2_hvkw8"]
 [ext_resource type="Shader" path="res://Shader/shaders_demo_project/lcd_post_process.gdshader" id="3_j2q4d"]
 [ext_resource type="Shader" path="res://Shader/shaders_demo_project/pp_band-dither.gdshader" id="4_svtuc"]
 [ext_resource type="Texture2D" uid="uid://b0ub3tqjyw46f" path="res://Shader/shaders_demo_project/psxdither.png" id="5_clp5x"]
-[ext_resource type="PackedScene" uid="uid://c3ql18ytlp6l1" path="res://Scenes/world.tscn" id="6_0qdad"]
+[ext_resource type="PackedScene" uid="uid://c7sf5ftsbupwp" path="res://Scenes/prologue.tscn" id="6_gsjph"]
+[ext_resource type="PackedScene" uid="uid://b2wexk6jwyi2o" path="res://Scenes/ui.tscn" id="6_ri3yx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1msht"]
 shader = ExtResource("1_wvubp")
@@ -22,13 +23,14 @@ shader_parameter/scanline_gap = 5
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0niw8"]
 shader = ExtResource("4_svtuc")
-shader_parameter/col_depth = 5.145
+shader_parameter/col_depth = 20.0
 shader_parameter/dither_banding = true
 shader_parameter/dither_tex = ExtResource("5_clp5x")
 
 [node name="ViewportShaders" type="Node"]
 
 [node name="PSXLayer" type="CanvasLayer" parent="."]
+process_mode = 3
 layer = 0
 
 [node name="BlurPostProcess" type="SubViewportContainer" parent="PSXLayer"]
@@ -38,6 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("2_hvkw8")
 metadata/_edit_use_anchors_ = true
 
@@ -86,4 +89,6 @@ audio_listener_enable_3d = true
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
-[node name="World" parent="PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport" instance=ExtResource("6_0qdad")]
+[node name="UI" parent="PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport" instance=ExtResource("6_ri3yx")]
+
+[node name="Prologue" parent="PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport" instance=ExtResource("6_gsjph")]

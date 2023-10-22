@@ -1,22 +1,29 @@
 extends Control
 
-@onready var _settings = $CanvasLayer/BookMenu/General
-@onready var _sound_settings = $CanvasLayer/BookMenu/SoundSettings
-@onready var _graphic_settings = $CanvasLayer/BookMenu/Graphics
-@onready var _general_tab = $CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/General
-@onready var _sound_tab = $CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/Sound
-@onready var _graphics_tab = $CanvasLayer/BookMenu/BookMenuTexture/MenuButtons/Graphics
-@onready var _continue_button = $CanvasLayer/BookMenu/General/VBoxContainer/Continue
-@onready var _start_button = $CanvasLayer/BookMenu/General/VBoxContainer/Start
-@onready var _bookmenu = $CanvasLayer/BookMenu
-@onready var DayCycleIconAnim = $CanvasLayer/DayCycle/DayCycleIcons
-@onready var _resolutionOptions = $CanvasLayer/BookMenu/Graphics/VBoxContainer/ResolutionButton
-#@onready var _fullscreen_checkbox = $"CanvasLayer/BookMenu/Graphics/VBoxContainer/FullScreen Check"
-@onready var crosshair = $CanvasLayer/Crosshair
-@onready var _prompt = $CanvasLayer/Prompt
-@onready var _HiddenPrompt = $CanvasLayer/HiddenPrompt
+@onready var _settings = $BookMenu/General
+@onready var _sound_settings = $BookMenu/SoundSettings
+@onready var _graphic_settings = $BookMenu/Graphics
+@onready var _general_tab = $BookMenu/BookMenuTexture/MenuButtons/General
+@onready var _sound_tab = $BookMenu/BookMenuTexture/MenuButtons/Sound
+@onready var _graphics_tab = $BookMenu/BookMenuTexture/MenuButtons/Graphics
+@onready var _continue_button = $BookMenu/General/VBoxContainer/Continue
+@onready var _start_button = $BookMenu/General/VBoxContainer/Start
+@onready var _bookmenu = $BookMenu
+@onready var DayCycleIconAnim = $DayCycle/DayCycleIcons
+@onready var _resolutionOptions = $BookMenu/Graphics/VBoxContainer/ResolutionButton
+#@onready var _fullscreen_checkbox = $"BookMenu/Graphics/VBoxContainer/FullScreen Check"
+@onready var crosshair = $Crosshair
+@onready var _prompt = $Prompt
+@onready var _HiddenPrompt = $HiddenPrompt
+@onready var objective = $Objective
+@onready var daycycle = $DayCycle
+@onready var LogoAnimPlayer = $Bootup/AnimationPlayer
+@onready var bootup = $Bootup
+@onready var titlescreenUi = $TitleScreen
 
 var isPaused = false
+var bootupPlaying = true
+var titleScreen = true
 
 var resolutions = {"1280x720":Vector2i(1280,720),
 "1920x1080":Vector2i(1920,1080),
@@ -29,6 +36,8 @@ var screensize = DisplayServer.screen_get_size()
 func _ready():
 ## REMOVE COMMENT FOR FINAL BUILD
 #	_fullscreen_checkbox.button_pressed = true
+	$PS1Start.play()
+	LogoAnimPlayer.play("Logo")
 	DayCycleIconAnim.play("FloatingIcons")
 	AddResolutions()
 	
@@ -40,14 +49,23 @@ func AddResolutions():
 			_resolutionOptions.select(index)
 		index +=1
 		
-		
 func _on_resolution_button_item_selected(_index):
 	var sizeRes = resolutions.get(_resolutionOptions.get_item_text(_resolutionOptions.get_selected_id()))
 	DisplayServer.window_set_size(sizeRes)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Input.is_action_just_pressed("Pause") and !isPaused:
+	if bootupPlaying and Input.is_action_just_pressed("Skip"):
+		bootup.hide()
+		$PS1Start.stop()
+		titlescreenUi.show()
+		bootupPlaying = false
+		
+	if Input.is_action_just_pressed("debug"):
+		SceneManager.changeSceneWithTransition(SceneManager.world)
+		
+	if Input.is_action_just_pressed("Pause") and !isPaused and !titleScreen:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			isPaused = true
 			_bookmenu.show()
 			_continue_button.show()
@@ -65,7 +83,7 @@ func _process(_delta):
 			$BookOpen_Close.play()
 			get_tree().paused = true
 
-	elif Input.is_action_just_pressed("Pause") and isPaused:
+	elif Input.is_action_just_pressed("Pause") and isPaused and !titleScreen:
 		isPaused = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		_bookmenu.hide()
@@ -130,3 +148,9 @@ func _on_full_screen_check_toggled(button_pressed):
 	if !button_pressed:
 		_resolutionOptions.disabled = false
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "Logo":
+		titlescreenUi.show()
+		bootup.hide()

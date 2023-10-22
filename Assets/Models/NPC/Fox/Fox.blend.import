@@ -29,6 +29,12 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
+"materials": {
+"Material": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Models/NPC/Fox/Foxps1.tres"
+}
+},
 "nodes": {
 "PATH:Armature/Skeleton3D/Behind Lower Legs left/Behind Lower Legs left": {
 "generate/physics": true
