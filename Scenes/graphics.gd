@@ -16,7 +16,7 @@ func _ready():
 	## REMOVE COMMENT FOR FINAL BUILD
 #	_fullscreen_checkbox.button_pressed = true
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Pause"):
 		AddResolutions()
 		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:

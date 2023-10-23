@@ -25,6 +25,7 @@ func changeSceneWithTransition(scenePath):
 	viewport.add_child(scene)
 	SoundManager.stopAllSounds()
 	animPlayer.play("TransOut")
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").titleScreen = false
 	await animPlayer.animation_finished
 	fadeoutRect.hide()
 

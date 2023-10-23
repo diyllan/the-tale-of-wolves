@@ -10,7 +10,7 @@ func _ready():
 	
 	value = db_to_linear(AudioServer.get_bus_volume_db(bus_index))
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Pause"):
 		value = db_to_linear(AudioServer.get_bus_volume_db(bus_index))
 	

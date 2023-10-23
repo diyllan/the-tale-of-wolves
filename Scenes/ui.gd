@@ -23,7 +23,7 @@ extends Control
 var isPaused = false
 var bootupPlaying = true
 var titleScreen = true
-
+var showOnce = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,9 +40,12 @@ func _process(_delta):
 		bootupPlaying = false
 		SoundManager.playMusic("Titlescreen")
 		
-	if Input.is_action_just_pressed("debug"):
-		SceneManager.changeSceneWithTransition(SceneManager.world)
-		titleScreen = false
+	if !titleScreen and !showOnce:
+		showOnce = true
+		crosshair.show()
+		_prompt.show()
+		objective.show()
+		daycycle.show()
 		
 	if Input.is_action_just_pressed("Pause") and !isPaused and !titleScreen:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
