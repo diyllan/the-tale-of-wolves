@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bre7li8tslkxw"]
+
+[ext_resource type="Shader" path="res://Shader/shaders_demo_project/psx_lit.gdshader" id="1_strp8"]
+[ext_resource type="Texture2D" uid="uid://bwstnielhpx32" path="res://Assets/Models/NPC/Wolf/Wolf.png" id="2_4fy3u"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_strp8")
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/uv_pan_velocity = Vector2(0, 0)
+shader_parameter/albedoTex = ExtResource("2_4fy3u")

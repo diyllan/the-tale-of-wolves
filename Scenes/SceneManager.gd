@@ -23,6 +23,7 @@ func changeSceneWithTransition(scenePath):
 	child.queue_free()
 	var scene = scenePath.instantiate()
 	viewport.add_child(scene)
+	SoundManager.stopAllSounds()
 	animPlayer.play("TransOut")
 	await animPlayer.animation_finished
 	fadeoutRect.hide()
@@ -32,3 +33,4 @@ func changeScene(scenePath):
 	child.queue_free()
 	var scene = world.instantiate()
 	viewport.add_child(scene)
+	SoundManager.stopAllSounds()

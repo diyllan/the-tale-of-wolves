@@ -16,17 +16,21 @@ func playVoice(voice):
 
 func playSound(sound):
 	var audioPlayer = $Sound.get_node(sound)
-	audioPlayer.play()
-	if lastSound != null:
-		if lastSound.playing:
-			lastSound.stop()
-			
 	lastSound = audioPlayer
 	audioPlayer.play()
 
+func playNextSound(sound):
+	var audioPlayer = $Sound.get_node(sound)
+
+	if lastSound != null:
+		if lastSound.playing:
+			await lastSound.finished
+			lastSound = audioPlayer
+			audioPlayer.play()
+
 func playMusic(music):
 	var audioPlayer = $Music.get_node(music)
-	audioPlayer.play()
+
 	if lastMusic != null:
 		if lastMusic.playing:
 			var lastMusicFadeOut = create_tween()
@@ -49,7 +53,7 @@ func lowerLastMusicVolume():
 
 func playAmbience(ambience):
 	var audioPlayer = $Ambience.get_node(ambience)
-	audioPlayer.play()
+
 	if lastAmbience != null:
 		if lastAmbience.playing:
 			var lastAmbienceFadeOut = create_tween()
@@ -64,7 +68,11 @@ func playAmbience(ambience):
 	audioPlayer.play()
 
 func stopAllSounds():
-	lastVoice.stop()
-	lastAmbience.stop()
-	lastSound.stop()
-	lastMusic.stop()
+	if lastVoice != null:
+		lastVoice.stop()
+	if lastAmbience != null:
+		lastAmbience.stop()
+	if lastSound != null:
+		lastSound.stop()
+	if lastMusic != null:
+		lastMusic.stop()

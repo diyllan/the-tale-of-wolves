@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://jfbavi4d2cyo"]
+[gd_scene load_steps=19 format=3 uid="uid://jfbavi4d2cyo"]
 
 [ext_resource type="Script" path="res://soundmanager.gd" id="1_ef6dy"]
 [ext_resource type="AudioStream" uid="uid://b32a325vhwxsb" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_1.ogg" id="1_uv58p"]
@@ -12,8 +12,12 @@
 [ext_resource type="AudioStream" uid="uid://c314wkehbo6vg" path="res://Assets/Sound/VoiceLines/Prologue/Prologue5_1.ogg" id="9_7aau1"]
 [ext_resource type="AudioStream" uid="uid://s1d24jlxvvpk" path="res://Assets/Sound/VoiceLines/Prologue/Prologue5_2.ogg" id="10_7a16d"]
 [ext_resource type="AudioStream" uid="uid://fsy47qkvmnvr" path="res://Assets/Sound/VoiceLines/Prologue/Prologue5_3.ogg" id="11_o1tp8"]
+[ext_resource type="AudioStream" uid="uid://c8ajbolx6b1j4" path="res://Assets/Sound/Music/Prologue/Shotgun.ogg" id="13_6w7nl"]
 [ext_resource type="AudioStream" uid="uid://bqt5ga1ft2s54" path="res://Assets/Sound/Music/Titlescreen/TitleScreen.ogg" id="13_pomwl"]
+[ext_resource type="AudioStream" uid="uid://c4xx05c13aysq" path="res://Assets/Sound/Music/Prologue/WolfGrowl.ogg" id="14_hugtc"]
 [ext_resource type="AudioStream" uid="uid://42jsqkm83icu" path="res://Assets/Sound/Music/Prologue/prologue_forest_ambience.ogg" id="14_xo28x"]
+[ext_resource type="AudioStream" uid="uid://cjto33sr15pjj" path="res://Assets/Sound/Music/Prologue/WolfWhimper.ogg" id="15_u74xd"]
+[ext_resource type="AudioStream" uid="uid://dbjhjpen1hmyu" path="res://Assets/Sound/Music/Prologue/LeavesRushling.ogg" id="16_453og"]
 
 [node name="soundmanager" type="Node"]
 script = ExtResource("1_ef6dy")
@@ -65,6 +69,22 @@ stream = ExtResource("11_o1tp8")
 bus = &"Voice"
 
 [node name="Sound" type="Node" parent="."]
+
+[node name="Shotgun" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("13_6w7nl")
+bus = &"SoundEffects"
+
+[node name="Bite" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("14_hugtc")
+bus = &"SoundEffects"
+
+[node name="Whimper" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("15_u74xd")
+bus = &"SoundEffects"
+
+[node name="LeavesRushling" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("16_453og")
+bus = &"SoundEffects"
 
 [node name="Music" type="Node" parent="."]
 
