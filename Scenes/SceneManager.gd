@@ -17,7 +17,7 @@ func _ready():
 
 func changeSceneWithTransition(scenePath):
 	fadeoutRect.show()
-	animPlayer.playVoice("TransIn")
+	animPlayer.play("TransIn")
 	await animPlayer.animation_finished
 	var child = viewport.get_child(1)
 	child.queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://b2wexk6jwyi2o"]
+[gd_scene load_steps=58 format=3 uid="uid://b2wexk6jwyi2o"]
 
 [ext_resource type="Texture2D" uid="uid://tv4rpk6bgncn" path="res://Assets/UI/Menu/Book.png" id="1_jrlyx"]
 [ext_resource type="Script" path="res://Scenes/ui.gd" id="1_kjabk"]
@@ -10,22 +10,17 @@
 [ext_resource type="Texture2D" uid="uid://drhg7ut2fyi8j" path="res://Assets/UI/MoonlilyLogo/CrescentMoonPixelated.png" id="5_ffem0"]
 [ext_resource type="FontFile" uid="uid://ceb7f61glg0rc" path="res://Assets/Fonts/GrusskartenGotisch.ttf" id="6_05n3k"]
 [ext_resource type="Texture2D" uid="uid://xjlx4w4hmpt1" path="res://Assets/UI/Menu/GeneralTabHover.png" id="6_gf611"]
-[ext_resource type="Texture2D" uid="uid://dt6cgrygubwgk" path="res://Assets/UI/Menu/SliderKnob.png" id="6_l0yut"]
 [ext_resource type="Texture2D" uid="uid://d4hwcisa62842" path="res://Assets/UI/MoonlilyLogo/SpiderLilyPixelated.png" id="7_hgkxd"]
-[ext_resource type="Texture2D" uid="uid://c834q6ifsm8qa" path="res://Assets/UI/Menu/SliderKnobActive.png" id="7_tsira"]
 [ext_resource type="Texture2D" uid="uid://dyo61laukm8a7" path="res://Assets/UI/Menu/SoundTab.png" id="7_xit51"]
 [ext_resource type="Texture2D" uid="uid://1o0f4jrk7djo" path="res://Assets/UI/Menu/SoundTabSelected.png" id="8_1ud53"]
-[ext_resource type="Texture2D" uid="uid://68ckbun0h48e" path="res://Assets/UI/Menu/Slider.png" id="8_7cnlo"]
 [ext_resource type="Texture2D" uid="uid://bhnoml3i6vdee" path="res://Assets/UI/MoonlilyLogo/CloudsPixelated.png" id="8_wyhr5"]
 [ext_resource type="Script" path="res://Scenes/TitleScreen.gd" id="9_5877f"]
 [ext_resource type="Texture2D" uid="uid://dixecebgui6lp" path="res://Assets/UI/Menu/SoundTabHover.png" id="9_b0yjl"]
-[ext_resource type="Texture2D" uid="uid://crx2ouspkr1x4" path="res://Assets/UI/Menu/SliderFill.png" id="9_j81di"]
 [ext_resource type="Texture2D" uid="uid://bohaclyiwwf3b" path="res://Assets/UI/Menu/GraphicsTab.png" id="10_micdt"]
 [ext_resource type="Texture2D" uid="uid://bv046r0tp2xc0" path="res://Assets/UI/Menu/GraphicsTabSelected.png" id="11_725kd"]
+[ext_resource type="PackedScene" uid="uid://c41jkoclspebv" path="res://Scenes/sound_settings.tscn" id="11_rd2p8"]
 [ext_resource type="Texture2D" uid="uid://knj0onob31x5" path="res://Assets/UI/Menu/GraphicsTabHover.png" id="12_6j54d"]
-[ext_resource type="Script" path="res://Scenes/Volume.gd" id="14_7bx3m"]
-[ext_resource type="Texture2D" uid="uid://bf5go5ea0wto0" path="res://Assets/UI/Menu/CheckBoxUnchecked.png" id="14_ohm1b"]
-[ext_resource type="Texture2D" uid="uid://bn3ywj6lxysmx" path="res://Assets/UI/Menu/CheckBox.png" id="14_rxagv"]
+[ext_resource type="PackedScene" uid="uid://boa1u6uxywdfr" path="res://Scenes/graphics.tscn" id="12_kuwbr"]
 [ext_resource type="Theme" uid="uid://cafwn0v5cxjf3" path="res://Assets/UI/theme.tres" id="18_6psci"]
 [ext_resource type="Texture2D" uid="uid://cpt2ynuidmh2i" path="res://Assets/UI/DayCycle/Frame.png" id="18_8svsh"]
 [ext_resource type="Texture2D" uid="uid://c2gbl5swaj6lf" path="res://Assets/UI/DayCycle/MoonGradient.png" id="19_6oig4"]
@@ -194,41 +189,6 @@ _data = {
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7dbxe"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_88t1h"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gcamd"]
-texture = ExtResource("8_7cnlo")
-texture_margin_left = 17.0
-texture_margin_top = 30.0
-texture_margin_right = 26.0
-texture_margin_bottom = 30.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gug57"]
-texture = ExtResource("9_j81di")
-texture_margin_left = 30.0
-texture_margin_top = 30.0
-texture_margin_right = 30.0
-texture_margin_bottom = 30.0
-expand_margin_right = 20.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ar3w2"]
-texture = ExtResource("9_j81di")
-texture_margin_left = 30.0
-texture_margin_top = 30.0
-texture_margin_right = 30.0
-texture_margin_bottom = 30.0
-expand_margin_right = 17.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6wmnt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tirv4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ieggq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2cjo"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mt063"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ongl"]
 
 [sub_resource type="Animation" id="Animation_2fluf"]
 resource_name = "FloatingIcons"
@@ -569,9 +529,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -224.0
-offset_top = 60.0
+offset_top = 31.0
 offset_right = 224.0
-offset_bottom = 171.0
+offset_bottom = 251.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -604,6 +564,20 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_0lb7y")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_audjk")
 disabled = true
 text = "Continue"
+
+[node name="Settings" type="Button" parent="TitleScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.466667, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.72549, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.72549, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w57ul")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_oy365")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0lb7y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_audjk")
+text = "Settings"
 
 [node name="Quit" type="Button" parent="TitleScreen/VBoxContainer"]
 layout_mode = 2
@@ -639,6 +613,63 @@ theme_override_constants/shadow_offset_y = 4
 theme_override_constants/shadow_outline_size = 5
 theme_override_font_sizes/font_size = 150
 text = "The Tale of Wolves"
+
+[node name="BookSettings" type="Control" parent="TitleScreen"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -966.0
+offset_top = -733.0
+offset_right = -926.0
+offset_bottom = -693.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BookMenuTexture" type="TextureRect" parent="TitleScreen/BookSettings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 433.5
+offset_top = 134.0
+offset_right = 1446.5
+offset_bottom = 906.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_jrlyx")
+
+[node name="Close" type="Button" parent="TitleScreen/BookSettings"]
+layout_mode = 0
+offset_left = 1145.0
+offset_top = 846.0
+offset_right = 1249.0
+offset_bottom = 898.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.466667, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.72549, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.72549, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w57ul")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_oy365")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0lb7y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_audjk")
+text = "Close"
+
+[node name="SoundSettings" parent="TitleScreen/BookSettings" instance=ExtResource("11_rd2p8")]
+visible = true
+
+[node name="Graphics" parent="TitleScreen/BookSettings" instance=ExtResource("12_kuwbr")]
+visible = true
+offset_left = -467.0
+offset_right = -427.0
 
 [node name="Dialogue" type="Control" parent="."]
 process_mode = 1
@@ -911,199 +942,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_7dbxe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_88t1h")
 text = "Quit"
 
-[node name="SoundSettings" type="Control" parent="BookMenu"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 399.0
-offset_bottom = 72.0
-
-[node name="SoundLabel" type="Label" parent="BookMenu/SoundSettings"]
-layout_mode = 2
-offset_left = 976.0
-offset_top = 220.0
-offset_right = 1416.0
-offset_bottom = 287.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.466667, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 4
-theme_override_constants/shadow_outline_size = 2
-theme_override_font_sizes/font_size = 64
-text = "Sound"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="BookMenu/SoundSettings"]
-layout_mode = 2
-offset_left = 976.0
-offset_top = 304.0
-offset_right = 1416.0
-offset_bottom = 840.0
-
-[node name="Volume Label" type="Label" parent="BookMenu/SoundSettings/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_constants/shadow_outline_size = 0
-theme_override_font_sizes/font_size = 48
-text = "Master Volume"
-horizontal_alignment = 1
-
-[node name="GeneralVolume" type="HSlider" parent="BookMenu/SoundSettings/VBoxContainer"]
-layout_mode = 2
-theme_override_icons/grabber = ExtResource("6_l0yut")
-theme_override_icons/grabber_highlight = ExtResource("7_tsira")
-theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
-theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
-max_value = 1.0
-step = 0.001
-value = 1.0
-script = ExtResource("14_7bx3m")
-bus_name = "Master"
-
-[node name="MusicLabel" type="Label" parent="BookMenu/SoundSettings/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_constants/shadow_outline_size = 0
-theme_override_font_sizes/font_size = 48
-text = "Music
-"
-horizontal_alignment = 1
-
-[node name="Music" type="HSlider" parent="BookMenu/SoundSettings/VBoxContainer"]
-layout_mode = 2
-theme_override_icons/grabber = ExtResource("6_l0yut")
-theme_override_icons/grabber_highlight = ExtResource("7_tsira")
-theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
-theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
-max_value = 1.0
-step = 0.001
-value = 1.0
-script = ExtResource("14_7bx3m")
-bus_name = "Music"
-
-[node name="SoundEffectsLabel" type="Label" parent="BookMenu/SoundSettings/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_constants/shadow_outline_size = 0
-theme_override_font_sizes/font_size = 48
-text = "Sound Effects
-"
-horizontal_alignment = 1
-
-[node name="SoundEffects" type="HSlider" parent="BookMenu/SoundSettings/VBoxContainer"]
-layout_mode = 2
-theme_override_icons/grabber = ExtResource("6_l0yut")
-theme_override_icons/grabber_highlight = ExtResource("7_tsira")
-theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
-theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
-max_value = 1.0
-step = 0.001
-value = 1.0
-script = ExtResource("14_7bx3m")
-bus_name = "SoundEffects"
-
-[node name="Voice Label" type="Label" parent="BookMenu/SoundSettings/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_constants/shadow_outline_size = 0
-theme_override_font_sizes/font_size = 48
-text = "Voice
-"
-horizontal_alignment = 1
-
-[node name="Voice" type="HSlider" parent="BookMenu/SoundSettings/VBoxContainer"]
-layout_mode = 2
-theme_override_icons/grabber = ExtResource("6_l0yut")
-theme_override_icons/grabber_highlight = ExtResource("7_tsira")
-theme_override_styles/slider = SubResource("StyleBoxTexture_gcamd")
-theme_override_styles/grabber_area = SubResource("StyleBoxTexture_gug57")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_ar3w2")
-max_value = 1.0
-step = 0.001
-value = 1.0
-script = ExtResource("14_7bx3m")
-bus_name = "Voice"
-
-[node name="Graphics" type="Control" parent="BookMenu"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="GraphicsLabel" type="Label" parent="BookMenu/Graphics"]
-layout_mode = 2
-offset_left = 976.0
-offset_top = 220.0
-offset_right = 1416.0
-offset_bottom = 287.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.466667, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 4
-theme_override_constants/shadow_outline_size = 2
-theme_override_font_sizes/font_size = 64
-text = "Graphics"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="FullScreen Check" type="CheckBox" parent="BookMenu/Graphics"]
-layout_mode = 2
-offset_left = 1160.0
-offset_top = 499.0
-offset_right = 1218.0
-offset_bottom = 555.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_icons/checked = ExtResource("14_rxagv")
-theme_override_icons/unchecked = ExtResource("14_ohm1b")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_6wmnt")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_tirv4")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ieggq")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_r2cjo")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_mt063")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_0ongl")
-alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="BookMenu/Graphics"]
-layout_mode = 0
-offset_left = 976.0
-offset_top = 303.0
-offset_right = 1416.0
-offset_bottom = 497.0
-
-[node name="ResolutionLabel" type="Label" parent="BookMenu/Graphics/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_constants/shadow_outline_size = 0
-theme_override_font_sizes/font_size = 48
-text = "Resolution
-"
-horizontal_alignment = 1
-
-[node name="ResolutionButton" type="OptionButton" parent="BookMenu/Graphics/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("18_6psci")
-theme_override_font_sizes/font_size = 36
-
-[node name="Label" type="Label" parent="BookMenu/Graphics/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_constants/shadow_outline_size = 0
-theme_override_font_sizes/font_size = 48
-text = "Fullscreen"
-horizontal_alignment = 1
-
 [node name="Title" type="Label" parent="BookMenu"]
 layout_mode = 0
 offset_left = 523.0
@@ -1123,6 +961,10 @@ of Wolves"
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="SoundSettings" parent="BookMenu" instance=ExtResource("11_rd2p8")]
+
+[node name="Graphics" parent="BookMenu" instance=ExtResource("12_kuwbr")]
 
 [node name="DayCycle" type="Control" parent="."]
 visible = false
@@ -1300,7 +1142,9 @@ expand_mode = 1
 [connection signal="animation_finished" from="Bootup/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="TitleScreen/VBoxContainer/Start" to="TitleScreen" method="_on_start_pressed"]
 [connection signal="pressed" from="TitleScreen/VBoxContainer/Continue" to="TitleScreen" method="_on_continue_pressed"]
+[connection signal="pressed" from="TitleScreen/VBoxContainer/Settings" to="TitleScreen" method="_on_settings_pressed"]
 [connection signal="pressed" from="TitleScreen/VBoxContainer/Quit" to="TitleScreen" method="_on_quit_pressed"]
+[connection signal="pressed" from="TitleScreen/BookSettings/Close" to="TitleScreen" method="_on_close_pressed"]
 [connection signal="timeout" from="Dialogue/SkipTimer" to="Dialogue" method="_on_skip_timer_timeout"]
 [connection signal="timeout" from="Dialogue/InteractDelay" to="Dialogue" method="_on_interact_delay_timeout"]
 [connection signal="pressed" from="BookMenu/BookMenuTexture/MenuButtons/General" to="." method="_on_general_pressed"]
@@ -1309,5 +1153,3 @@ expand_mode = 1
 [connection signal="pressed" from="BookMenu/General/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="BookMenu/General/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="BookMenu/General/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="toggled" from="BookMenu/Graphics/FullScreen Check" to="." method="_on_full_screen_check_toggled"]
-[connection signal="item_selected" from="BookMenu/Graphics/VBoxContainer/ResolutionButton" to="." method="_on_resolution_button_item_selected"]

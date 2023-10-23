@@ -119,9 +119,3 @@ func nextPhrase() -> void:
 		
 	phraseNum += 1
 	return
-
-
-
-
-func _on_timer_timeout():
-	pass

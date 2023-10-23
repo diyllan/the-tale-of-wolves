@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=3 uid="uid://boa1u6uxywdfr"]
+
+[ext_resource type="Script" path="res://Scenes/graphics.gd" id="1_3deqe"]
+[ext_resource type="Texture2D" uid="uid://bn3ywj6lxysmx" path="res://Assets/UI/Menu/CheckBox.png" id="1_5p5ft"]
+[ext_resource type="Texture2D" uid="uid://bf5go5ea0wto0" path="res://Assets/UI/Menu/CheckBoxUnchecked.png" id="2_oy4a0"]
+[ext_resource type="Theme" uid="uid://cafwn0v5cxjf3" path="res://Assets/UI/theme.tres" id="3_7fwk6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bpxuk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c51x1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhmod"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cpbf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kiohp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2uydr"]
+
+[node name="Graphics" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3deqe")
+
+[node name="GraphicsLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 976.0
+offset_top = 220.0
+offset_right = 1416.0
+offset_bottom = 287.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.466667, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 2
+theme_override_font_sizes/font_size = 64
+text = "Graphics"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FullScreen Check" type="CheckBox" parent="."]
+layout_mode = 2
+offset_left = 1160.0
+offset_top = 499.0
+offset_right = 1218.0
+offset_bottom = 555.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_icons/checked = ExtResource("1_5p5ft")
+theme_override_icons/unchecked = ExtResource("2_oy4a0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bpxuk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c51x1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lhmod")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6cpbf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kiohp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2uydr")
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 976.0
+offset_top = 303.0
+offset_right = 1416.0
+offset_bottom = 497.0
+
+[node name="ResolutionLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 48
+text = "Resolution
+"
+horizontal_alignment = 1
+
+[node name="ResolutionButton" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_7fwk6")
+theme_override_font_sizes/font_size = 36
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 48
+text = "Fullscreen"
+horizontal_alignment = 1
+
+[connection signal="toggled" from="FullScreen Check" to="." method="_on_full_screen_check_toggled"]
+[connection signal="item_selected" from="VBoxContainer/ResolutionButton" to="." method="_on_resolution_button_item_selected"]
