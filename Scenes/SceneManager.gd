@@ -32,6 +32,6 @@ func changeSceneWithTransition(scenePath):
 func changeScene(scenePath):
 	var child = viewport.get_child(1)
 	child.queue_free()
-	var scene = world.instantiate()
+	var scene = scenePath.instantiate()
 	viewport.add_child(scene)
 	SoundManager.stopAllSounds()
