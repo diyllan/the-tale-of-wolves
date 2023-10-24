@@ -30,6 +30,7 @@ func _process(_delta):
 			SoundManager.playNextSound("Whimper")
 			SoundManager.playSound("LeavesRushling")
 			animPlayer.play("CameraMovement7")
+			get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").cutScene = false
 			await animPlayer.animation_finished
 			bite_prompt.hide()
 			SceneManager.changeSceneWithTransition(SceneManager.world)

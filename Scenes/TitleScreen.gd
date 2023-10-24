@@ -15,6 +15,7 @@ func _process(_delta):
 func _on_start_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/Prologue/Camera3D/AnimationPlayer").play("CameraMovement1")
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").cutScene = true
 	$VBoxContainer.hide()
 	var tween = create_tween()
 	tween.tween_property($Title, "modulate:a", 0, 1)

@@ -10,7 +10,7 @@ extends Control
 @onready var _start_button = $BookMenu/General/VBoxContainer/Start
 @onready var _bookmenu = $BookMenu
 @onready var DayCycleIconAnim = $DayCycle/DayCycleIcons
-
+@onready var dialogueAnim = $Dialogue/Indicator/AnimationPlayer
 @onready var crosshair = $Crosshair
 @onready var _prompt = $Prompt
 @onready var _HiddenPrompt = $HiddenPrompt
@@ -24,7 +24,8 @@ var isPaused = false
 var bootupPlaying = true
 var titleScreen = true
 var showOnce = false
-
+var cutScene = false
+var blacBarsAllowed = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$PS1Start.play()
@@ -76,6 +77,12 @@ func _process(_delta):
 		$BookOpen_Close.play()
 		get_tree().paused = false
 
+	if cutScene and blacBarsAllowed:
+		dialogueAnim.play("BlackBarsFadeIn")
+		blacBarsAllowed = false
+	elif !cutScene and !blacBarsAllowed:
+		dialogueAnim.play("BlackBarsFadeOut")
+		blacBarsAllowed = true
 func _on_start_pressed():
 	print("start game")
 
