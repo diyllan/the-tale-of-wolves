@@ -69,10 +69,22 @@ func playAmbience(ambience):
 
 func stopAllSounds():
 	if lastVoice != null:
+		var lastVoiceFadeOut = create_tween()
+		lastVoiceFadeOut.tween_property(lastVoice, "volume_db", -80, 5)
+		await lastVoiceFadeOut.finished
 		lastVoice.stop()
 	if lastAmbience != null:
+		var lastAmbienceFadeOut = create_tween()
+		lastAmbienceFadeOut.tween_property(lastAmbience, "volume_db", -80, 5)
+		await lastAmbienceFadeOut.finished
 		lastAmbience.stop()
 	if lastSound != null:
+		var lastSoundFadeOut = create_tween()
+		lastSoundFadeOut.tween_property(lastSound, "volume_db", -80, 5)
+		await lastSoundFadeOut.finished
 		lastSound.stop()
 	if lastMusic != null:
+		var lastMusicFadeOut = create_tween()
+		lastMusicFadeOut.tween_property(lastMusic, "volume_db", -80, 5)
+		await lastMusicFadeOut.finished
 		lastMusic.stop()

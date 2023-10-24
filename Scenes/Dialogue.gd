@@ -105,6 +105,11 @@ func nextPhrase() -> void:
 	var voice = dialog[phraseNum]["Voice"]
 	if voice != "":
 		SoundManager.playVoice(voice)
+	
+	var sound = dialog[phraseNum]["Sound"]
+	if sound != "":
+		SoundManager.playSound(sound)
+	
 	var regex = RegEx.new()
 	regex.compile("\\[.*?\\]")
 	var text_without_tags = regex.sub($Text.text, "", true)
