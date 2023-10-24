@@ -511,6 +511,7 @@ offset_top = -535.0
 offset_right = 3935.0
 offset_bottom = 2245.0
 scale = Vector2(0.4, 0.4)
+mouse_filter = 2
 texture = ExtResource("3_hgffe")
 expand_mode = 1
 
@@ -521,6 +522,7 @@ offset_top = -431.0
 offset_right = 3713.0
 offset_bottom = 2755.0
 scale = Vector2(0.3, 0.3)
+mouse_filter = 2
 texture = ExtResource("4_xtxhd")
 
 [node name="CrescentMoon" type="TextureRect" parent="Bootup/Logo"]
@@ -530,6 +532,7 @@ offset_top = -429.0
 offset_right = 3731.0
 offset_bottom = 2757.0
 scale = Vector2(0.3, 0.3)
+mouse_filter = 2
 texture = ExtResource("5_ffem0")
 
 [node name="Label" type="Label" parent="Bootup/Logo"]
@@ -555,6 +558,7 @@ offset_top = -385.0
 offset_right = 3845.0
 offset_bottom = 2801.0
 scale = Vector2(0.3, 0.3)
+mouse_filter = 2
 texture = ExtResource("7_hgkxd")
 
 [node name="Clouds" type="TextureRect" parent="Bootup/Logo"]
@@ -564,6 +568,7 @@ offset_top = -444.0
 offset_right = 3714.0
 offset_bottom = 2742.0
 scale = Vector2(0.3, 0.3)
+mouse_filter = 2
 texture = ExtResource("8_wyhr5")
 
 [node name="SkipLabel" type="Label" parent="Bootup/Logo"]
@@ -603,7 +608,7 @@ offset_right = 986.0
 offset_bottom = 753.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource("9_5877f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TitleScreen"]
@@ -785,12 +790,14 @@ offset_left = 941.0
 offset_top = 990.0
 offset_right = 981.0
 offset_bottom = 1030.0
+mouse_filter = 2
 
 [node name="BlackBarTop" type="ColorRect" parent="Control"]
 offset_left = -940.0
 offset_top = -1267.0
 offset_right = 980.0
 offset_bottom = -1072.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="BlackBarBottom" type="ColorRect" parent="Control"]
@@ -799,6 +806,7 @@ offset_left = -940.0
 offset_top = 114.0
 offset_right = 980.0
 offset_bottom = 309.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Dialogue" type="Control" parent="."]
@@ -815,6 +823,7 @@ offset_right = 980.0
 offset_bottom = 1024.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 script = ExtResource("33_o5fdm")
 
 [node name="Name" type="RichTextLabel" parent="Dialogue"]
@@ -830,6 +839,7 @@ offset_right = 119.0
 offset_bottom = -76.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_colors/default_color = Color(0.839216, 0.839216, 0.839216, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
@@ -851,6 +861,7 @@ offset_right = 354.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_outline_size = 0
@@ -905,6 +916,7 @@ offset_right = 111.0
 offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 max_value = 20.0
 rounded = true
 fill_mode = 4
@@ -1106,6 +1118,7 @@ offset_left = 1880.0
 offset_right = 1920.0
 offset_bottom = 40.0
 grow_horizontal = 0
+mouse_filter = 2
 
 [node name="DayCycleFrame" type="TextureRect" parent="DayCycle"]
 layout_mode = 0
@@ -1113,18 +1126,21 @@ offset_left = -205.0
 offset_top = -7.0
 offset_right = -60.0
 offset_bottom = 115.0
+mouse_filter = 2
 texture = ExtResource("18_8svsh")
 
 [node name="MoonGradient" type="TextureRect" parent="DayCycle/DayCycleFrame"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 texture = ExtResource("19_6oig4")
 
 [node name="FullMoonIconFIll" type="TextureProgressBar" parent="DayCycle/DayCycleFrame/MoonGradient"]
 layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
+mouse_filter = 2
 value = 100.0
 fill_mode = 3
 texture_progress = ExtResource("20_uykwl")
@@ -1134,6 +1150,7 @@ visible = false
 layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
+mouse_filter = 2
 value = 100.0
 fill_mode = 3
 texture_progress = ExtResource("21_4ch8y")
@@ -1143,6 +1160,7 @@ visible = false
 layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
+mouse_filter = 2
 value = 100.0
 fill_mode = 3
 texture_progress = ExtResource("22_qvq3f")
@@ -1152,12 +1170,14 @@ visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 texture = ExtResource("23_npmsi")
 
 [node name="DawnIconFIll" type="TextureProgressBar" parent="DayCycle/DayCycleFrame/DawnGradient"]
 layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
+mouse_filter = 2
 value = 100.0
 fill_mode = 3
 texture_progress = ExtResource("24_cqvtd")
@@ -1167,12 +1187,14 @@ visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 texture = ExtResource("25_pky44")
 
 [node name="DayIconFIll" type="TextureProgressBar" parent="DayCycle/DayCycleFrame/DayGradient"]
 layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
+mouse_filter = 2
 value = 100.0
 fill_mode = 3
 texture_progress = ExtResource("26_o8er1")
@@ -1182,12 +1204,14 @@ visible = false
 layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
+mouse_filter = 2
 texture = ExtResource("27_edtwp")
 
 [node name="MorningIconFIll" type="TextureProgressBar" parent="DayCycle/DayCycleFrame/MorningBG"]
 layout_mode = 0
 offset_right = 145.0
 offset_bottom = 122.0
+mouse_filter = 2
 value = 100.0
 fill_mode = 3
 texture_progress = ExtResource("28_x8fnj")
@@ -1239,19 +1263,6 @@ text = "[Key]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PS1Start" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("43_33uk5")
-
-[node name="BookOpen_Close" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("36_t42dm")
-pitch_scale = 0.76
-
-[node name="PageTurn" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("29_8xo55")
-volume_db = -7.111
-pitch_scale = 0.69
-bus = &"SoundEffects"
-
 [node name="Crosshair" type="TextureRect" parent="."]
 visible = false
 layout_mode = 1
@@ -1266,8 +1277,22 @@ offset_right = 994.0
 offset_bottom = 565.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("29_eo06n")
 expand_mode = 1
+
+[node name="PS1Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_33uk5")
+
+[node name="BookOpen_Close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("36_t42dm")
+pitch_scale = 0.76
+
+[node name="PageTurn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_8xo55")
+volume_db = -7.111
+pitch_scale = 0.69
+bus = &"SoundEffects"
 
 [connection signal="animation_finished" from="Bootup/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="TitleScreen/VBoxContainer/Start" to="TitleScreen" method="_on_start_pressed"]
