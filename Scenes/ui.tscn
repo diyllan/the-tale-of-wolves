@@ -159,22 +159,6 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_audjk"]
 
-[sub_resource type="Animation" id="Animation_akg1v"]
-resource_name = "Indicator"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Indicator:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.333333), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_rbbhf"]
 resource_name = "BlackBarsFadeIn"
 tracks/0/type = "value"
@@ -202,33 +186,6 @@ tracks/1/keys = {
 "values": [Vector2(-940, 114), Vector2(-940, -107)]
 }
 
-[sub_resource type="Animation" id="Animation_qox3c"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../Control/BlackBarBottom:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-940, 114)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../Control/BlackBarTop:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-940, -1267)]
-}
-
 [sub_resource type="Animation" id="Animation_igucl"]
 resource_name = "BlackBarsFadeOut"
 tracks/0/type = "value"
@@ -254,6 +211,49 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-940, -107), Vector2(-941, 89)]
+}
+
+[sub_resource type="Animation" id="Animation_akg1v"]
+resource_name = "Indicator"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Indicator:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.333333), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qox3c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Control/BlackBarBottom:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-940, 114)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Control/BlackBarTop:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-940, -1267)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0mj26"]
@@ -793,6 +793,7 @@ offset_bottom = 1030.0
 mouse_filter = 2
 
 [node name="BlackBarTop" type="ColorRect" parent="Control"]
+layout_mode = 0
 offset_left = -940.0
 offset_top = -1267.0
 offset_right = 980.0
