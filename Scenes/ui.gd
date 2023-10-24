@@ -34,6 +34,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	
+	if Input.is_action_just_pressed("debug"):
+		SceneManager.changeScene(SceneManager.world)
+	
 	if bootupPlaying and Input.is_action_just_pressed("Skip"):
 		bootup.hide()
 		$PS1Start.stop()
@@ -47,6 +51,7 @@ func _process(_delta):
 		_prompt.show()
 		objective.show()
 		daycycle.show()
+		titlescreenUi.hide()
 		
 	if Input.is_action_just_pressed("Pause") and !isPaused and !titleScreen:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

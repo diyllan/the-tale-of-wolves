@@ -34,4 +34,5 @@ func changeScene(scenePath):
 	child.queue_free()
 	var scene = scenePath.instantiate()
 	viewport.add_child(scene)
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").titleScreen = false
 	SoundManager.stopAllSounds()
