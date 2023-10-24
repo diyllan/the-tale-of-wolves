@@ -5431,7 +5431,7 @@ _subresources={
 "materials": {
 "Material": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/Models/NPC/Man1/man_1_anim.tres"
+"use_external/path": "res://Assets/Models/NPC/Man1/man1Ps1.tres"
 }
 }
 }
