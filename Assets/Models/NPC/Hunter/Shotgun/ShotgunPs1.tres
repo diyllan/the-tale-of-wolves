@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b012eyyv44e5b"]
+
+[ext_resource type="Shader" path="res://Shader/shaders_demo_project/psx_lit.gdshader" id="1_hslrs"]
+[ext_resource type="Texture2D" uid="uid://u874457bwsjy" path="res://Assets/Models/NPC/Hunter/Shotgun/ShotgunTexture.png" id="2_savmf"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_hslrs")
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/uv_pan_velocity = Vector2(0, 0)
+shader_parameter/albedoTex = ExtResource("2_savmf")

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://ofycgrofvf00"]
+
+[ext_resource type="Shader" path="res://Shader/shaders_demo_project/psx_lit.gdshader" id="1_4j3u4"]
+[ext_resource type="Texture2D" uid="uid://b3rgbgv3o6nl4" path="res://Assets/Models/NPC/Woman3/textures/Woman3exture.png" id="2_rgmab"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_4j3u4")
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/uv_pan_velocity = Vector2(0, 0)
+shader_parameter/albedoTex = ExtResource("2_rgmab")

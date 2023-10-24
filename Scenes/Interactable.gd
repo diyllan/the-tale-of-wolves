@@ -4,6 +4,9 @@ extends StaticBody3D
 @export var Dialogue_Path = ""
 @export var prompt_message = ""
 @export var prompt_action = "interact"
+
+signal Interacted
+
 var player
 
 func get_prompt():
@@ -15,6 +18,7 @@ func get_prompt():
 	
 func interact(body):
 	if Dialogue_Path != "":
+		Interacted.emit()
 		DialogueManager.showDialogue(Dialogue_Path)
 	
 	if prompt_message == "hide":
@@ -28,4 +32,3 @@ func interact(body):
 	if prompt_message == "Open Door":
 		var tween = create_tween()
 		tween.tween_property(get_parent().get_parent().get_parent(), "rotation", Vector3(0,90,0), 0.5)
-	

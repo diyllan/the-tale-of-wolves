@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bmfl64uqpqams"]
+
+[ext_resource type="Shader" path="res://Shader/shaders_demo_project/psx_lit.gdshader" id="1_51xfm"]
+[ext_resource type="Texture2D" uid="uid://dscp1r5ethlhu" path="res://Assets/Models/NPC/Man4/textures/Man4Texture.png" id="2_8slfa"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_51xfm")
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/uv_pan_velocity = Vector2(0, 0)
+shader_parameter/albedoTex = ExtResource("2_8slfa")

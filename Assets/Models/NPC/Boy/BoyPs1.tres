@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b4u3p0tpn7ja2"]
+
+[ext_resource type="Shader" path="res://Shader/shaders_demo_project/psx_lit.gdshader" id="1_8eo1p"]
+[ext_resource type="Texture2D" uid="uid://bys3t5ywlhy6b" path="res://Assets/Models/NPC/Boy/textures/BoyTexture.png" id="2_xk2rr"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_8eo1p")
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/uv_pan_velocity = Vector2(0, 0)
+shader_parameter/albedoTex = ExtResource("2_xk2rr")

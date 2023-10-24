@@ -8,7 +8,6 @@ enum {
 	BITE,
 }
 const SPEED = 3
-const JUMP_VELOCITY = 4.5
 const TOLERANCE = 4.0
 
 var state = IDLE

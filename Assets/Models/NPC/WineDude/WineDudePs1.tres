@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b6h3pbawoxdj3"]
+
+[ext_resource type="Shader" path="res://Shader/shaders_demo_project/psx_lit.gdshader" id="1_vbt5j"]
+[ext_resource type="Texture2D" uid="uid://s6smki3pw17j" path="res://Assets/Models/NPC/WineDude/textures/WineDudeTexture.png" id="2_6oeaw"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_vbt5j")
+shader_parameter/modulate_color = Color(1, 1, 1, 1)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/uv_pan_velocity = Vector2(0, 0)
+shader_parameter/albedoTex = ExtResource("2_6oeaw")

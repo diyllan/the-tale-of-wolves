@@ -151,6 +151,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.28451, -2.73321)
 shape = SubResource("BoxShape3D_w256i")
 
 [node name="DetectPlayer" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.894861)
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="DetectPlayer"]
 transform = Transform3D(1, 0, 0, 0, 0.0618499, 0.998085, 0, -0.998085, 0.0618499, 0, 2.2034, 1.1569)

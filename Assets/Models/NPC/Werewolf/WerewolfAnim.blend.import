@@ -10824,6 +10824,12 @@ _subresources={
 "slice_99/start_frame": 0,
 "slices/amount": null
 }
+},
+"materials": {
+"Material": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Models/NPC/Werewolf/WerewolfPs1.tres"
+}
 }
 }
 gltf/embedded_image_handling=1

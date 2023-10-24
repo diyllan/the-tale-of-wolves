@@ -5,6 +5,7 @@ var sceneChange = false
 var nextScene
 
 var world = preload("res://Scenes/world.tscn")
+var test = preload("res://Scenes/Testing/npc_testing.tscn")
 
 @onready var fadeoutRect = $CanvasLayer/ColorRect
 @onready var animPlayer = $AnimationPlayer
