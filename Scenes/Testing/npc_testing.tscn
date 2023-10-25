@@ -40,6 +40,54 @@ shape = SubResource("ConcavePolygonShape3D_h6blk")
 
 [node name="Man1" parent="." instance=ExtResource("1_2r7lm")]
 
+[node name="Head_001" parent="Man1/Man1Anim/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.487628, 0.197033, -0.0902139, -0.211198, 0.481854, -0.08918, 0.0485345, 0.117201, 0.518314, 0.282355, 1.70586, 0.137355)
+
+[node name="Neck" parent="Man1/Man1Anim/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.853956, 0.506974, -0.117203, -0.519386, 0.844151, -0.132841, 0.0315903, 0.174314, 0.984183, 0.0838157, 1.24371, 0.0403475)
+
+[node name="Hands Left" parent="Man1/Man1Anim/Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.673662, 0.518313, -0.526811, -0.261398, 0.833863, 0.48615, 0.691267, -0.189793, 0.697228, -0.799031, 0.601062, -0.0562009)
+
+[node name="Arm Lower Left" parent="Man1/Man1Anim/Armature/Skeleton3D" index="3"]
+transform = Transform3D(0.635655, 0.680222, -0.36502, -0.4391, 0.707489, 0.55376, 0.634927, -0.19172, 0.748404, -0.309546, 1.09898, -0.11341)
+
+[node name="Arm Upper Left" parent="Man1/Man1Anim/Armature/Skeleton3D" index="4"]
+transform = Transform3D(0.636665, 0.699805, -0.323929, -0.691669, 0.703956, 0.161366, 0.340957, 0.121316, 0.932218, -0.0677835, 1.09568, 0.0262918)
+
+[node name="Hands Right" parent="Man1/Man1Anim/Armature/Skeleton3D" index="5"]
+transform = Transform3D(0.85229, 0.367002, 0.372707, -0.113143, 0.825019, -0.553662, -0.510685, 0.429712, 0.74468, -0.745027, 0.62851, -0.135652)
+
+[node name="Arm Lower Right" parent="Man1/Man1Anim/Armature/Skeleton3D" index="6"]
+transform = Transform3D(0.795091, 0.583103, 0.166798, -0.375602, 0.689348, -0.619454, -0.476187, 0.429872, 0.76711, -0.273193, 1.10144, 0.102898)
+
+[node name="Arm Upper Right" parent="Man1/Man1Anim/Armature/Skeleton3D" index="7"]
+transform = Transform3D(0.6908, 0.721885, -0.0409539, -0.695937, 0.648469, -0.30848, -0.19613, 0.2416, 0.95035, 0.0686003, 1.12444, 0.0778727)
+
+[node name="Torso Upper" parent="Man1/Man1Anim/Armature/Skeleton3D" index="8"]
+transform = Transform3D(0.974203, 0.224866, -0.0190685, -0.225381, 0.973759, -0.0315814, 0.0114666, 0.0350644, 0.999319, -0.0232789, 0.896757, 0.0287246)
+
+[node name="Feet Left" parent="Man1/Man1Anim/Armature/Skeleton3D" index="9"]
+transform = Transform3D(0.942709, 0.230835, 0.240861, -0.190416, 0.965123, -0.179661, -0.273933, 0.123502, 0.953786, -0.30117, -1.4091, -0.697556)
+
+[node name="Leg Lower Left" parent="Man1/Man1Anim/Armature/Skeleton3D" index="10"]
+transform = Transform3D(0.950212, 0.274508, 0.147451, -0.175414, 0.862341, -0.474971, -0.257537, 0.425458, 0.86756, 0.0829405, -0.217811, -0.0810535)
+
+[node name="Legs Upper Left" parent="Man1/Man1Anim/Armature/Skeleton3D" index="11"]
+transform = Transform3D(0.95108, -0.00669721, 0.308871, 0.151517, 0.881382, -0.447447, -0.269237, 0.472357, 0.839279, -0.0980944, -0.187734, -0.0514899)
+
+[node name="Feet Right" parent="Man1/Man1Anim/Armature/Skeleton3D" index="12"]
+transform = Transform3D(0.909161, 0.270147, -0.316937, -0.293762, 0.955459, -0.0282851, 0.295176, 0.11882, 0.948025, -0.447416, -1.44226, -0.184832)
+
+[node name="Leg Lower Right" parent="Man1/Man1Anim/Armature/Skeleton3D" index="13"]
+transform = Transform3D(0.875516, 0.430711, -0.219004, -0.455563, 0.88686, -0.0770579, 0.161036, 0.167236, 0.972676, 0.159826, -0.188119, 0.0418459)
+
+[node name="Legs Upper Right" parent="Man1/Man1Anim/Armature/Skeleton3D" index="14"]
+transform = Transform3D(0.996834, 0.0485278, -0.0629848, -0.0552021, 0.992514, -0.108944, 0.0572264, 0.112076, 0.99205, -0.143609, -0.0904325, -0.00580773)
+
+[node name="Torso Lower" parent="Man1/Man1Anim/Armature/Skeleton3D" index="15"]
+transform = Transform3D(1, -1.11759e-08, 1.86264e-08, 1.11759e-08, 1, 7.82311e-08, -1.86265e-08, -7.82311e-08, 1, -0.153397, 0.909699, 0.00858675)
+
 [node name="Man2" parent="." instance=ExtResource("1_2r7lm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.8642, 0, 27.6924)
 

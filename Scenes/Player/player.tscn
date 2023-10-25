@@ -8,12 +8,12 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p0fya"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4vnny"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eo2um"]
 render_priority = -1
 shader = ExtResource("3_hrreo")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_n2cv5"]
-material = SubResource("ShaderMaterial_4vnny")
+material = SubResource("ShaderMaterial_eo2um")
 
 [sub_resource type="Animation" id="Animation_om646"]
 resource_name = "Head Bob"
