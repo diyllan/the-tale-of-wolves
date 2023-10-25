@@ -15,18 +15,16 @@ func save():
 	
 #	var file = FileAccess.new()
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
-	var json = JSON.new()
-	var json_string = json.stringify(data)
+	var json_string = JSON.stringify(data)
 	file.store_line(json_string)
 	
 func load_data():
 	load_saved_game = true
 #	var file = FileAccess.new()
-	var file = FileAccess.open(save_path, FileAccess.READ)
+#	var file = FileAccess.open(save_path, FileAccess.READ)
 	
-	if file.file_exists(save_path):
-		file = FileAccess.open(save_path, FileAccess.READ)
-		var json = JSON.new()
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path, FileAccess.READ)
 		var data = JSON.parse_string(file.get_as_text())
 		
 		$"../Player".from_dictionary(data.player)

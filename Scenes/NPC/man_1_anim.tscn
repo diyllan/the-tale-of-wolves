@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bw6k4ofimn4sx"]
+[gd_scene load_steps=2 format=3 uid="uid://bw6k4ofimn4sx"]
 
 [ext_resource type="PackedScene" uid="uid://djlo417iivuek" path="res://Assets/Models/NPC/Man1/Man1Anim.blend" id="1_gaapc"]
-[ext_resource type="Script" path="res://Assets/Models/NPC/Man1/NPC.gd" id="2_3lg1h"]
 
 [node name="Man1Anim" instance=ExtResource("1_gaapc")]
-script = ExtResource("2_3lg1h")
 
 [node name="Armature" parent="." index="0"]
 transform = Transform3D(0.189376, 0.0682752, -0.979528, 0.270142, 0.95546, 0.118825, 0.944013, -0.287115, 0.162497, 0.0599953, 1.71099, 0.125482)

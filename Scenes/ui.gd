@@ -36,7 +36,7 @@ func _ready():
 func _process(_delta):
 	
 	if Input.is_action_just_pressed("debug"):
-		SceneManager.changeScene(SceneManager.test)
+		SceneManager.changeScene(SceneManager.world)
 	
 	if bootupPlaying and Input.is_action_just_pressed("Skip"):
 		bootup.hide()
