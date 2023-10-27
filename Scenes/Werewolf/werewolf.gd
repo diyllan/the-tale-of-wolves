@@ -147,7 +147,7 @@ func setGravity(delta):
 		
 func update_target_position():
 	if target_vector == last_target_vector:
-		target_vector = Vector3(randi_range(-radius, radius), randi_range(-radius, radius), 0)
+		target_vector = Vector3(randi_range(-radius, radius), 0, randi_range(-radius, radius))
 		
 func random_roaming():
 	last_target_vector = target_vector 
