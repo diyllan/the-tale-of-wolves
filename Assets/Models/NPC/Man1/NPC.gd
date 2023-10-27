@@ -29,7 +29,7 @@ var randomTime
 
 func _ready():
 	$StaticBodyInteraction.connect("Interacted", interaction)
-	DialogueManager.connect("dialogue_started", interaction)
+#	DialogueManager.connect("dialogue_started", interaction)
 	DialogueManager.connect("dialogue_ended", interaction_ended)
 	update_target_position()
 	idle_Walking_timer.start(randomTime)
@@ -40,32 +40,38 @@ func _process(delta):
 	
 	match state:
 		IDLE:
-			animPlayer.play("Idle")
-			update_target_position()
-			idle_Walking_timer.start(randomTime)
+			print_debug("walking")
+			animPlayer.play("Idle")	
 			await idle_Walking_timer.timeout
 			state = WALKING
+			print_debug("walking")
 
 		WALKING:
 			animPlayer.play("Walking")
 			random_roaming()
 			if nav_agent.is_navigation_finished():
+				idle_Walking_timer.start(randomTime)
+				update_target_position()
 				state = IDLE
+				print_debug("Idle")
 
 		TALKING:
 			look_at(player.global_transform.origin)
 			animPlayer.play("Talking")
 			if !interacted:
+				update_target_position()
+				idle_Walking_timer.start(randomTime)
 				state = IDLE
+				print_debug("Idle")
 			
 func setGravity(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 		
 func update_target_position():
-	randomTime = randi_range(0, 5)
+	randomTime = randi_range(0, 20)
 	if target_vector == last_target_vector:
-		target_vector = Vector3(randi_range(-radius, radius), randi_range(-radius, radius), 0)
+		target_vector = Vector3(randi_range(-radius, radius),  0, randi_range(-radius, radius))
 
 func random_roaming():
 	last_target_vector = target_vector 
