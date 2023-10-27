@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
+const SPRINTSPEED = 7.5
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -62,12 +63,16 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
 	var direction = (self.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	var movespeed = SPEED
+	if Input.is_action_pressed("Sprint"): movespeed = SPRINTSPEED
+	
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * movespeed
+		velocity.z = direction.z * movespeed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, movespeed)
+		velocity.z = move_toward(velocity.z, 0, movespeed)
 		
 	move_and_slide()
 	
