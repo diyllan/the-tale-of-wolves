@@ -32,7 +32,7 @@ _subresources={
 "materials": {
 "Tree Branch": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/Models/Environment/Trees/Tree_leaves_material.tres"
+"use_external/path": "res://Assets/Models/Environment/Trees/Tree_leaves_material_wind.tres"
 }
 }
 }
