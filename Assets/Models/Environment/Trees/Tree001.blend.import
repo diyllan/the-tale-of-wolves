@@ -34,6 +34,11 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://Assets/Models/Environment/Trees/Tree_leaves_material_wind.tres"
 }
+},
+"nodes": {
+"PATH:Tree Branch": {
+"import/skip_import": true
+}
 }
 }
 gltf/embedded_image_handling=1
