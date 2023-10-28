@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bj1j1f1t6n8ce"]
+
+[ext_resource type="Shader" uid="uid://cg07ipnrujyp6" path="res://Assets/Models/Environment/Candle/Rope.tres" id="1_fk5re"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fk5re")

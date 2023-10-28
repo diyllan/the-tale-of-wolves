@@ -1,0 +1,43 @@
+[gd_resource type="VisualShader" load_steps=5 format=3 uid="uid://d305jg4jhx1fd"]
+
+[ext_resource type="Texture2D" uid="uid://bh1a2dfqmi6wm" path="res://Assets/Models/Environment/Hatchet/Textures/w_camo_1.png" id="1_my05a"]
+[ext_resource type="Texture2D" uid="uid://ca3kfvs2diebp" path="res://Assets/Models/Environment/Hatchet/Textures/w_me_hatchet_n.png" id="2_qiild"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_66f1x"]
+texture = ExtResource("1_my05a")
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_ydtau"]
+texture = ExtResource("2_qiild")
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform sampler2D tex_frg_2;
+uniform sampler2D tex_frg_3;
+
+
+
+void fragment() {
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, UV);
+
+
+// Texture2D:3
+	vec4 n_out3p0 = texture(tex_frg_3, UV);
+
+
+// Output:0
+	ALBEDO = vec3(n_out2p0.xyz);
+	NORMAL = vec3(n_out3p0.xyz);
+
+
+}
+"
+graph_offset = Vector2(-155.293, -31.547)
+nodes/fragment/0/position = Vector2(720, 60)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_66f1x")
+nodes/fragment/2/position = Vector2(240, -20)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_ydtau")
+nodes/fragment/3/position = Vector2(220, 240)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 3, 0, 0, 8)

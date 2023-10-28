@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://chxkmnl668crq"]
+
+[ext_resource type="Shader" uid="uid://c2j2mjvo5x147" path="res://Assets/Models/Environment/Candle/Candlebowl.tres" id="1_r2a4k"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_r2a4k")

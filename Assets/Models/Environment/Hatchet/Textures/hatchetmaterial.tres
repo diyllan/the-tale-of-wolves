@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cli0c2rewdtj3"]
+
+[ext_resource type="Shader" uid="uid://d305jg4jhx1fd" path="res://Assets/Models/Environment/Hatchet/Textures/hatchet.tres" id="1_rcnvl"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_rcnvl")

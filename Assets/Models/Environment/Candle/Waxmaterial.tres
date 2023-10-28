@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://biupnrwxecu2x"]
+
+[ext_resource type="Shader" uid="uid://d3wp2wnsii8k2" path="res://Assets/Models/Environment/Candle/Wax.tres" id="1_j4108"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_j4108")
