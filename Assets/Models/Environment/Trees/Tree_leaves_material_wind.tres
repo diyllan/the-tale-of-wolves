@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://72ctj2j8e8xu" path="res://Assets/Models/Environment/Trees/Tree Branch.png" id="1_lcrki"]
 
-[sub_resource type="Shader" id="Shader_hg86n"]
+[sub_resource type="Shader" id="Shader_tasrg"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.1.1.stable's StandardMaterial3D.
 
 shader_type spatial;
@@ -71,7 +71,7 @@ noise = SubResource("FastNoiseLite_ew1ok")
 
 [resource]
 render_priority = 0
-shader = SubResource("Shader_hg86n")
+shader = SubResource("Shader_tasrg")
 shader_parameter/albedo = Color(1, 1, 1, 1)
 shader_parameter/alpha_scissor_threshold = 0.3
 shader_parameter/point_size = 1.0
@@ -84,6 +84,6 @@ shader_parameter/uv1_offset = Vector3(0, 0, 0)
 shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
 shader_parameter/texture_albedo = ExtResource("1_lcrki")
-shader_parameter/wind_speed = 0.15
-shader_parameter/wind_strength = 1.5
+shader_parameter/wind_speed = 0.1
+shader_parameter/wind_strength = 0.01
 shader_parameter/noise_tex = SubResource("NoiseTexture2D_ym3jn")
