@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://lgv2hfw43ill"]
+
+[ext_resource type="PackedScene" uid="uid://r44kucqdyibb" path="res://Assets/Models/Environment/Buildings/Door/Door.blend" id="1_2tc0c"]
+[ext_resource type="Script" path="res://Scenes/Interactable.gd" id="1_x60o1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2fsd"]
+size = Vector3(0.775, 8.805, 4.725)
+
+[sub_resource type="Animation" id="Animation_0vt6o"]
+resource_name = "Close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.74533, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2bard"]
+resource_name = "Open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.74533, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8y002"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_88cfi"]
+_data = {
+"Close": SubResource("Animation_0vt6o"),
+"Open": SubResource("Animation_2bard"),
+"RESET": SubResource("Animation_8y002")
+}
+
+[node name="Hinge" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, -10.0244, 0, 2.29997)
+
+[node name="InteractCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.184131, 0, 0.0324669)
+collision_layer = 8
+script = ExtResource("1_x60o1")
+prompt_message = "Open Door"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.00001, -2.25627)
+shape = SubResource("BoxShape3D_h2fsd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_88cfi")
+}
+
+[node name="Door" parent="." instance=ExtResource("1_2tc0c")]
+transform = Transform3D(1, 0, -4.65661e-10, 0, 1, 0, 4.65661e-10, 0, 1, 10.0244, 0, -2.29997)
+
+[node name="Cube_001" parent="Door" index="0"]
+transform = Transform3D(1.0433, 0, -0.0334445, 0, 1.04378, 0, 0.0326922, 0, 1.0673, -9.86919, 4.95699, 0.612392)
+
+[node name="StaticBody3D" parent="Door/Cube_001" index="0"]
+transform = Transform3D(1, 0, -3.72529e-09, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[editable path="Door"]

@@ -5,6 +5,9 @@ extends StaticBody3D
 @export var prompt_message = ""
 @export var prompt_action = "interact"
 
+#Door
+var DoorisOpen = false
+
 signal Interacted
 
 var player
@@ -29,6 +32,13 @@ func interact(body):
 		body.yMinRotation = -10
 #		if body.hiding:
 #			prompt_message = "leave"
-	if prompt_message == "Open Door":
-		var tween = create_tween()
-		tween.tween_property(get_parent().get_parent().get_parent(), "rotation", Vector3(0,0.3,0), 0.5)
+	if prompt_message == "Open Door" and !DoorisOpen:
+		DoorisOpen = true
+		$"../AnimationPlayer".play("Open")
+		await $"../AnimationPlayer".animation_finished
+		prompt_message = "Close Door"
+	elif prompt_message == "Close Door" and DoorisOpen:
+		DoorisOpen = false
+		$"../AnimationPlayer".play("Close")
+		await $"../AnimationPlayer".animation_finished
+		prompt_message = "Open Door"

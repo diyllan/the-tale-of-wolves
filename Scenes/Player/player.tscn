@@ -156,7 +156,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.02679, 1.65326, 0)
 shape = SubResource("CapsuleShape3D_p0fya")
 
 [node name="Neck" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.72, -0.318)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.94592, -0.318)
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78191e-08, 0, -0.318214)

@@ -12,7 +12,7 @@ var state = IDLE
 
 var target_vector: Vector3
 var last_target_vector: Vector3 
-var radius = 100
+var radius = 50
 var TOLERANCE = 4.0
 
 var interacted = false
@@ -25,9 +25,10 @@ var randomTime
 @onready var animPlayer = $Man1Anim/AnimationPlayer
 @onready var nav_agent = $NavigationAgent3D
 @onready var idle_Walking_timer = $Idle_Walking
-@onready var player = get_node("../Player")
+@onready var player = get_node("../../Player")
 
 func _ready():
+	print_debug(nav_agent.get_navigation_map())
 	$StaticBodyInteraction.connect("Interacted", interaction)
 #	DialogueManager.connect("dialogue_started", interaction)
 	DialogueManager.connect("dialogue_ended", interaction_ended)
@@ -40,11 +41,9 @@ func _process(delta):
 	
 	match state:
 		IDLE:
-			print_debug("walking")
 			animPlayer.play("Idle")	
 			await idle_Walking_timer.timeout
 			state = WALKING
-			print_debug("walking")
 
 		WALKING:
 			animPlayer.play("Walking")
@@ -53,7 +52,6 @@ func _process(delta):
 				idle_Walking_timer.start(randomTime)
 				update_target_position()
 				state = IDLE
-				print_debug("Idle")
 
 		TALKING:
 			look_at(player.global_transform.origin)
@@ -62,7 +60,6 @@ func _process(delta):
 				update_target_position()
 				idle_Walking_timer.start(randomTime)
 				state = IDLE
-				print_debug("Idle")
 			
 func setGravity(delta):
 	if not is_on_floor():
@@ -77,7 +74,11 @@ func random_roaming():
 	last_target_vector = target_vector 
 	nav_agent.set_target_position(target_vector)
 	var next_nav_point = nav_agent.get_next_path_position()
+#	print_debug(next_nav_point)
+#	print_debug(global_transform.origin)
+#	print_debug(next_nav_point - global_transform.origin)
 	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
+#	print_debug(velocity)
 	look_at(global_transform.origin + velocity)
 	move_and_slide()
 

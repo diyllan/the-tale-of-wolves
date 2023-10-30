@@ -34,6 +34,11 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://Assets/Models/Environment/Trees/Dead_Tree_material.tres"
 }
+},
+"nodes": {
+"PATH:Cylinder": {
+"generate/physics": true
+}
 }
 }
 gltf/embedded_image_handling=1

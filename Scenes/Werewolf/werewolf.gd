@@ -7,7 +7,8 @@ enum {
 	GROWL,
 	BITE,
 }
-const SPEED = 3
+const SPEED = 6
+const CHASE_SPEED = 8
 const TOLERANCE = 4.0
 
 var state = IDLE
@@ -15,7 +16,7 @@ var state = IDLE
 var _player = null
 var target_vector: Vector3
 var last_target_vector: Vector3 
-var radius = 100
+var radius = 50
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -40,8 +41,6 @@ func _ready():
 	update_target_position()
 
 func _physics_process(delta):
-
-	velocity = Vector3.ZERO
 	setGravity(delta)
 	match state:
 		IDLE:
@@ -147,13 +146,17 @@ func setGravity(delta):
 		
 func update_target_position():
 	if target_vector == last_target_vector:
-		target_vector = Vector3(randi_range(-radius, radius), 0, randi_range(-radius, radius))
+		target_vector = Vector3(randi_range(-radius, radius),  0, randi_range(-radius, radius))
 		
 func random_roaming():
 	last_target_vector = target_vector 
 	nav_agent.set_target_position(target_vector)
 	var next_nav_point = nav_agent.get_next_path_position()
+#	print_debug(next_nav_point)
+#	print_debug(global_transform.origin)
+#	print_debug(next_nav_point - global_transform.origin)
 	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
+#	print_debug(velocity)
 	look_at(global_transform.origin + velocity)
 	move_and_slide()
 	
@@ -164,7 +167,7 @@ func is_at_target_position():
 func chase():
 	nav_agent.set_target_position(_player.global_transform.origin)
 	var next_nav_point = nav_agent.get_next_path_position()
-	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
+	velocity = (next_nav_point - global_transform.origin).normalized() * CHASE_SPEED
 	look_at(global_transform.origin + velocity)
 	move_and_slide()
 	
