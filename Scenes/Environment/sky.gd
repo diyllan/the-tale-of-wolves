@@ -2,6 +2,8 @@
 extends WorldEnvironment
 
 var time_of_day: float = 0.0;
+var next_time_of_day: float = 0.0;
+var changing_to_next_time: bool = false;
 var one_second: float = 1.0 / (24.0 * 60.0 * 60.0); # --- What part of a second takes in a day in the range from 0 to 1
 
 @onready var sun_moon: DirectionalLight3D = $sun_moon;
@@ -181,20 +183,42 @@ func set_time():
 	sky_shader.set_shader_parameter("attenuation",clamp(light_energy,night_level_light*0.25,1.00));#clouds too bright with night_level_light
 
 func _process(delta:float):
-	if !lighting_strike:
-		return;
-	lighting_time += delta;
-	var lighting_strength = clamp(sin(lighting_time*20.0),0.0,1.0);
-	lighting_pos = lighting_pos.normalized();
-	sun_moon.light_color = day_light;
-	sun_moon.light_energy = lighting_strength*2;
-	sky_shader.set_shader_parameter("lighting_strength",lighting_strength);
-	if !lighting_pos.is_equal_approx(Vector3.UP) and !lighting_pos.is_equal_approx(Vector3.DOWN):
-		sun_moon.look_at_from_position(lighting_pos,Vector3.ZERO,Vector3.UP);
+	print(changing_to_next_time);
+	print(time_of_day);
+	print(next_time_of_day);
+	print('enter process');
+	#add input
+	if changing_to_next_time:
+		if time_of_day < next_time_of_day:
+			print('counting up?');
+			time_of_day += delta / 20;
+			set_time();
+			if time_of_day >= next_time_of_day:
+				changing_to_next_time = false;
+				next_time_of_day = time_of_day
+				set_process(false);
+		if time_of_day == next_time_of_day and changing_to_next_time:
+			next_time_of_day = time_of_day + 0.16;
+	
+	#if lightning
+	if lighting_strike:
+		lighting_time += delta;
+		var lighting_strength = clamp(sin(lighting_time*20.0),0.0,1.0);
+		lighting_pos = lighting_pos.normalized();
+		sun_moon.light_color = day_light;
+		sun_moon.light_energy = lighting_strength*2;
+		sky_shader.set_shader_parameter("lighting_strength",lighting_strength);
+		if !lighting_pos.is_equal_approx(Vector3.UP) and !lighting_pos.is_equal_approx(Vector3.DOWN):
+			sun_moon.look_at_from_position(lighting_pos,Vector3.ZERO,Vector3.UP);
 
 func _ready():
+	next_time_of_day = time_of_day;
 	set_process(false);
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		lighting_strike = true;
+	if event.is_action_pressed("skiptime"):
+		changing_to_next_time = true;
+		set_process(true);
+
