@@ -43,6 +43,7 @@ func _process(_delta):
 		$PS1Start.stop()
 		titlescreenUi.show()
 		bootupPlaying = false
+		get_parent().get_node("Prologue/sky").lighting_strike = true
 		SoundManager.playMusic("Titlescreen")
 		
 	if !titleScreen and !showOnce:
@@ -136,4 +137,5 @@ func _on_animation_player_animation_finished(anim_name):
 		bootupPlaying = false
 		titlescreenUi.show()
 		bootup.hide()
+		get_parent().get_node("Prologue/sky").lighting_strike = true
 		SoundManager.playMusic("Titlescreen")
