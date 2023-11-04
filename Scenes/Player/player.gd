@@ -127,11 +127,30 @@ func playerHide():
 		yMinRotation = -360
 		camera.fov = 75
 
-func to_dictionary():
-	return {
-		"position": [position.x, position.y, position.z]
+func save():
+	var save_dict = {
+		"filename" : get_scene_file_path(),
+		"parent" : get_parent().get_path(),
+		"pos_x" : position.x,
+		"pos_y" : position.y,
+		"pos_z" : position.z,
 	}
-
-func from_dictionary(data):
-	position = Vector3(data.position[0], data.position[1], data.position[2])
+	return save_dict
 	
+var keyPressed = false
+
+func _process(_delta):
+	if Input.is_action_just_pressed("save") and !keyPressed:
+		keyPressed = true
+		SaveLoad.save_game()
+		print("Saved game")
+		
+	if Input.is_action_just_pressed("loadsave") and !keyPressed:
+		keyPressed = true
+		SaveLoad.load_game()
+		print("Loaded game")
+		
+	if Input.is_action_just_released("save") or Input.is_action_just_released("loadsave"):
+		keyPressed = false
+		
+		

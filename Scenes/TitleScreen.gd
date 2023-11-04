@@ -9,8 +9,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-#	if file.file_exists(SaveLoad.save_path):
-#		continueBtn.disabled = false
+	if FileAccess.file_exists(SaveLoad.save_path):
+		continueBtn.disabled = false
+	else :
+		continueBtn.disabled = true
 	pass
 func _on_start_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -24,7 +26,8 @@ func _on_start_pressed():
 	
 
 func _on_continue_pressed():
-	pass # Replace with function body.
+	SceneManager.changeScene(SceneManager.world)
+	SaveLoad.load_game() # Replace with function body.
 
 
 func _on_quit_pressed():
