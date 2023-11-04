@@ -16,7 +16,7 @@ var state = IDLE
 var _player = null
 var target_vector: Vector3
 var last_target_vector: Vector3 
-var radius = 50
+var radius = 100
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
