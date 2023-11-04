@@ -25,7 +25,7 @@ var randomTime
 @onready var animPlayer = $Man1Anim/AnimationPlayer
 @onready var nav_agent = $NavigationAgent3D
 @onready var idle_Walking_timer = $Idle_Walking
-@onready var player = get_node("../../Player")
+@onready var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
 
 func _ready():
 	print_debug(nav_agent.get_navigation_map())
