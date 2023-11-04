@@ -64,15 +64,15 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tk204"]
 shader = ExtResource("1_iny4t")
 shader_parameter/moon_tint = Color(1, 1, 1, 1)
-shader_parameter/clouds_tint = Color(0.917647, 0.917647, 0.917647, 1)
-shader_parameter/SUN_POS = Vector3(0, 0.3933, 0.91941)
-shader_parameter/MOON_POS = Vector3(0, -0.3933, -0.91941)
-shader_parameter/MOON_TEX_POS = Vector3(0, -0.834656, -0.550772)
+shader_parameter/clouds_tint = Color(0.987858, 0.73209, 0.604206, 1)
+shader_parameter/SUN_POS = Vector3(0, 0.129488, -0.991581)
+shader_parameter/MOON_POS = Vector3(0, -0.129488, 0.991581)
+shader_parameter/MOON_TEX_POS = Vector3(0, -0.751494, 0.659739)
 shader_parameter/LIGHTING_POS = Vector3(0, 0, 0)
 shader_parameter/lighting_strength = 0.0
 shader_parameter/MOON_PHASE = 1.0
 shader_parameter/moon_size = 0.05
-shader_parameter/attenuation = 0.7496
+shader_parameter/attenuation = 0.328951
 shader_parameter/WIND = Vector3(0.1, 0, 0)
 shader_parameter/SIZE = 2.0
 shader_parameter/SOFTNESS = 2.0
@@ -90,11 +90,11 @@ sky_material = SubResource("ShaderMaterial_tk204")
 [sub_resource type="Environment" id="Environment_5lato"]
 background_mode = 2
 sky = SubResource("Sky_xcjma")
-ambient_light_color = Color(0.917647, 0.917647, 0.917647, 1)
+ambient_light_color = Color(0.987858, 0.73209, 0.604206, 1)
 ambient_light_sky_contribution = 0.0
-ambient_light_energy = 0.7496
-fog_light_color = Color(0.917647, 0.917647, 0.917647, 1)
-volumetric_fog_albedo = Color(0.917647, 0.917647, 0.917647, 1)
+ambient_light_energy = 0.328951
+fog_light_color = Color(0.987858, 0.73209, 0.604206, 1)
+volumetric_fog_albedo = Color(0.987858, 0.73209, 0.604206, 1)
 adjustment_enabled = true
 adjustment_saturation = 0.75
 
@@ -757,13 +757,13 @@ process_mode = 1
 [node name="sky" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5lato")
 script = ExtResource("2_oesol")
-time_of_day_setup = 0.769
+time_of_day_setup = 0.354
 day_light = Color(0.917647, 0.917647, 0.917647, 1)
 
 [node name="sun_moon" type="DirectionalLight3D" parent="sky"]
-transform = Transform3D(1, 0, 0, 0, 0.91941, 0.3933, 0, -0.3933, 0.91941, 0, 0.3933, 0.91941)
-light_color = Color(0.917647, 0.917647, 0.917647, 1)
-light_energy = 0.7496
+transform = Transform3D(-1, 1.13202e-08, -8.66868e-08, 0, 0.991581, 0.129488, 8.74228e-08, 0.129488, -0.991581, 0, 0.129488, -0.991581)
+light_color = Color(0.987858, 0.73209, 0.604206, 1)
+light_energy = 0.328951
 
 [node name="thunder" type="AudioStreamPlayer" parent="sky"]
 stream = ExtResource("5_ciw63")
