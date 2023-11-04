@@ -1,14 +1,24 @@
 @tool
 extends WorldEnvironment
 
-var time_of_day: float = 0.0;
-var next_time_of_day: float = 0.0;
-var changing_to_next_time: bool = false;
-var one_second: float = 1.0 / (24.0 * 60.0 * 60.0); # --- What part of a second takes in a day in the range from 0 to 1
+var day_cycle = { 
+	"morning": 0.246, 
+	"day" : 0.45, 
+	"evening" : 0.755,
+	"night": 0.85
+}
+var day_part_count = 0;
+var day_count = 1;
 
-@onready var sun_moon: DirectionalLight3D = $sun_moon;
-@onready var thunder_sound: AudioStreamPlayer = $thunder;
-@onready var sky_shader: ShaderMaterial = environment.sky.sky_material;
+var time_of_day: float = 0.0
+var next_time_of_day: float = 0.0
+var changing_to_next_time: bool = false
+var one_second: float = 1.0 / (24.0 * 60.0 * 60.0) # --- What part of a second takes in a day in the range from 0 to 1
+
+
+@onready var sun_moon: DirectionalLight3D = $sun_moon
+@onready var thunder_sound: AudioStreamPlayer = $thunder
+@onready var sky_shader: ShaderMaterial = environment.sky.sky_material
 @export_range(0.0, 1.0) var time_of_day_setup: float  = 0.0:
 	get:
 		return time_of_day_setup;
@@ -183,14 +193,12 @@ func set_time():
 	sky_shader.set_shader_parameter("attenuation",clamp(light_energy,night_level_light*0.25,1.00));#clouds too bright with night_level_light
 
 func _process(delta:float):
-	print(changing_to_next_time);
-	print(time_of_day);
-	print(next_time_of_day);
-	print('enter process');
+	print(changing_to_next_time) 
+	print(time_of_day)
+	print(next_time_of_day)
 	#add input
 	if changing_to_next_time:
 		if time_of_day < next_time_of_day:
-			print('counting up?');
 			time_of_day += delta / 20;
 			set_time();
 			if time_of_day >= next_time_of_day:
@@ -198,7 +206,14 @@ func _process(delta:float):
 				next_time_of_day = time_of_day
 				set_process(false);
 		if time_of_day == next_time_of_day and changing_to_next_time:
-			next_time_of_day = time_of_day + 0.16;
+			day_part_count += 1;
+			next_time_of_day = day_cycle[day_cycle.keys()[day_part_count % 4]]
+			if time_of_day > next_time_of_day:
+				changing_to_next_time = false;
+				time_of_day = next_time_of_day
+				day_count += 1
+				set_time()
+				set_process(false);
 	
 	#if lightning
 	if lighting_strike:
@@ -212,7 +227,7 @@ func _process(delta:float):
 			sun_moon.look_at_from_position(lighting_pos,Vector3.ZERO,Vector3.UP);
 
 func _ready():
-	next_time_of_day = time_of_day;
+	next_time_of_day = time_of_day
 	set_process(false);
 
 func _input(event):
