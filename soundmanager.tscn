@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://jfbavi4d2cyo"]
+[gd_scene load_steps=22 format=3 uid="uid://jfbavi4d2cyo"]
 
 [ext_resource type="Script" path="res://soundmanager.gd" id="1_ef6dy"]
 [ext_resource type="AudioStream" uid="uid://b32a325vhwxsb" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_1.ogg" id="1_uv58p"]
@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://dbjhjpen1hmyu" path="res://Assets/Sound/Music/Prologue/LeavesRushling.ogg" id="16_453og"]
 [ext_resource type="AudioStream" uid="uid://bg0mwvwy0yvck" path="res://Assets/Sound/Music/Prologue/Boy_Humming.ogg" id="17_yg1ae"]
 [ext_resource type="AudioStream" uid="uid://dthtmrc0gpxsk" path="res://Assets/Sound/Music/Prologue/Forest_Footsteps.ogg" id="18_qb4b8"]
+[ext_resource type="AudioStream" uid="uid://3abxfri4rolf" path="res://Assets/Sound/SoundEffects/World/NatureAmbience.ogg" id="21_d4tg7"]
 
 [node name="soundmanager" type="Node"]
 script = ExtResource("1_ef6dy")
@@ -108,4 +109,8 @@ bus = &"Music"
 [node name="Prologue_forest_ambience" type="AudioStreamPlayer" parent="Ambience"]
 stream = ExtResource("14_xo28x")
 volume_db = -15.0
+bus = &"Music"
+
+[node name="NatureAmbience" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("21_d4tg7")
 bus = &"Music"

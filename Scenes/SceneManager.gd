@@ -25,6 +25,7 @@ func changeSceneWithTransition(scenePath):
 	var scene = scenePath.instantiate()
 	viewport.add_child(scene)
 	SoundManager.stopAllSounds()
+	SoundManager.playAmbience("NatureAmbience")
 	animPlayer.play("TransOut")
 	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").titleScreen = false
 	await animPlayer.animation_finished
@@ -35,5 +36,7 @@ func changeScene(scenePath):
 	child.queue_free()
 	var scene = scenePath.instantiate()
 	viewport.add_child(scene)
+	SoundManager.stopAllSounds()
+	SoundManager.playAmbience("NatureAmbience")
 	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").titleScreen = false
 	SoundManager.stopAllSounds()

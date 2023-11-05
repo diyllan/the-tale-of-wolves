@@ -47,7 +47,6 @@ func _unhandled_input(event):
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(xMinRotation), deg_to_rad(xMaxRotation))
 
 func _physics_process(delta):
-	print(global_transform)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta

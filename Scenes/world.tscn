@@ -1,4 +1,4 @@
-[gd_scene load_steps=184 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=185 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" path="res://Scenes/Interactable.gd" id="5_fk6m7"]
 [ext_resource type="PackedScene" uid="uid://ccm5cl2x4l7rg" path="res://Assets/Models/Player/LittleRedCapAnim.blend" id="5_lxjey"]
 [ext_resource type="PackedScene" uid="uid://d3ja2j7jxw2hi" path="res://Scenes/NPC/Man5/man_5.tscn" id="7_c3d1w"]
-[ext_resource type="AudioStream" uid="uid://w7ivm45o5gav" path="res://Assets/Sound/Music/DarkForrestAmbience.wav" id="8_5x5xe"]
 [ext_resource type="PackedScene" uid="uid://b7rd5gjbgwvmp" path="res://Scenes/NPC/Man2/man_2.tscn" id="8_5xf7b"]
 [ext_resource type="PackedScene" uid="uid://dwdt6bm3xf5xn" path="res://Scenes/NPC/Kid2/kid_2.tscn" id="9_6q7jp"]
 [ext_resource type="Material" uid="uid://c68kmuy5fm1ey" path="res://Assets/Models/Environment/Bushes/bush001.tres" id="9_cvob3"]
@@ -54,7 +53,9 @@
 [ext_resource type="PackedScene" uid="uid://bsd4jff8xiu57" path="res://Assets/Models/Environment/Books/book012.blend" id="55_xkf0u"]
 [ext_resource type="PackedScene" uid="uid://bcoi7ehxujiv2" path="res://Assets/Models/Environment/Candle/Candle.blend" id="56_0jnva"]
 [ext_resource type="PackedScene" uid="uid://67k2lth04l1" path="res://Assets/Models/Environment/Books/book003.blend" id="57_gqs7u"]
+[ext_resource type="AudioStream" uid="uid://bx1m42v7sfngx" path="res://Assets/Sound/SoundEffects/World/PeopleTalking.ogg" id="57_nk6o8"]
 [ext_resource type="PackedScene" uid="uid://btui7jfsv1xd3" path="res://Assets/Models/Environment/Hatchet/hatchet.blend" id="58_i58mx"]
+[ext_resource type="AudioStream" uid="uid://cy4101eqdcoyq" path="res://Assets/Sound/SoundEffects/World/River.ogg" id="58_puxgu"]
 [ext_resource type="PackedScene" uid="uid://pisu121ffc58" path="res://Assets/Models/Environment/Barrel/Barreltextured.blend" id="59_81x7k"]
 [ext_resource type="PackedScene" uid="uid://vwqu7qwuyw3e" path="res://Assets/Models/Environment/Bucket/BucketGameready.blend" id="60_prruw"]
 
@@ -768,6 +769,7 @@ light_energy = 0.328951
 
 [node name="thunder" type="AudioStreamPlayer" parent="sky"]
 stream = ExtResource("5_ciw63")
+volume_db = -10.0
 
 [node name="Player" parent="." groups=["Persist"] instance=ExtResource("1_6k6ey")]
 transform = Transform3D(-0.761765, 0, 0.647854, 0, 1, 0, -0.647854, 0, -0.761765, -307.717, 1.771, -445.264)
@@ -1591,13 +1593,6 @@ shape = SubResource("CylinderShape3D_v5j33")
 
 [node name="Environment" parent="NavRegion" instance=ExtResource("34_hqnwq")]
 
-[node name="DarkForrestAmbience" type="AudioStreamPlayer" parent="."]
-process_mode = 3
-stream = ExtResource("8_5x5xe")
-volume_db = -24.681
-autoplay = true
-bus = &"Music"
-
 [node name="SwampWater" parent="." instance=ExtResource("47_yqvkt")]
 transform = Transform3D(19.592, 0, -2.0096, 0, 1, 0, 4.01919, 0, 9.796, -484.067, -2.73461, -176.016)
 mesh = SubResource("QuadMesh_kqoko")
@@ -1679,6 +1674,51 @@ shape = SubResource("BoxShape3D_q7nux")
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="WaterCollision"]
 transform = Transform3D(0.309747, 0, 0.950819, 0, 1, 0, -0.950819, 0, 0.309747, 137.812, 0, -371.874)
 shape = SubResource("BoxShape3D_q7nux")
+
+[node name="DirectionalAudio" type="Node3D" parent="."]
+
+[node name="PeopleTalking" type="AudioStreamPlayer3D" parent="DirectionalAudio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -311.536, 25.652, -487.492)
+stream = ExtResource("57_nk6o8")
+volume_db = 5.0
+autoplay = true
+max_distance = 395.75
+bus = &"Music"
+
+[node name="River" type="AudioStreamPlayer3D" parent="DirectionalAudio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -374.172, 0, -290.093)
+stream = ExtResource("58_puxgu")
+autoplay = true
+max_distance = 124.75
+bus = &"SoundEffects"
+
+[node name="River4" type="AudioStreamPlayer3D" parent="DirectionalAudio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -580.441, 0, -405.923)
+stream = ExtResource("58_puxgu")
+autoplay = true
+max_distance = 124.75
+bus = &"SoundEffects"
+
+[node name="River5" type="AudioStreamPlayer3D" parent="DirectionalAudio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -805.099, 0, -405.923)
+stream = ExtResource("58_puxgu")
+autoplay = true
+max_distance = 124.75
+bus = &"SoundEffects"
+
+[node name="River2" type="AudioStreamPlayer3D" parent="DirectionalAudio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -207.522, 0, -326.735)
+stream = ExtResource("58_puxgu")
+autoplay = true
+max_distance = 124.75
+bus = &"SoundEffects"
+
+[node name="River3" type="AudioStreamPlayer3D" parent="DirectionalAudio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198.406, 0, -536.325)
+stream = ExtResource("58_puxgu")
+autoplay = true
+max_distance = 124.75
+bus = &"SoundEffects"
 
 [editable path="NavRegion/bush001"]
 [editable path="NavRegion/bush001/bush001"]
