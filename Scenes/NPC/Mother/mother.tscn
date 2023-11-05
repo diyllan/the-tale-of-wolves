@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=3 uid="uid://wk2lsgfxme8h"]
+
+[ext_resource type="Script" path="res://Assets/Models/NPC/Man1/NPC.gd" id="1_ut1w1"]
+[ext_resource type="PackedScene" uid="uid://bhlxfclvx6hst" path="res://Assets/Models/NPC/Mother/MotherAnim.blend" id="2_x7trr"]
+[ext_resource type="Script" path="res://Scenes/Interactable.gd" id="3_phbyn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r1n5f"]
+height = 4.06401
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_771kj"]
+height = 4.13655
+
+[node name="Mother" type="CharacterBody3D"]
+script = ExtResource("1_ut1w1")
+
+[node name="MotherAnim" parent="." instance=ExtResource("2_x7trr")]
+
+[node name="Armature" parent="MotherAnim" index="0"]
+transform = Transform3D(-0.00292571, 0.0353642, -0.99937, 0.0556178, 0.997833, 0.035147, 0.998448, -0.05548, -0.00488625, -0.00151705, 1.64019, 0.0131015)
+
+[node name="Skeleton3D" parent="MotherAnim/Armature" index="0"]
+bones/1/rotation = Quaternion(-0.00274106, 0.000690473, -0.0112935, 0.999932)
+bones/2/rotation = Quaternion(-0.00762914, -0.029807, -0.048103, 0.998368)
+bones/3/rotation = Quaternion(-0.00431716, 0.00580241, -0.0207094, 0.999759)
+bones/7/rotation = Quaternion(-0.969479, 0.0308502, -0.208183, 0.125773)
+bones/8/rotation = Quaternion(-1.01737e-07, -1.21058e-07, -0.241183, 0.97048)
+bones/9/rotation = Quaternion(-0.090943, 0.0555762, 0.117304, 0.98736)
+bones/14/rotation = Quaternion(0.951269, -0.0180862, -0.268884, 0.149872)
+bones/15/rotation = Quaternion(-3.79241e-07, -1.33358e-09, -0.256669, 0.966499)
+bones/16/rotation = Quaternion(0.00676255, 0.0400849, 0.122256, 0.991666)
+bones/22/rotation = Quaternion(-0.99436, -0.0956476, 0.0260808, 0.0376676)
+bones/23/rotation = Quaternion(0.0190445, -0.0829083, 0.29819, 0.950708)
+bones/24/rotation = Quaternion(0.151929, -0.00588341, -0.714505, 0.68291)
+bones/29/rotation = Quaternion(0.987118, 0.0928743, 0.121517, 0.0469566)
+bones/30/rotation = Quaternion(-0.0116625, 0.0328406, 0.258953, 0.965261)
+bones/31/rotation = Quaternion(-0.141561, 0.0158668, -0.680245, 0.71901)
+
+[node name="Head" parent="MotherAnim/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.526179, 0.085555, -0.0236053, -0.0848532, 0.526548, 0.0169805, 0.0260153, -0.0129903, 0.532818, 0.11085, 1.80594, -0.0364141)
+bone_idx = 5
+
+[node name="Neck" parent="MotherAnim/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.991269, 0.118936, -0.0569189, -0.117684, 0.992739, 0.0248799, 0.0594647, -0.0179642, 0.998069, 0.0308406, 1.29881, -0.0110049)
+bone_idx = 6
+
+[node name="Hands Left" parent="MotherAnim/Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.823833, 0.194285, -0.532496, 0.0947675, 0.878992, 0.467324, 0.558854, -0.43546, 0.705731, -0.310112, 0.509304, 0.232486)
+bone_idx = 11
+
+[node name="Arm Lower Left" parent="MotherAnim/Armature/Skeleton3D" index="3"]
+transform = Transform3D(0.81732, -0.017958, -0.575904, 0.337493, 0.825027, 0.453242, 0.466997, -0.564808, 0.680372, -0.31929, 0.993866, -0.0789401)
+bone_idx = 12
+
+[node name="Arm Upper Left" parent="MotherAnim/Armature/Skeleton3D" index="4"]
+transform = Transform3D(0.90922, 0.277437, -0.310398, -0.130579, 0.898008, 0.420156, 0.395306, -0.341483, 0.852715, -0.0788581, 1.25004, -0.0872418)
+bone_idx = 13
+
+[node name="Hands Right" parent="MotherAnim/Armature/Skeleton3D" index="5"]
+transform = Transform3D(0.851292, 0.0383962, 0.523285, 0.145542, 0.940902, -0.305811, -0.504102, 0.336494, 0.795395, -0.23924, 0.379191, -0.291896)
+bone_idx = 18
+
+[node name="Arm Lower Right" parent="MotherAnim/Armature/Skeleton3D" index="6"]
+transform = Transform3D(0.726622, 0.0219963, 0.686685, 0.354126, 0.844496, -0.401773, -0.58874, 0.53511, 0.60584, -0.358214, 0.968181, 0.145399)
+bone_idx = 19
+
+[node name="Arm Upper Right" parent="MotherAnim/Armature/Skeleton3D" index="7"]
+transform = Transform3D(0.851202, 0.300826, 0.430068, -0.13705, 0.918401, -0.371155, -0.506628, 0.256987, 0.822974, -0.118535, 1.23219, 0.104498)
+bone_idx = 20
+
+[node name="Torso Upper" parent="MotherAnim/Armature/Skeleton3D" index="8"]
+transform = Transform3D(0.999744, 0.0225817, 0.00144277, -0.0225893, 0.99973, 0.00546624, -0.00131894, -0.00549743, 0.999984, 0.0131561, 0.936529, 0.00471542)
+bone_idx = 21
+
+[node name="Feet Left" parent="MotherAnim/Armature/Skeleton3D" index="9"]
+transform = Transform3D(0.95997, 0.0559084, 0.274465, -0.0440337, 0.997816, -0.0492383, -0.276618, 0.0351816, 0.960335, -0.0313132, -1.44567, -0.174133)
+bone_idx = 26
+
+[node name="Leg Lower Left" parent="MotherAnim/Armature/Skeleton3D" index="10"]
+transform = Transform3D(0.913372, 0.354267, 0.200614, -0.323362, 0.930655, -0.171221, -0.24736, 0.0915178, 0.964592, 0.473476, -0.159879, -0.0382192)
+bone_idx = 27
+
+[node name="Legs Upper Left" parent="MotherAnim/Armature/Skeleton3D" index="11"]
+transform = Transform3D(0.969765, -0.234829, 0.0664117, 0.240634, 0.965448, -0.100023, -0.0406287, 0.11298, 0.992766, 0.0327957, -0.1035, -0.0109946)
+bone_idx = 28
+
+[node name="Feet Right" parent="MotherAnim/Armature/Skeleton3D" index="12"]
+transform = Transform3D(0.920459, 0.0557657, -0.386839, -0.0650472, 0.997822, -0.0109346, 0.385386, 0.035228, 0.922082, 0.0267745, -1.4618, 0.192103)
+bone_idx = 33
+
+[node name="Leg Lower Right" parent="MotherAnim/Armature/Skeleton3D" index="13"]
+transform = Transform3D(0.911663, 0.285145, -0.29591, -0.252085, 0.956737, 0.145282, 0.324534, -0.0578539, 0.944103, 0.430026, -0.136085, 0.0974996)
+bone_idx = 34
+
+[node name="Legs Upper Right" parent="MotherAnim/Armature/Skeleton3D" index="14"]
+transform = Transform3D(0.943484, -0.211301, -0.255324, 0.243191, 0.964787, 0.100212, 0.225158, -0.156641, 0.961648, 0.069084, -0.10484, 0.0202623)
+bone_idx = 35
+
+[node name="Torso Lower" parent="MotherAnim/Armature/Skeleton3D" index="15"]
+transform = Transform3D(1, -2.04636e-09, -1.74623e-10, 2.04636e-09, 1, 8.28659e-08, 1.74623e-10, -8.28659e-08, 1, -2.88666e-08, 0.936643, 0.00791554)
+bone_idx = 36
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133924, 1.74338, -0.230516)
+shape = SubResource("CapsuleShape3D_r1n5f")
+
+[node name="StaticBodyInteraction" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
+collision_layer = 8
+script = ExtResource("3_phbyn")
+Dialogue_Path = "res://Assets/Dialogues/TestDialogue.json"
+prompt_message = "Talk"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBodyInteraction"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0787395, 1.74338, -0.531831)
+shape = SubResource("CapsuleShape3D_771kj")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+debug_enabled = true
+
+[node name="Idle_Walking" type="Timer" parent="."]
+one_shot = true
+
+[editable path="MotherAnim"]
