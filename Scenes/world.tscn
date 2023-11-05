@@ -787,7 +787,7 @@ transform = Transform3D(0.348981, 0, 0.93713, 0, 1, 0, -0.93713, 0, 0.348981, 41
 transform = Transform3D(-0.997081, 0, -0.0763537, 0, 1, 0, 0.0763537, 0, -0.997081, -26.888, 1.03893, -1.00137)
 
 [node name="Man2Anim" parent="Villagers" instance=ExtResource("3_n0l2k")]
-transform = Transform3D(-0.991135, 0, -0.132862, 0, 1, 0, 0.132862, 0, -0.991135, -35.4654, 0, 6.78934)
+transform = Transform3D(-0.991135, 0, -0.132862, 0, 1, 0, 0.132862, 0, -0.991135, -35.6753, 0, 7.02362)
 
 [node name="Man3Anim" parent="Villagers" instance=ExtResource("4_truw2")]
 transform = Transform3D(-0.991135, 0, -0.132862, 0, 1, 0, 0.132862, 0, -0.991135, -31.2832, 0, 6.46339)
