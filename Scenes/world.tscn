@@ -772,7 +772,7 @@ stream = ExtResource("5_ciw63")
 volume_db = -10.0
 
 [node name="Player" parent="." groups=["Persist"] instance=ExtResource("1_6k6ey")]
-transform = Transform3D(-0.761765, 0, 0.647854, 0, 1, 0, -0.647854, 0, -0.761765, -307.717, 1.771, -445.264)
+transform = Transform3D(-0.761765, 0, 0.647854, 0, 1, 0, -0.647854, 0, -0.761765, -703.194, 1.771, -535.35)
 floor_max_angle = 1.13446
 
 [node name="Forest" type="GridMap" parent="."]

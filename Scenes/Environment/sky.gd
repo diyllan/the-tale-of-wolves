@@ -7,8 +7,6 @@ var day_cycle = {
 	"evening" : 0.755,
 	"night": 0.85
 }
-var day_part_count = 0;
-var day_count = 1;
 
 var time_of_day: float = 0.0
 var next_time_of_day: float = 0.0
@@ -203,12 +201,11 @@ func _process(delta:float):
 				next_time_of_day = time_of_day
 				set_process(false);
 		if time_of_day == next_time_of_day and changing_to_next_time:
-			day_part_count += 1;
-			next_time_of_day = day_cycle[day_cycle.keys()[day_part_count % 4]]
+			ObjectiveManager.day_part_count += 1;
+			next_time_of_day = day_cycle[day_cycle.keys()[ObjectiveManager.day_part_count % 4]]
 			if time_of_day > next_time_of_day:
 				changing_to_next_time = false;
 				time_of_day = next_time_of_day
-				day_count += 1
 				set_time()
 				set_process(false);
 	
