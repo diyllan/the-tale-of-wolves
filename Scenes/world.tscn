@@ -806,7 +806,7 @@ transform = Transform3D(-0.998935, 0, 0.0461302, 0, 1, 0, -0.0461302, 0, -0.9989
 transform = Transform3D(-0.713239, 0, -0.700922, 0, 1, 0, 0.700922, 0, -0.713239, 0.34021, 0, -10.8619)
 
 [node name="Man6" parent="NPC/Villagers" instance=ExtResource("45_8d4ek")]
-transform = Transform3D(0.744812, 0, -0.667273, 0, 1, 0, 0.667273, 0, 0.744812, 23.3963, 0, -14.069)
+transform = Transform3D(0.744812, 0, -0.667273, 0, 1, 0, 0.667273, 0, 0.744812, 46.4196, 0, -33.9626)
 
 [node name="Man5" parent="NPC/Villagers" instance=ExtResource("7_c3d1w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02339, 0, 10.072)
