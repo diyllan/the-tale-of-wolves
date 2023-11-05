@@ -14,6 +14,7 @@ height = 3.45942
 script = ExtResource("1_7763w")
 
 [node name="Woman4Anim" parent="." instance=ExtResource("2_8mgbt")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Armature" parent="Woman4Anim" index="0"]
 transform = Transform3D(-0.0432664, 0.135733, -0.826485, 0.0371399, 0.827084, 0.133887, 0.836733, -0.029693, -0.0486793, 0.0012199, 1.32905, -0.00258214)
@@ -36,63 +37,63 @@ bones/30/rotation = Quaternion(0.0156627, 0.0460838, 0.12735, 0.990663)
 bones/31/rotation = Quaternion(-0.171882, -0.0798571, -0.65973, 0.72721)
 
 [node name="Head" parent="Woman4Anim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.53197, 0.0236516, -0.034488, -0.0266249, 0.530906, -0.0465924, 0.0322481, 0.0481699, 0.530454, 0.0497493, 1.7978, 0.192484)
+transform = Transform3D(0.53197, 0.0236515, -0.034488, -0.0266248, 0.530906, -0.0465924, 0.032248, 0.0481699, 0.530454, 0.0497492, 1.7978, 0.192484)
 bone_idx = 5
 
 [node name="Neck" parent="Woman4Anim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.996167, -0.0424237, -0.0764954, 0.0303344, 0.987793, -0.15279, 0.0820436, 0.149884, 0.985294, 0.032298, 1.28608, 0.155196)
+transform = Transform3D(0.996167, -0.0424238, -0.0764954, 0.0303345, 0.987793, -0.15279, 0.0820435, 0.149884, 0.985294, 0.0322979, 1.28608, 0.155196)
 bone_idx = 6
 
 [node name="Hands Left" parent="Woman4Anim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.977799, -0.202085, -0.0554206, 0.209484, 0.936237, 0.282091, -0.0051196, -0.287438, 0.957786, 0.00477915, 0.477423, 0.292494)
+transform = Transform3D(0.977799, -0.202085, -0.0554206, 0.209484, 0.936238, 0.28209, -0.00511926, -0.287437, 0.957786, 0.00477944, 0.477422, 0.292493)
 bone_idx = 11
 
 [node name="Arm Lower Left" parent="Woman4Anim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.985248, 0.0794009, 0.151599, -0.140768, 0.879777, 0.454069, -0.0973197, -0.46871, 0.877975, 0.169194, 1.14534, 0.00359204)
+transform = Transform3D(0.985248, 0.0794004, 0.151599, -0.140767, 0.879777, 0.454067, -0.0973196, -0.468709, 0.877976, 0.169194, 1.14534, 0.00359231)
 bone_idx = 12
 
 [node name="Arm Upper Left" parent="Woman4Anim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.980248, -0.145105, -0.134378, 0.102323, 0.953565, -0.283273, 0.169243, 0.263928, 0.949579, -0.0391862, 1.03496, 0.139532)
+transform = Transform3D(0.980248, -0.145106, -0.134378, 0.102323, 0.953565, -0.283274, 0.169243, 0.263929, 0.949578, -0.0391863, 1.03496, 0.139532)
 bone_idx = 13
 
 [node name="Hands Right" parent="Woman4Anim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(0.93398, -0.281661, 0.219885, 0.356131, 0.784042, -0.508378, -0.0292095, 0.553123, 0.832588, -0.158562, 0.478568, -0.246073)
+transform = Transform3D(0.933979, -0.281661, 0.219886, 0.356131, 0.784043, -0.508377, -0.0292107, 0.553122, 0.832588, -0.158562, 0.478567, -0.246072)
 bone_idx = 18
 
 [node name="Arm Lower Right" parent="Woman4Anim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.990895, 0.121629, -0.0577361, -0.128273, 0.722565, -0.679299, -0.0409044, 0.68052, 0.731588, 0.0660043, 1.04144, 0.215982)
+transform = Transform3D(0.990895, 0.121629, -0.0577351, -0.128272, 0.722566, -0.679298, -0.040905, 0.680518, 0.731589, 0.0660037, 1.04144, 0.215981)
 bone_idx = 19
 
 [node name="Arm Upper Right" parent="Woman4Anim/Armature/Skeleton3D" index="7"]
-transform = Transform3D(0.986191, -0.141451, -0.0861321, 0.116619, 0.962415, -0.245269, 0.117588, 0.231838, 0.965622, 0.0338324, 1.11142, 0.15685)
+transform = Transform3D(0.986191, -0.141451, -0.0861321, 0.11662, 0.962415, -0.245268, 0.117588, 0.231837, 0.965622, 0.0338323, 1.11142, 0.156849)
 bone_idx = 20
 
 [node name="Torso Upper" parent="Woman4Anim/Armature/Skeleton3D" index="8"]
-transform = Transform3D(0.998904, 0.042388, -0.0198465, -0.045156, 0.984333, -0.170439, 0.012311, 0.171149, 0.985168, 0.0245169, 0.926174, 0.107424)
+transform = Transform3D(0.998904, 0.0423879, -0.0198465, -0.0451559, 0.984333, -0.170439, 0.012311, 0.171149, 0.985168, 0.0245168, 0.926174, 0.107424)
 bone_idx = 21
 
 [node name="Feet Left" parent="Woman4Anim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.951468, 0.0376037, 0.30544, 0.0143193, 0.986022, -0.165996, -0.307412, 0.162313, 0.937631, 0.0241559, -1.43951, -0.317334)
+transform = Transform3D(0.951468, 0.0376051, 0.30544, 0.0143177, 0.986022, -0.165995, -0.307412, 0.162312, 0.937631, 0.0241544, -1.43951, -0.317334)
 bone_idx = 26
 
 [node name="Leg Lower Left" parent="Woman4Anim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.902076, 0.329233, 0.279043, -0.267207, 0.933801, -0.23794, -0.338908, 0.140078, 0.930333, 0.498491, -0.142715, -0.12206)
+transform = Transform3D(0.902075, 0.329234, 0.279043, -0.267208, 0.9338, -0.237941, -0.338908, 0.140078, 0.930333, 0.498491, -0.142715, -0.12206)
 bone_idx = 27
 
 [node name="Legs Upper Left" parent="Woman4Anim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.950722, -0.269627, 0.153065, 0.298444, 0.92963, -0.216145, -0.0840149, 0.251175, 0.964289, 0.0518593, -0.122006, -0.0280836)
+transform = Transform3D(0.950722, -0.269626, 0.153064, 0.298443, 0.92963, -0.216145, -0.0840149, 0.251175, 0.964289, 0.0518592, -0.122007, -0.0280837)
 bone_idx = 28
 
 [node name="Feet Right" parent="Woman4Anim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.983651, 0.0439066, -0.174651, -0.0706103, 0.986198, -0.149759, 0.165665, 0.159643, 0.973175, -0.0229768, -1.4555, -0.211868)
+transform = Transform3D(0.983651, 0.0439074, -0.174651, -0.0706111, 0.986198, -0.149759, 0.165665, 0.159643, 0.973175, -0.0229775, -1.4555, -0.211868)
 bone_idx = 33
 
 [node name="Leg Lower Right" parent="Woman4Anim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.962124, 0.161305, -0.21977, -0.192902, 0.972469, -0.130737, 0.192631, 0.168179, 0.966752, 0.216253, -0.0821108, 0.0315407)
+transform = Transform3D(0.962123, 0.161306, -0.21977, -0.192903, 0.972469, -0.130737, 0.192631, 0.16818, 0.966752, 0.216254, -0.082111, 0.0315407)
 bone_idx = 34
 
 [node name="Legs Upper Right" parent="Woman4Anim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.987774, -0.0752873, -0.136511, 0.0576065, 0.989952, -0.129136, 0.144861, 0.119693, 0.982185, 0.0335798, -0.0609266, -0.0075103)
+transform = Transform3D(0.987774, -0.0752873, -0.136511, 0.0576065, 0.989952, -0.129136, 0.144861, 0.119693, 0.982185, 0.0335798, -0.0609266, -0.00751032)
 bone_idx = 35
 
 [node name="Torso Lower" parent="Woman4Anim/Armature/Skeleton3D" index="15"]
@@ -116,6 +117,8 @@ shape = SubResource("CapsuleShape3D_5dqkv")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 avoidance_enabled = true
+radius = 1.0
+max_neighbors = 20
 debug_enabled = true
 
 [node name="Idle_Walking" type="Timer" parent="."]

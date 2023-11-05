@@ -12,22 +12,25 @@ var state = IDLE
 
 var target_vector: Vector3
 var last_target_vector: Vector3 
-var radius = 50
+var radiusx1 = -360
+var radiusx2 = -280
+var radiusz1 = -570
+var radiusz2 = -415
 var TOLERANCE = 4.0
 
 var interacted = false
 var dialogue_ended = false
-
 var randomTime
 
 @export var SPEED = 3
 
-@onready var animPlayer = $Man1Anim/AnimationPlayer
+@onready var animPlayer = get_child(0).get_node("AnimationPlayer")
 @onready var nav_agent = $NavigationAgent3D
 @onready var idle_Walking_timer = $Idle_Walking
 @onready var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
 
 func _ready():
+	nav_agent.velocity_computed.connect(_on_nav_velocity_computed)
 	$StaticBodyInteraction.connect("Interacted", interaction)
 #	DialogueManager.connect("dialogue_started", interaction)
 	DialogueManager.connect("dialogue_ended", interaction_ended)
@@ -63,23 +66,28 @@ func _process(delta):
 func setGravity(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-		
+
+func _on_nav_velocity_computed(safe_velocity: Vector3) -> void:
+	if !interacted:
+		velocity = safe_velocity
+		look_at(nav_agent.get_next_path_position())
+		move_and_slide()
+	
+	
 func update_target_position():
 	randomTime = randi_range(0, 20)
 	if target_vector == last_target_vector:
-		target_vector = Vector3(randi_range(-radius, radius),  0, randi_range(-radius, radius))
+		target_vector = Vector3(randi_range(radiusx1, radiusx2),  0, randi_range(radiusz1, radiusz2))
 
 func random_roaming():
 	last_target_vector = target_vector 
 	nav_agent.set_target_position(target_vector)
-	var next_nav_point = nav_agent.get_next_path_position()
-#	print_debug(next_nav_point)
-#	print_debug(global_transform.origin)
-#	print_debug(next_nav_point - global_transform.origin)
-	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
-#	print_debug(velocity)
-	look_at(global_transform.origin + velocity)
-	move_and_slide()
+	var direction = (nav_agent.get_next_path_position() - global_transform.origin).normalized()
+	
+	var intended_velocity = direction * SPEED
+	nav_agent.set_velocity(intended_velocity)
+	
+	
 
 func is_at_target_position(): 
 	# Stop moving when at target +/- tolerance
@@ -91,5 +99,3 @@ func interaction():
 
 func interaction_ended():
 	interacted = false
-		
-	

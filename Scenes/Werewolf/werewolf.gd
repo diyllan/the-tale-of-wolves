@@ -16,7 +16,10 @@ var state = IDLE
 var _player = null
 var target_vector: Vector3
 var last_target_vector: Vector3 
-var radius = 100
+var radiusx1 = -546
+var radiusx2 = -360
+var radiusz1 = -275
+var radiusz2 = -172
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -146,7 +149,7 @@ func setGravity(delta):
 		
 func update_target_position():
 	if target_vector == last_target_vector:
-		target_vector = Vector3(randi_range(-radius, radius),  randi_range(-radius, radius), 0)
+		target_vector = Vector3(randi_range(radiusx1, radiusx2),  0, randi_range(radiusz1, radiusz2))
 		
 func random_roaming():
 	last_target_vector = target_vector 

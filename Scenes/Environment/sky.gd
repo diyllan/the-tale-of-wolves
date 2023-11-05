@@ -193,9 +193,6 @@ func set_time():
 	sky_shader.set_shader_parameter("attenuation",clamp(light_energy,night_level_light*0.25,1.00));#clouds too bright with night_level_light
 
 func _process(delta:float):
-	print(changing_to_next_time) 
-	print(time_of_day)
-	print(next_time_of_day)
 	#add input
 	if changing_to_next_time:
 		if time_of_day < next_time_of_day:

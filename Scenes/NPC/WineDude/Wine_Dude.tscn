@@ -14,9 +14,10 @@ height = 4.06078
 script = ExtResource("1_0a7bm")
 
 [node name="WineDudeAnim" parent="." instance=ExtResource("2_sq0g2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Armature" parent="WineDudeAnim" index="0"]
-transform = Transform3D(0.0277153, 0.0826602, -0.996192, 0.0155692, 0.996418, 0.0831122, 0.999495, -0.0178134, 0.026329, 0.0331513, 1.69679, 0.131534)
+transform = Transform3D(0.0277153, 0.0826602, -0.996192, 0.0155692, 0.996418, 0.0831121, 0.999495, -0.0178134, 0.026329, 0.0331513, 1.69679, 0.131534)
 
 [node name="Skeleton3D" parent="WineDudeAnim/Armature" index="0"]
 bones/1/rotation = Quaternion(0.0208326, -0.0108951, -0.0109877, 0.999663)
@@ -36,31 +37,31 @@ bones/30/rotation = Quaternion(0.0399347, 0.0456457, 0.0659778, 0.995976)
 bones/31/rotation = Quaternion(0.0239607, 0.177397, -0.704697, 0.686556)
 
 [node name="Head" parent="WineDudeAnim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.53175, 0.043327, -0.0103072, -0.0444534, 0.523877, -0.0912037, 0.00271378, 0.0917441, 0.525658, -0.0885838, 1.77814, 0.12644)
+transform = Transform3D(0.53175, 0.043327, -0.0103072, -0.0444533, 0.523877, -0.0912037, 0.00271377, 0.0917441, 0.525658, -0.0885839, 1.77814, 0.12644)
 bone_idx = 5
 
 [node name="Neck" parent="WineDudeAnim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.997937, 0.0624406, -0.0149282, -0.0641814, 0.975943, -0.208367, 0.00155843, 0.208896, 0.977937, -0.12966, 1.27149, 0.049439)
+transform = Transform3D(0.997937, 0.0624406, -0.0149281, -0.0641814, 0.975943, -0.208367, 0.00155842, 0.208896, 0.977937, -0.12966, 1.27149, 0.049439)
 bone_idx = 6
 
 [node name="Hands Left" parent="WineDudeAnim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.96115, -0.197422, 0.192909, 0.0712661, 0.852679, 0.517551, -0.266665, -0.483696, 0.833623, 0.0644632, 0.537211, 0.262962)
+transform = Transform3D(0.961151, -0.197421, 0.19291, 0.0712654, 0.85268, 0.51755, -0.266665, -0.483695, 0.833623, 0.0644631, 0.537211, 0.262962)
 bone_idx = 11
 
 [node name="Arm Lower Left" parent="WineDudeAnim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.977157, 0.0790076, -0.197287, 0.0222224, 0.88525, 0.464583, 0.211354, -0.458355, 0.863272, -0.287075, 1.00025, 0.0374375)
+transform = Transform3D(0.977157, 0.0790082, -0.197286, 0.0222213, 0.885251, 0.464583, 0.211354, -0.458354, 0.863273, -0.287074, 1.00025, 0.0374375)
 bone_idx = 12
 
 [node name="Arm Upper Left" parent="WineDudeAnim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.964353, 0.256166, -0.0663576, -0.221163, 0.917915, 0.329421, 0.145297, -0.303002, 0.941848, -0.132055, 1.20805, -0.0125047)
+transform = Transform3D(0.964353, 0.256166, -0.0663577, -0.221163, 0.917915, 0.329421, 0.145297, -0.303001, 0.941848, -0.132055, 1.20805, -0.0125046)
 bone_idx = 13
 
 [node name="Hands Right" parent="WineDudeAnim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(0.991625, -0.126012, -0.0283146, 0.0711885, 0.716199, -0.694256, 0.107764, 0.686426, 0.719171, -0.0122701, 0.687717, -0.311904)
+transform = Transform3D(0.991625, -0.126012, -0.028316, 0.0711874, 0.716199, -0.694256, 0.107765, 0.686426, 0.719171, -0.0122693, 0.687716, -0.311904)
 bone_idx = 18
 
 [node name="Arm Lower Right" parent="WineDudeAnim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.970387, -0.114061, 0.212932, 0.224312, 0.752583, -0.619116, -0.0896319, 0.648544, 0.755882, -0.291311, 1.04116, 0.0446727)
+transform = Transform3D(0.970387, -0.11406, 0.212931, 0.224311, 0.752583, -0.619116, -0.0896319, 0.648544, 0.755882, -0.291311, 1.04116, 0.0446727)
 bone_idx = 19
 
 [node name="Arm Upper Right" parent="WineDudeAnim/Armature/Skeleton3D" index="7"]
@@ -72,27 +73,27 @@ transform = Transform3D(0.999521, 0.0215141, -0.0222409, -0.022422, 0.998891, -0
 bone_idx = 21
 
 [node name="Feet Left" parent="WineDudeAnim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.881079, -0.0124166, 0.472806, 0.0396824, 0.998072, -0.0477297, -0.471298, 0.0608148, 0.879873, 0.0623927, -1.46423, -0.44338)
+transform = Transform3D(0.88108, -0.012416, 0.472805, 0.039682, 0.998072, -0.0477303, -0.471297, 0.0608151, 0.879874, 0.0623915, -1.46423, -0.44338)
 bone_idx = 26
 
 [node name="Leg Lower Left" parent="WineDudeAnim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.901164, 0.155152, 0.404762, -0.0415489, 0.960372, -0.275609, -0.43148, 0.231551, 0.871898, 0.287668, -0.129579, -0.100427)
+transform = Transform3D(0.901164, 0.155152, 0.404761, -0.0415497, 0.960372, -0.27561, -0.431479, 0.231551, 0.871899, 0.287668, -0.12958, -0.100427)
 bone_idx = 27
 
 [node name="Legs Upper Left" parent="WineDudeAnim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.905305, -0.324958, 0.273541, 0.388054, 0.894619, -0.221518, -0.172731, 0.306691, 0.936005, -0.0835816, -0.153737, -0.0261901)
+transform = Transform3D(0.905306, -0.324958, 0.27354, 0.388053, 0.894619, -0.221519, -0.17273, 0.30669, 0.936005, -0.0835818, -0.153737, -0.02619)
 bone_idx = 28
 
 [node name="Feet Right" parent="WineDudeAnim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.987293, 0.0135311, -0.158336, -0.0264255, 0.996475, -0.0796152, 0.156699, 0.0827876, 0.98417, -0.179914, -1.48807, -0.249734)
+transform = Transform3D(0.987293, 0.013531, -0.158336, -0.0264254, 0.996475, -0.0796154, 0.1567, 0.0827878, 0.98417, -0.179914, -1.48807, -0.249734)
 bone_idx = 33
 
 [node name="Leg Lower Right" parent="WineDudeAnim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.979794, 0.106995, -0.168986, -0.137783, 0.973503, -0.182502, 0.144981, 0.202098, 0.968574, -0.0208095, -0.095695, 0.0469174)
+transform = Transform3D(0.979794, 0.106994, -0.168987, -0.137783, 0.973503, -0.182502, 0.144981, 0.202098, 0.968574, -0.0208095, -0.095695, 0.0469174)
 bone_idx = 34
 
 [node name="Legs Upper Right" parent="WineDudeAnim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.99643, -0.0284321, -0.0794924, 0.0172284, 0.990252, -0.138216, 0.0826472, 0.136353, 0.987206, -0.135477, -0.0857864, -0.00683422)
+transform = Transform3D(0.99643, -0.0284322, -0.0794924, 0.0172285, 0.990252, -0.138216, 0.0826472, 0.136353, 0.987206, -0.135477, -0.0857864, -0.00683422)
 bone_idx = 35
 
 [node name="Torso Lower" parent="WineDudeAnim/Armature/Skeleton3D" index="15"]
@@ -116,6 +117,8 @@ shape = SubResource("CapsuleShape3D_sjhnk")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 avoidance_enabled = true
+radius = 1.0
+max_neighbors = 20
 debug_enabled = true
 
 [node name="Idle_Walking" type="Timer" parent="."]

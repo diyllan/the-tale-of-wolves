@@ -11,85 +11,86 @@ height = 2.36614
 script = ExtResource("1_xcfmj")
 
 [node name="BakerAnim" parent="." instance=ExtResource("2_g1e0c")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Armature" parent="BakerAnim" index="0"]
-transform = Transform3D(0.033409, -0.0141552, -0.999342, -0.0338375, 0.99931, -0.015286, 0.998869, 0.034326, 0.032907, 0.0196745, 1.72121, 0.129789)
+transform = Transform3D(-0.014914, 0.0203549, -0.999682, 0.0446149, 0.99881, 0.0196716, 0.998893, -0.0443073, -0.0158044, 0.00899119, 1.70318, 0.141202)
 
 [node name="Skeleton3D" parent="BakerAnim/Armature" index="0"]
-bones/1/rotation = Quaternion(-0.00867825, -0.0114346, -0.053753, 0.998451)
-bones/2/rotation = Quaternion(0.0200086, -0.0237732, -0.0383299, 0.998782)
-bones/3/rotation = Quaternion(-0.00196527, 0.0186594, 0.00405717, 0.999816)
-bones/7/rotation = Quaternion(-0.92727, 0.0199241, -0.346514, 0.140363)
-bones/8/rotation = Quaternion(1.45946e-07, -3.25156e-08, -0.0963789, 0.995345)
-bones/9/rotation = Quaternion(-0.0913541, 0.0255419, 0.0336099, 0.994923)
-bones/14/rotation = Quaternion(0.956999, 0.0560679, -0.227945, 0.170441)
-bones/15/rotation = Quaternion(1.53903e-07, 1.51509e-07, -0.201067, 0.979577)
-bones/16/rotation = Quaternion(0.051397, 0.0115187, -0.00878466, 0.998573)
-bones/22/rotation = Quaternion(-0.971264, -0.218916, 0.0920649, 0.0156992)
-bones/23/rotation = Quaternion(-0.0324851, 0.0349815, 0.490796, 0.869965)
-bones/24/rotation = Quaternion(0.217745, 0.0957649, -0.618384, 0.749011)
-bones/29/rotation = Quaternion(-0.99473, -0.0798018, -0.0638328, 0.00837774)
-bones/30/rotation = Quaternion(-0.0173822, -0.028077, 0.135582, 0.990216)
-bones/31/rotation = Quaternion(0.0788312, 0.226203, -0.686224, 0.686815)
+bones/1/rotation = Quaternion(0.000784764, -0.00240774, -0.0107554, 0.999939)
+bones/2/rotation = Quaternion(-0.00595231, -0.0371213, -0.0206525, 0.99908)
+bones/3/rotation = Quaternion(-0.0122095, 0.0133818, 0.00464618, 0.999825)
+bones/7/rotation = Quaternion(-0.961638, 0.0401856, -0.234235, 0.137006)
+bones/8/rotation = Quaternion(3.64992e-08, 3.05192e-08, -0.250067, 0.968229)
+bones/9/rotation = Quaternion(-0.0887894, -0.00444351, 0.119691, 0.988823)
+bones/14/rotation = Quaternion(0.969564, -0.0269149, -0.199974, 0.138674)
+bones/15/rotation = Quaternion(-1.27602e-08, -9.16293e-08, -0.259784, 0.965667)
+bones/16/rotation = Quaternion(-0.0027728, 0.030972, 0.138025, 0.989941)
+bones/22/rotation = Quaternion(-0.996716, -0.0607725, 0.0398185, 0.0357647)
+bones/23/rotation = Quaternion(0.0117294, -0.0802757, 0.22009, 0.9721)
+bones/24/rotation = Quaternion(0.215961, 0.0294068, -0.68359, 0.696564)
+bones/29/rotation = Quaternion(0.99266, 0.0569828, 0.0973462, 0.043616)
+bones/30/rotation = Quaternion(-0.0060359, 0.0305919, 0.188295, 0.981617)
+bones/31/rotation = Quaternion(0.111962, 0.269527, -0.685254, 0.667268)
 
 [node name="Head" parent="BakerAnim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.525129, 0.0926492, -0.0199158, -0.093033, 0.525361, -0.00904165, 0.018038, 0.0123702, 0.533163, 0.0444241, 1.77458, -0.0170705)
+transform = Transform3D(0.53211, 0.029642, -0.0268552, -0.0286849, 0.532487, 0.0193805, 0.0278752, -0.0178824, 0.532583, -0.0998411, 1.7854, -0.0331456)
 bone_idx = 5
 
 [node name="Neck" parent="BakerAnim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.980573, 0.181379, -0.0746871, -0.18291, 0.983028, -0.0141444, 0.070854, 0.0275306, 0.997107, -0.045519, 1.26849, -0.016253)
+transform = Transform3D(0.994911, 0.0632347, -0.0784403, -0.0623641, 0.997962, 0.013501, 0.0791342, -0.00854045, 0.996827, -0.129317, 1.27317, -0.0041358)
 bone_idx = 6
 
 [node name="Hands Left" parent="BakerAnim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.684465, 0.466252, -0.56046, -0.0844645, 0.814297, 0.574269, 0.724137, -0.345728, 0.596739, -0.625652, 0.55314, 0.0660273)
+transform = Transform3D(0.853282, 0.191079, -0.485177, 0.0931452, 0.859625, 0.502363, 0.513062, -0.47385, 0.715704, -0.420994, 0.528154, 0.240158)
 bone_idx = 11
 
 [node name="Arm Lower Left" parent="BakerAnim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.719749, 0.38293, -0.579072, -0.0138915, 0.841895, 0.539463, 0.694095, -0.380233, 0.611272, -0.409743, 1.01066, -0.125433)
+transform = Transform3D(0.787064, 0.0186444, -0.616589, 0.323019, 0.839093, 0.4377, 0.525537, -0.543668, 0.654397, -0.494043, 0.97018, -0.101416)
 bone_idx = 12
 
 [node name="Arm Upper Left" parent="BakerAnim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.726091, 0.418692, -0.545424, -0.202934, 0.888386, 0.411811, 0.65697, -0.188327, 0.730016, -0.259665, 1.21443, -0.116248)
+transform = Transform3D(0.881656, 0.292719, -0.370131, -0.161188, 0.92399, 0.346787, 0.443509, -0.246086, 0.861824, -0.260281, 1.2015, -0.0601837)
 bone_idx = 13
 
 [node name="Hands Right" parent="BakerAnim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(0.797897, -0.0701269, 0.598701, 0.325862, 0.885756, -0.330531, -0.507123, 0.458824, 0.729595, -0.39374, 0.406658, -0.198855)
+transform = Transform3D(0.917185, 0.0187215, 0.398023, 0.128413, 0.931714, -0.339733, -0.377204, 0.362709, 0.85215, -0.297679, 0.391559, -0.316292)
 bone_idx = 18
 
 [node name="Arm Lower Right" parent="BakerAnim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.79479, -0.024793, 0.606379, 0.303647, 0.881354, -0.361959, -0.52546, 0.471806, 0.70802, -0.416787, 0.938146, 0.0983311)
+transform = Transform3D(0.803378, -0.0650601, 0.591905, 0.372145, 0.830839, -0.413781, -0.464857, 0.552697, 0.69169, -0.48201, 0.956196, 0.110076)
 bone_idx = 19
 
 [node name="Arm Upper Right" parent="BakerAnim/Armature/Skeleton3D" index="7"]
-transform = Transform3D(0.897578, 0.182026, 0.401522, -0.0743492, 0.960236, -0.26911, -0.434541, 0.211694, 0.875421, -0.241242, 1.18115, 0.0690871)
+transform = Transform3D(0.917871, 0.23946, 0.3165, -0.126813, 0.932621, -0.337842, -0.376073, 0.269959, 0.886393, -0.247708, 1.19845, 0.0834454)
 bone_idx = 20
 
 [node name="Torso Upper" parent="BakerAnim/Armature/Skeleton3D" index="8"]
-transform = Transform3D(0.99396, 0.107538, -0.021901, -0.107141, 0.994071, 0.018559, 0.023767, -0.0161004, 0.999588, -0.09135, 0.907618, -0.000988039)
+transform = Transform3D(0.999757, 0.0215057, -0.0048323, -0.0215133, 0.999767, -0.00151755, 0.00479854, 0.00162114, 0.999987, -0.141003, 0.90979, 0.00947068)
 bone_idx = 21
 
 [node name="Feet Left" parent="BakerAnim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.871748, 0.473147, 0.127229, -0.485108, 0.869934, 0.0887849, -0.0686733, -0.13912, 0.987891, -0.0884053, -1.38013, -0.0312681)
+transform = Transform3D(0.949109, 0.0446151, 0.311771, -0.0362314, 0.99881, -0.0326278, -0.312853, 0.0196712, 0.949597, -0.162003, -1.5046, -0.169346)
 bone_idx = 26
 
 [node name="Leg Lower Left" parent="BakerAnim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.86657, 0.489766, 0.0958397, -0.49464, 0.868398, 0.0348541, -0.0661569, -0.0776117, 0.994786, 0.607118, -0.148599, -0.137269)
+transform = Transform3D(0.935787, 0.271205, 0.225279, -0.240686, 0.958326, -0.153885, -0.257622, 0.0897815, 0.962065, 0.227434, -0.171199, -0.0310175)
 bone_idx = 27
 
 [node name="Legs Upper Left" parent="BakerAnim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.855256, -0.478558, 0.198794, 0.490703, 0.871216, -0.0138363, -0.166572, 0.109383, 0.979943, -0.0861043, -0.118028, -0.00637232)
+transform = Transform3D(0.978656, -0.185327, 0.0888055, 0.193395, 0.976703, -0.0930027, -0.0695007, 0.108192, 0.991697, -0.125953, -0.132593, -0.006145)
 bone_idx = 28
 
 [node name="Feet Right" parent="BakerAnim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.996597, -0.0532345, -0.062927, 0.0541639, 0.998446, 0.0131333, 0.0621309, -0.0164967, 0.997931, -0.00304022, -1.52734, 0.0612482)
+transform = Transform3D(0.954333, 0.04462, -0.295393, -0.0484352, 0.99881, -0.00561532, 0.29479, 0.019667, 0.955359, -0.125302, -1.51327, 0.187281)
 bone_idx = 33
 
 [node name="Leg Lower Right" parent="BakerAnim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.996636, 0.0542606, -0.061418, -0.0505935, 0.996932, 0.0597226, 0.0644709, -0.0564141, 0.996323, 0.0806004, -0.120923, -0.0211897)
+transform = Transform3D(0.946245, 0.217196, -0.239683, -0.187702, 0.972205, 0.139945, 0.263415, -0.087433, 0.960712, 0.186266, -0.160574, 0.0527445)
 bone_idx = 34
 
 [node name="Legs Upper Right" parent="BakerAnim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.965904, -0.225014, -0.128054, 0.226904, 0.973917, 0.00019001, 0.124671, -0.0292397, 0.991767, -0.112834, -0.116875, 0.00171569)
+transform = Transform3D(0.965519, -0.167704, -0.19912, 0.190712, 0.976279, 0.102505, 0.177206, -0.136946, 0.974599, -0.102011, -0.137015, 0.0108574)
 bone_idx = 35
 
 [node name="Torso Lower" parent="BakerAnim/Armature/Skeleton3D" index="15"]
@@ -113,6 +114,8 @@ shape = SubResource("CapsuleShape3D_33uso")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 avoidance_enabled = true
+radius = 1.0
+max_neighbors = 20
 debug_enabled = true
 
 [node name="Idle_Walking" type="Timer" parent="."]
