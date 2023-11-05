@@ -21,6 +21,7 @@ DialogueManager="*res://Scenes/DialogueManager.gd"
 SceneManager="*res://Scenes/scene_manager.tscn"
 SaveLoad="*res://Scenes/Save&Load.gd"
 SoundManager="*res://soundmanager.tscn"
+ObjectiveManager="*res://Scenes/objective_manager.tscn"
 
 [display]
 

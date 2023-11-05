@@ -40,3 +40,13 @@ func changeScene(scenePath):
 	SoundManager.playAmbience("NatureAmbience")
 	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").titleScreen = false
 	SoundManager.stopAllSounds()
+
+func playTransition(sound = ""):
+	fadeoutRect.show()
+	animPlayer.play("TransIn")
+	await animPlayer.animation_finished
+	if sound != "":
+		SoundManager.playSound("")
+	animPlayer.play("TransOut")
+	await animPlayer.animation_finished
+	fadeoutRect.hide()
