@@ -358,9 +358,6 @@ radius = 0.333322
 height = 1.0
 radius = 0.35
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1vcig"]
-size = Vector3(1.4, 1.5, 2.4)
-
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0yc4u"]
 height = 1.0
 
@@ -445,6 +442,9 @@ size = Vector3(3.09902, 1.49984, 1.42882)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_v5j33"]
 height = 0.450154
 radius = 0.527639
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1vcig"]
+size = Vector3(1.4, 1.5, 2.4)
 
 [sub_resource type="QuadMesh" id="QuadMesh_kqoko"]
 size = Vector2(40, 20)
@@ -1402,15 +1402,6 @@ transform = Transform3D(2.95912, 0, 0, 0, 2.95912, 0, 0, 0, 2.95912, -340.066, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.506111, 0)
 shape = SubResource("CylinderShape3D_qvr1m")
 
-[node name="bed" parent="NavRegion" instance=ExtResource("53_kl2gr")]
-transform = Transform3D(-2.33232, 0, 0.0367202, 0, 2.33261, 0, -0.0367202, 0, -2.33232, -346.572, 0.248037, -459.101)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="NavRegion/bed"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/bed/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.749223, 0)
-shape = SubResource("BoxShape3D_1vcig")
-
 [node name="BucketGameready" parent="NavRegion" instance=ExtResource("60_prruw")]
 transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 0, 3.78552e-08, -0.866025, 0.5, -338.8, 0.523813, -463.314)
 
@@ -1592,6 +1583,17 @@ transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0.002388
 shape = SubResource("CylinderShape3D_v5j33")
 
 [node name="Environment" parent="NavRegion" instance=ExtResource("34_hqnwq")]
+
+[node name="Objectives" type="Node3D" parent="NavRegion"]
+
+[node name="bed" parent="NavRegion/Objectives" instance=ExtResource("53_kl2gr")]
+transform = Transform3D(-2.33232, 0, 0.0367202, 0, 2.33261, 0, -0.0367202, 0, -2.33232, -346.572, 0.248037, -459.101)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavRegion/Objectives/bed"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Objectives/bed/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.749223, 0)
+shape = SubResource("BoxShape3D_1vcig")
 
 [node name="SwampWater" parent="." instance=ExtResource("47_yqvkt")]
 transform = Transform3D(19.592, 0, -2.0096, 0, 1, 0, 4.01919, 0, 9.796, -484.067, -2.73461, -176.016)
