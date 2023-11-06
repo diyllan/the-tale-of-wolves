@@ -1,4 +1,4 @@
-[gd_scene load_steps=234 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=239 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
@@ -63,6 +63,11 @@
 [ext_resource type="Script" path="res://Scenes/Triggers.gd" id="59_8o0c0"]
 [ext_resource type="PackedScene" uid="uid://pisu121ffc58" path="res://Assets/Models/Environment/Barrel/Barreltextured.blend" id="59_81x7k"]
 [ext_resource type="PackedScene" uid="uid://vwqu7qwuyw3e" path="res://Assets/Models/Environment/Bucket/BucketGameready.blend" id="60_prruw"]
+[ext_resource type="PackedScene" uid="uid://cm5m207tlfygh" path="res://Assets/Models/Environment/Flour/Flour.blend" id="60_y3swk"]
+[ext_resource type="PackedScene" uid="uid://gayuu0in5ya5" path="res://Assets/Models/Environment/Grapes/grape.blend" id="61_chqve"]
+[ext_resource type="PackedScene" uid="uid://qvehxxvntvxd" path="res://Assets/Models/Environment/Bread/Bread.blend" id="62_syclq"]
+[ext_resource type="PackedScene" uid="uid://caycyrgox37nc" path="res://Assets/Models/Environment/Wine/Winebottle.blend" id="63_ef1v1"]
+[ext_resource type="PackedScene" uid="uid://bqe8oby0x8yx1" path="res://Assets/Models/Environment/Wine/Wineshelf.blend" id="64_326qu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tk204"]
 shader = ExtResource("1_iny4t")
@@ -2366,6 +2371,54 @@ transform = Transform3D(0.977061, 0, 0.212962, 0, 1, 0, -0.212962, 0, 0.977061, 
 collision_layer = 4
 collision_mask = 1
 
+[node name="Head" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.53175, 0.043327, -0.0103072, -0.0444533, 0.523877, -0.0912037, 0.00271377, 0.0917441, 0.525658, -0.0885839, 1.77814, 0.12644)
+
+[node name="Neck" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.997937, 0.0624406, -0.0149281, -0.0641814, 0.975943, -0.208367, 0.00155842, 0.208896, 0.977937, -0.12966, 1.27149, 0.049439)
+
+[node name="Hands Left" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.961151, -0.197421, 0.19291, 0.0712654, 0.85268, 0.51755, -0.266665, -0.483695, 0.833623, 0.0644631, 0.537211, 0.262962)
+
+[node name="Arm Lower Left" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="3"]
+transform = Transform3D(0.977157, 0.0790082, -0.197286, 0.0222213, 0.885251, 0.464583, 0.211354, -0.458354, 0.863273, -0.287074, 1.00025, 0.0374375)
+
+[node name="Arm Upper Left" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="4"]
+transform = Transform3D(0.964353, 0.256166, -0.0663577, -0.221163, 0.917915, 0.329421, 0.145297, -0.303001, 0.941848, -0.132055, 1.20805, -0.0125046)
+
+[node name="Hands Right" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="5"]
+transform = Transform3D(0.991625, -0.126012, -0.028316, 0.0711874, 0.716199, -0.694256, 0.107765, 0.686426, 0.719171, -0.0122693, 0.687716, -0.311904)
+
+[node name="Arm Lower Right" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="6"]
+transform = Transform3D(0.970387, -0.11406, 0.212931, 0.224311, 0.752583, -0.619116, -0.0896319, 0.648544, 0.755882, -0.291311, 1.04116, 0.0446727)
+
+[node name="Arm Upper Right" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="7"]
+transform = Transform3D(0.993483, 0.111661, 0.0228765, -0.0829394, 0.845885, -0.526878, -0.0781823, 0.521547, 0.849634, -0.147037, 1.25006, 0.153765)
+
+[node name="Torso Upper" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="8"]
+transform = Transform3D(0.999521, 0.0215141, -0.0222409, -0.022422, 0.998891, -0.0414117, 0.0213253, 0.0418905, 0.998894, -0.141145, 0.908951, 0.0325579)
+
+[node name="Feet Left" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="9"]
+transform = Transform3D(0.88108, -0.012416, 0.472805, 0.039682, 0.998072, -0.0477303, -0.471297, 0.0608151, 0.879874, 0.0623915, -1.46423, -0.44338)
+
+[node name="Leg Lower Left" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="10"]
+transform = Transform3D(0.901164, 0.155152, 0.404761, -0.0415497, 0.960372, -0.27561, -0.431479, 0.231551, 0.871899, 0.287668, -0.12958, -0.100427)
+
+[node name="Legs Upper Left" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="11"]
+transform = Transform3D(0.905306, -0.324958, 0.27354, 0.388053, 0.894619, -0.221519, -0.17273, 0.30669, 0.936005, -0.0835818, -0.153737, -0.02619)
+
+[node name="Feet Right" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="12"]
+transform = Transform3D(0.987293, 0.013531, -0.158336, -0.0264254, 0.996475, -0.0796154, 0.1567, 0.0827878, 0.98417, -0.179914, -1.48807, -0.249734)
+
+[node name="Leg Lower Right" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="13"]
+transform = Transform3D(0.979794, 0.106994, -0.168987, -0.137783, 0.973503, -0.182502, 0.144981, 0.202098, 0.968574, -0.0208095, -0.095695, 0.0469174)
+
+[node name="Legs Upper Right" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="14"]
+transform = Transform3D(0.99643, -0.0284322, -0.0794924, 0.0172285, 0.990252, -0.138216, 0.0826472, 0.136353, 0.987206, -0.135477, -0.0857864, -0.00683422)
+
+[node name="Torso Lower" parent="NPC/Villagers/WineDude/WineDudeAnim/Armature/Skeleton3D" index="15"]
+transform = Transform3D(1, 3.49246e-10, 5.23869e-10, -3.49246e-10, 1, 8.20728e-08, -5.23869e-10, -8.20728e-08, 1, -0.153397, 0.909699, 0.00858675)
+
 [node name="Woman1" parent="NPC/Villagers" instance=ExtResource("19_rrc5e")]
 transform = Transform3D(-0.161501, 0, 0.986873, 0, 1, 0, -0.986873, 0, -0.161501, 8.56514, 0, -21.439)
 collision_layer = 4
@@ -3543,6 +3596,21 @@ prompt_message = "Pick up Basket"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Objectives/Basket/StaticBodyInteraction"]
 shape = SubResource("BoxShape3D_rwnms")
+
+[node name="Flour2" parent="NavRegion/Objectives" instance=ExtResource("60_y3swk")]
+transform = Transform3D(1.30554, 0, 1.00493, 0, 1.64752, 0, -1.00493, 0, 1.30554, -459.938, 0, -644.514)
+
+[node name="grape" parent="NavRegion/Objectives" instance=ExtResource("61_chqve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -303.318, 7.24221, -479.23)
+
+[node name="Bread" parent="NavRegion/Objectives" instance=ExtResource("62_syclq")]
+transform = Transform3D(8.30994, 0, 0, 0, 8.30994, 0, 0, 0, 8.30994, -296.702, 0, -479.461)
+
+[node name="Winebottle" parent="NavRegion/Objectives" instance=ExtResource("63_ef1v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -299.294, 0, -486.467)
+
+[node name="Wineshelf" parent="NavRegion" instance=ExtResource("64_326qu")]
+transform = Transform3D(6.839, 0, 0, 0, 6.839, 0, 0, 0, 6.839, -304.2, 0, -484.371)
 
 [node name="SwampWater" parent="." instance=ExtResource("47_yqvkt")]
 transform = Transform3D(19.592, 0, -2.0096, 0, 1, 0, 4.01919, 0, 9.796, -484.067, -2.73461, -176.016)
