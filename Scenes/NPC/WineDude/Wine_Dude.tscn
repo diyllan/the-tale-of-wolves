@@ -11,6 +11,8 @@ height = 4.01201
 height = 4.06078
 
 [node name="WineDude" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_0a7bm")
 
 [node name="WineDudeAnim" parent="." instance=ExtResource("2_sq0g2")]
@@ -104,7 +106,7 @@ bone_idx = 36
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133924, 1.74338, -0.230516)
 shape = SubResource("CapsuleShape3D_phh7i")
 
-[node name="StaticBodyInteraction" type="StaticBody3D" parent="."]
+[node name="StaticBodyInteraction" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_a4146")

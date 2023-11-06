@@ -10,6 +10,7 @@ height = 3.98139
 height = 4.01906
 
 [node name="Kid2" type="CharacterBody3D"]
+collision_layer = 0
 
 [node name="Kid2Anim" parent="." instance=ExtResource("2_ph0wk")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -102,7 +103,7 @@ bone_idx = 36
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133924, 1.74338, -0.230516)
 shape = SubResource("CapsuleShape3D_nm1yx")
 
-[node name="StaticBodyInteraction" type="StaticBody3D" parent="."]
+[node name="StaticBodyInteraction" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_4xuoc")

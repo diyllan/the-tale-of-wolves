@@ -8,7 +8,7 @@ var phraseNum = 0
 var finished = false
 var skipping = false
 var interactDelay = true
-
+var dialogueStarted = false
 
 
 func _ready():
@@ -16,6 +16,7 @@ func _ready():
 #	start()
 	
 func start():
+	dialogueStarted = true
 	DialogueManager.dialogue_started.emit()
 	skipping = false
 	interactDelay = true
@@ -48,7 +49,7 @@ func _on_skip_timer_timeout():
 	
 func _process(_delta):
 
-	if Input.is_action_just_pressed("interact") and finished:
+	if Input.is_action_just_pressed("interact") and finished and dialogueStarted:
 		nextPhrase()
 	elif Input.is_action_just_pressed("interact") and !finished and !interactDelay:
 		$Text.visible_characters = len($Text.text)
@@ -88,6 +89,7 @@ func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		self.hide()
 		DialogueManager.dialogue_ended.emit()
+		dialogueStarted = false
 		return
 	
 	$Indicator.hide()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://22gyqrf85trv"]
 
-[ext_resource type="Script" path="res://Assets/Models/NPC/Man1/NPC.gd" id="1_28rs1"]
+[ext_resource type="Script" path="res://Scenes/NPC/Woman5/AngryNPC.gd" id="1_o07ox"]
 [ext_resource type="PackedScene" uid="uid://ixbebn8vu6kh" path="res://Assets/Models/NPC/Man4/Man4Anim.blend" id="2_r7cqi"]
 [ext_resource type="Script" path="res://Scenes/Interactable.gd" id="3_0527o"]
 
@@ -8,7 +8,9 @@
 height = 4.404
 
 [node name="Man4" type="CharacterBody3D"]
-script = ExtResource("1_28rs1")
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_o07ox")
 
 [node name="Man4Anim" parent="." instance=ExtResource("2_r7cqi")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -101,9 +103,10 @@ bone_idx = 36
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133924, 1.74338, -0.230516)
 shape = SubResource("CapsuleShape3D_33uso")
 
-[node name="StaticBodyInteraction" type="StaticBody3D" parent="."]
+[node name="StaticBodyInteraction" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
+collision_mask = 0
 script = ExtResource("3_0527o")
 Dialogue_Path = "res://Assets/Dialogues/TestDialogue.json"
 prompt_message = "Talk"

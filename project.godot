@@ -109,7 +109,11 @@ skiptime={
 
 [layer_names]
 
+3d_physics/layer_1="Collidable Layer"
+3d_physics/layer_2="Player Layer"
+3d_physics/layer_3="NPC Layer"
 3d_physics/layer_4="Interaction Layer"
+3d_physics/layer_9="Collidable NPCs"
 
 [shader_globals]
 

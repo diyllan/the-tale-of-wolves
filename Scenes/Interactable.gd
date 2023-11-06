@@ -1,5 +1,5 @@
 class_name Interactable
-extends StaticBody3D
+extends Area3D
 
 @export var Dialogue_Path = ""
 @export var prompt_message = ""

@@ -56,7 +56,7 @@ func _process(delta):
 				state = IDLE
 
 		TALKING:
-			look_at(player.global_transform.origin)
+			look_at(player.global_transform.origin, Vector3.UP)
 			animPlayer.play("Talking")
 			if !interacted:
 				update_target_position()

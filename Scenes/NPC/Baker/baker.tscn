@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://ugcc6137wy8j"]
+[gd_scene load_steps=6 format=3 uid="uid://ugcc6137wy8j"]
 
-[ext_resource type="Script" path="res://Assets/Models/NPC/Man1/NPC.gd" id="1_xcfmj"]
+[ext_resource type="Script" path="res://Scenes/NPC/Baker/BakerNPC.gd" id="1_00ayl"]
 [ext_resource type="PackedScene" uid="uid://cbgmd8r0ep6ms" path="res://Assets/Models/NPC/Baker/BakerAnim.blend" id="2_g1e0c"]
 [ext_resource type="Script" path="res://Scenes/Interactable.gd" id="3_mbpe4"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_33uso"]
-height = 2.36614
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4mkiq"]
+height = 3.81405
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8gfmk"]
+height = 3.71918
 
 [node name="Baker" type="CharacterBody3D"]
-script = ExtResource("1_xcfmj")
+collision_layer = 0
+script = ExtResource("1_00ayl")
 
 [node name="BakerAnim" parent="." instance=ExtResource("2_g1e0c")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -98,10 +102,10 @@ transform = Transform3D(1, 4.2055e-09, -1.60071e-09, -4.2055e-09, 1, 8.39063e-08
 bone_idx = 36
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133924, 1.74338, -0.230516)
-shape = SubResource("CapsuleShape3D_33uso")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133924, 1.95781, -0.230516)
+shape = SubResource("CapsuleShape3D_4mkiq")
 
-[node name="StaticBodyInteraction" type="StaticBody3D" parent="."]
+[node name="StaticBodyInteraction" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_mbpe4")
@@ -109,8 +113,8 @@ Dialogue_Path = "res://Assets/Dialogues/TestDialogue.json"
 prompt_message = "Talk"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBodyInteraction"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0787395, 1.74338, -0.531831)
-shape = SubResource("CapsuleShape3D_33uso")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0787395, 1.96058, -0.531831)
+shape = SubResource("CapsuleShape3D_8gfmk")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 avoidance_enabled = true

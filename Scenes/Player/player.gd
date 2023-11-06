@@ -31,10 +31,22 @@ var currentCamPosHiding
 #Audio
 @onready var HeavyBreathing = $HeavyBreathing
 @onready var BreathingTimer = $BreathingTImer
-
-
 var HeavyBreathingPlaying = false
+
+var cutscene = false
+
+func _ready():
+	$"../Triggers".connect("cutsceneStart", CutsceneStart)
+	$"../Triggers".connect("cutsceneEnd", CutsceneEnd)
+	
+func CutsceneStart():
+	cutscene = true
+func CutsceneEnd():
+	cutscene = false
 func _unhandled_input(event):
+	if cutscene:
+		return
+
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
@@ -47,6 +59,8 @@ func _unhandled_input(event):
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(xMinRotation), deg_to_rad(xMaxRotation))
 
 func _physics_process(delta):
+	if cutscene:
+		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta

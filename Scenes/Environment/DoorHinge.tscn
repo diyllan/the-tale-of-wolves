@@ -63,7 +63,7 @@ _data = {
 [node name="Hinge" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, -10.0244, 0, 2.29997)
 
-[node name="InteractCollision" type="StaticBody3D" parent="."]
+[node name="InteractCollision" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.184131, 0, 0.0324669)
 collision_layer = 8
 script = ExtResource("1_x60o1")

@@ -104,7 +104,7 @@ bone_idx = 36
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133924, 1.39739, -0.230516)
 shape = SubResource("CapsuleShape3D_dttgh")
 
-[node name="StaticBodyInteraction" type="StaticBody3D" parent="."]
+[node name="StaticBodyInteraction" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_o5i6g")

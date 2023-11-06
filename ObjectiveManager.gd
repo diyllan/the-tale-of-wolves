@@ -24,6 +24,18 @@ var mother_objective : int = 12
 
 #Dayparts
 var day_part_count : int = 0;
+# 0 = Day 1 Morning
+# 1 = Day 1 Day
+# 2 = Day 1 Evening
+# 3 = Day 1 Night
+# 4 = Day 2 Morning
+# 5 = Day 2 Day
+# 6 = Day 2 Evening
+# 7 = Day 2 Night
+# 8 = Day 3 Morning
+# 9 = Day 3 Day
+# 10 = Day 3 Evening
+# 11 = Day 3 Night
 
 signal objectiveCompleted
 

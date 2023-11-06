@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://yv8sartdqh20"]
 
-[ext_resource type="Script" path="res://Assets/Models/NPC/Man1/NPC.gd" id="1_0ssad"]
+[ext_resource type="Script" path="res://Scenes/NPC/Kid1/kids.gd" id="1_1l6td"]
 [ext_resource type="PackedScene" uid="uid://hrp2hgl0ur3w" path="res://Assets/Models/NPC/Kid1/Kid1Anim.blend" id="2_n1h2i"]
 [ext_resource type="Script" path="res://Scenes/Interactable.gd" id="3_fwocl"]
 
@@ -11,7 +11,8 @@ height = 2.36614
 height = 2.36614
 
 [node name="Kid1" type="CharacterBody3D"]
-script = ExtResource("1_0ssad")
+collision_layer = 0
+script = ExtResource("1_1l6td")
 
 [node name="Kid1Anim" parent="." instance=ExtResource("2_n1h2i")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -104,7 +105,7 @@ bone_idx = 36
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133924, 0.897922, -0.230516)
 shape = SubResource("CapsuleShape3D_q2m3x")
 
-[node name="StaticBodyInteraction" type="StaticBody3D" parent="."]
+[node name="StaticBodyInteraction" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_fwocl")
@@ -119,7 +120,6 @@ shape = SubResource("CapsuleShape3D_82di0")
 avoidance_enabled = true
 radius = 1.0
 max_neighbors = 20
-debug_enabled = true
 
 [node name="Idle_Walking" type="Timer" parent="."]
 one_shot = true
