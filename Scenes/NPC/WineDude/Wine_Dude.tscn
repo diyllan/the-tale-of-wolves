@@ -121,7 +121,6 @@ shape = SubResource("CapsuleShape3D_sjhnk")
 avoidance_enabled = true
 radius = 1.0
 max_neighbors = 20
-debug_enabled = true
 
 [node name="Idle_Walking" type="Timer" parent="."]
 one_shot = true

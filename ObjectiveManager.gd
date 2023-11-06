@@ -7,17 +7,17 @@ var world_path : String = "/root/ViewportShaders/PSXLayer/BlurPostProcess/SubVie
 
 var objective_library = {
 	"Talk to the baker": "NPC/Villagers/Baker",
-	"Go fetch the bag of flour": "Objectives/Flour",
+	"Go fetch the bag of flour": "NavRegion/Objectives/Flour",
 	"Return to the baker": "NPC/Villagers/Baker",
-	"Go to bed": "Objectives/Bed",
+	"Go to bed": "NavRegion/Objectives/Bed",
 	"Talk to the winery owner": "NPC/Villagers/WineDude",
-	"Pick some grapes in the forest": "Objectives/Grapes",
+	"Pick some grapes in the forest": "NavRegion/Objectives/Grapes",
 	"Return to the winery owner": "NPC/Villagers/WineDude",
-	"Return to bed": "Objectives/Bed",
-	"Fetch the basket and Latern from the cart": "Objectives/Basket",
+	"Return to bed": "NavRegion/Objectives/Bed",
+	"Fetch the basket and Latern from the cart": "NavRegion/Objectives/Basket",
 	"Get the bread from the baker": "NPC/Villagers/Baker",
 	"Get the wine from the winery owner": "NPC/Villagers/WineDude",
-	"Walk to grandma's house at the end of the dark forest": "Objectives/GrandmaDoor",
+	"Walk to grandma's house at the end of the dark forest": "NavRegion/Objectives/GrandmaDoor",
 	"Talk to mother": "NPC/Villagers/Mother"
 }
 var mother_objective : int = 12
@@ -84,5 +84,5 @@ func load_Next_Objective():
 	#set the new objective text
 	set_Objective(objective_library.keys()[day_part_count])
 	#enable objective on the new objective -> currently disabled because not all objective models don't exist yet - would error
-	#var new_objective = get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction")
-	#new_objective.add_to_group("Objective")
+	var new_objective = get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction")
+	new_objective.add_to_group("Objective")
