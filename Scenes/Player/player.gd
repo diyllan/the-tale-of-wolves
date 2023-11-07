@@ -35,9 +35,13 @@ var HeavyBreathingPlaying = false
 
 var cutscene = false
 
+#Items
+var hasPlanks = false
+
 func _ready():
 	$"../Triggers".connect("cutsceneStart", CutsceneStart)
 	$"../Triggers".connect("cutsceneEnd", CutsceneEnd)
+	
 	
 func CutsceneStart():
 	cutscene = true

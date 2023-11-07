@@ -19,6 +19,10 @@ func playSound(sound):
 	lastSound = audioPlayer
 	audioPlayer.play()
 
+func stopLastSound(sound):
+	var audioPlayer = $Sound.get_node(sound)
+	audioPlayer.stop()
+
 func playNextSound(sound):
 	var audioPlayer = $Sound.get_node(sound)
 

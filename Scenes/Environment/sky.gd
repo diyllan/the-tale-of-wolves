@@ -230,4 +230,3 @@ func _input(event):
 	if event.is_action_pressed("skiptime"):
 		changing_to_next_time = true;
 		set_process(true);
-

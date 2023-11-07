@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://jfbavi4d2cyo"]
+[gd_scene load_steps=25 format=3 uid="uid://jfbavi4d2cyo"]
 
 [ext_resource type="Script" path="res://soundmanager.gd" id="1_ef6dy"]
 [ext_resource type="AudioStream" uid="uid://b32a325vhwxsb" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_1.ogg" id="1_uv58p"]
@@ -15,12 +15,15 @@
 [ext_resource type="AudioStream" uid="uid://c8ajbolx6b1j4" path="res://Assets/Sound/Music/Prologue/Shotgun.ogg" id="13_6w7nl"]
 [ext_resource type="AudioStream" uid="uid://bqt5ga1ft2s54" path="res://Assets/Sound/Music/Titlescreen/TitleScreen.ogg" id="13_pomwl"]
 [ext_resource type="AudioStream" uid="uid://c4xx05c13aysq" path="res://Assets/Sound/Music/Prologue/WolfGrowl.ogg" id="14_hugtc"]
+[ext_resource type="AudioStream" uid="uid://p0hkjd6roxyp" path="res://Assets/Sound/SoundEffects/Scary Stuff/tension-sound.ogg" id="14_ilfsn"]
 [ext_resource type="AudioStream" uid="uid://42jsqkm83icu" path="res://Assets/Sound/Music/Prologue/prologue_forest_ambience.ogg" id="14_xo28x"]
+[ext_resource type="AudioStream" uid="uid://c3q4u0eb3mdwc" path="res://Assets/Sound/SoundEffects/Scary Stuff/simple_jumpscare.ogg" id="15_5jfw3"]
 [ext_resource type="AudioStream" uid="uid://cjto33sr15pjj" path="res://Assets/Sound/Music/Prologue/WolfWhimper.ogg" id="15_u74xd"]
 [ext_resource type="AudioStream" uid="uid://dbjhjpen1hmyu" path="res://Assets/Sound/Music/Prologue/LeavesRushling.ogg" id="16_453og"]
 [ext_resource type="AudioStream" uid="uid://bg0mwvwy0yvck" path="res://Assets/Sound/Music/Prologue/Boy_Humming.ogg" id="17_yg1ae"]
 [ext_resource type="AudioStream" uid="uid://dthtmrc0gpxsk" path="res://Assets/Sound/Music/Prologue/Forest_Footsteps.ogg" id="18_qb4b8"]
 [ext_resource type="AudioStream" uid="uid://3abxfri4rolf" path="res://Assets/Sound/SoundEffects/World/NatureAmbience.ogg" id="21_d4tg7"]
+[ext_resource type="AudioStream" uid="uid://c3e2mxf3tgaig" path="res://Assets/Sound/SoundEffects/UI/StartGameButton.ogg" id="21_fdmu8"]
 
 [node name="soundmanager" type="Node"]
 script = ExtResource("1_ef6dy")
@@ -77,6 +80,15 @@ bus = &"Voice"
 stream = ExtResource("13_6w7nl")
 bus = &"SoundEffects"
 
+[node name="TensionSound" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("14_ilfsn")
+bus = &"SoundEffects"
+
+[node name="SimpleJumpscare" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("15_5jfw3")
+volume_db = 10.0
+bus = &"SoundEffects"
+
 [node name="Bite" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("14_hugtc")
 bus = &"SoundEffects"
@@ -95,6 +107,10 @@ bus = &"SoundEffects"
 
 [node name="Forest_Footsteps" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("18_qb4b8")
+bus = &"SoundEffects"
+
+[node name="StartGameButton" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("21_fdmu8")
 bus = &"SoundEffects"
 
 [node name="Music" type="Node" parent="."]

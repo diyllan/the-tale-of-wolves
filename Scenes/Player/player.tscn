@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cuaeywdbin27w"]
+[gd_scene load_steps=13 format=3 uid="uid://cuaeywdbin27w"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_x0tal"]
 [ext_resource type="PackedScene" uid="uid://ccm5cl2x4l7rg" path="res://Assets/Models/Player/LittleRedCapAnim.blend" id="2_id4cr"]
 [ext_resource type="Shader" path="res://Shader/camerapixelation.gdshader" id="3_hrreo"]
 [ext_resource type="Script" path="res://Scenes/Player/InteractRay.gd" id="4_2l74s"]
 [ext_resource type="AudioStream" uid="uid://dapgogsu1cbua" path="res://Assets/Sound/SoundEffects/Player/female-breathing-heavily.wav" id="5_5j5ia"]
+[ext_resource type="AudioStream" uid="uid://063y6qjtpay" path="res://Assets/Sound/SoundEffects/Scary Stuff/TreeBranchCrack.ogg" id="6_sbhoy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p0fya"]
 
@@ -184,5 +185,14 @@ pitch_scale = 1.88
 bus = &"SoundEffects"
 
 [node name="BreathingTImer" type="Timer" parent="."]
+
+[node name="TreeBranch" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2191, -0.49616, 17.7111)
+stream = ExtResource("6_sbhoy")
+unit_size = 24.0
+max_db = 6.0
+pitch_scale = 1.14
+max_distance = 24.0
+bus = &"SoundEffects"
 
 [editable path="LittleRedCapAnim"]

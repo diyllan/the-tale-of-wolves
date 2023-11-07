@@ -50,3 +50,13 @@ func playTransition(sound = ""):
 	animPlayer.play("TransOut")
 	await animPlayer.animation_finished
 	fadeoutRect.hide()
+
+func playFadeIn():
+	fadeoutRect.show()
+	animPlayer.play("TransIn")
+
+
+func playFadeOut():
+	animPlayer.play("TransOut")
+	await animPlayer.animation_finished
+	fadeoutRect.hide	()

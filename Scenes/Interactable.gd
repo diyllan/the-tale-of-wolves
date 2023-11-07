@@ -4,7 +4,7 @@ extends Area3D
 @export var Dialogue_Path = ""
 @export var prompt_message = ""
 @export var prompt_action = "interact"
-
+var world_path : String = "/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/"
 #Door
 var DoorisOpen = false
 
@@ -20,7 +20,7 @@ func get_prompt():
 	return prompt_message + "\n[" + key_name + "]"
 	
 func interact(body):
-	if Dialogue_Path != "":
+	if Dialogue_Path != "" and !body.hasPlanks:
 		Interacted.emit()
 		DialogueManager.showDialogue(Dialogue_Path)
 	
@@ -42,3 +42,15 @@ func interact(body):
 		$"../AnimationPlayer".play("Close")
 		await $"../AnimationPlayer".animation_finished
 		prompt_message = "Open Door"
+		
+	if prompt_message == "Hole" and body.hasPlanks:
+		var plank = get_parent().get_node("planks")
+		plank.show()
+		plank.get_node("StaticBody3D").set_collision_layer_value(1, true)
+		body.hasPlanks = false
+		self.queue_free()
+		
+	if prompt_message == "Pick up Planks":
+		body.hasPlanks = true
+		get_parent().hide()
+		self.queue_free()

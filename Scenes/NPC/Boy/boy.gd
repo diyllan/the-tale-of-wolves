@@ -37,8 +37,8 @@ func _ready():
 	DialogueManager.connect("dialogue_ended", interaction_ended)
 	update_target_position()
 	
-	$"../../../Triggers".connect("cutsceneStart", CutsceneStart)
-	$"../../../Triggers".connect("cutsceneEnd", CutsceneEnd)
+	$"../../../Triggers".connect("BoyCutSceneStart", CutsceneStart)
+	$"../../../Triggers".connect("BoyCutSceneEnd", CutsceneEnd)
 	
 func CutsceneStart():
 	cutscene = true
