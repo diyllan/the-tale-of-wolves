@@ -39,14 +39,14 @@ func _on_boy_who_cries_wolf_body_entered(body):
 			await cutscene.animation_finished
 			DialogueManager.showDialogue(BoyWhoCriesWolfDialogueDay1)
 			BoyAnimations.play("Yelling")
-#		if ObjectiveManager.day_part_count == 4 and !BoyWhoCriesWolf2:
-#			BoyCutSceneStart.emit()
-#			BoyWhoCriesWolf2 = true
-#			cutscene.play("BoyWhoCriesWolf2")
-#		if ObjectiveManager.day_part_count == 8 and !BoyWhoCriesWolf3:
-#			BoyCutSceneStart.emit()
-#			BoyWhoCriesWolf3 = true
-#			cutscene.play("BoyWhoCriesWolf3")
+		if ObjectiveManager.day_part_count == 4 and !BoyWhoCriesWolf2:
+			BoyCutSceneStart.emit()
+			BoyWhoCriesWolf2 = true
+			cutscene.play("BoyWhoCriesWolf2")
+		if ObjectiveManager.day_part_count == 8 and !BoyWhoCriesWolf3:
+			BoyCutSceneStart.emit()
+			BoyWhoCriesWolf3 = true
+			cutscene.play("BoyWhoCriesWolf3")
 
 func DialogueEnded():
 	if BoyWhoCriesWolf1 and !BoyWhoCriesWolf1Ended:
