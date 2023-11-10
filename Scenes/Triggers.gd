@@ -6,8 +6,10 @@ var BoyWhoCriesWolf1 = false
 var BoyWhoCriesWolf1Ended = false
 @export var BoyWhoCriesWolfDialogueDay1: String
 var BoyWhoCriesWolf2 = false
+var BoyWhoCriesWolf2Ended = false
 @export var BoyWhoCriesWolfDialogueDay2: String
 var BoyWhoCriesWolf3 = false
+var BoyWhoCriesWolf3Ended = false
 @export var BoyWhoCriesWolfDialogueDay3: String
 
 var FirstForestScarePlayed = false
@@ -35,6 +37,15 @@ func DialogueEnded():
 			BoyWhoCriesWolf1Ended = true
 			cutscene.play("Return")
 			BoyCutSceneEnd.emit()
+	if BoyWhoCriesWolf2 and !BoyWhoCriesWolf2Ended:
+			BoyWhoCriesWolf2Ended = true
+			cutscene.play("Return")
+			BoyCutSceneEnd.emit()
+	if BoyWhoCriesWolf2 and !BoyWhoCriesWolf3Ended:
+			BoyWhoCriesWolf3Ended = true
+			cutscene.play("BoyWhoCriesWolfRunninginWoods")
+			cutscene.play("Return")
+			BoyCutSceneEnd.emit()
 
 	if weirdGuyScare1 and !weirdGuyScare1Ended:
 			weirdGuyScare1Ended = true
@@ -60,12 +71,15 @@ func _on_boy_who_cries_wolf_body_entered(body):
 			BoyWhoCriesWolf2 = true
 			cutscene.play("BoyWhoCriesWolf1")
 			await cutscene.animation_finished
-			DialogueManager.showDialogue(BoyWhoCriesWolfDialogueDay1)
+			DialogueManager.showDialogue(BoyWhoCriesWolfDialogueDay2)
 			BoyAnimations.play("Yelling")
 		if ObjectiveManager.day_part_count == 8 and !BoyWhoCriesWolf3:
 			BoyCutSceneStart.emit()
 			BoyWhoCriesWolf3 = true
-			cutscene.play("BoyWhoCriesWolf3")
+			cutscene.play("BoyWhoCriesWolf1")
+			await cutscene.animation_finished
+			DialogueManager.showDialogue(BoyWhoCriesWolfDialogueDay3)
+			BoyAnimations.play("Yelling")
 
 
 func _on_silo_hole_body_entered(body):
