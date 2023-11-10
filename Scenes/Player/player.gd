@@ -50,7 +50,7 @@ func CutsceneEnd():
 func _unhandled_input(event):
 	if cutscene:
 		return
-
+	
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
@@ -116,8 +116,8 @@ func playerHide():
 		
 		if !HeavyBreathingPlaying:
 			HeavyBreathingPlaying = true
-			var randomTime = randf_range(1, 3)
-			var randomPitch = randf_range(0.80, 1.20)
+			var randomTime = randf_range(1, 1.8)
+			var randomPitch = randf_range(0.95, 1.05)
 			BreathingTimer.wait_time= randomTime
 			BreathingTimer.start()
 			HeavyBreathing.pitch_scale = randomPitch

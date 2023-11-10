@@ -29,7 +29,23 @@ signal BoyCutSceneEnd
 
 func _ready():
 	DialogueManager.connect("dialogue_ended", DialogueEnded)
-	
+
+func DialogueEnded():
+	if BoyWhoCriesWolf1 and !BoyWhoCriesWolf1Ended:
+			BoyWhoCriesWolf1Ended = true
+			cutscene.play("Return")
+			BoyCutSceneEnd.emit()
+
+	if weirdGuyScare1 and !weirdGuyScare1Ended:
+			weirdGuyScare1Ended = true
+			cutscene.play("RESET")
+			WeirdGuySceneEnd.emit()
+			cutsceneEnd.emit()
+			
+	if FirstForestScarePlayed and !FirstForestScareEnded:
+		FirstForestScareEnded = true
+		cutsceneEnd.emit()
+
 func _on_boy_who_cries_wolf_body_entered(body):
 	if body.is_in_group("Player"):
 		if ObjectiveManager.day_part_count == 0 and !BoyWhoCriesWolf1:
@@ -42,27 +58,14 @@ func _on_boy_who_cries_wolf_body_entered(body):
 		if ObjectiveManager.day_part_count == 4 and !BoyWhoCriesWolf2:
 			BoyCutSceneStart.emit()
 			BoyWhoCriesWolf2 = true
-			cutscene.play("BoyWhoCriesWolf2")
+			cutscene.play("BoyWhoCriesWolf1")
+			await cutscene.animation_finished
+			DialogueManager.showDialogue(BoyWhoCriesWolfDialogueDay1)
+			BoyAnimations.play("Yelling")
 		if ObjectiveManager.day_part_count == 8 and !BoyWhoCriesWolf3:
 			BoyCutSceneStart.emit()
 			BoyWhoCriesWolf3 = true
 			cutscene.play("BoyWhoCriesWolf3")
-
-func DialogueEnded():
-	if BoyWhoCriesWolf1 and !BoyWhoCriesWolf1Ended:
-			BoyWhoCriesWolf1Ended = true
-			cutscene.play("Return")
-			BoyCutSceneEnd.emit()
-
-	if weirdGuyScare1 and !weirdGuyScare1Ended:
-			weirdGuyScare1Ended = true
-			cutscene.play("Reset")
-			WeirdGuySceneEnd.emit()
-			cutsceneEnd.emit()
-			
-	if FirstForestScarePlayed and !FirstForestScareEnded:
-		FirstForestScareEnded = true
-		cutsceneEnd.emit()
 
 
 func _on_silo_hole_body_entered(body):
@@ -105,3 +108,7 @@ func _on_weird_return_pos_1_body_entered(body):
 		if ObjectiveManager.day_part_count == 3 and weirdGuyScare1Ended and !weirdGuyScare1Reset:
 			weirdGuyScare1Reset = true
 			cutscene.play("WeirdGuyReturnPos")
+
+
+func _on_cutscene_player_animation_finished(anim_name):
+	print_debug(anim_name)

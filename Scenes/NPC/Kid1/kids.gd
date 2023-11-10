@@ -51,7 +51,7 @@ func _process(delta):
 
 		TALKING:
 			look_at(player.global_transform.origin, Vector3.UP)
-			animPlayer.play("Talking")
+			animPlayer.play("Idle")
 			if !interacted:
 				update_target_position()
 				state = WALKING
@@ -63,8 +63,9 @@ func setGravity(delta):
 func _on_nav_velocity_computed(safe_velocity: Vector3) -> void:
 	if !interacted and state == WALKING:
 		velocity = safe_velocity
-		look_at(nav_agent.get_next_path_position())
 		move_and_slide()
+	if global_transform.origin != nav_agent.get_next_path_position():
+		look_at(nav_agent.get_next_path_position())
 	
 	
 func update_target_position():

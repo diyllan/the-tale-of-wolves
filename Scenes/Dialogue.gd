@@ -89,7 +89,7 @@ func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		self.hide()
 		DialogueManager.dialogue_ended.emit()
-		dialogueStarted = false
+#		dialogueStarted = false
 		return
 	
 	$Indicator.hide()
