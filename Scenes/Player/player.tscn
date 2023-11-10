@@ -171,7 +171,6 @@ mesh = SubResource("PlaneMesh_n2cv5")
 target_position = Vector3(0, 0, -2.5)
 collision_mask = 8
 collide_with_areas = true
-collide_with_bodies = false
 script = ExtResource("4_2l74s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Neck/Camera3D"]
