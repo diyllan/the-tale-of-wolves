@@ -2187,6 +2187,54 @@ transform = Transform3D(0.0906847, 0, 0.99588, 0, 1, 0, -0.99588, 0, 0.0906847, 
 collision_layer = 4
 collision_mask = 1
 
+[node name="Head_001" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.487628, 0.197033, -0.0902139, -0.211198, 0.481854, -0.08918, 0.0485345, 0.117201, 0.518314, 0.282355, 1.70586, 0.137355)
+
+[node name="Neck" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.853956, 0.506974, -0.117203, -0.519386, 0.844151, -0.132841, 0.0315903, 0.174314, 0.984183, 0.0838157, 1.24371, 0.0403475)
+
+[node name="Hands Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.673662, 0.518313, -0.526811, -0.261398, 0.833863, 0.48615, 0.691267, -0.189793, 0.697228, -0.799031, 0.601062, -0.0562009)
+
+[node name="Arm Lower Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="3"]
+transform = Transform3D(0.635655, 0.680222, -0.36502, -0.4391, 0.707489, 0.55376, 0.634927, -0.19172, 0.748404, -0.309546, 1.09898, -0.11341)
+
+[node name="Arm Upper Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="4"]
+transform = Transform3D(0.636665, 0.699805, -0.323929, -0.691669, 0.703956, 0.161366, 0.340957, 0.121316, 0.932218, -0.0677835, 1.09568, 0.0262918)
+
+[node name="Hands Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="5"]
+transform = Transform3D(0.85229, 0.367002, 0.372707, -0.113143, 0.825019, -0.553662, -0.510685, 0.429712, 0.74468, -0.745027, 0.62851, -0.135652)
+
+[node name="Arm Lower Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="6"]
+transform = Transform3D(0.795091, 0.583103, 0.166798, -0.375602, 0.689348, -0.619454, -0.476187, 0.429872, 0.76711, -0.273193, 1.10144, 0.102898)
+
+[node name="Arm Upper Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="7"]
+transform = Transform3D(0.6908, 0.721885, -0.0409539, -0.695937, 0.648469, -0.30848, -0.19613, 0.2416, 0.95035, 0.0686003, 1.12444, 0.0778727)
+
+[node name="Torso Upper" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="8"]
+transform = Transform3D(0.974203, 0.224866, -0.0190685, -0.225381, 0.973759, -0.0315814, 0.0114666, 0.0350644, 0.999319, -0.0232789, 0.896757, 0.0287246)
+
+[node name="Feet Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="9"]
+transform = Transform3D(0.942709, 0.230835, 0.240861, -0.190416, 0.965123, -0.179661, -0.273933, 0.123502, 0.953786, -0.30117, -1.4091, -0.697556)
+
+[node name="Leg Lower Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="10"]
+transform = Transform3D(0.950212, 0.274508, 0.147451, -0.175414, 0.862341, -0.474971, -0.257537, 0.425458, 0.86756, 0.0829405, -0.217811, -0.0810535)
+
+[node name="Legs Upper Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="11"]
+transform = Transform3D(0.95108, -0.00669721, 0.308871, 0.151517, 0.881382, -0.447447, -0.269237, 0.472357, 0.839279, -0.0980944, -0.187734, -0.0514899)
+
+[node name="Feet Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="12"]
+transform = Transform3D(0.909161, 0.270147, -0.316937, -0.293762, 0.955459, -0.0282851, 0.295176, 0.11882, 0.948025, -0.447416, -1.44226, -0.184832)
+
+[node name="Leg Lower Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="13"]
+transform = Transform3D(0.875516, 0.430711, -0.219004, -0.455563, 0.88686, -0.0770579, 0.161036, 0.167236, 0.972676, 0.159826, -0.188119, 0.0418459)
+
+[node name="Legs Upper Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="14"]
+transform = Transform3D(0.996834, 0.0485278, -0.0629848, -0.0552021, 0.992514, -0.108944, 0.0572264, 0.112076, 0.99205, -0.143609, -0.0904325, -0.00580773)
+
+[node name="Torso Lower" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="15"]
+transform = Transform3D(1, -1.11759e-08, 1.86264e-08, 1.11759e-08, 1, 7.82311e-08, -1.86265e-08, -7.82311e-08, 1, -0.153397, 0.909699, 0.00858675)
+
 [node name="NavigationAgent3D" parent="NPC/Villagers/Man1" index="3"]
 debug_enabled = false
 
@@ -2424,9 +2472,6 @@ transform = Transform3D(0.205321, -0.970575, 0.125807, 0.938514, 0.158803, -0.30
 [node name="Legs Upper Right" parent="NPC/Villagers/Mother/MotherAnim/Armature/Skeleton3D/Legs Upper Right" index="0"]
 mesh = SubResource("ArrayMesh_qm1wi")
 
-[node name="Torso Lower" parent="NPC/Villagers/Mother/MotherAnim/Armature/Skeleton3D" index="15"]
-transform = Transform3D(1, 1.58725e-08, -2.09547e-09, -1.58725e-08, 1, 7.98609e-08, 2.09547e-09, -7.98609e-08, 1, 7.57522e-08, 0.936643, 0.00791555)
-
 [node name="Torso Lower" parent="NPC/Villagers/Mother/MotherAnim/Armature/Skeleton3D/Torso Lower" index="0"]
 mesh = SubResource("ArrayMesh_xmoog")
 
@@ -2445,43 +2490,26 @@ collision_layer = 4
 [node name="Armature" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim" index="0"]
 transform = Transform3D(0.152539, -0.136023, -0.978892, 0.104716, 0.987132, -0.12085, 0.982734, -0.0840718, 0.16482, 0.0580598, 1.70284, 0.143026)
 
-[node name="Skeleton3D" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature" index="0"]
-bones/1/rotation = Quaternion(0.0015385, -0.0164814, -0.0165926, 0.999725)
-bones/2/rotation = Quaternion(0.0020477, -0.0365628, -0.0607331, 0.997482)
-bones/3/rotation = Quaternion(-0.00712615, -0.0212066, -0.0647445, 0.997651)
-bones/7/rotation = Quaternion(-0.969001, -0.126272, -0.151641, 0.14865)
-bones/8/rotation = Quaternion(2.56482e-07, -4.6474e-08, -0.285431, 0.958399)
-bones/9/rotation = Quaternion(-0.0585891, 0.0591539, 0.073302, 0.993829)
-bones/14/rotation = Quaternion(0.974999, 0.0820204, -0.0762767, 0.191913)
-bones/15/rotation = Quaternion(1.18704e-07, 8.12212e-08, -0.396274, 0.918132)
-bones/16/rotation = Quaternion(0.0564041, -0.0622878, 0.0852819, 0.992807)
-bones/22/rotation = Quaternion(-0.994409, -0.0641495, 0.0531852, 0.0648601)
-bones/23/rotation = Quaternion(0.0181002, -0.0835614, 0.224241, 0.970776)
-bones/24/rotation = Quaternion(0.257098, 0.010768, -0.575023, 0.776617)
-bones/29/rotation = Quaternion(-0.997338, -0.0426848, -0.0539234, 0.0242319)
-bones/30/rotation = Quaternion(-0.00167471, 0.0500081, 0.228695, 0.972212)
-bones/31/rotation = Quaternion(0.0225186, 0.178524, -0.752834, 0.633137)
-
 [node name="Head" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.506378, 0.149734, -0.0768236, -0.149525, 0.512081, 0.0124941, 0.0772299, 0.00967062, 0.527905, 0.0286542, 1.7688, -0.00507732)
+transform = Transform3D(0.506378, 0.149735, -0.0768237, -0.149525, 0.512081, 0.0124941, 0.0772299, 0.00967063, 0.527905, 0.0286543, 1.7688, -0.00507731)
 
 [node name="Neck" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.982449, 0.153478, -0.106015, -0.154319, 0.988021, 0.000265424, 0.104786, 0.0160994, 0.994365, -0.111593, 1.27314, -0.000643521)
+transform = Transform3D(0.982449, 0.153478, -0.106015, -0.154319, 0.988021, 0.00026543, 0.104786, 0.0160994, 0.994365, -0.111593, 1.27314, -0.000643522)
 
 [node name="Hands Left" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.673407, -0.234295, -0.701162, 0.503328, 0.839979, 0.202723, 0.541465, -0.489429, 0.683574, -0.265155, 0.395533, 0.241102)
+transform = Transform3D(0.673407, -0.234295, -0.701162, 0.503327, 0.839979, 0.202722, 0.541465, -0.489428, 0.683574, -0.265155, 0.395532, 0.241101)
 
 [node name="Arm Lower Left" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.621258, -0.340409, -0.705804, 0.650794, 0.72584, 0.222764, 0.436471, -0.597726, 0.672469, -0.452133, 0.861244, -0.0817713)
+transform = Transform3D(0.621258, -0.340409, -0.705804, 0.650793, 0.725841, 0.222763, 0.436471, -0.597726, 0.67247, -0.452133, 0.861244, -0.0817712)
 
 [node name="Arm Upper Left" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.916787, -0.0526257, -0.395895, 0.168045, 0.950089, 0.262853, 0.362303, -0.307507, 0.879872, -0.287525, 1.17555, -0.0597003)
+transform = Transform3D(0.916787, -0.0526258, -0.395895, 0.168044, 0.95009, 0.262852, 0.362303, -0.307506, 0.879872, -0.287525, 1.17555, -0.0597001)
 
 [node name="Hands Right" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(0.674804, -0.425305, 0.603121, 0.578954, 0.811881, -0.0752478, -0.457659, 0.399956, 0.794093, -0.172535, 0.35733, -0.20896)
+transform = Transform3D(0.674804, -0.425305, 0.603121, 0.578954, 0.811881, -0.075248, -0.457659, 0.399957, 0.794093, -0.172535, 0.35733, -0.20896)
 
 [node name="Arm Lower Right" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.568196, -0.540411, 0.620572, 0.736814, 0.669909, -0.0912523, -0.366413, 0.509095, 0.778823, -0.467512, 0.789915, 0.0856488)
+transform = Transform3D(0.568196, -0.540411, 0.620572, 0.736814, 0.669909, -0.0912524, -0.366413, 0.509095, 0.778823, -0.467512, 0.789915, 0.0856488)
 
 [node name="Arm Upper Right" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="7"]
 transform = Transform3D(0.984119, -0.0647793, 0.165268, 0.0986527, 0.973603, -0.205827, -0.147572, 0.218863, 0.964533, -0.220866, 1.15185, 0.0500108)
@@ -2490,22 +2518,22 @@ transform = Transform3D(0.984119, -0.0647793, 0.165268, 0.0986527, 0.973603, -0.
 transform = Transform3D(0.998906, 0.0331254, -0.033005, -0.0332268, 0.999445, -0.00252912, 0.0329029, 0.00362301, 0.999452, -0.134518, 0.909724, 0.0103117)
 
 [node name="Feet Left" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.836441, 0.286066, 0.467478, -0.231146, 0.95753, -0.172356, -0.496925, 0.0361097, 0.86704, -0.141947, -1.53034, -0.280896)
+transform = Transform3D(0.836441, 0.286065, 0.467478, -0.231145, 0.95753, -0.172356, -0.496924, 0.03611, 0.86704, -0.141946, -1.53034, -0.280896)
 
 [node name="Leg Lower Left" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.924373, 0.279878, 0.259237, -0.225602, 0.949023, -0.220131, -0.307629, 0.144999, 0.940393, 0.24046, -0.182261, -0.0432741)
+transform = Transform3D(0.924373, 0.279878, 0.259237, -0.225601, 0.949023, -0.220131, -0.307629, 0.144999, 0.940393, 0.240459, -0.18226, -0.0432739)
 
 [node name="Legs Upper Left" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.975166, -0.186646, 0.119227, 0.203385, 0.967772, -0.148497, -0.0876685, 0.169058, 0.981699, -0.120491, -0.141923, -0.0113193)
+transform = Transform3D(0.975166, -0.186646, 0.119227, 0.203385, 0.967772, -0.148497, -0.0876685, 0.169059, 0.981699, -0.120491, -0.141923, -0.0113193)
 
 [node name="Feet Right" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.977726, 0.0945588, -0.187381, -0.0689152, 0.987901, 0.138928, 0.198249, -0.12292, 0.972413, -0.222188, -1.512, -0.0419288)
+transform = Transform3D(0.977726, 0.094559, -0.18738, -0.0689154, 0.987901, 0.138928, 0.198249, -0.12292, 0.972413, -0.222188, -1.512, -0.041929)
 
 [node name="Leg Lower Right" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.932712, 0.311868, -0.181075, -0.315043, 0.949004, 0.011679, 0.175482, 0.0461538, 0.9834, 0.231014, -0.163376, 0.0305917)
+transform = Transform3D(0.932712, 0.311868, -0.181075, -0.315043, 0.949004, 0.0116789, 0.175482, 0.0461538, 0.9834, 0.231014, -0.163376, 0.0305917)
 
 [node name="Legs Upper Right" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.9823, -0.15449, -0.105923, 0.152595, 0.987952, -0.0258098, 0.108634, 0.00918958, 0.994039, -0.122016, -0.111034, -0.000819236)
+transform = Transform3D(0.9823, -0.15449, -0.105923, 0.152595, 0.987952, -0.0258099, 0.108634, 0.00918963, 0.994039, -0.122016, -0.111034, -0.000819236)
 
 [node name="Torso Lower" parent="NPC/Villagers/WeirdGuy/WeirdGuyAnim/Armature/Skeleton3D" index="15"]
 transform = Transform3D(1, -4.65661e-09, 6.28643e-09, 4.65661e-09, 1, 8.45175e-08, -6.28643e-09, -8.45176e-08, 1, -0.153397, 0.909699, 0.00858673)
@@ -2798,53 +2826,70 @@ debug_enabled = false
 transform = Transform3D(0.218416, 0, -0.975856, 0, 1, 0, 0.975856, 0, 0.218416, 12.6952, 0, 12.7189)
 collision_layer = 260
 
+[node name="Armature" parent="NPC/Villagers/Woman5/Woman5Anim" index="0"]
+transform = Transform3D(-0.027571, -0.0856231, -0.995946, 0.0155825, 0.996166, -0.0860735, 0.999498, -0.0178924, -0.0261311, -0.00206419, 1.66334, -0.00396952)
+
+[node name="Skeleton3D" parent="NPC/Villagers/Woman5/Woman5Anim/Armature" index="0"]
+bones/1/rotation = Quaternion(-0.0222865, 0.0108562, -0.010914, 0.999633)
+bones/2/rotation = Quaternion(-0.0838115, -0.00708548, -0.0221331, 0.996211)
+bones/3/rotation = Quaternion(-6.71425e-08, 3.95812e-09, -1.09503e-08, 1)
+bones/7/rotation = Quaternion(-0.997277, 0.0305381, -0.0498106, 0.0449938)
+bones/8/rotation = Quaternion(6.41755e-08, 4.50692e-09, -0.154093, 0.988056)
+bones/9/rotation = Quaternion(-0.10116, -0.100969, 0.097276, 0.984941)
+bones/14/rotation = Quaternion(0.986358, -0.0895461, -0.0778933, 0.114068)
+bones/15/rotation = Quaternion(-1.35134e-07, -1.17007e-07, -0.126257, 0.991998)
+bones/16/rotation = Quaternion(0.103783, 0.227334, 0.0363265, 0.967589)
+bones/22/rotation = Quaternion(0.995488, -0.00705236, -0.0392593, 0.0861002)
+bones/23/rotation = Quaternion(-0.0360236, -0.0451246, 0.0996591, 0.993345)
+bones/24/rotation = Quaternion(0.230169, 0.0917179, -0.660052, 0.709183)
+bones/29/rotation = Quaternion(0.973656, 0.154452, 0.116201, 0.120978)
+bones/30/rotation = Quaternion(-0.0262162, 0.0779674, 0.239088, 0.967507)
+bones/31/rotation = Quaternion(-0.11979, 0.0151114, -0.639731, 0.759056)
+
 [node name="Head" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.533133, 0.00174231, -0.0225294, -0.00320818, 0.53247, -0.0347394, 0.0223677, 0.0348437, 0.532003, 0.00441444, 1.81379, 0.0141692)
+transform = Transform3D(0.532505, 0.0333942, 0.00802774, -0.0343366, 0.520464, 0.112603, -0.000783101, -0.112886, 0.521534, 0.056015, 1.79396, -0.184633)
 
 [node name="Neck" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.999521, 0.0188585, -0.0245255, -0.0200643, 0.998553, -0.049888, 0.0235492, 0.0503562, 0.998454, 0.000986637, 1.29992, -0.00501574)
+transform = Transform3D(0.997926, 0.0625814, 0.0150442, -0.0643475, 0.975361, 0.21102, -0.00146755, -0.211551, 0.977366, 0.0240509, 1.29547, -0.0628373)
 
 [node name="Hands Left" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.527408, -0.574873, -0.62559, 0.640169, 0.752996, -0.152251, 0.558592, -0.320185, 0.765152, -0.119058, 0.055632, 0.227803)
+transform = Transform3D(0.995111, -0.0774641, 0.0612664, 0.0159178, 0.738018, 0.674593, -0.0974724, -0.67032, 0.735643, 0.159327, 0.666956, 0.33545)
 
 [node name="Arm Lower Left" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.81996, -0.300149, -0.487419, 0.505884, 0.778418, 0.37168, 0.267856, -0.55134, 0.790113, -0.235374, 0.951571, -0.011912)
+transform = Transform3D(0.970532, -0.113231, -0.212712, 0.223969, 0.749573, 0.622879, 0.088914, -0.652165, 0.752845, -0.136585, 1.06322, -0.0168925)
 
 [node name="Arm Upper Left" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.970541, -0.0441138, -0.236864, 0.137051, 0.909635, 0.392151, 0.19816, -0.41306, 0.888884, -0.103408, 1.24354, -0.0848291)
+transform = Transform3D(0.99345, 0.113128, -0.0160726, -0.083182, 0.81246, 0.577053, 0.0783392, -0.571937, 0.816549, 0.0120935, 1.28773, -0.158966)
 
 [node name="Hands Right" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(0.909795, -0.0741797, 0.408375, -0.0948907, 0.920668, 0.378637, -0.404065, -0.383233, 0.830581, -0.314796, -0.242941, -0.0292923)
+transform = Transform3D(0.968529, -0.135536, -0.208763, 0.0133277, 0.865774, -0.500258, 0.248545, 0.481732, 0.840333, 0.22352, 0.547544, -0.272733)
 
 [node name="Arm Lower Right" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.874211, -0.364841, -0.320384, 0.196568, 0.869285, -0.453546, 0.443977, 0.333517, 0.831656, 0.16906, 0.993183, 0.0292612)
+transform = Transform3D(0.977091, 0.0797191, 0.197327, 0.0214319, 0.885623, -0.46391, -0.21174, 0.457511, 0.863626, -0.128821, 1.01584, -0.0193182)
 
 [node name="Arm Upper Right" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="7"]
-transform = Transform3D(0.875994, -0.296535, -0.380396, 0.137733, 0.909631, -0.39192, 0.462238, 0.290926, 0.837675, 0.110174, 1.24327, 0.116536)
+transform = Transform3D(0.964263, 0.259849, 0.0517272, -0.22176, 0.898389, -0.379104, -0.144981, 0.354085, 0.923908, 0.0341036, 1.24674, 0.057919)
 
 [node name="Torso Upper" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="8"]
-transform = Transform3D(0.999998, -0.00109877, 0.00173093, 0.00108811, 0.99998, 0.0061518, -0.00173765, -0.0061499, 0.99998, -0.000625892, 0.93668, 0.00433558)
+transform = Transform3D(0.999526, 0.0213361, 0.0221909, -0.0223038, 0.998768, 0.0443198, -0.0212179, -0.0447937, 0.998771, 0.0125953, 0.936277, -0.0181684)
 
 [node name="Feet Left" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.661228, 0.750184, -0.00143434, -0.729454, 0.642512, -0.234678, -0.17513, 0.156223, 0.972072, 0.0609134, -1.39644, -0.188697)
+transform = Transform3D(0.987287, 0.0155823, 0.158181, -0.028948, 0.996166, 0.0825471, -0.156289, -0.0860766, 0.983953, -0.0442989, -1.45649, 0.254897)
 
 [node name="Leg Lower Left" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.878488, 0.470689, -0.0819206, -0.475123, 0.842704, -0.253194, -0.0501404, 0.261351, 0.96394, 0.729389, -0.166582, 0.198187)
+transform = Transform3D(0.975676, 0.139187, 0.169361, -0.169668, 0.968669, 0.181361, -0.138811, -0.205685, 0.968723, 0.159757, -0.0760778, -0.0438266)
 
 [node name="Legs Upper Left" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.855153, -0.507296, -0.1066, 0.507269, 0.861286, -0.0294012, 0.106728, -0.0289322, 0.993867, 0.0251422, -0.0825569, 0.000938416)
+transform = Transform3D(0.995946, -0.0398208, 0.0806539, 0.0282242, 0.989731, 0.140129, -0.0854057, -0.137284, 0.986843, 0.0183329, -0.0605005, 0.00988819)
 
 [node name="Feet Right" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.893117, 0.387605, -0.228265, -0.405691, 0.913279, -0.036534, 0.194309, 0.125235, 0.972913, 0.0838313, -1.49626, -0.239447)
+transform = Transform3D(0.881162, -0.0017539, -0.47281, 0.0410557, 0.9965, 0.0728157, 0.471027, -0.0835736, 0.87815, 0.215914, -1.43703, 0.458328)
 
 [node name="Leg Lower Right" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.952945, 0.127243, -0.275146, -0.17658, 0.970755, -0.162643, 0.246404, 0.203575, 0.947545, 0.265886, -0.0725999, 0.0620796)
+transform = Transform3D(0.900989, 0.155329, -0.405081, -0.0390892, 0.958977, 0.280775, 0.432075, -0.237141, 0.8701, 0.436575, -0.105797, 0.111419)
 
 [node name="Legs Upper Right" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.976075, -0.154931, -0.152557, 0.133444, 0.980791, -0.142268, 0.171668, 0.118506, 0.978001, 0.0437326, -0.0578549, -0.00669347)
-
-[node name="Torso Lower" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="15"]
-transform = Transform3D(1, -3.49246e-10, -2.21189e-09, 3.49246e-10, 1, 7.84057e-08, 2.21189e-09, -7.84057e-08, 1, 4.73953e-09, 0.936643, 0.00791555)
+transform = Transform3D(0.910577, -0.309978, -0.273429, 0.374387, 0.898861, 0.227777, 0.175169, -0.309777, 0.934534, 0.0813901, -0.124863, 0.039161)
 
 [node name="NavigationAgent3D" parent="NPC/Villagers/Woman5" index="3"]
 debug_enabled = false

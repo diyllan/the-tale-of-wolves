@@ -201,7 +201,6 @@ func _process(delta:float):
 				next_time_of_day = time_of_day
 				set_process(false);
 		if time_of_day == next_time_of_day and changing_to_next_time:
-			ObjectiveManager.day_part_count += 1;
 			next_time_of_day = day_cycle[day_cycle.keys()[ObjectiveManager.day_part_count % 4]]
 			if time_of_day > next_time_of_day:
 				changing_to_next_time = false;
@@ -221,8 +220,13 @@ func _process(delta:float):
 			sun_moon.look_at_from_position(lighting_pos,Vector3.ZERO,Vector3.UP);
 
 func _ready():
+	ObjectiveManager.objectiveCompleted.connect(changeTimeOnCompletion)
 	next_time_of_day = time_of_day
 	set_process(false);
+
+func changeTimeOnCompletion():
+	changing_to_next_time = true;
+	set_process(true);
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):

@@ -20,9 +20,9 @@ func _physics_process(_delta):
 		
 		if detected.is_in_group("Objective"):
 			if Input.is_action_just_pressed(detected.prompt_action):
-				print(detected.prompt_message)
 				ObjectiveManager.load_Next_Objective()
-				ObjectiveManager.emit_signal("objectiveCompleted")
+				if (detected.prompt_message != "Mother"):
+					ObjectiveManager.emit_signal("objectiveCompleted")
 				
 		
 func dialogue_active():
