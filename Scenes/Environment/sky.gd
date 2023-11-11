@@ -155,82 +155,92 @@ func set_time_of_day(value: float):
 
 func set_time():
 	if !is_inside_tree():
-		return;
-	var light_color: Color = Color(1.0,1.0,1.0,1.0);
-	var phi: float = time_of_day * 2.0 * PI;
+		return
+	var light_color: Color = Color(1.0,1.0,1.0,1.0)
+	var phi: float = time_of_day * 2.0 * PI
 	var sun_pos: Vector3 = sun_pos_default.rotated(sun_axis_rotation,phi) #here you can change the start position of the Sun and axis of rotation
 	var moon_pos:Vector3 = moon_pos_default.rotated(moon_axis_rotation,phi) #Same for Moon
 	var moon_tex_pos: Vector3 = Vector3(0.0,1.0,0.0).normalized().rotated(Vector3(1.0,0.0,0.0).normalized(),(phi+PI)*0.5) #This magical formula for shader
-	var light_energy: float = smoothstep(sunset_offset,0.4, sun_pos.y);# light intensity depending on the height of the sun
-	light_energy = clamp(light_energy, night_level_light, 2.0);
-	var sun_height: float = sun_pos.y-sunset_offset;
+	var light_energy: float = smoothstep(sunset_offset,0.4, sun_pos.y)# light intensity depending on the height of the sun
+	light_energy = clamp(light_energy, night_level_light, 2.0)
+	var sun_height: float = sun_pos.y-sunset_offset
 	if sun_height < sunset_range:
 		light_color=lerp(moon_light, sunset_light, clamp(sun_height/sunset_range,0.0,1.0))
 	else:
 		light_color=lerp(sunset_light, day_light, clamp((sun_height-sunset_range)/sunset_range,0.0,1.0))
 	if sun_pos.y < 0.0:
 		if !moon_pos.is_equal_approx(Vector3.UP) and !moon_pos.is_equal_approx(Vector3.DOWN):
-			sun_moon.look_at_from_position(moon_pos,Vector3.ZERO,Vector3.UP); # move sun to position and look at center scene from position
+			sun_moon.look_at_from_position(moon_pos,Vector3.ZERO,Vector3.UP) # move sun to position and look at center scene from position
 	else:
 		if !sun_pos.is_equal_approx(Vector3.UP) and !sun_pos.is_equal_approx(Vector3.DOWN):
-			sun_moon.look_at_from_position(sun_pos,Vector3.ZERO,Vector3.UP); # move sun to position and look at center scene from position
+			sun_moon.look_at_from_position(sun_pos,Vector3.ZERO,Vector3.UP) # move sun to position and look at center scene from position
 
 	light_energy = light_energy * (1-clouds_coverage * 0.5)
-	sun_moon.light_energy = light_energy;
-	sun_moon.light_color = light_color;
-	environment.ambient_light_color = light_color;
-	environment.ambient_light_energy = light_energy;
+	sun_moon.light_energy = light_energy
+	sun_moon.light_color = light_color
+	environment.ambient_light_color = light_color
+	environment.ambient_light_energy = light_energy
 	environment.adjustment_saturation = 1-clouds_coverage*0.5
-	environment.fog_light_color = light_color;
-	environment.volumetric_fog_albedo = light_color;
+	environment.fog_light_color = light_color
+	environment.volumetric_fog_albedo = light_color
 	#set_clouds_tint(light_color*) # comment this, if you need custom clouds tint
-	sky_shader.set_shader_parameter("clouds_tint",light_color*clouds_tint);
-	sky_shader.set_shader_parameter("SUN_POS",sun_pos);
-	sky_shader.set_shader_parameter("MOON_POS",moon_pos);
-	sky_shader.set_shader_parameter("MOON_TEX_POS",moon_tex_pos);
-	sky_shader.set_shader_parameter("attenuation",clamp(light_energy,night_level_light*0.25,1.00));#clouds too bright with night_level_light
+	sky_shader.set_shader_parameter("clouds_tint",light_color*clouds_tint)
+	sky_shader.set_shader_parameter("SUN_POS",sun_pos)
+	sky_shader.set_shader_parameter("MOON_POS",moon_pos)
+	sky_shader.set_shader_parameter("MOON_TEX_POS",moon_tex_pos)
+	sky_shader.set_shader_parameter("attenuation",clamp(light_energy,night_level_light*0.25,1.00))#clouds too bright with night_level_light
 
 func _process(delta:float):
 	#add input
 	if changing_to_next_time:
 		if time_of_day < next_time_of_day:
-			time_of_day += delta / 20;
-			set_time();
+			time_of_day += delta / 20
+			set_time()
+			self.get_environment().ambient_light_energy = 0.15
 			if time_of_day >= next_time_of_day:
-				changing_to_next_time = false;
+				changing_to_next_time = false
 				next_time_of_day = time_of_day
-				set_process(false);
+				set_process(false)
 		if time_of_day == next_time_of_day and changing_to_next_time:
 			next_time_of_day = day_cycle[day_cycle.keys()[ObjectiveManager.day_part_count % 4]]
 			if time_of_day > next_time_of_day:
-				changing_to_next_time = false;
+				changing_to_next_time = false
 				time_of_day = next_time_of_day
 				set_time()
-				set_process(false);
+				self.get_environment().ambient_light_energy = 0.15
+				set_process(false)
 	
 	#if lightning
 	if lighting_strike:
-		lighting_time += delta;
-		var lighting_strength = clamp(sin(lighting_time*20.0),0.0,1.0);
-		lighting_pos = lighting_pos.normalized();
-		sun_moon.light_color = day_light;
-		sun_moon.light_energy = lighting_strength*2;
-		sky_shader.set_shader_parameter("lighting_strength",lighting_strength);
+		lighting_time += delta
+		var lighting_strength = clamp(sin(lighting_time*20.0),0.0,1.0)
+		lighting_pos = lighting_pos.normalized()
+		sun_moon.light_color = day_light
+		sun_moon.light_energy = lighting_strength*2
+		sky_shader.set_shader_parameter("lighting_strength",lighting_strength)
 		if !lighting_pos.is_equal_approx(Vector3.UP) and !lighting_pos.is_equal_approx(Vector3.DOWN):
-			sun_moon.look_at_from_position(lighting_pos,Vector3.ZERO,Vector3.UP);
+			sun_moon.look_at_from_position(lighting_pos,Vector3.ZERO,Vector3.UP)
 
 func _ready():
 	ObjectiveManager.objectiveCompleted.connect(changeTimeOnCompletion)
 	next_time_of_day = time_of_day
-	set_process(false);
+	set_process(false)
 
 func changeTimeOnCompletion():
-	changing_to_next_time = true;
-	set_process(true);
+	changing_to_next_time = true
+	set_process(true)
+	
+	if (ObjectiveManager.day_part_count == 4):
+		var environmentPointer = self.get_environment()
+		environmentPointer.fog_enabled = true
+		environmentPointer.fog_density = 0.0005
+		environmentPointer.fog_sky_affect = 0.2
+		environmentPointer.fog_light_color = Color(0.24, 0.23, 0.39, 1)
 
 func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		lighting_strike = true;
-	if event.is_action_pressed("skiptime"):
-		changing_to_next_time = true;
-		set_process(true);
+	pass
+#	if event.is_action_pressed("ui_accept"):
+#		lighting_strike = true;
+#	if event.is_action_pressed("skiptime"):
+#		changing_to_next_time = true;
+#		set_process(true);

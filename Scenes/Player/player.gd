@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 const SPEED = 9.0
-const SPRINTSPEED = 12.5
+const SPRINTSPEED = 120.5
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
