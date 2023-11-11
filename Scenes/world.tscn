@@ -1,4 +1,4 @@
-[gd_scene load_steps=252 format=3 uid="uid://c3ql18ytlp6l1"]
+[gd_scene load_steps=258 format=3 uid="uid://c3ql18ytlp6l1"]
 
 [ext_resource type="PackedScene" uid="uid://cuaeywdbin27w" path="res://Scenes/Player/player.tscn" id="1_6k6ey"]
 [ext_resource type="PackedScene" uid="uid://dvjuks7llhcdr" path="res://Scenes/Werewolf/werewolf.tscn" id="1_gtt3q"]
@@ -65,11 +65,14 @@
 [ext_resource type="PackedScene" uid="uid://pisu121ffc58" path="res://Assets/Models/Environment/Barrel/Barreltextured.blend" id="59_81x7k"]
 [ext_resource type="PackedScene" uid="uid://vwqu7qwuyw3e" path="res://Assets/Models/Environment/Bucket/BucketGameready.blend" id="60_prruw"]
 [ext_resource type="PackedScene" uid="uid://cm5m207tlfygh" path="res://Assets/Models/Environment/Flour/Flour.blend" id="60_y3swk"]
+[ext_resource type="PackedScene" uid="uid://qf4qtqx6uolk" path="res://Assets/Models/Environment/Basket/EmptyBasket.blend" id="61_by01s"]
 [ext_resource type="PackedScene" uid="uid://gayuu0in5ya5" path="res://Assets/Models/Environment/Grapes/grape.blend" id="61_chqve"]
 [ext_resource type="PackedScene" uid="uid://qvehxxvntvxd" path="res://Assets/Models/Environment/Bread/Bread.blend" id="62_syclq"]
 [ext_resource type="PackedScene" uid="uid://caycyrgox37nc" path="res://Assets/Models/Environment/Wine/Winebottle.blend" id="63_ef1v1"]
 [ext_resource type="PackedScene" uid="uid://bqe8oby0x8yx1" path="res://Assets/Models/Environment/Wine/Wineshelf.blend" id="64_326qu"]
+[ext_resource type="PackedScene" uid="uid://cgsm6n77o0vee" path="res://Assets/Models/Environment/Planks/plank.blend" id="67_5dn3b"]
 [ext_resource type="AudioStream" uid="uid://cag7171faerlq" path="res://Assets/Sound/Music/Village/MedievalMusic.ogg" id="67_22drj"]
+[ext_resource type="PackedScene" uid="uid://f0pkwe7nnvic" path="res://Assets/Models/Environment/Sack/SackTextured.blend" id="68_66ju4"]
 [ext_resource type="AudioStream" uid="uid://batnpo2n6rpmf" path="res://Assets/Sound/SoundEffects/Player/FallinDownHole.ogg" id="69_21cam"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tk204"]
@@ -107,7 +110,8 @@ ambient_light_energy = 0.0503215
 fog_light_color = Color(0.758115, 0.639529, 0.701178, 1)
 fog_density = 0.005
 fog_sky_affect = 0.2
-volumetric_fog_albedo = Color(0.758115, 0.639529, 0.701178, 1)
+volumetric_fog_albedo = Color(0.756863, 0.639216, 0.701961, 1)
+volumetric_fog_sky_affect = 0.75
 adjustment_enabled = true
 adjustment_saturation = 0.75
 
@@ -1089,15 +1093,24 @@ size = Vector3(1.4, 1.5, 2.4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_suhue"]
 size = Vector3(1.23318, 0.23245, 2.19712)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_36vox"]
-size = Vector3(1, 0.910102, 1)
-
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ft4yg"]
 height = 0.521266
 radius = 0.333322
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rwnms"]
-size = Vector3(0.506453, 0.931965, 0.598536)
+size = Vector3(0.506453, 0.507171, 0.598536)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_36vox"]
+size = Vector3(1, 0.910102, 0.794304)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_frbyr"]
+size = Vector3(0.851003, 0.877998, 0.652096)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s5ekb"]
+size = Vector3(0.162394, 0.0463735, 1.14427)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y1bj8"]
+size = Vector3(3.25495, 1.51656, 1.56814)
 
 [sub_resource type="QuadMesh" id="QuadMesh_kqoko"]
 size = Vector2(40, 20)
@@ -1798,6 +1811,60 @@ transform = Transform3D(-0.199261, 0, -0.979947, 0, 1, 0, 0.979947, 0, -0.199261
 collision_layer = 2
 collision_mask = 265
 floor_max_angle = 1.13446
+
+[node name="Hair" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.994974, -0.0493042, 0.0871438, 0.0503659, 0.99868, -0.0100251, -0.0865346, 0.0143638, 0.996145, -0.765471, -1.10674, -0.0141647)
+
+[node name="Hat" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.994974, -0.0493042, 0.0871438, 0.0503659, 0.99868, -0.0100251, -0.0865346, 0.0143638, 0.996145, -0.765471, -1.10674, -0.0141647)
+
+[node name="Head" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.994974, -0.0493042, 0.0871438, 0.0503659, 0.99868, -0.0100251, -0.0865346, 0.0143638, 0.996145, -0.765471, -1.10674, -0.0141647)
+
+[node name="Neck" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="3"]
+transform = Transform3D(0.995193, -0.0139629, 0.0969319, 0.0168883, 0.999424, -0.0294256, -0.0964652, 0.0309211, 0.994856, -0.868015, -1.10426, -0.0608183)
+
+[node name="HandLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="4"]
+transform = Transform3D(0.915148, 0.358063, -0.185188, 0.0262617, 0.405457, 0.913737, 0.402261, -0.841068, 0.36165, -1.81676, 0.759576, 1.28189)
+
+[node name="LowerArmLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="5"]
+transform = Transform3D(0.920484, 0.344431, -0.184597, -0.130768, 0.716639, 0.685076, 0.368251, -0.606461, 0.704696, -1.78973, -0.0640037, 1.15566)
+
+[node name="UpperArmLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="6"]
+transform = Transform3D(0.992292, 0.0726632, -0.100379, -0.0647403, 0.994686, 0.0800555, 0.105662, -0.0729398, 0.991724, -1.14758, -1.04088, 0.1739)
+
+[node name="HandRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="7"]
+transform = Transform3D(0.618336, 0.598403, 0.509483, 0.325519, 0.395043, -0.859056, -0.715331, 0.697032, 0.0494777, -2.49841, 0.665481, -0.602563)
+
+[node name="LowerArmRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="8"]
+transform = Transform3D(0.74197, 0.562133, 0.365359, -0.205447, 0.709382, -0.674217, -0.63818, 0.425187, 0.641828, -2.30308, -0.0574713, -0.662856)
+
+[node name="UpperArmRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="9"]
+transform = Transform3D(0.993744, 0.0481105, 0.100782, -0.0323184, 0.987723, -0.152839, -0.106898, 0.148627, 0.983099, -1.05176, -1.01282, -0.344879)
+
+[node name="Torso" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="10"]
+transform = Transform3D(0.998941, 0.010735, 0.0447382, -0.0100701, 0.999836, -0.0150616, -0.0448925, 0.0145952, 0.998885, -0.936161, -1.10162, -0.0233385)
+
+[node name="FeetLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="11"]
+transform = Transform3D(0.860154, 0.490994, 0.138057, -0.48319, 0.87112, -0.0876247, -0.163287, 0.00866306, 0.986538, -0.810784, -1.03655, 0.254894)
+
+[node name="LowerLegLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="12"]
+transform = Transform3D(0.986124, 0.0431814, 0.160296, -0.0902759, 0.949815, 0.299501, -0.139319, -0.309815, 0.940532, -0.707041, -0.874231, 0.30013)
+
+[node name="UpperLegLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="13"]
+transform = Transform3D(0.731069, -0.665901, -0.148707, 0.681686, 0.722118, 0.117687, 0.0290158, -0.187408, 0.981851, -0.20747, -0.852463, 0.193705)
+
+[node name="FeetRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="14"]
+transform = Transform3D(0.996283, 0.0837785, 0.0200077, -0.0851144, 0.9932, 0.0794255, -0.0132175, -0.080834, 0.996638, -0.954763, -1.13017, -0.301845)
+
+[node name="LowerLegRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="15"]
+transform = Transform3D(0.990828, 0.12532, -0.050536, -0.135126, 0.918944, -0.370516, 6.77258e-06, 0.373948, 0.927448, -0.926014, -0.872135, -0.364777)
+
+[node name="UpperLegRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="16"]
+transform = Transform3D(0.965319, -0.25956, 0.028078, 0.254044, 0.909089, -0.330178, 0.0601757, 0.325861, 0.943499, -0.638817, -0.942341, -0.3415)
+
+[node name="skirt" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="17"]
+transform = Transform3D(1, 9.4587e-11, 2.93949e-09, -9.45873e-11, 1, 8.03848e-08, -2.93949e-09, -8.03848e-08, 1, -0.914487, -1.10324, 0.000563968)
 
 [node name="Forest" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -822.2, 0, -691.1)
@@ -2896,6 +2963,9 @@ transform = Transform3D(0.90099, 0.155329, -0.40508, -0.0390886, 0.958977, 0.280
 [node name="Legs Upper Right" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="14"]
 transform = Transform3D(0.910577, -0.309978, -0.273429, 0.374387, 0.898861, 0.227777, 0.175169, -0.309777, 0.934534, 0.08139, -0.124863, 0.039161)
 
+[node name="Torso Lower" parent="NPC/Villagers/Woman5/Woman5Anim/Armature/Skeleton3D" index="15"]
+transform = Transform3D(1, -3.49246e-10, -2.21189e-09, 3.49246e-10, 1, 7.84057e-08, 2.21189e-09, -7.84057e-08, 1, 4.73953e-09, 0.936643, 0.00791555)
+
 [node name="NavigationAgent3D" parent="NPC/Villagers/Woman5" index="3"]
 debug_enabled = false
 
@@ -3840,29 +3910,11 @@ prompt_message = "Sleep"
 transform = Transform3D(1, 0, -5.58794e-09, 0, 1, 0, 5.58794e-09, 0, 1, 0, 0.690227, 0)
 shape = SubResource("BoxShape3D_suhue")
 
-[node name="Flour" parent="NavRegion/Objectives" instance=ExtResource("60_prruw")]
-transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 0, 3.78552e-08, -0.866025, 0.5, -472.752, 4.03371, -651.631)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="NavRegion/Objectives/Flour"]
-collision_mask = 7
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Objectives/Flour/StaticBody3D"]
-transform = Transform3D(1, -1.06581e-14, 0, 1.06581e-14, 1, 0, 0, 0, 1, 0, 0.510107, 0)
-shape = SubResource("CylinderShape3D_0yc4u")
-
-[node name="StaticBodyInteraction" type="Area3D" parent="NavRegion/Objectives/Flour"]
-collision_layer = 8
-script = ExtResource("5_fk6m7")
-prompt_message = "Pick up Flour"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Objectives/Flour/StaticBodyInteraction"]
-transform = Transform3D(1, -1.06581e-14, 3.55271e-15, -3.55271e-15, 1, 0, 0, 0, 1, 0, 0.549316, 0.0733032)
-shape = SubResource("BoxShape3D_36vox")
-
-[node name="Basket" parent="NavRegion/Objectives" instance=ExtResource("54_nmeo8")]
-transform = Transform3D(2.9447, 0, 0, 0, 2.9447, 0, 0, 0, 2.9447, -718.855, 2.64043, -542.172)
+[node name="Basket" parent="NavRegion/Objectives" instance=ExtResource("61_by01s")]
+transform = Transform3D(2.88366, -2.42657e-15, 0, 0, 2.88366, 0, 0, 7.68364e-15, 2.88366, -718.812, 2.57643, -542.229)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavRegion/Objectives/Basket"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, -2.11758e-22, 1, 0, 0, 0)
 collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Objectives/Basket/StaticBody3D"]
@@ -3875,10 +3927,26 @@ script = ExtResource("5_fk6m7")
 prompt_message = "Pick up Basket"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Objectives/Basket/StaticBodyInteraction"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, -8.47033e-22, 1, 0, 0.263944, 0)
 shape = SubResource("BoxShape3D_rwnms")
 
-[node name="Flour2" parent="NavRegion/Objectives" instance=ExtResource("60_y3swk")]
-transform = Transform3D(1.30554, 0, 1.00493, 0, 1.64752, 0, -1.00493, 0, 1.30554, -459.938, 0, -644.514)
+[node name="Flour" parent="NavRegion/Objectives" instance=ExtResource("60_y3swk")]
+transform = Transform3D(1.30554, 0, 1.00493, 0, 1.64752, 0, -1.00493, 0, 1.30554, -472.575, 3.36785, -652.198)
+
+[node name="StaticBodyInteraction" type="Area3D" parent="NavRegion/Objectives/Flour"]
+collision_layer = 8
+script = ExtResource("5_fk6m7")
+prompt_message = "Pick up Flour"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Objectives/Flour/StaticBodyInteraction"]
+transform = Transform3D(1, -1.06581e-14, 3.55271e-15, -3.55271e-15, 1, 0, 0, 0, 1, 0, 0.549316, 0.0733032)
+shape = SubResource("BoxShape3D_36vox")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavRegion/Objectives/Flour"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Objectives/Flour/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495638, 0)
+shape = SubResource("BoxShape3D_frbyr")
 
 [node name="Bread" parent="NavRegion/Objectives" instance=ExtResource("62_syclq")]
 transform = Transform3D(8.30994, 0, 0, 0, 8.30994, 0, 0, 0, 8.30994, -296.702, 0, -479.461)
@@ -3888,6 +3956,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -299.294, 0, -486.467)
 
 [node name="Wineshelf" parent="NavRegion" instance=ExtResource("64_326qu")]
 transform = Transform3D(6.839, 0, 0, 0, 6.839, 0, 0, 0, 6.839, -304.2, 0, -484.371)
+
+[node name="WoodBasket" parent="NavRegion" instance=ExtResource("54_nmeo8")]
+transform = Transform3D(2.9447, 0, 0, 0, 2.9447, 0, 0, 0, 2.9447, -712.608, 0.270044, -542.172)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavRegion/WoodBasket"]
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/WoodBasket/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.267954, 0)
+shape = SubResource("CylinderShape3D_ft4yg")
+
+[node name="plank" parent="NavRegion" instance=ExtResource("67_5dn3b")]
+transform = Transform3D(4.86093, 0, -4.21914, 0, 6.4366, 0, 4.21914, 0, 4.86093, -472.855, 3.06403, -652.313)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavRegion/plank"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/plank/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00919342, 0.0353581, 0.0246964)
+shape = SubResource("BoxShape3D_s5ekb")
+
+[node name="Bucket" parent="NavRegion" instance=ExtResource("60_prruw")]
+transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 0, 3.78552e-08, -0.866025, 0.5, -466.964, 0.566826, -642.365)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavRegion/Bucket"]
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Bucket/StaticBody3D"]
+transform = Transform3D(1, -1.06581e-14, 0, 1.06581e-14, 1, 0, 0, 0, 1, 0, 0.510107, 0)
+shape = SubResource("CylinderShape3D_0yc4u")
+
+[node name="Bakercart" parent="NavRegion" instance=ExtResource("50_htotg")]
+transform = Transform3D(0.397177, 0, -2.7106, 0, 2.73956, 0, 2.7106, 0, 0.397177, -326.777, 3.4201e-06, -534.514)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavRegion/Bakercart"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavRegion/Bakercart/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.756634, 0)
+shape = SubResource("BoxShape3D_y1bj8")
+
+[node name="SackTextured" parent="NavRegion/Bakercart" instance=ExtResource("68_66ju4")]
+transform = Transform3D(-0.304851, 0, -0.00882905, 0, 0.304977, 0, 0.00882905, 0, -0.304851, 0.590561, 0.561396, -0.248146)
+
+[node name="SackTextured2" parent="NavRegion/Bakercart" instance=ExtResource("68_66ju4")]
+transform = Transform3D(-0.299704, 0, -0.0133317, 0, 0.3, 0, 0.0133317, 0, -0.299704, 0.619904, 0.577196, 0.301186)
+
+[node name="SackTextured3" parent="NavRegion/Bakercart" instance=ExtResource("68_66ju4")]
+transform = Transform3D(-0.273243, -0.135424, -0.00325849, -0.134794, 0.272539, -0.0237556, 0.0134605, -0.0198434, -0.304035, 0.227844, 0.747674, 0.0281067)
 
 [node name="SwampWater" parent="." instance=ExtResource("47_yqvkt")]
 transform = Transform3D(19.592, 0, -2.0096, 0, 1, 0, 4.01919, 0, 9.796, -484.067, -2.73461, -176.016)

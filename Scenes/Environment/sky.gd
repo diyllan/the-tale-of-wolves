@@ -236,8 +236,14 @@ func changeTimeOnCompletion():
 		environmentPointer.fog_density = 0.0005
 		environmentPointer.fog_sky_affect = 0.2
 		environmentPointer.fog_light_color = Color(0.24, 0.23, 0.39, 1)
+		
+	if (ObjectiveManager.day_part_count == 8):
+		var environmentPointer = self.get_environment()
+		environmentPointer.volumetric_fog_enabled = true
+		environmentPointer.volumetric_fog_sky_affect = 0.75
+		environmentPointer.volumetric_fog_albedo = Color(0.76, 0.64, 0.70, 1)
 
-func _input(event):
+func _input(_event):
 	pass
 #	if event.is_action_pressed("ui_accept"):
 #		lighting_strike = true;
