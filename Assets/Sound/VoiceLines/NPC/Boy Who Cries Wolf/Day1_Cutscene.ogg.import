@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bn0v33ue1lg8m"
+path="res://.godot/imported/Day1_Cutscene.ogg-c73a1826f5c6723b53d554376d552852.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day1_Cutscene.ogg"
+dest_files=["res://.godot/imported/Day1_Cutscene.ogg-c73a1826f5c6723b53d554376d552852.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

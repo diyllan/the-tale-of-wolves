@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://csdhvmbhm73f2"
+path="res://.godot/imported/Day1_1.ogg-8bdee9e085aaaf2cbab77ce5198f3b8c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sound/VoiceLines/NPC/Man 4/Day1_1.ogg"
+dest_files=["res://.godot/imported/Day1_1.ogg-8bdee9e085aaaf2cbab77ce5198f3b8c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
