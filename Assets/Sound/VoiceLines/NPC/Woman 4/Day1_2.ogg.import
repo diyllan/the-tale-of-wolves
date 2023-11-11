@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8y4xuh02o2i4"
+path="res://.godot/imported/Day1_2.ogg-229a853cc79e27aa94d9f65a6a5d729c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sound/VoiceLines/NPC/Woman 4/Day1_2.ogg"
+dest_files=["res://.godot/imported/Day1_2.ogg-229a853cc79e27aa94d9f65a6a5d729c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

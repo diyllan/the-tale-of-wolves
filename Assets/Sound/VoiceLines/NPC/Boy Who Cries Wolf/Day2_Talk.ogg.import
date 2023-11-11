@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bpl3n5g3ocysy"
+path="res://.godot/imported/Day2_Talk.ogg-cee99fc993a27742637417c923428adf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day2_Talk.ogg"
+dest_files=["res://.godot/imported/Day2_Talk.ogg-cee99fc993a27742637417c923428adf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
