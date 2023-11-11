@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dsi1dkce8ei1m"]
+
+[ext_resource type="Texture2D" uid="uid://ba5uwxrdvtnua" path="res://Assets/Models/Environment/Smallcart/Textures/Rope_1_0/TexturesCom_Rope_NaturalSisal_512_albedo.png" id="1_nd0ip"]
+
+[resource]
+albedo_texture = ExtResource("1_nd0ip")

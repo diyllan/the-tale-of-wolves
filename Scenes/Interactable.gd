@@ -32,7 +32,7 @@ func interact(body):
 		body.yMinRotation = -10
 #		if body.hiding:
 #			prompt_message = "leave"
-	if prompt_message == "Open Door" and !DoorisOpen:
+	if (prompt_message == "Open Door" or prompt_message == "To Grandma") and !DoorisOpen:
 		DoorisOpen = true
 		$"../AnimationPlayer".play("Open")
 		await $"../AnimationPlayer".animation_finished

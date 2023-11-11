@@ -15,8 +15,8 @@ var objective_library = {
 	"Return to the winery owner": "NPC/Villagers/WineDude",
 	"Return to bed": "NavRegion/Objectives/Bed",
 	"Fetch the basket and Latern from the cart": "NavRegion/Objectives/Basket",
-	"Get the bread from the baker": "NPC/Villagers/Baker",
-	"Get the wine from the winery owner": "NPC/Villagers/WineDude",
+	"Get the bread from the baker": "NavRegion/Objectives/Bread",
+	"Get the wine from the winery owner": "NavRegion/Objectives/Winebottle",
 	"Walk to grandma's house at the end of the dark forest": "NavRegion/Objectives/GrandmaDoor",
 	"Talk to mother": "NPC/Villagers/Mother"
 }
@@ -73,7 +73,7 @@ func load_Next_Objective():
 	
 	if (day_part_count == 11):
 		#no more objectives to complete
-		set_Objective("You finished the game!")
+		set_Objective("You reached grandma with all the items!")
 		return
 	
 	#disable objective on the current objective
@@ -83,6 +83,12 @@ func load_Next_Objective():
 	day_part_count += 1
 	#set the new objective text
 	set_Objective(objective_library.keys()[day_part_count])
+	#for some objectives - in day 3 - we only now show them
+	if (day_part_count == 9 or day_part_count == 10):
+		get_tree().root.get_node(world_path + objective_library.values()[day_part_count]).show()
+		get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction").set_collision_layer_value(4, true)
 	#enable objective on the new objective -> currently disabled because not all objective models don't exist yet - would error
 	var new_objective = get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction")
 	new_objective.add_to_group("Objective")
+
+	
