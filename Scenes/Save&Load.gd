@@ -70,8 +70,7 @@ func load_game():
 
 		# Now we set the remaining variables.
 		for i in node_data.keys():
-			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y":
+			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y" or i == "pos_z":
 				continue
 			new_object.set(i, node_data[i])
-			#ObjectiveManager.day_part_count = node_data["DayPartCount"]
-			#ObjectiveManager.load_Current_Objective()
+			
