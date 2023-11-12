@@ -243,10 +243,10 @@ func changeTimeOnCompletion():
 		environmentPointer.volumetric_fog_sky_affect = 0.75
 		environmentPointer.volumetric_fog_albedo = Color(0.76, 0.64, 0.70, 1)
 
-func _input(event):
-#	pass
-#	if event.is_action_pressed("ui_accept"):
-#		lighting_strike = true;
-	if event.is_action_pressed("skiptime"):
-		changing_to_next_time = true;
-		set_process(true);
+#func _input(event):
+##	pass
+##	if event.is_action_pressed("ui_accept"):
+##		lighting_strike = true;
+#	if event.is_action_pressed("skiptime"):
+#		changing_to_next_time = true;
+#		set_process(true);
