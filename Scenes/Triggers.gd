@@ -19,13 +19,21 @@ var FirstForestScareEnded = false
 var weirdGuyScare1 = false
 var weirdGuyScare1Ended = false
 var weirdGuyScare1Reset = false
-@export var WirdGuyDialogue1: String
+@export var WeirdGuyDialogue1: String
 var TensionSoundPlayed = false
+
+var weirdGuyScare2 = false
+var weirdGuyScare3 = false
+var weirdGuyScare2Ended = false
+var weirdGuyScare2Reset = false
+@export var WeirdGuyDialogue2: String
 
 signal cutsceneStart
 signal cutsceneEnd
 signal WeirdGuySceneStart
 signal WeirdGuySceneEnd
+signal WeirdGuyScene2Start
+signal WeirdGuyScene2End
 signal BoyCutSceneStart
 signal BoyCutSceneEnd
 
@@ -43,9 +51,10 @@ func DialogueEnded():
 			cutscene.play("Return")
 			BoyCutSceneEnd.emit()
 			cutsceneEnd.emit()
-	if BoyWhoCriesWolf2 and !BoyWhoCriesWolf3Ended:
+	if BoyWhoCriesWolf3 and !BoyWhoCriesWolf3Ended:
 			BoyWhoCriesWolf3Ended = true
 			cutscene.play("BoyWhoCriesWolfRunninginWoods")
+			await cutscene.animation_finished
 			cutscene.play("Return")
 			cutsceneEnd.emit()
 
@@ -58,6 +67,12 @@ func DialogueEnded():
 	if FirstForestScarePlayed and !FirstForestScareEnded:
 		FirstForestScareEnded = true
 		cutsceneEnd.emit()
+	
+	if weirdGuyScare2 and !weirdGuyScare2Ended:
+			weirdGuyScare2Ended = true
+			cutscene.play("RESET")
+			WeirdGuyScene2End.emit()
+			cutsceneEnd.emit()
 
 func _on_boy_who_cries_wolf_body_entered(body):
 	if body.is_in_group("Player"):
@@ -79,7 +94,7 @@ func _on_boy_who_cries_wolf_body_entered(body):
 			await cutscene.animation_finished
 			DialogueManager.showDialogue(BoyWhoCriesWolfDialogueDay2)
 			BoyAnimations.play("Yelling")
-		if ObjectiveManager.day_part_count == 8 and !BoyWhoCriesWolf3:
+		if ObjectiveManager.day_part_count == 9 and !BoyWhoCriesWolf3:
 			cutsceneStart.emit()
 			cutscene.play("BoyWhoCriesWolfRepos")
 			BoyCutSceneStart.emit()
@@ -117,7 +132,10 @@ func _on_weird_guy_1_body_entered(body):
 			cutscene.play("WeirdGuyScare1")
 			SoundManager.stopLastSound("TensionSound")
 			SoundManager.playSound("SimpleJumpscare")
-			DialogueManager.showDialogue(FirstForestScare)
+			DialogueManager.showDialogue(WeirdGuyDialogue1)
+		
+		
+
 
 func _on_tension_sound_trigger_body_entered(body):
 	if body.is_in_group("Player"):
@@ -132,5 +150,28 @@ func _on_weird_return_pos_1_body_entered(body):
 			cutscene.play("WeirdGuyReturnPos")
 
 
-func _on_cutscene_player_animation_finished(anim_name):
-	print_debug(anim_name)
+func _on_weird_guy_2_body_entered(body):
+	if body.is_in_group("Player"):
+		if ObjectiveManager.day_part_count == 7 and !weirdGuyScare2:
+			cutscene.play("WeirdGuyRepos1")
+			weirdGuyScare2 = true
+			WeirdGuySceneStart.emit()
+			SoundManager.playSound("TensionSound")
+
+
+func _on_weird_guy_chase_body_entered(body):
+	if body.is_in_group("Player"):
+		if ObjectiveManager.day_part_count == 7 and !weirdGuyScare3 and weirdGuyScare2:
+			weirdGuyScare3 = true
+			WeirdGuySceneEnd.emit()
+			WeirdGuyScene2Start.emit()
+			cutsceneStart.emit()
+			cutscene.play("WeirdGuyScare2")
+			SoundManager.stopLastSound("TensionSound")
+			SoundManager.playSound("SimpleJumpscare")
+			DialogueManager.showDialogue(WeirdGuyDialogue2)
+
+
+func _on_weird_return_pos_2_body_entered(body):
+	if body.is_in_group("Player"):
+			cutscene.play("WeirdGuyReturnPos")

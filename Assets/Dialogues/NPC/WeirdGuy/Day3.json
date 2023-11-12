@@ -1,5 +1,5 @@
 [
-	{"Name":"[center]Wolf[/center]", "Text":"[center]Hello little girl, what are you doing here all alone? [/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Wolf[/center]", "Text":"[center]Be careful little girl.[/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Wolf[/center]", "Text":"[center]...[/center]", "Voice":"","Sound":""}
+	{"Name":"[center]Wolf[/center]", "Text":"[center]Hello little girl, what are you doing here all alone? [/center]", "Voice":"WeirdGuyHelloLittleGirl","Sound":""},
+	{"Name":"[center]Wolf[/center]", "Text":"[center]Be careful little girl.[/center]", "Voice":"WeirdGuyBeCareful","Sound":""},
+	{"Name":"[center]Wolf[/center]", "Text":"[center]...[/center]", "Voice":"WeirdGuyBreathing","Sound":""}
 ]

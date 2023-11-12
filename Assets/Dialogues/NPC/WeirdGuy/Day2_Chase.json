@@ -1,5 +1,5 @@
 [
-	{"Name":"[center]Wolf[/center]", "Text":"[center]I saw the beast! It's living right among us, it's not like us. It hides in the Night.[/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Wolf[/center]", "Text":"[center]I have warned you![/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Wolf[/center]", "Text":"[center]...[/center]", "Voice":"","Sound":""}
+	{"Name":"[center]Wolf[/center]", "Text":"[center]I saw the beast! It's living right among us, it's not like us. It hides in the Night.[/center]", "Voice":"WeirdGuySawTheBest","Sound":"SimpleJumpscare"},
+	{"Name":"[center]Wolf[/center]", "Text":"[center]I have warned you![/center]", "Voice":"WeirdGuyWarnedYou","Sound":""},
+	{"Name":"[center]Wolf[/center]", "Text":"[center]...[/center]", "Voice":"WeirdGuyBreathing","Sound":""}
 ]

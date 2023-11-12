@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dkl754seefna3"
+path="res://.godot/imported/Day1_1_3.ogg-7d89a6fee2e805543650abcf34794b10.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sound/VoiceLines/NPC/Kid 2/Day1_1_3.ogg"
+dest_files=["res://.godot/imported/Day1_1_3.ogg-7d89a6fee2e805543650abcf34794b10.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

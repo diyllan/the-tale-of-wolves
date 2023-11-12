@@ -1,5 +1,5 @@
 [
-	{"Name":"[center]Wolf[/center]", "Text":"[center]There's a Monster out there![/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Wolf[/center]", "Text":"[center]Last Night i heard a very loud scream in the Forest be careful![/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Wolf[/center]", "Text":"[center]...[/center]", "Voice":"","Sound":""}
+	{"Name":"[center]Wolf[/center]", "Text":"[center]There's a Monster out there![/center]", "Voice":"WeirdGuyMonsterOutThere","Sound":"SimpleJumpscare"},
+	{"Name":"[center]Wolf[/center]", "Text":"[center]Last Night i heard a very loud scream in the Forest be careful![/center]", "Voice":"WeirdGuyLastNight","Sound":""},
+	{"Name":"[center]Wolf[/center]", "Text":"[center]...[/center]", "Voice":"WeirdGuyBreathing","Sound":""}
 ]

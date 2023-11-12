@@ -109,5 +109,109 @@ func interact(body):
 		if ObjectiveManager.day_part_count == 4 or ObjectiveManager.day_part_count == 5 or ObjectiveManager.day_part_count == 6 or ObjectiveManager.day_part_count == 7:
 			DialogueManager.showDialogue(Dialogue_Path[1])
 
+	if prompt_message == "Talk to Brunhilde":
+		Interacted.emit()
+		if ObjectiveManager.day_part_count == 0 or ObjectiveManager.day_part_count == 1 or ObjectiveManager.day_part_count == 2 or ObjectiveManager.day_part_count == 3:
+			DialogueManager.showDialogue(Dialogue_Path[0])
+			
+		if ObjectiveManager.day_part_count == 4 or ObjectiveManager.day_part_count == 5 or ObjectiveManager.day_part_count == 6 or ObjectiveManager.day_part_count == 7:
+			DialogueManager.showDialogue(Dialogue_Path[1])
 		
+		if ObjectiveManager.day_part_count == 8 or ObjectiveManager.day_part_count == 9 or ObjectiveManager.day_part_count == 10 or ObjectiveManager.day_part_count == 11:
+			DialogueManager.showDialogue(Dialogue_Path[2])
+			
+	if prompt_message == "Talk to Erwin":
+		Interacted.emit()
+		if ObjectiveManager.day_part_count == 0 or ObjectiveManager.day_part_count == 1 or ObjectiveManager.day_part_count == 2 or ObjectiveManager.day_part_count == 3:
+			DialogueManager.showDialogue(Dialogue_Path[0])
+			
+		if ObjectiveManager.day_part_count == 4 or ObjectiveManager.day_part_count == 5 or ObjectiveManager.day_part_count == 6 or ObjectiveManager.day_part_count == 7:
+			DialogueManager.showDialogue(Dialogue_Path[1])
+		
+		if ObjectiveManager.day_part_count == 8 or ObjectiveManager.day_part_count == 9 or ObjectiveManager.day_part_count == 10 or ObjectiveManager.day_part_count == 11:
+			DialogueManager.showDialogue(Dialogue_Path[2])
+	
+	if prompt_message == "Talk to Ulf":
+		Interacted.emit()
+		if ObjectiveManager.day_part_count == 0 or ObjectiveManager.day_part_count == 1:
+			if !firstInteractionDay1:
+				firstInteractionDay1 = true
+				DialogueManager.showDialogue(Dialogue_Path[0])
+			elif firstInteractionDay1:
+				DialogueManager.showDialogue(Dialogue_Path[4])
+				
+		elif ObjectiveManager.day_part_count == 2 or ObjectiveManager.day_part_count == 3 and firstInteractionDay1:
+			DialogueManager.showDialogue(Dialogue_Path[1])
+			
+		if ObjectiveManager.day_part_count == 4 or ObjectiveManager.day_part_count == 5:
+			if !firstInteractionDay2:
+				firstInteractionDay2 = true
+				DialogueManager.showDialogue(Dialogue_Path[2])
+			elif firstInteractionDay1:
+				DialogueManager.showDialogue(Dialogue_Path[4])
+			
+		elif ObjectiveManager.day_part_count == 6 or ObjectiveManager.day_part_count == 7:
+			DialogueManager.showDialogue(Dialogue_Path[3])
+			
+		if ObjectiveManager.day_part_count == 8 or ObjectiveManager.day_part_count == 9 or ObjectiveManager.day_part_count == 10 or ObjectiveManager.day_part_count == 11:
+			DialogueManager.showDialogue(Dialogue_Path[5])
+			
+	if prompt_message == "Talk to Siegfried":
+		Interacted.emit()
+		if ObjectiveManager.day_part_count == 0 or ObjectiveManager.day_part_count == 1 or ObjectiveManager.day_part_count == 2 or ObjectiveManager.day_part_count == 3:
+			DialogueManager.showDialogue(Dialogue_Path[0])
+			
+		if ObjectiveManager.day_part_count == 4 or ObjectiveManager.day_part_count == 5 or ObjectiveManager.day_part_count == 6 or ObjectiveManager.day_part_count == 7:
+			DialogueManager.showDialogue(Dialogue_Path[1])
+				
+		if ObjectiveManager.day_part_count == 8 or ObjectiveManager.day_part_count == 9 or ObjectiveManager.day_part_count == 10 or ObjectiveManager.day_part_count == 11:
+			DialogueManager.showDialogue(Dialogue_Path[2])
+	
+	if prompt_message == "Talk to Sarolf":
+		Interacted.emit()
+		if ObjectiveManager.day_part_count == 0 or ObjectiveManager.day_part_count == 1 or ObjectiveManager.day_part_count == 2 or ObjectiveManager.day_part_count == 3:
+			DialogueManager.showDialogue(Dialogue_Path[0])
+			
+		if ObjectiveManager.day_part_count == 4 or ObjectiveManager.day_part_count == 5 or ObjectiveManager.day_part_count == 6 or ObjectiveManager.day_part_count == 7:
+			DialogueManager.showDialogue(Dialogue_Path[1])
+				
+		if ObjectiveManager.day_part_count == 8 or ObjectiveManager.day_part_count == 9 or ObjectiveManager.day_part_count == 10 or ObjectiveManager.day_part_count == 11:
+			DialogueManager.showDialogue(Dialogue_Path[2])
+			
+	if prompt_message == "Talk to Arnulf":
+		Interacted.emit()
+		if ObjectiveManager.day_part_count == 0 or ObjectiveManager.day_part_count == 1 or ObjectiveManager.day_part_count == 2 or ObjectiveManager.day_part_count == 3:
+			DialogueManager.showDialogue(Dialogue_Path[0])
+			
+		if ObjectiveManager.day_part_count == 4 or ObjectiveManager.day_part_count == 5 or ObjectiveManager.day_part_count == 6 or ObjectiveManager.day_part_count == 7:
+			DialogueManager.showDialogue(Dialogue_Path[1])
+				
+		if ObjectiveManager.day_part_count == 8 or ObjectiveManager.day_part_count == 9 or ObjectiveManager.day_part_count == 10 or ObjectiveManager.day_part_count == 11:
+			DialogueManager.showDialogue(Dialogue_Path[2])
+	
+	if prompt_message == "Talk to Falko":
+		Interacted.emit()
+		if ObjectiveManager.day_part_count == 0 or ObjectiveManager.day_part_count == 1:
+			DialogueManager.showDialogue(Dialogue_Path[0])
+			
+		if ObjectiveManager.day_part_count == 2 or ObjectiveManager.day_part_count == 3:
+			DialogueManager.showDialogue(Dialogue_Path[1])
+		
+		if ObjectiveManager.day_part_count == 4 or ObjectiveManager.day_part_count == 5 or ObjectiveManager.day_part_count == 6 or ObjectiveManager.day_part_count == 7:
+			DialogueManager.showDialogue(Dialogue_Path[2])
+				
+		if ObjectiveManager.day_part_count == 8 or ObjectiveManager.day_part_count == 9 or ObjectiveManager.day_part_count == 10 or ObjectiveManager.day_part_count == 11:
+			DialogueManager.showDialogue(Dialogue_Path[3])
+			
+	if prompt_message == "Talk to Wolf":
+		Interacted.emit()
+		if ObjectiveManager.day_part_count == 0 or ObjectiveManager.day_part_count == 1 or ObjectiveManager.day_part_count == 2 or ObjectiveManager.day_part_count == 3:
+			DialogueManager.showDialogue(Dialogue_Path[0])
+			
+		if ObjectiveManager.day_part_count == 4 or ObjectiveManager.day_part_count == 5 or ObjectiveManager.day_part_count == 6 or ObjectiveManager.day_part_count == 7:
+			DialogueManager.showDialogue(Dialogue_Path[1])
+				
+		if ObjectiveManager.day_part_count == 8 or ObjectiveManager.day_part_count == 9 or ObjectiveManager.day_part_count == 10 or ObjectiveManager.day_part_count == 11:
+			DialogueManager.showDialogue(Dialogue_Path[2])
+	
 

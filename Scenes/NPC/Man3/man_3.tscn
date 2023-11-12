@@ -107,7 +107,8 @@ shape = SubResource("CapsuleShape3D_33uso")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_co4bg")
-prompt_message = "Talk"
+Dialogue_Path = PackedStringArray("res://Assets/Dialogues/NPC/Man3/Day1.json", "res://Assets/Dialogues/NPC/Man3/Day2.json", "res://Assets/Dialogues/NPC/Man3/Day3.json")
+prompt_message = "Talk to Sarolf"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBodyInteraction"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0787395, 1.74338, -0.531831)

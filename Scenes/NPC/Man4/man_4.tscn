@@ -108,7 +108,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("3_0527o")
-prompt_message = "Talk"
+Dialogue_Path = PackedStringArray("res://Assets/Dialogues/NPC/Man4/Day1.json", "res://Assets/Dialogues/NPC/Man4/Day2.json", "res://Assets/Dialogues/NPC/Man4/Day3.json")
+prompt_message = "Talk to Arnulf"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBodyInteraction"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0787395, 1.74338, -0.531831)

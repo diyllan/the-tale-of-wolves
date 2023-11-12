@@ -1,4 +1,5 @@
 [
-	{"Name":"[center]Ulf[/center]", "Text":"[center]Hello Redcap what are you doing today?[/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Ulf[/center]", "Text":"[center]That is so nice of you I bless you and your Grandma.[/center]", "Voice":"","Sound":""}
+	{"Name":"[center]Ulf[/center]", "Text":"[center]Hello Redcap what are you doing today?[/center]", "Voice":"Man1_1_1_1","Sound":""},
+	{"Name":"[center]Lil Red Cap[/center]", "Text":"[center]I need some Bread for my Grandma.[/center]", "Voice":"","Sound":""},
+	{"Name":"[center]Ulf[/center]", "Text":"[center]That is so nice of you I bless you and your Grandma.[/center]", "Voice":"Man1_1_1_2","Sound":""}
 ]

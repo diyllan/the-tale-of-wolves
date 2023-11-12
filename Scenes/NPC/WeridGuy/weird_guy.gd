@@ -5,6 +5,7 @@ enum {
 	WALKING,
 	TALKING,
 	STANDING,
+	CHASE,
 }
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -23,9 +24,11 @@ var interacted = false
 var dialogue_ended = false
 var randomTime
 var cutscene = false
+var cutscene2 = false
 var repos = false
 
 @export var SPEED = 3
+@export var CHASE_SPEED = 18
 
 @onready var animPlayer = get_child(0).get_node("AnimationPlayer")
 @onready var nav_agent = $NavigationAgent3D
@@ -42,6 +45,8 @@ func _ready():
 	
 	$"../../../Triggers".connect("WeirdGuySceneStart", CutsceneStart)
 	$"../../../Triggers".connect("WeirdGuySceneEnd", CutsceneEnd)
+	$"../../../Triggers".connect("WeirdGuyScene2Start", Cutscene2Start)
+	$"../../../Triggers".connect("WeirdGuyScene2End", Cutscene2End)
 	
 func CutsceneStart():
 	cutscene = true
@@ -49,12 +54,23 @@ func CutsceneEnd():
 	cutscene = false
 	state = WALKING
 
+func Cutscene2Start():
+	cutscene2 = true
+func Cutscene2End():
+	cutscene2 = false
+
 func _process(delta):
 	velocity = Vector3.ZERO
 	setGravity(delta)
 	if cutscene or ObjectiveManager.day_part_count == 3:
 		state = STANDING
-
+	
+	if cutscene and ObjectiveManager.day_part_count == 7:
+		state = CHASE
+	
+	if cutscene2 and ObjectiveManager.day_part_count == 7:
+		state = STANDING
+		
 	match state:
 		IDLE:
 			animPlayer.play("Idle")	
@@ -81,6 +97,9 @@ func _process(delta):
 			if !repos:
 				repos = true
 				get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/CutscenePlayer").play("WeirdGuyRepos1")
+		CHASE:
+			animPlayer.play("Walking")
+			chase()
 			
 func setGravity(delta):
 	if not is_on_floor():
@@ -106,7 +125,12 @@ func random_roaming():
 	var intended_velocity = direction * SPEED
 	nav_agent.set_velocity(intended_velocity)
 	
-	
+func chase():
+	nav_agent.set_target_position(player.global_transform.origin)
+	var next_nav_point = nav_agent.get_next_path_position()
+	velocity = (next_nav_point - global_transform.origin).normalized() * CHASE_SPEED
+	look_at(global_transform.origin + velocity)
+	move_and_slide()
 
 func is_at_target_position(): 
 	# Stop moving when at target +/- tolerance
