@@ -127,3 +127,6 @@ func _input(event):
 #		lighting_strike = true;
 	if event.is_action_pressed("skiptime"):
 		day_part_count += 1
+
+#unc load_Current_Objective():
+	

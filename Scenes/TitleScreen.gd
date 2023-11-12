@@ -26,8 +26,7 @@ func _on_start_pressed():
 	
 
 func _on_continue_pressed():
-	SceneManager.changeScene(SceneManager.world)
-	SaveLoad.load_game() # Replace with function body.
+	SceneManager.reloadSceneWithTransition(SceneManager.world)
 
 
 func _on_quit_pressed():

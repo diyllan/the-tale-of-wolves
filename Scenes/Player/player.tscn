@@ -77,7 +77,7 @@ _data = {
 "RESET": SubResource("Animation_yk7vp")
 }
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["Persist", "Player"]]
 collision_mask = 9
 script = ExtResource("1_x0tal")
 
