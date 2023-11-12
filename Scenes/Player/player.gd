@@ -12,7 +12,8 @@ var hiding = false
 var leaveHiding = false
 var death = false
 
-
+var enableLight = false
+var enableLightOnce = false
 var hidingPos
 var xMaxRotation = 60
 var xMinRotation = -60
@@ -100,8 +101,13 @@ func _physics_process(delta):
 
 	playerHide()
 	
+	if enableLight and !enableLightOnce:
+		enableLightOnce = true
+		$OmniLight3D.show()
+	
 func playerHide():
 	if hiding:
+		$OmniLight3D.hide()
 		get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/Prompt").hide()
 		get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/HiddenPrompt").text = "Leave\n[E]"
 		get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/Crosshair").hide()
@@ -126,6 +132,8 @@ func playerHide():
 			HeavyBreathingPlaying = false
 
 	if hiding and Input.is_action_just_pressed("interact"):
+		if enableLight:
+			$OmniLight3D.show()
 		if HeavyBreathingPlaying:
 			HeavyBreathingPlaying = false
 			HeavyBreathing.stop()

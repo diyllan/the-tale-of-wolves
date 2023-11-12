@@ -57,6 +57,9 @@ func interact(body):
 		body.hasPlanks = true
 		get_parent().hide()
 		self.queue_free()
+	
+	if prompt_message == "Pick up Basket":
+		body.enableLight = true
 #NPC DIALOGUE STUFF
 	if prompt_message == "Mother":
 		Interacted.emit()
