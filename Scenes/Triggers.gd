@@ -195,7 +195,7 @@ func _on_weird_return_pos_2_body_entered(body):
 			cutscene.play("WeirdGuyReturnPos")
 
 
-func _on_ending_cutscene_trigger_body_entered(body):
+func _on_ending_cutscene_body_entered(body):
 	if body.is_in_group("Player"):
 		if !endingPlayed:
 			endingPlayed = true

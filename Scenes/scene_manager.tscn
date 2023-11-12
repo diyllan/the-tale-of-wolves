@@ -3,6 +3,46 @@
 [ext_resource type="Script" path="res://Scenes/SceneManager.gd" id="1_cyeqp"]
 [ext_resource type="Texture2D" uid="uid://hchdy1cffoow" path="res://Assets/UI/MoonlilyLogo/MoonLilyLogoGradient.png" id="2_nuxw3"]
 
+[sub_resource type="Animation" id="Animation_ntx25"]
+resource_name = "Credits"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gradient:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 14.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 14.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RichTextLabel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 14.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(284, 1103), Vector2(284, -5854)]
+}
+
 [sub_resource type="Animation" id="Animation_c76u1"]
 length = 0.001
 tracks/0/type = "value"
@@ -16,6 +56,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(284, 1103)]
 }
 
 [sub_resource type="Animation" id="Animation_tuxup"]
@@ -278,46 +330,6 @@ tracks/5/keys = {
 "values": [true, false]
 }
 
-[sub_resource type="Animation" id="Animation_ntx25"]
-resource_name = "Credits"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Gradient:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("RichTextLabel:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("RichTextLabel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(284, 45), Vector2(284, -673)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v5rdj"]
 _data = {
 "Credits": SubResource("Animation_ntx25"),
@@ -425,21 +437,97 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -676.0
-offset_top = -495.0
-offset_right = 719.0
-offset_bottom = 399.001
+offset_left = 284.0
+offset_top = 1103.0
+offset_right = 1679.0
+offset_bottom = 7152.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
-text = "[center][font_size=150]Credits[/font_size]
+text = "[center] [font_size=150]Credits[/font_size] 
 
-[font_size=150]VoiceActors[/font_size]
-LilRedCap: Tiffany
-LilRedCap: Tiffany
-LilRedCap: Tiffany[/center]"
+[font_size=50]Story building[/font_size] 
+Diyllan
+Table/Painfully Sad
+Fany
+
+[font_size=50]Game Design[/font_size] 
+Diyllan
+Table/Painfully Sad
+Fany
+
+[font_size=50]Modelling[/font_size] 
+Diyllan
+Table Painfully Sad
+
+[font_size=50]Programming[/font_size] 
+Diyllan
+Table/Painfully Sad 
+Jonas
+
+[font_size=150] Voice Actors[/font_size] 
+[font_size=50]Narrator[/font_size] 
+Table/Painfully Sad
+
+[font_size=50]Lil Red Cap[/font_size] 
+Fany
+
+[font_size=50]Baker[/font_size] 
+Reevali
+
+[font_size=50]Blonde Boy[/font_size] 
+Lucu
+
+[font_size=50]Brunhilde[/font_size] 
+Fany
+
+[font_size=50]Erwin[/font_size] 
+MarcHatePage
+
+[font_size=50]Ulf[/font_size] 
+Percivald the Pure
+
+[font_size=50]Siegfried[/font_size] 
+MaikuTempest
+
+[font_size=50]Sarolf[/font_size] 
+MaikuTempest
+
+[font_size=50]Arnulf[/font_size] 
+MaikuTempest
+
+[font_size=50]Falko[/font_size] 
+Percivald the Pure
+
+[font_size=50]Mother[/font_size] 
+Jamie S.
+
+[font_size=50]Wolf[/font_size] 
+Daemon Maxwell
+
+[font_size=50]Adalbert[/font_size] 
+L
+
+[font_size=50]Alwina[/font_size] 
+Jamie S.
+
+[font_size=50]Rosaline[/font_size] 
+Jamie S.
+
+[font_size=50]Gwendolin[/font_size] 
+Jamie S.
+
+[font_size=50]Elfriede[/font_size] 
+Senery
+
+[font_size=50]Gertrud[/font_size] 
+Fany
+
+[font_size=50]Grandma | Werewolf[/font_size] 
+Diyllan
+[/center]"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../CanvasLayer")
