@@ -79,6 +79,8 @@ func load_Next_Objective():
 	#disable objective on the current objective
 	var old_objective = get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction")
 	old_objective.remove_from_group("Objective")
+	if (day_part_count == 1 or day_part_count == 5 or day_part_count == 8 or day_part_count == 9 or day_part_count == 10):
+		get_tree().root.get_node(world_path + objective_library.values()[day_part_count]).queue_free()
 	#increase day part by one
 	day_part_count += 1
 	#set the new objective text
