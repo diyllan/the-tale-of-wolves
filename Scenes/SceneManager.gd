@@ -32,21 +32,6 @@ func changeSceneWithTransition(scenePath):
 	await animPlayer.animation_finished
 	fadeoutRect.hide()
 	
-func reloadSceneWithTransition(scenePath):
-	fadeoutRect.show()
-	animPlayer.play("TransIn")
-	await animPlayer.animation_finished
-	var child = viewport.get_child(1)
-	child.queue_free()
-	var scene = scenePath.instantiate()
-	viewport.add_child(scene)
-	SoundManager.stopAllSounds()
-	SoundManager.playAmbience("NatureAmbience")
-	animPlayer.play("TransOut")
-	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").titleScreen = false
-	await animPlayer.animation_finished
-	fadeoutRect.hide()
-	SaveLoad.load_game()
 
 func changeScene(scenePath):
 	var child = viewport.get_child(1)
