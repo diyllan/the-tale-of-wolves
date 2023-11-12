@@ -33,7 +33,6 @@ var repos = false
 @onready var animPlayer = get_child(0).get_node("AnimationPlayer")
 @onready var nav_agent = $NavigationAgent3D
 @onready var idle_Walking_timer = $Idle_Walking
-@onready var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
 
 func _ready():
 	nav_agent.velocity_computed.connect(_on_nav_velocity_computed)
@@ -86,6 +85,7 @@ func _process(delta):
 				state = IDLE
 
 		TALKING:
+			var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
 			look_at(player.global_transform.origin, Vector3.UP)
 			animPlayer.play("Idle")
 			if !interacted:
@@ -128,6 +128,7 @@ func random_roaming():
 	nav_agent.set_velocity(intended_velocity)
 	
 func chase():
+	var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
 	nav_agent.set_target_position(player.global_transform.origin)
 	var next_nav_point = nav_agent.get_next_path_position()
 	velocity = (next_nav_point - global_transform.origin).normalized() * CHASE_SPEED

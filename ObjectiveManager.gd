@@ -70,6 +70,8 @@ func load_Next_Objective():
 		#next load = not mother
 		general_objective = false
 		return
+		
+	SaveLoad.save_game()
 	
 	if (day_part_count == 3 or day_part_count == 7):
 		#next load = mother
@@ -96,6 +98,9 @@ func load_Next_Objective():
 		#no more objectives to complete
 		set_Objective("You reached grandma with all the items!")
 		return
+		
+	if (day_part_count == 8):
+		get_tree().root.get_node(world_path + "Player/OmniLight3D").show()
 	
 	if (day_part_count == 2 or day_part_count == 6 or day_part_count == 10):
 		for npc in npc_list:
@@ -128,5 +133,40 @@ func _input(event):
 	if event.is_action_pressed("skiptime"):
 		day_part_count += 1
 
-#unc load_Current_Objective():
+func load_Current_Objective():
+	if (day_part_count > 1 and get_tree().root.get_node(world_path + objective_library.values()[1]) != null):
+		get_tree().root.get_node(world_path + objective_library.values()[1]).queue_free()
+	if (day_part_count > 5 and get_tree().root.get_node(world_path + objective_library.values()[5]) != null):
+		get_tree().root.get_node(world_path + objective_library.values()[5]).queue_free()
+	if (day_part_count > 8 and get_tree().root.get_node(world_path + objective_library.values()[8]) != null):
+		get_tree().root.get_node(world_path + objective_library.values()[8]).queue_free()
+		get_tree().root.get_node(world_path + "Player/OmniLight3D").show()
+	if (day_part_count > 9 and get_tree().root.get_node(world_path + objective_library.values()[9]) != null):
+		get_tree().root.get_node(world_path + objective_library.values()[9]).queue_free()
+	if (day_part_count > 10 and get_tree().root.get_node(world_path + objective_library.values()[10]) != null):
+		get_tree().root.get_node(world_path + objective_library.values()[10]).queue_free()
 	
+	if (day_part_count == 0 or day_part_count == 4 or day_part_count == 8):
+		general_objective = true
+		return
+	
+	#if not 0 4 8 -> remove mother and load current objective
+	#disable objective on the current objective
+	var old_objective = get_tree().root.get_node(world_path + objective_library.values()[mother_objective] + "/StaticBodyInteraction")
+	old_objective.remove_from_group("Objective")
+	#set the new objective text
+	set_Objective(objective_library.keys()[day_part_count])
+	#for some objectives - in day 3 - we only now show them
+	if (day_part_count == 9 or day_part_count == 10):
+		get_tree().root.get_node(world_path + objective_library.values()[day_part_count]).show()
+		get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction").set_collision_layer_value(4, true)
+	#enable objective on the new objective -> currently disabled because not all objective models don't exist yet - would error
+	var new_objective = get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction")
+	new_objective.add_to_group("Objective")
+	
+	if (day_part_count == 3 or day_part_count == 7 or day_part_count == 11):
+		for npc in npc_list:
+			print(npc)
+			var npcitem = get_tree().root.get_node(world_path + npc)
+			npcitem.hide()
+			npcitem.get_node("StaticBodyInteraction").set_collision_layer_value(4, false)

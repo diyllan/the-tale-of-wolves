@@ -1665,6 +1665,147 @@ tracks/3/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_my56i"]
+resource_name = "EndingCutscene"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-12.8101, 2.76695, 11.8037)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.30643, -3.08414, -0.0370552)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D/Head:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.00724267, -0.0863161, 0.212511), Vector3(0.397011, 0.596687, -0.392518)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-607.503, 0.43927, -146.379), Vector3(-608.066, 0.439271, -142.942)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2.6929, 0), Vector3(0, 4.32318, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p1146"]
+resource_name = "EndingDeathCutscene"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-12.8101, 2.76695, 11.8037), Vector3(-16.596, 1.36961, 11.9712)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.30643, -3.08414, -0.0370552), Vector3(0.235337, -1.81811, -0.0844295)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D/Head:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00724267, -0.0863161, 0.212511)]
+}
+tracks/3/type = "animation"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/AnimationPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": PackedStringArray("NeckBite", "NeckBite"),
+"times": PackedFloat32Array(2, 6.2)
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Scream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("80_20qtm")
+}],
+"times": PackedFloat32Array(2)
+}
+tracks/4/use_blend = true
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Camera3D:current")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_dik45"]
 resource_name = "Hole"
 length = 7.0
@@ -1920,147 +2061,6 @@ tracks/1/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_my56i"]
-resource_name = "EndingCutscene"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-12.8101, 2.76695, 11.8037)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.30643, -3.08414, -0.0370552)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D/Head:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-0.00724267, -0.0863161, 0.212511), Vector3(0.397011, 0.596687, -0.392518)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Player:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-607.503, 0.43927, -146.379), Vector3(-608.066, 0.439271, -142.942)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Player:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 2.6929, 0), Vector3(0, 4.32318, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_p1146"]
-resource_name = "EndingDeathCutscene"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-12.8101, 2.76695, 11.8037), Vector3(-16.596, 1.36961, 11.9712)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-1.30643, -3.08414, -0.0370552), Vector3(0.235337, -1.81811, -0.0844295)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D/Head:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.00724267, -0.0863161, 0.212511)]
-}
-tracks/3/type = "animation"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/AnimationPlayer")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"clips": PackedStringArray("NeckBite", "NeckBite"),
-"times": PackedFloat32Array(2, 6.2)
-}
-tracks/4/type = "audio"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Scream")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("80_20qtm")
-}],
-"times": PackedFloat32Array(2)
-}
-tracks/4/use_blend = true
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Camera3D:current")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mturv"]
 _data = {
 "BoyWhoCriesWolf1": SubResource("Animation_gtcxa"),
@@ -2100,8 +2100,6 @@ volume_db = -10.0
 
 [node name="Player" parent="." instance=ExtResource("1_6k6ey")]
 transform = Transform3D(-0.199261, 0, -0.979947, 0, 1, 0, 0.979947, 0, -0.199261, -377.861, 0.43927, -468.8)
-collision_layer = 2
-collision_mask = 265
 floor_max_angle = 1.13446
 
 [node name="LittleRedCapAnim" parent="Player" index="0"]
@@ -2390,46 +2388,46 @@ bones/31/rotation = Quaternion(0.0328571, 0.157057, -0.763911, 0.625055)
 transform = Transform3D(0.519691, 0.0956742, -0.074221, -0.102229, 0.521962, -0.0429671, 0.0648968, 0.0560654, 0.526675, 0.106373, 1.75833, 0.142193)
 
 [node name="Neck" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.95906, 0.215663, -0.183558, -0.232186, 0.969882, -0.0736146, 0.162154, 0.113221, 0.980249, 0.0108643, 1.25534, 0.100549)
+transform = Transform3D(0.95906, 0.215663, -0.183558, -0.232186, 0.969882, -0.0736146, 0.162154, 0.11322, 0.980249, 0.0108643, 1.25534, 0.100548)
 
 [node name="Hands Left" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.11598, -0.603086, -0.789199, 0.905184, 0.391273, -0.165975, 0.40889, -0.69512, 0.591283, -0.247538, 0.424164, 0.424029)
+transform = Transform3D(0.115982, -0.603087, -0.789198, 0.905183, 0.391274, -0.165975, 0.40889, -0.695119, 0.591284, -0.247537, 0.424163, 0.424029)
 
 [node name="Arm Lower Left" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.0970094, -0.261637, -0.960278, 0.906827, 0.420872, -0.0230611, 0.410188, -0.868569, 0.278088, -0.632745, 0.782238, -0.302767)
+transform = Transform3D(0.0970106, -0.261638, -0.960278, 0.906826, 0.420873, -0.0230602, 0.410189, -0.868569, 0.278089, -0.632744, 0.782239, -0.302767)
 
 [node name="Arm Upper Left" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.795481, 0.53331, -0.287733, -0.488262, 0.845313, 0.216902, 0.3589, -0.0320517, 0.932825, -0.0704304, 1.16377, 0.061967)
+transform = Transform3D(0.795481, 0.53331, -0.287732, -0.488263, 0.845312, 0.216902, 0.3589, -0.0320517, 0.932825, -0.0704302, 1.16377, 0.061967)
 
 [node name="Hands Right" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(-0.208434, -0.811358, 0.546125, 0.816118, 0.163437, 0.554292, -0.538986, 0.561236, 0.6281, -0.0082216, 0.114649, -0.199642)
+transform = Transform3D(-0.208434, -0.811358, 0.546126, 0.816118, 0.163437, 0.554292, -0.538986, 0.561236, 0.628099, -0.00822231, 0.114649, -0.199643)
 
 [node name="Arm Lower Right" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.00542618, -0.536056, 0.844165, 0.921568, 0.330378, 0.203871, -0.38818, 0.776849, 0.495805, -0.626489, 0.582341, 0.326454)
+transform = Transform3D(0.00542622, -0.536056, 0.844165, 0.921568, 0.330378, 0.203871, -0.38818, 0.776849, 0.495805, -0.626489, 0.582341, 0.326454)
 
 [node name="Arm Upper Right" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="7"]
-transform = Transform3D(0.949454, 0.285598, 0.130273, -0.257634, 0.946073, -0.196392, -0.179337, 0.152902, 0.971834, -0.113466, 1.09095, 0.103619)
+transform = Transform3D(0.949453, 0.285598, 0.130274, -0.257634, 0.946073, -0.196392, -0.179338, 0.152902, 0.971833, -0.113467, 1.09095, 0.103619)
 
 [node name="Torso Upper" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="8"]
-transform = Transform3D(0.980238, 0.16914, -0.102595, -0.179029, 0.979115, -0.0963432, 0.0841568, 0.112807, 0.990047, -0.0562785, 0.898783, 0.072782)
+transform = Transform3D(0.980238, 0.16914, -0.102595, -0.179029, 0.979115, -0.0963431, 0.0841568, 0.112807, 0.990047, -0.0562785, 0.898783, 0.0727819)
 
 [node name="Feet Left" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(-0.084349, 0.960797, 0.264135, -0.980341, -0.0325725, -0.194571, -0.178337, -0.275356, 0.944656, -0.563767, -0.650074, -0.0258659)
+transform = Transform3D(-0.0843481, 0.960797, 0.264134, -0.980341, -0.0325718, -0.194571, -0.178337, -0.275356, 0.944656, -0.563767, -0.650074, -0.0258658)
 
 [node name="Leg Lower Left" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(-0.332556, 0.939589, 0.0811732, -0.938137, -0.320785, -0.130319, -0.0964047, -0.119492, 0.988143, 0.73335, -1.11405, -0.175082)
+transform = Transform3D(-0.332556, 0.939589, 0.0811734, -0.938138, -0.320785, -0.130319, -0.0964046, -0.119492, 0.988144, 0.733351, -1.11405, -0.175082)
 
 [node name="Legs Upper Left" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.94165, -0.28766, 0.174775, 0.30261, 0.950869, -0.0653793, -0.147382, 0.114453, 0.982435, -0.103856, -0.128301, -0.00662795)
+transform = Transform3D(0.94165, -0.28766, 0.174776, 0.30261, 0.950869, -0.0653793, -0.147382, 0.114454, 0.982435, -0.103856, -0.128301, -0.0066279)
 
 [node name="Feet Right" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.982981, -0.175707, -0.0535694, 0.172117, 0.982889, -0.0656588, 0.0641911, 0.0553228, 0.996403, 0.341987, -1.29363, -0.16886)
+transform = Transform3D(0.982981, -0.175708, -0.0535697, 0.172118, 0.982888, -0.065659, 0.0641914, 0.0553229, 0.996403, 0.341989, -1.29363, -0.16886)
 
 [node name="Leg Lower Right" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.993364, 0.101097, -0.0547723, -0.110205, 0.972965, -0.202977, 0.0327724, 0.207669, 0.97765, 0.503861, 0.0892967, 0.136517)
+transform = Transform3D(0.993365, 0.101096, -0.0547722, -0.110204, 0.972965, -0.202977, 0.0327726, 0.207669, 0.97765, 0.503861, 0.0892971, 0.136517)
 
 [node name="Legs Upper Right" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.70304, -0.697837, -0.136965, 0.681352, 0.716137, -0.151346, 0.203701, 0.0130809, 0.978945, -0.0764932, -0.0790806, 0.000132695)
+transform = Transform3D(0.70304, -0.697837, -0.136965, 0.681353, 0.716137, -0.151346, 0.203701, 0.0130809, 0.978946, -0.0764932, -0.0790806, 0.00013268)
 
 [node name="Torso Lower" parent="NPC/Villagers/Boy/BoyAnim/Armature/Skeleton3D" index="15"]
 transform = Transform3D(1, -2.9886e-09, -4.57967e-16, 2.9886e-09, 1, 8.65839e-08, 2.22045e-16, -8.65839e-08, 1, -0.153397, 0.909699, 0.00858675)
@@ -2513,6 +2511,54 @@ transform = Transform3D(1, -2.67755e-09, 5.82072e-11, 2.67755e-09, 1, 7.46513e-0
 transform = Transform3D(0.0906847, 0, 0.99588, 0, 1, 0, -0.99588, 0, 0.0906847, 15.2181, 0, -20.6711)
 collision_layer = 4
 collision_mask = 1
+
+[node name="Head_001" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.487628, 0.197033, -0.0902139, -0.211198, 0.481854, -0.08918, 0.0485345, 0.117201, 0.518314, 0.282355, 1.70586, 0.137355)
+
+[node name="Neck" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.853956, 0.506974, -0.117203, -0.519386, 0.844151, -0.132841, 0.0315903, 0.174314, 0.984183, 0.0838157, 1.24371, 0.0403475)
+
+[node name="Hands Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.673662, 0.518313, -0.526811, -0.261398, 0.833863, 0.48615, 0.691267, -0.189793, 0.697228, -0.799031, 0.601062, -0.0562009)
+
+[node name="Arm Lower Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="3"]
+transform = Transform3D(0.635655, 0.680222, -0.36502, -0.4391, 0.707489, 0.55376, 0.634927, -0.19172, 0.748404, -0.309546, 1.09898, -0.11341)
+
+[node name="Arm Upper Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="4"]
+transform = Transform3D(0.636665, 0.699805, -0.323929, -0.691669, 0.703956, 0.161366, 0.340957, 0.121316, 0.932218, -0.0677835, 1.09568, 0.0262918)
+
+[node name="Hands Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="5"]
+transform = Transform3D(0.85229, 0.367002, 0.372707, -0.113143, 0.825019, -0.553662, -0.510685, 0.429712, 0.74468, -0.745027, 0.62851, -0.135652)
+
+[node name="Arm Lower Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="6"]
+transform = Transform3D(0.795091, 0.583103, 0.166798, -0.375602, 0.689348, -0.619454, -0.476187, 0.429872, 0.76711, -0.273193, 1.10144, 0.102898)
+
+[node name="Arm Upper Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="7"]
+transform = Transform3D(0.6908, 0.721885, -0.0409539, -0.695937, 0.648469, -0.30848, -0.19613, 0.2416, 0.95035, 0.0686003, 1.12444, 0.0778727)
+
+[node name="Torso Upper" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="8"]
+transform = Transform3D(0.974203, 0.224866, -0.0190685, -0.225381, 0.973759, -0.0315814, 0.0114666, 0.0350644, 0.999319, -0.0232789, 0.896757, 0.0287246)
+
+[node name="Feet Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="9"]
+transform = Transform3D(0.942709, 0.230835, 0.240861, -0.190416, 0.965123, -0.179661, -0.273933, 0.123502, 0.953786, -0.30117, -1.4091, -0.697556)
+
+[node name="Leg Lower Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="10"]
+transform = Transform3D(0.950212, 0.274508, 0.147451, -0.175414, 0.862341, -0.474971, -0.257537, 0.425458, 0.86756, 0.0829405, -0.217811, -0.0810535)
+
+[node name="Legs Upper Left" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="11"]
+transform = Transform3D(0.95108, -0.00669721, 0.308871, 0.151517, 0.881382, -0.447447, -0.269237, 0.472357, 0.839279, -0.0980944, -0.187734, -0.0514899)
+
+[node name="Feet Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="12"]
+transform = Transform3D(0.909161, 0.270147, -0.316937, -0.293762, 0.955459, -0.0282851, 0.295176, 0.11882, 0.948025, -0.447416, -1.44226, -0.184832)
+
+[node name="Leg Lower Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="13"]
+transform = Transform3D(0.875516, 0.430711, -0.219004, -0.455563, 0.88686, -0.0770579, 0.161036, 0.167236, 0.972676, 0.159826, -0.188119, 0.0418459)
+
+[node name="Legs Upper Right" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="14"]
+transform = Transform3D(0.996834, 0.0485278, -0.0629848, -0.0552021, 0.992514, -0.108944, 0.0572264, 0.112076, 0.99205, -0.143609, -0.0904325, -0.00580773)
+
+[node name="Torso Lower" parent="NPC/Villagers/Man1/Man1Anim/Armature/Skeleton3D" index="15"]
+transform = Transform3D(1, -1.11759e-08, 1.86264e-08, 1.11759e-08, 1, 7.82311e-08, -1.86265e-08, -7.82311e-08, 1, -0.153397, 0.909699, 0.00858675)
 
 [node name="NavigationAgent3D" parent="NPC/Villagers/Man1" index="3"]
 debug_enabled = false
@@ -3605,63 +3651,63 @@ bones/30/rotation = Quaternion(0.000558398, -0.0194856, 0.59472, 0.803697)
 bones/31/rotation = Quaternion(0.0318752, 0.0392942, -0.842367, 0.536525)
 
 [node name="Head" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.973997, -0.209519, -0.0862067, 0.210909, 0.977479, 0.0072426, 0.0827478, -0.0252361, 0.996251, -0.60715, 3.42923, -0.0048344)
+transform = Transform3D(0.973997, -0.209518, -0.0862067, 0.210908, 0.977479, 0.00724262, 0.0827477, -0.025236, 0.996251, -0.607149, 3.42923, -0.00483434)
 bone_idx = 5
 
 [node name="Neck" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.976518, -0.199215, -0.0820137, 0.199618, 0.979868, -0.00333715, 0.0810274, -0.0131126, 0.996626, -0.416943, 2.52703, 0.0155736)
+transform = Transform3D(0.976518, -0.199215, -0.0820137, 0.199618, 0.979868, -0.00333714, 0.0810274, -0.0131126, 0.996626, -0.416943, 2.52703, 0.0155736)
 bone_idx = 6
 
 [node name="Hand Left" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.190721, -0.146857, 0.970597, 0.367955, 0.927353, 0.0680111, -0.910074, 0.344165, 0.230903, 0.716938, -0.00739177, -0.175125)
+transform = Transform3D(0.19072, -0.146857, 0.970597, 0.367954, 0.927353, 0.068012, -0.910075, 0.344164, 0.230902, 0.71694, -0.00739008, -0.175124)
 bone_idx = 11
 
 [node name="Arm Lower Left" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.999567, 0.0108829, -0.0273222, -0.0135961, 0.994777, -0.101164, 0.0260786, 0.101492, 0.994494, -1.0718, -0.763091, -0.290762)
+transform = Transform3D(0.999567, 0.0108824, -0.027322, -0.0135954, 0.994777, -0.101163, 0.0260784, 0.101491, 0.994494, -1.0718, -0.763091, -0.290759)
 bone_idx = 12
 
 [node name="Arm Upper Left" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.921679, 0.38789, 0.00698987, -0.386107, 0.9189, -0.0809002, -0.0378034, 0.0718652, 0.996698, -0.430693, 2.0395, -0.00484616)
+transform = Transform3D(0.921679, 0.38789, 0.00699008, -0.386107, 0.9189, -0.0808994, -0.0378032, 0.0718644, 0.996698, -0.430693, 2.0395, -0.00484592)
 bone_idx = 13
 
 [node name="Hand Right" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(-0.209276, -0.179528, -0.961235, 0.317493, 0.917271, -0.24044, 0.924879, -0.355504, -0.134965, 1.25967, 0.19638, 0.418686)
+transform = Transform3D(-0.209276, -0.179529, -0.961235, 0.317492, 0.917271, -0.240441, 0.924879, -0.355503, -0.134964, 1.25967, 0.196381, 0.418685)
 bone_idx = 18
 
 [node name="Arm Lower Right" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.977897, -0.115849, -0.174059, 0.116747, 0.993149, -0.00510744, 0.173458, -0.0153263, 0.984722, -0.516446, -0.792045, -0.0767409)
+transform = Transform3D(0.977897, -0.115849, -0.174059, 0.116747, 0.993149, -0.00510764, 0.173458, -0.015326, 0.984722, -0.516446, -0.792045, -0.0767411)
 bone_idx = 19
 
 [node name="Arm Upper Right" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="7"]
-transform = Transform3D(0.94803, 0.241049, -0.20769, -0.248188, 0.968673, -0.00862865, 0.199104, 0.0597264, 0.978157, -0.264172, 2.06012, -0.0220672)
+transform = Transform3D(0.94803, 0.241048, -0.20769, -0.248187, 0.968673, -0.00862871, 0.199103, 0.0597263, 0.978157, -0.264172, 2.06012, -0.0220673)
 bone_idx = 20
 
 [node name="Body Upper" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="8"]
-transform = Transform3D(0.97063, -0.2405, -0.00604643, 0.240469, 0.970642, -0.00533372, 0.00715168, 0.00372309, 0.999968, -0.23029, 1.77811, 0.00768969)
+transform = Transform3D(0.97063, -0.2405, -0.00604644, 0.240469, 0.970642, -0.00533374, 0.00715169, 0.0037231, 0.999968, -0.230291, 1.77811, 0.00768971)
 bone_idx = 21
 
 [node name="Feet Left" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.718959, -0.585435, 0.374654, 0.648716, 0.758715, -0.0593149, -0.249527, 0.28569, 0.925262, 0.30156, -1.199, -0.240834)
+transform = Transform3D(0.71896, -0.585434, 0.374654, 0.648716, 0.758715, -0.0593149, -0.249527, 0.285689, 0.925262, 0.30156, -1.199, -0.240834)
 bone_idx = 26
 
 [node name="Leg Lower left" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.947187, -0.212154, 0.240475, 0.248826, 0.959262, -0.133793, -0.202292, 0.186565, 0.961386, 0.0686016, -0.863537, -0.0235719)
+transform = Transform3D(0.947187, -0.212154, 0.240475, 0.248826, 0.959262, -0.133793, -0.202292, 0.186565, 0.961386, 0.0686015, -0.863537, -0.0235718)
 bone_idx = 27
 
 [node name="Leg Upper Left" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.969872, -0.228128, 0.0854758, 0.232272, 0.971742, -0.0420217, -0.0734744, 0.0606126, 0.995449, 0.0610748, -0.109826, -0.0278368)
+transform = Transform3D(0.969872, -0.228128, 0.0854757, 0.232272, 0.971742, -0.0420216, -0.0734744, 0.0606124, 0.995449, 0.0610748, -0.109826, -0.0278368)
 bone_idx = 28
 
 [node name="Feet Right" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.722817, -0.601642, -0.339941, 0.630834, 0.775305, -0.0308244, 0.282105, -0.192168, 0.939933, 0.400438, -1.21777, 0.198447)
+transform = Transform3D(0.722817, -0.601642, -0.339941, 0.630834, 0.775305, -0.030824, 0.282105, -0.192169, 0.939933, 0.400439, -1.21777, 0.198448)
 bone_idx = 33
 
 [node name="Leg Lower Right" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.908868, -0.292389, -0.297431, 0.319165, 0.946645, 0.0446809, 0.268501, -0.13554, 0.953688, 0.117728, -0.851394, 0.030439)
+transform = Transform3D(0.908867, -0.29239, -0.297432, 0.319165, 0.946645, 0.0446813, 0.268501, -0.135541, 0.953688, 0.117728, -0.851395, 0.0304395)
 bone_idx = 34
 
 [node name="Leg Upper Right" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.947701, -0.249569, -0.198939, 0.253376, 0.967346, -0.00650685, 0.19407, -0.0442411, 0.979982, 0.0970647, -0.0905121, 0.0545645)
+transform = Transform3D(0.9477, -0.249569, -0.198939, 0.253376, 0.967346, -0.00650642, 0.19407, -0.0442416, 0.979982, 0.0970649, -0.0905122, 0.0545648)
 bone_idx = 35
 
 [node name="Body Lower" parent="NavRegion/Buidlings/GrandmaHouse2/WerewolfAnim/Armature/Skeleton3D" index="15"]

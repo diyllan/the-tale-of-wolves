@@ -44,7 +44,8 @@ func load_game():
 	var save_nodes = get_tree().get_nodes_in_group("Persist")
 	for i in save_nodes:
 		i.queue_free()
-
+		await i.tree_exited
+		continue
 	# Load the file line by line and process that dictionary to restore
 	# the object it represents.
 	var saving = FileAccess.open(save_path, FileAccess.READ)
@@ -65,7 +66,8 @@ func load_game():
 
 		# Firstly, we need to create the object and add it to the tree and set its position.
 		var new_object = load(node_data["filename"]).instantiate()
-		get_node(node_data["parent"]).add_child(new_object)
+		new_object.set_name("Player")
+		get_node(node_data["parent"]).add_child(new_object, true)
 		new_object.position = Vector3(node_data["pos_x"], node_data["pos_y"], node_data["pos_z"])
 
 		# Now we set the remaining variables.
@@ -73,5 +75,5 @@ func load_game():
 			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y":
 				continue
 			new_object.set(i, node_data[i])
-			#ObjectiveManager.day_part_count = node_data["DayPartCount"]
-			#ObjectiveManager.load_Current_Objective()
+			ObjectiveManager.day_part_count = node_data["DayPartCount"]
+			ObjectiveManager.load_Current_Objective()

@@ -15,7 +15,7 @@ var dialogue_ended = false
 
 
 @onready var animPlayer = get_child(0).get_node("AnimationPlayer")
-@onready var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
+
 
 var cutscene = false
 
@@ -35,6 +35,7 @@ func _process(delta):
 			animPlayer.play("Idle")
 
 		TALKING:
+			var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player") 
 			look_at(player.global_transform.origin, Vector3.UP)
 			animPlayer.play("Talking")
 			if !interacted:
