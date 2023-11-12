@@ -44,6 +44,7 @@ func _ready():
 	$"../Triggers".connect("cutsceneEnd", CutsceneEnd)
 	
 	
+	
 func CutsceneStart():
 	cutscene = true
 func CutsceneEnd():
@@ -160,6 +161,7 @@ func save():
 		"pos_x" : position.x,
 		"pos_y" : position.y,
 		"pos_z" : position.z,
+		"DayPartCount" : ObjectiveManager.day_part_count,
 	}
 	return save_dict
 	
