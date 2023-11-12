@@ -230,7 +230,7 @@ func changeTimeOnCompletion():
 	changing_to_next_time = true
 	set_process(true)
 	
-	if (ObjectiveManager.day_part_count == 4):
+	if (ObjectiveManager.day_part_count == 3):
 		var environmentPointer = self.get_environment()
 		environmentPointer.fog_enabled = true
 		environmentPointer.fog_density = 0.0005
