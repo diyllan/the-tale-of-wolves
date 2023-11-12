@@ -14,12 +14,27 @@ var objective_library = {
 	"Pick some grapes in the forest": "NavRegion/Objectives/Grapes",
 	"Return to the winery owner": "NPC/Villagers/WineDude",
 	"Return to bed": "NavRegion/Objectives/Bed",
-	"Fetch the basket and Latern from the cart": "NavRegion/Objectives/Basket",
+	"Grab the basket and Lantern from table": "NavRegion/Objectives/Basket",
 	"Get the bread from the baker": "NavRegion/Objectives/Bread",
 	"Get the wine from the winery owner": "NavRegion/Objectives/Winebottle",
 	"Walk to grandma's house at the end of the dark forest": "NavRegion/Objectives/GrandmaDoor",
 	"Talk to mother": "NPC/Villagers/Mother"
 }
+var npc_list = [
+	"NPC/Villagers/Man1",
+	"NPC/Villagers/Man2",
+	"NPC/Villagers/Man3",
+	"NPC/Villagers/Man4",
+	"NPC/Villagers/Man5",
+	"NPC/Villagers/Woman1",
+	"NPC/Villagers/Woman2",
+	"NPC/Villagers/Woman3",
+	"NPC/Villagers/Woman4",
+	"NPC/Villagers/Woman5",
+	"NPC/Villagers/Kid1",
+	"NPC/Villagers/Kid2",
+	"NPC/Villagers/Boy"
+]
 var mother_objective : int = 12
 
 #Dayparts
@@ -69,6 +84,12 @@ func load_Next_Objective():
 		#enable objective on the new objective
 		var new_objective = get_tree().root.get_node(world_path + objective_library.values()[mother_objective] + "/StaticBodyInteraction")
 		new_objective.add_to_group("Objective")
+		#re-enabling all npcs
+		for npc in npc_list:
+			print(npc)
+			var npcitem = get_tree().root.get_node(world_path + npc)
+			npcitem.show()
+			npcitem.get_node("StaticBodyInteraction").set_collision_layer_value(4, true)
 		return
 	
 	if (day_part_count == 11):
@@ -76,6 +97,13 @@ func load_Next_Objective():
 		set_Objective("You reached grandma with all the items!")
 		return
 	
+	if (day_part_count == 2 or day_part_count == 6 or day_part_count == 10):
+		for npc in npc_list:
+			print(world_path + npc)
+			var npcitem = get_tree().root.get_node(world_path + npc)
+			npcitem.hide()
+			npcitem.get_node("StaticBodyInteraction").set_collision_layer_value(4, false)
+			
 	#disable objective on the current objective
 	var old_objective = get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction")
 	old_objective.remove_from_group("Objective")
