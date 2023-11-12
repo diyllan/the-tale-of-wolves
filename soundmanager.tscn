@@ -1,30 +1,42 @@
-[gd_scene load_steps=96 format=3 uid="uid://jfbavi4d2cyo"]
+[gd_scene load_steps=128 format=3 uid="uid://jfbavi4d2cyo"]
 
 [ext_resource type="Script" path="res://soundmanager.gd" id="1_ef6dy"]
 [ext_resource type="AudioStream" uid="uid://b32a325vhwxsb" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_1.ogg" id="1_uv58p"]
 [ext_resource type="AudioStream" uid="uid://be66rduojr1gr" path="res://Assets/Sound/VoiceLines/NPC/Man 5/Day1_1_1.ogg" id="2_23f18"]
 [ext_resource type="AudioStream" uid="uid://f7wjvdu6fw03" path="res://Assets/Sound/VoiceLines/NPC/Weird Guy/BeCareful.ogg" id="2_60iat"]
+[ext_resource type="AudioStream" uid="uid://ctekhywsbv5dp" path="res://Assets/Sound/VoiceLines/NPC/Woman3/Day1_1.ogg" id="2_c0yx7"]
+[ext_resource type="AudioStream" uid="uid://dpvpyavsckgcn" path="res://Assets/Sound/VoiceLines/NPC/Woman2/Day1_1.ogg" id="2_clo0c"]
 [ext_resource type="AudioStream" uid="uid://bfonov1umgtbd" path="res://Assets/Sound/VoiceLines/NPC/Man1/Day1_1_1.ogg" id="2_gnpmy"]
 [ext_resource type="AudioStream" uid="uid://b21ldxu730o8b" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_1_1.ogg" id="2_i3uoj"]
 [ext_resource type="AudioStream" uid="uid://bdje64ebcjx83" path="res://Assets/Sound/VoiceLines/NPC/Kid 1/Day1_1_1.ogg" id="2_is0k0"]
 [ext_resource type="AudioStream" uid="uid://ihu8qp7gg8eo" path="res://Assets/Sound/VoiceLines/NPC/Man3/Day1_1.ogg" id="2_kgo4n"]
 [ext_resource type="AudioStream" uid="uid://31naht64umu4" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_2.ogg" id="2_maxv1"]
 [ext_resource type="AudioStream" uid="uid://bn0v33ue1lg8m" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day1_Cutscene.ogg" id="2_mb0ds"]
+[ext_resource type="AudioStream" uid="uid://bqqqlpda483xe" path="res://Assets/Sound/VoiceLines/NPC/Woman 4/Day1_1.ogg" id="2_msk7a"]
 [ext_resource type="AudioStream" uid="uid://csdhvmbhm73f2" path="res://Assets/Sound/VoiceLines/NPC/Man 4/Day1_1.ogg" id="2_n8m0t"]
 [ext_resource type="AudioStream" uid="uid://b8f303r4rw3fe" path="res://Assets/Sound/VoiceLines/NPC/Man2/Day1.ogg" id="2_n152d"]
+[ext_resource type="AudioStream" uid="uid://cvhed3yxaits0" path="res://Assets/Sound/VoiceLines/NPC/Woman 5/Day1_1_1.ogg" id="2_pempc"]
+[ext_resource type="AudioStream" uid="uid://ovj78ot7hid8" path="res://Assets/Sound/VoiceLines/NPC/Wine Guy/Day1_1.ogg" id="2_ripft"]
+[ext_resource type="AudioStream" uid="uid://bjwf7h8yrpqy1" path="res://Assets/Sound/VoiceLines/NPC/Woman 1/Day1_1.ogg" id="2_rnr4y"]
 [ext_resource type="AudioStream" uid="uid://bokkyy4ipbthh" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day1_1_1.ogg" id="2_upapm"]
 [ext_resource type="AudioStream" uid="uid://m6nfh837ekfj" path="res://Assets/Sound/VoiceLines/NPC/Kid 2/Day1_1_1.ogg" id="2_xiq4h"]
 [ext_resource type="AudioStream" uid="uid://bkg7p1gy70bkn" path="res://Assets/Sound/VoiceLines/NPC/Man3/Day1_2.ogg" id="3_1xhye"]
 [ext_resource type="AudioStream" uid="uid://d0qiovseeewlo" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_3.ogg" id="3_2ihw4"]
 [ext_resource type="AudioStream" uid="uid://hqwaprjr70jf" path="res://Assets/Sound/VoiceLines/NPC/Man 5/Day1_1_2.ogg" id="3_3ank3"]
+[ext_resource type="AudioStream" uid="uid://622hjbh5y8qq" path="res://Assets/Sound/VoiceLines/NPC/Woman 5/Day2_1_1.ogg" id="3_4q575"]
 [ext_resource type="AudioStream" uid="uid://b7c7gh2d74smw" path="res://Assets/Sound/VoiceLines/NPC/Weird Guy/Breathing.ogg" id="3_5pled"]
 [ext_resource type="AudioStream" uid="uid://cif4kx7p45n2c" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day1_1_2.ogg" id="3_48d2f"]
+[ext_resource type="AudioStream" uid="uid://d0ra6yx0vr4ij" path="res://Assets/Sound/VoiceLines/NPC/Wine Guy/Day1_2.ogg" id="3_bf022"]
 [ext_resource type="AudioStream" uid="uid://bo6btnkq5tpq1" path="res://Assets/Sound/VoiceLines/NPC/Kid 1/Day2_1_1.ogg" id="3_c4ord"]
 [ext_resource type="AudioStream" uid="uid://id62rt7k1jo" path="res://Assets/Sound/VoiceLines/NPC/Kid 2/Day1_1_2.ogg" id="3_gshns"]
+[ext_resource type="AudioStream" uid="uid://c8y4xuh02o2i4" path="res://Assets/Sound/VoiceLines/NPC/Woman 4/Day1_2.ogg" id="3_kaiph"]
 [ext_resource type="AudioStream" uid="uid://c8oes6rbvcc77" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_1_2.ogg" id="3_kmc5f"]
 [ext_resource type="AudioStream" uid="uid://b1p1xh26dejau" path="res://Assets/Sound/VoiceLines/NPC/Man1/Day1_1_2.ogg" id="3_l7bd7"]
 [ext_resource type="AudioStream" uid="uid://d0b7fwab8jiii" path="res://Assets/Sound/VoiceLines/NPC/Man 4/Day1_2.ogg" id="3_o4606"]
 [ext_resource type="AudioStream" uid="uid://61ca5d0j6bfg" path="res://Assets/Sound/VoiceLines/NPC/Man2/Day2.ogg" id="3_p5tpl"]
+[ext_resource type="AudioStream" uid="uid://dqjgtrxjqangq" path="res://Assets/Sound/VoiceLines/NPC/Woman2/Day1_2.ogg" id="3_tdphq"]
+[ext_resource type="AudioStream" uid="uid://30p76qkkv6im" path="res://Assets/Sound/VoiceLines/NPC/Woman 1/Day1_2.ogg" id="3_v20ji"]
+[ext_resource type="AudioStream" uid="uid://vn6fb0xdcm7c" path="res://Assets/Sound/VoiceLines/NPC/Woman3/Day1_2.ogg" id="3_vr2jg"]
 [ext_resource type="AudioStream" uid="uid://r6xcw8nq3die" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day2_Cutscene.ogg" id="3_yr3k5"]
 [ext_resource type="AudioStream" uid="uid://c4cipm17dabye" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_1_3.ogg" id="4_2fr7x"]
 [ext_resource type="AudioStream" uid="uid://br7mkd60tyxgf" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_4.ogg" id="4_7sgfk"]
@@ -34,31 +46,50 @@
 [ext_resource type="AudioStream" uid="uid://np38ixia6p8a" path="res://Assets/Sound/VoiceLines/NPC/Kid 1/Day3_1_1.ogg" id="4_du0a6"]
 [ext_resource type="AudioStream" uid="uid://bfoogxh4acnor" path="res://Assets/Sound/VoiceLines/NPC/Man 5/Day1_2_1.ogg" id="4_ejqph"]
 [ext_resource type="AudioStream" uid="uid://drdbgv6ocuy83" path="res://Assets/Sound/VoiceLines/NPC/Man3/Day2.ogg" id="4_gcsvl"]
+[ext_resource type="AudioStream" uid="uid://cbufqii20cgd1" path="res://Assets/Sound/VoiceLines/NPC/Wine Guy/Day2_1.ogg" id="4_gp5k4"]
+[ext_resource type="AudioStream" uid="uid://b02c4tjypcu8m" path="res://Assets/Sound/VoiceLines/NPC/Woman 4/Day2_1.ogg" id="4_h4mcy"]
+[ext_resource type="AudioStream" uid="uid://bbmie0c8md43f" path="res://Assets/Sound/VoiceLines/NPC/Woman 1/Day2_1.ogg" id="4_hv035"]
 [ext_resource type="AudioStream" uid="uid://2i67hftanmsi" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day1_2_1.ogg" id="4_j57io"]
+[ext_resource type="AudioStream" uid="uid://cvgs0u1uvbpdu" path="res://Assets/Sound/VoiceLines/NPC/Woman2/Day2_1.ogg" id="4_kyseu"]
 [ext_resource type="AudioStream" uid="uid://syou16k14ela" path="res://Assets/Sound/VoiceLines/NPC/Man1/Day1_2_1.ogg" id="4_l808j"]
+[ext_resource type="AudioStream" uid="uid://bvjihx3lfk6ud" path="res://Assets/Sound/VoiceLines/NPC/Woman 5/Day3_1_1.ogg" id="4_lt1rp"]
 [ext_resource type="AudioStream" uid="uid://c7vf8v7qvbl1" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day3_Cutscene.ogg" id="4_r8ljc"]
+[ext_resource type="AudioStream" uid="uid://cnfm7ptn1m1dv" path="res://Assets/Sound/VoiceLines/NPC/Woman3/Day2_1.ogg" id="4_ullxi"]
 [ext_resource type="AudioStream" uid="uid://dwlbtryshiwx4" path="res://Assets/Sound/VoiceLines/NPC/Weird Guy/HelloLittleGirl.ogg" id="4_yimao"]
 [ext_resource type="AudioStream" uid="uid://bceermq8a4mn8" path="res://Assets/Sound/VoiceLines/NPC/Weird Guy/iHaveWarnedYou.ogg" id="5_0nsl2"]
 [ext_resource type="AudioStream" uid="uid://uerfcutwlxk2" path="res://Assets/Sound/VoiceLines/NPC/Man3/Day3.ogg" id="5_0vosg"]
+[ext_resource type="AudioStream" uid="uid://b4rn3shovxem6" path="res://Assets/Sound/VoiceLines/NPC/Wine Guy/Day2_2.ogg" id="5_3ia6c"]
 [ext_resource type="AudioStream" uid="uid://cs551u3av67vt" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day1_Talk.ogg" id="5_3ll4t"]
 [ext_resource type="AudioStream" uid="uid://cblwwtgmqv7qs" path="res://Assets/Sound/VoiceLines/NPC/Man 5/Day2_1_1.ogg" id="5_38xbc"]
 [ext_resource type="AudioStream" uid="uid://8biiidwpiwog" path="res://Assets/Sound/VoiceLines/NPC/Man 4/Day3_1.ogg" id="5_amvsh"]
 [ext_resource type="AudioStream" uid="uid://srkocw7rww4v" path="res://Assets/Sound/VoiceLines/NPC/Kid 2/Day2_1_1.ogg" id="5_at3i3"]
+[ext_resource type="AudioStream" uid="uid://djxu575qvuy0i" path="res://Assets/Sound/VoiceLines/NPC/Woman3/Day2_2.ogg" id="5_bxo3i"]
+[ext_resource type="AudioStream" uid="uid://bbdrgf2vou7nd" path="res://Assets/Sound/VoiceLines/NPC/Woman2/Day2_2.ogg" id="5_g7sc1"]
 [ext_resource type="AudioStream" uid="uid://bqfhgdvn87jom" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day1_3_1.ogg" id="5_gf0uq"]
 [ext_resource type="AudioStream" uid="uid://dsy0u4o7a7lnu" path="res://Assets/Sound/VoiceLines/NPC/Man1/Day1_2_2.ogg" id="5_iwjxw"]
+[ext_resource type="AudioStream" uid="uid://ccchro0adxbkn" path="res://Assets/Sound/VoiceLines/NPC/Woman 1/Day2_2.ogg" id="5_k74jo"]
+[ext_resource type="AudioStream" uid="uid://ddui56bkkaqs3" path="res://Assets/Sound/VoiceLines/NPC/Woman 4/Day2_2.ogg" id="5_q4ya6"]
 [ext_resource type="AudioStream" uid="uid://ciff7gh44pvg6" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_2_1.ogg" id="5_uvq4k"]
 [ext_resource type="AudioStream" uid="uid://dfpfsaml5tkaw" path="res://Assets/Sound/VoiceLines/Prologue/Prologue2_1.ogg" id="5_w21e0"]
+[ext_resource type="AudioStream" uid="uid://dus2t6kiqsfme" path="res://Assets/Sound/VoiceLines/NPC/Wine Guy/Day2_3.ogg" id="6_1ipmp"]
 [ext_resource type="AudioStream" uid="uid://81jkd7ghiwlg" path="res://Assets/Sound/VoiceLines/NPC/Weird Guy/LastNight.ogg" id="6_2t4kh"]
+[ext_resource type="AudioStream" uid="uid://bee2bjw4tkgx1" path="res://Assets/Sound/VoiceLines/NPC/Woman3/Day3.ogg" id="6_7opr4"]
 [ext_resource type="AudioStream" uid="uid://cnd3me8hx7tya" path="res://Assets/Sound/VoiceLines/NPC/Man1/Day2_1_1.ogg" id="6_364wm"]
 [ext_resource type="AudioStream" uid="uid://cbeto6v0060l4" path="res://Assets/Sound/VoiceLines/Prologue/Prologue3_1.ogg" id="6_btxn3"]
+[ext_resource type="AudioStream" uid="uid://cahfuv8nxy383" path="res://Assets/Sound/VoiceLines/NPC/Woman 4/Day3_1.ogg" id="6_ewo07"]
 [ext_resource type="AudioStream" uid="uid://ctnobjtgfepwl" path="res://Assets/Sound/VoiceLines/NPC/Man 5/Day2_1_2.ogg" id="6_gfygx"]
+[ext_resource type="AudioStream" uid="uid://nryfot1v77me" path="res://Assets/Sound/VoiceLines/NPC/Woman 1/Day3_1.ogg" id="6_hdhni"]
+[ext_resource type="AudioStream" uid="uid://dlgyk5xng0uds" path="res://Assets/Sound/VoiceLines/NPC/Woman2/Day3_1.ogg" id="6_jqjx2"]
 [ext_resource type="AudioStream" uid="uid://vjmr7vkq3aa" path="res://Assets/Sound/VoiceLines/NPC/Kid 2/Day2_1_2.ogg" id="6_n7nav"]
 [ext_resource type="AudioStream" uid="uid://bgeqscv1exhwx" path="res://Assets/Sound/VoiceLines/NPC/Man 4/Day3_2.ogg" id="6_pf5gl"]
 [ext_resource type="AudioStream" uid="uid://6ofe02oyhsog" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day2_1_1.ogg" id="6_pshv5"]
 [ext_resource type="AudioStream" uid="uid://capy87md3qhof" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_3_1.ogg" id="6_sy6ur"]
 [ext_resource type="AudioStream" uid="uid://bpl3n5g3ocysy" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day2_Talk.ogg" id="6_v4bwl"]
+[ext_resource type="AudioStream" uid="uid://qsrcpjur8t3s" path="res://Assets/Sound/VoiceLines/NPC/Woman2/Day3_2.ogg" id="7_6mgvn"]
 [ext_resource type="AudioStream" uid="uid://cqehp2klieo7" path="res://Assets/Sound/VoiceLines/Prologue/Prologue4_1.ogg" id="7_60yki"]
 [ext_resource type="AudioStream" uid="uid://csycpeqwejd0s" path="res://Assets/Sound/VoiceLines/NPC/Weird Guy/Laughing.ogg" id="7_ak2tv"]
+[ext_resource type="AudioStream" uid="uid://4ymc2ty6icat" path="res://Assets/Sound/VoiceLines/NPC/Woman 4/Day3_2.ogg" id="7_bxsmt"]
+[ext_resource type="AudioStream" uid="uid://beanqhopd64tx" path="res://Assets/Sound/VoiceLines/NPC/Wine Guy/Day2_4.ogg" id="7_d87y7"]
 [ext_resource type="AudioStream" uid="uid://bfn4u6nbywvr8" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_3_2.ogg" id="7_debep"]
 [ext_resource type="AudioStream" uid="uid://cnvtlvt028p77" path="res://Assets/Sound/VoiceLines/NPC/Man1/Day2_2_1.ogg" id="7_fe010"]
 [ext_resource type="AudioStream" uid="uid://vyr6l5vp7p5d" path="res://Assets/Sound/VoiceLines/NPC/Kid 2/Day3_1_1.ogg" id="7_op0ly"]
@@ -66,6 +97,7 @@
 [ext_resource type="AudioStream" uid="uid://biwo67h4abldx" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day3_1_1.ogg" id="7_u4lfd"]
 [ext_resource type="AudioStream" uid="uid://c1gbb3rka6t7l" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day2_1_1.ogg" id="8_0j5ug"]
 [ext_resource type="AudioStream" uid="uid://3sdenieiernh" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day3_1_2.ogg" id="8_8a8tf"]
+[ext_resource type="AudioStream" uid="uid://cu24re0j5ba14" path="res://Assets/Sound/VoiceLines/NPC/Wine Guy/Day3.ogg" id="8_esayi"]
 [ext_resource type="AudioStream" uid="uid://bto1li012npdu" path="res://Assets/Sound/VoiceLines/NPC/Man1/Day2_2_2.ogg" id="8_ow5hu"]
 [ext_resource type="AudioStream" uid="uid://b14px33o13ia4" path="res://Assets/Sound/VoiceLines/NPC/Weird Guy/MonsterOutThere.ogg" id="8_p2e68"]
 [ext_resource type="AudioStream" uid="uid://cnb48sdq5jijn" path="res://Assets/Sound/VoiceLines/Prologue/Prologue4_2.ogg" id="8_s8mg0"]
@@ -100,6 +132,134 @@
 script = ExtResource("1_ef6dy")
 
 [node name="Voice" type="Node" parent="."]
+
+[node name="Woman5_1_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("2_pempc")
+bus = &"Voice"
+
+[node name="Woman5_2_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("3_4q575")
+bus = &"Voice"
+
+[node name="Woman5_3_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("4_lt1rp")
+bus = &"Voice"
+
+[node name="Woman4_1_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("2_msk7a")
+bus = &"Voice"
+
+[node name="Woman4_1_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("3_kaiph")
+bus = &"Voice"
+
+[node name="Woman4_2_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("4_h4mcy")
+bus = &"Voice"
+
+[node name="Woman4_2_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("5_q4ya6")
+bus = &"Voice"
+
+[node name="Woman4_3_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("6_ewo07")
+bus = &"Voice"
+
+[node name="Woman4_3_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("7_bxsmt")
+bus = &"Voice"
+
+[node name="Woman3_1_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("2_c0yx7")
+bus = &"Voice"
+
+[node name="Woman3_1_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("3_vr2jg")
+bus = &"Voice"
+
+[node name="Woman3_2_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("4_ullxi")
+bus = &"Voice"
+
+[node name="Woman3_2_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("5_bxo3i")
+bus = &"Voice"
+
+[node name="Woman3_3_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("6_7opr4")
+bus = &"Voice"
+
+[node name="Woman2_1_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("2_clo0c")
+bus = &"Voice"
+
+[node name="Woman2_1_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("3_tdphq")
+bus = &"Voice"
+
+[node name="Woman2_2_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("4_kyseu")
+bus = &"Voice"
+
+[node name="Woman2_2_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("5_g7sc1")
+bus = &"Voice"
+
+[node name="Woman2_3_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("6_jqjx2")
+bus = &"Voice"
+
+[node name="Woman2_3_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("7_6mgvn")
+bus = &"Voice"
+
+[node name="Woman1_1_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("2_rnr4y")
+bus = &"Voice"
+
+[node name="Woman1_1_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("3_v20ji")
+bus = &"Voice"
+
+[node name="Woman1_2_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("4_hv035")
+bus = &"Voice"
+
+[node name="Woman1_2_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("5_k74jo")
+bus = &"Voice"
+
+[node name="Woman1_3_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("6_hdhni")
+bus = &"Voice"
+
+[node name="WineGuy_1_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("2_ripft")
+bus = &"Voice"
+
+[node name="WineGuy_1_2_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("3_bf022")
+bus = &"Voice"
+
+[node name="WineGuy_2_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("4_gp5k4")
+bus = &"Voice"
+
+[node name="WineGuy_2_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("5_3ia6c")
+bus = &"Voice"
+
+[node name="WineGuy_2_1_3" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("6_1ipmp")
+bus = &"Voice"
+
+[node name="WineGuy_2_2_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("7_d87y7")
+bus = &"Voice"
+
+[node name="WineGuy_3_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("8_esayi")
+bus = &"Voice"
 
 [node name="WeirdGuyBeCareful" type="AudioStreamPlayer" parent="Voice"]
 stream = ExtResource("2_60iat")
