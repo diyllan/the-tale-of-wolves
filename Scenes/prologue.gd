@@ -9,6 +9,7 @@ var DARK_RED = Color(0.545098, 0, 0, 1)
 var biteReady = false
 var finalDialogue = false
 
+@export var StartDialogue: String
 @onready var animPlayer = $Camera3D/AnimationPlayer
 @onready var bite_prompt = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/PrologueBitePrompt")
 func _ready():
@@ -35,6 +36,7 @@ func _process(_delta):
 			bite_prompt.hide()
 			SceneManager.changeSceneWithTransition(SceneManager.world)
 			SceneManager.wakeUpDay1()
+			DialogueManager.showDialogue(StartDialogue)
 			
 	if cameraMovement1Started and !firstDialogue:
 		firstDialogue = true
