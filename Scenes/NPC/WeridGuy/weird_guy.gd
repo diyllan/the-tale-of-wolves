@@ -98,6 +98,8 @@ func _process(delta):
 				repos = true
 				get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/CutscenePlayer").play("WeirdGuyRepos1")
 		CHASE:
+			SoundManager.playSound("Forest_Footsteps")
+			SoundManager.playVoice("WeirdGuyLaughing")
 			animPlayer.play("Walking")
 			chase()
 			

@@ -1,4 +1,5 @@
 [
 	{"Name":"[center]Mother[/center]", "Text":"[center]Did you get the Bread?[/center]", "Voice":"Mother1_3_1","Sound":""},
+	{"Name":"[center]Lil Red Cap[/center]", "Text":"[center]The baker told me he doesn't have any flour left for today so he will make the bread by tomorrow and I can pick it up the day after tomorrow.[/center]", "Voice":"LilRedCapBreadPickup","Sound":""},
 	{"Name":"[center]Mother[/center]", "Text":"[center]Okey Dear, let's go to bed it's late...[/center]", "Voice":"Mother1_3_2","Sound":""}
 ]

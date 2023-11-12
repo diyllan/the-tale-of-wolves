@@ -28,6 +28,12 @@ var weirdGuyScare2Ended = false
 var weirdGuyScare2Reset = false
 @export var WeirdGuyDialogue2: String
 
+@export var NarratorEnding: String
+@export var EndingDialogue: String
+var endingPlayed = false
+var endingEnded = false
+var narratorending = false
+
 signal cutsceneStart
 signal cutsceneEnd
 signal WeirdGuySceneStart
@@ -73,6 +79,18 @@ func DialogueEnded():
 			cutscene.play("RESET")
 			WeirdGuyScene2End.emit()
 			cutsceneEnd.emit()
+	
+	if endingPlayed and !endingEnded:
+		endingEnded = true
+		cutscene.play("EndingDeathCutscene")
+		await cutscene.animation_finished
+		narratorending = true
+		SceneManager.playFadeOut()
+		DialogueManager.showDialogue(NarratorEnding)
+	
+	if narratorending and endingEnded:
+		SceneManager.playCredits()
+		
 
 func _on_boy_who_cries_wolf_body_entered(body):
 	if body.is_in_group("Player"):
@@ -175,3 +193,13 @@ func _on_weird_guy_chase_body_entered(body):
 func _on_weird_return_pos_2_body_entered(body):
 	if body.is_in_group("Player"):
 			cutscene.play("WeirdGuyReturnPos")
+
+
+func _on_ending_cutscene_trigger_body_entered(body):
+	if body.is_in_group("Player"):
+		if !endingPlayed:
+			endingPlayed = true
+			cutsceneStart.emit()
+			cutscene.play("EndingCutscene")
+			await cutscene.animation_finished
+			DialogueManager.showDialogue(EndingDialogue)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://3ehpuh7x3p1w"]
+[gd_scene load_steps=11 format=3 uid="uid://3ehpuh7x3p1w"]
 
 [ext_resource type="Script" path="res://Scenes/SceneManager.gd" id="1_cyeqp"]
+[ext_resource type="Texture2D" uid="uid://hchdy1cffoow" path="res://Assets/UI/MoonlilyLogo/MoonLilyLogoGradient.png" id="2_nuxw3"]
 
 [sub_resource type="Animation" id="Animation_c76u1"]
 length = 0.001
@@ -277,8 +278,49 @@ tracks/5/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_ntx25"]
+resource_name = "Credits"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gradient:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RichTextLabel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(284, 45), Vector2(284, -673)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v5rdj"]
 _data = {
+"Credits": SubResource("Animation_ntx25"),
 "RESET": SubResource("Animation_c76u1"),
 "TransIn": SubResource("Animation_tuxup"),
 "TransOut": SubResource("Animation_glejr"),
@@ -362,6 +404,42 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 500
 text = "Day 3"
+
+[node name="Gradient" type="TextureRect" parent="CanvasLayer"]
+visible = false
+modulate = Color(0.886275, 0.698039, 0.992157, 1)
+offset_left = -965.0
+offset_top = -535.0
+offset_right = 3930.0
+offset_bottom = 2245.0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(1577.5, 866.249)
+mouse_filter = 2
+texture = ExtResource("2_nuxw3")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -676.0
+offset_top = -495.0
+offset_right = 719.0
+offset_bottom = 399.001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[center][font_size=150]Credits[/font_size]
+
+[font_size=150]VoiceActors[/font_size]
+LilRedCap: Tiffany
+LilRedCap: Tiffany
+LilRedCap: Tiffany[/center]"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../CanvasLayer")

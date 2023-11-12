@@ -1,0 +1,9 @@
+[
+	{"Name":"[center]Narrator[/center]", "Text":"[center]Little Red Cap asked [/center]", "Voice":"NarratorLilRedCapAsked","Sound":""},
+	{"Name":"[center]Lil Red Cap[/center]", "Text":"[center]Grandma Why are your eyes so big?[/center]", "Voice":"LilRedCapEyesBig","Sound":""},
+	{"Name":"[center]Grandma[/center]", "Text":"[center]So i can see you better my dear[/center]", "Voice":"GrandmaSeeYou","Sound":""},
+	{"Name":"[center]Lil Red Cap[/center]", "Text":"[center]Why are your hands so big?[/center]", "Voice":"LilRedCapHandsBig","Sound":""},
+	{"Name":"[center]Grandma[/center]", "Text":"[center]So i can hold you stronger my dear[/center]", "Voice":"GrandmaHoldYou","Sound":""},
+	{"Name":"[center]Lil Red Cap[/center]", "Text":"[center]Why is your Mouth so big?[/center]", "Voice":"LilRedCapBigMouth","Sound":""},
+	{"Name":"[center]Grandma[/center]", "Text":"[center]So i can feast upon you my dear![/center]", "Voice":"GrandmaFeast","Sound":""}
+]

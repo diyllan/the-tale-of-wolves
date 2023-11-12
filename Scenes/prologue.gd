@@ -34,6 +34,7 @@ func _process(_delta):
 			await animPlayer.animation_finished
 			bite_prompt.hide()
 			SceneManager.changeSceneWithTransition(SceneManager.world)
+			SceneManager.wakeUpDay1()
 			
 	if cameraMovement1Started and !firstDialogue:
 		firstDialogue = true

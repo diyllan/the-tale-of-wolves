@@ -5,6 +5,7 @@ var sceneChange = false
 var nextScene
 
 var world = preload("res://Scenes/world.tscn")
+var prologue = preload("res://Scenes/prologue.tscn")
 var test = preload("res://Scenes/Testing/npc_testing.tscn")
 
 @onready var fadeoutRect = $CanvasLayer/ColorRect
@@ -28,7 +29,6 @@ func changeSceneWithTransition(scenePath):
 	SoundManager.playAmbience("NatureAmbience")
 	animPlayer.play("TransOut")
 	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").titleScreen = false
-	wakeUpDay1()
 	await animPlayer.animation_finished
 	fadeoutRect.hide()
 	
@@ -78,10 +78,7 @@ func playFadeOut():
 	fadeoutRect.hide()
 
 func wakeUpDay1():
-	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = true
 	animPlayer.play("WakeUpDay1")
-	await animPlayer.animation_finished
-	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = false
 
 func wakeUpDay2():
 	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = true
@@ -94,3 +91,8 @@ func wakeUpDay3():
 	animPlayer.play("WakeUpDay3")
 	await animPlayer.animation_finished
 	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = false
+
+func playCredits():
+	animPlayer.play("Credits")
+	await animPlayer.animation_finished
+	get_tree().quit()

@@ -8,12 +8,12 @@
 [ext_resource type="AudioStream" uid="uid://c54dbnfpxlc5s" path="res://Assets/Sound/SoundEffects/Werewolf/werewolf-breathing-and-sniffing.wav" id="4_ygpqp"]
 [ext_resource type="AudioStream" uid="uid://bcpcbg52eydlj" path="res://Assets/Sound/SoundEffects/Werewolf/scream.wav" id="6_jqwge"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fxrpj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oybyc"]
 render_priority = 0
 shader = ExtResource("3_62uxq")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rpm5k"]
-material = SubResource("ShaderMaterial_fxrpj")
+material = SubResource("ShaderMaterial_oybyc")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6n2ja"]
 radius = 1.0
