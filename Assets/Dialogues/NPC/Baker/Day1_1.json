@@ -1,3 +1,5 @@
 [
-	{"Name":"[center]Baker[/center]", "Text":"[center]Oh hello litte Redcap? What can I do for you?[/center]", "Voice":"","Sound":""}
+	{"Name":"[center]Baker[/center]", "Text":"[center]Oh hello litte Redcap? What can I do for you?[/center]", "Voice":"Baker1_1_1","Sound":""},
+	{"Name":"[center]Lil Red Cap[/center]", "Text":"[center]I need some Bread for my Grandma.[/center]", "Voice":"","Sound":""},
+	{"Name":"[center]Baker[/center]", "Text":"[center]I sadly dont have any of my special flour left. Would you be so nice and go get it for me?[/center]", "Voice":"Baker1_1_2","Sound":""}
 ]

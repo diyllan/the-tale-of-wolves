@@ -107,7 +107,6 @@ shape = SubResource("CapsuleShape3D_33uso")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_msjib")
-Dialogue_Path = "res://Assets/Dialogues/TestDialogue.json"
 prompt_message = "Talk"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBodyInteraction"]

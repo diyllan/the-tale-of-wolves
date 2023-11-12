@@ -1,20 +1,45 @@
-[gd_scene load_steps=25 format=3 uid="uid://jfbavi4d2cyo"]
+[gd_scene load_steps=50 format=3 uid="uid://jfbavi4d2cyo"]
 
 [ext_resource type="Script" path="res://soundmanager.gd" id="1_ef6dy"]
 [ext_resource type="AudioStream" uid="uid://b32a325vhwxsb" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_1.ogg" id="1_uv58p"]
+[ext_resource type="AudioStream" uid="uid://b21ldxu730o8b" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_1_1.ogg" id="2_i3uoj"]
 [ext_resource type="AudioStream" uid="uid://31naht64umu4" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_2.ogg" id="2_maxv1"]
+[ext_resource type="AudioStream" uid="uid://bn0v33ue1lg8m" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day1_Cutscene.ogg" id="2_mb0ds"]
+[ext_resource type="AudioStream" uid="uid://bokkyy4ipbthh" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day1_1_1.ogg" id="2_upapm"]
 [ext_resource type="AudioStream" uid="uid://d0qiovseeewlo" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_3.ogg" id="3_2ihw4"]
+[ext_resource type="AudioStream" uid="uid://cif4kx7p45n2c" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day1_1_2.ogg" id="3_48d2f"]
+[ext_resource type="AudioStream" uid="uid://c8oes6rbvcc77" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_1_2.ogg" id="3_kmc5f"]
+[ext_resource type="AudioStream" uid="uid://r6xcw8nq3die" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day2_Cutscene.ogg" id="3_yr3k5"]
+[ext_resource type="AudioStream" uid="uid://c4cipm17dabye" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_1_3.ogg" id="4_2fr7x"]
 [ext_resource type="AudioStream" uid="uid://br7mkd60tyxgf" path="res://Assets/Sound/VoiceLines/Prologue/Prologue1_4.ogg" id="4_7sgfk"]
+[ext_resource type="AudioStream" uid="uid://2i67hftanmsi" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day1_2_1.ogg" id="4_j57io"]
+[ext_resource type="AudioStream" uid="uid://c7vf8v7qvbl1" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day3_Cutscene.ogg" id="4_r8ljc"]
+[ext_resource type="AudioStream" uid="uid://cs551u3av67vt" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day1_Talk.ogg" id="5_3ll4t"]
+[ext_resource type="AudioStream" uid="uid://bqfhgdvn87jom" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day1_3_1.ogg" id="5_gf0uq"]
+[ext_resource type="AudioStream" uid="uid://ciff7gh44pvg6" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_2_1.ogg" id="5_uvq4k"]
 [ext_resource type="AudioStream" uid="uid://dfpfsaml5tkaw" path="res://Assets/Sound/VoiceLines/Prologue/Prologue2_1.ogg" id="5_w21e0"]
 [ext_resource type="AudioStream" uid="uid://cbeto6v0060l4" path="res://Assets/Sound/VoiceLines/Prologue/Prologue3_1.ogg" id="6_btxn3"]
+[ext_resource type="AudioStream" uid="uid://6ofe02oyhsog" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day2_1_1.ogg" id="6_pshv5"]
+[ext_resource type="AudioStream" uid="uid://capy87md3qhof" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_3_1.ogg" id="6_sy6ur"]
+[ext_resource type="AudioStream" uid="uid://bpl3n5g3ocysy" path="res://Assets/Sound/VoiceLines/NPC/Boy Who Cries Wolf/Day2_Talk.ogg" id="6_v4bwl"]
 [ext_resource type="AudioStream" uid="uid://cqehp2klieo7" path="res://Assets/Sound/VoiceLines/Prologue/Prologue4_1.ogg" id="7_60yki"]
+[ext_resource type="AudioStream" uid="uid://bfn4u6nbywvr8" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day1_3_2.ogg" id="7_debep"]
+[ext_resource type="AudioStream" uid="uid://biwo67h4abldx" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day3_1_1.ogg" id="7_u4lfd"]
+[ext_resource type="AudioStream" uid="uid://c1gbb3rka6t7l" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day2_1_1.ogg" id="8_0j5ug"]
+[ext_resource type="AudioStream" uid="uid://3sdenieiernh" path="res://Assets/Sound/VoiceLines/NPC/Baker/Day3_1_2.ogg" id="8_8a8tf"]
 [ext_resource type="AudioStream" uid="uid://cnb48sdq5jijn" path="res://Assets/Sound/VoiceLines/Prologue/Prologue4_2.ogg" id="8_s8mg0"]
 [ext_resource type="AudioStream" uid="uid://c314wkehbo6vg" path="res://Assets/Sound/VoiceLines/Prologue/Prologue5_1.ogg" id="9_7aau1"]
+[ext_resource type="AudioStream" uid="uid://bvhrxd1003xha" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day2_1_2.ogg" id="9_r6c8a"]
 [ext_resource type="AudioStream" uid="uid://s1d24jlxvvpk" path="res://Assets/Sound/VoiceLines/Prologue/Prologue5_2.ogg" id="10_7a16d"]
+[ext_resource type="AudioStream" uid="uid://b8eq0flw1omdy" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day2_2_1.ogg" id="10_jhuj4"]
+[ext_resource type="AudioStream" uid="uid://c6a6qcrlr2bq5" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day2_3_1.ogg" id="11_5o81w"]
 [ext_resource type="AudioStream" uid="uid://fsy47qkvmnvr" path="res://Assets/Sound/VoiceLines/Prologue/Prologue5_3.ogg" id="11_o1tp8"]
+[ext_resource type="AudioStream" uid="uid://cewfeva3wtkgc" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day3_1_1.ogg" id="12_xaeda"]
+[ext_resource type="AudioStream" uid="uid://d5i6vswtmvlu" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day3_1_2.ogg" id="13_0y22b"]
 [ext_resource type="AudioStream" uid="uid://c8ajbolx6b1j4" path="res://Assets/Sound/Music/Prologue/Shotgun.ogg" id="13_6w7nl"]
 [ext_resource type="AudioStream" uid="uid://bqt5ga1ft2s54" path="res://Assets/Sound/Music/Titlescreen/TitleScreen.ogg" id="13_pomwl"]
 [ext_resource type="AudioStream" uid="uid://c4xx05c13aysq" path="res://Assets/Sound/Music/Prologue/WolfGrowl.ogg" id="14_hugtc"]
+[ext_resource type="AudioStream" uid="uid://c5hhth2absq4e" path="res://Assets/Sound/VoiceLines/NPC/Mother/Day3_2_1.ogg" id="14_iecko"]
 [ext_resource type="AudioStream" uid="uid://p0hkjd6roxyp" path="res://Assets/Sound/SoundEffects/Scary Stuff/tension-sound.ogg" id="14_ilfsn"]
 [ext_resource type="AudioStream" uid="uid://42jsqkm83icu" path="res://Assets/Sound/Music/Prologue/prologue_forest_ambience.ogg" id="14_xo28x"]
 [ext_resource type="AudioStream" uid="uid://c3q4u0eb3mdwc" path="res://Assets/Sound/SoundEffects/Scary Stuff/simple_jumpscare.ogg" id="15_5jfw3"]
@@ -29,6 +54,106 @@
 script = ExtResource("1_ef6dy")
 
 [node name="Voice" type="Node" parent="."]
+
+[node name="WolfBoy1_Cutscene" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("2_mb0ds")
+bus = &"Voice"
+
+[node name="WolfBoy2_Cutscene" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("3_yr3k5")
+bus = &"Voice"
+
+[node name="WolfBoy3_Cutscene" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("4_r8ljc")
+bus = &"Voice"
+
+[node name="WolfBoy1_Talk" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("5_3ll4t")
+bus = &"Voice"
+
+[node name="WolfBoy2_Talk" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("6_v4bwl")
+bus = &"Voice"
+
+[node name="Baker1_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("2_upapm")
+bus = &"Voice"
+
+[node name="Baker1_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("3_48d2f")
+bus = &"Voice"
+
+[node name="Baker1_2_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("4_j57io")
+bus = &"Voice"
+
+[node name="Baker1_3_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("5_gf0uq")
+bus = &"Voice"
+
+[node name="Baker2_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("6_pshv5")
+bus = &"Voice"
+
+[node name="Baker3_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("7_u4lfd")
+bus = &"Voice"
+
+[node name="Baker3_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("8_8a8tf")
+bus = &"Voice"
+
+[node name="Mother1_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("2_i3uoj")
+bus = &"Voice"
+
+[node name="Mother1_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("3_kmc5f")
+bus = &"Voice"
+
+[node name="Mother1_1_3" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("4_2fr7x")
+bus = &"Voice"
+
+[node name="Mother1_2_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("5_uvq4k")
+bus = &"Voice"
+
+[node name="Mother1_3_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("6_sy6ur")
+bus = &"Voice"
+
+[node name="Mother1_3_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("7_debep")
+bus = &"Voice"
+
+[node name="Mother2_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("8_0j5ug")
+bus = &"Voice"
+
+[node name="Mother2_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("9_r6c8a")
+bus = &"Voice"
+
+[node name="Mother2_2_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("10_jhuj4")
+bus = &"Voice"
+
+[node name="Mother2_3_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("11_5o81w")
+bus = &"Voice"
+
+[node name="Mother3_1_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("12_xaeda")
+bus = &"Voice"
+
+[node name="Mother3_1_2" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("13_0y22b")
+bus = &"Voice"
+
+[node name="Mother3_2_1" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("14_iecko")
+bus = &"Voice"
 
 [node name="Prologue1_1" type="AudioStreamPlayer" parent="Voice"]
 stream = ExtResource("1_uv58p")

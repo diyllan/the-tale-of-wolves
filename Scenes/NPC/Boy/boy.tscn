@@ -106,8 +106,8 @@ shape = SubResource("CapsuleShape3D_1a51v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_7cvj5")
-Dialogue_Path = "res://Assets/Dialogues/TestDialogue.json"
-prompt_message = "Talk"
+Dialogue_Path = PackedStringArray("res://Assets/Dialogues/NPC/BoyWolf/Day1.json", "res://Assets/Dialogues/NPC/BoyWolf/Day2.json")
+prompt_message = "Talk to Blonde Boy"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBodyInteraction"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0787395, 0.939937, -0.531831)

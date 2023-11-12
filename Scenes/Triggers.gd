@@ -37,15 +37,17 @@ func DialogueEnded():
 			BoyWhoCriesWolf1Ended = true
 			cutscene.play("Return")
 			BoyCutSceneEnd.emit()
+			cutsceneEnd.emit()
 	if BoyWhoCriesWolf2 and !BoyWhoCriesWolf2Ended:
 			BoyWhoCriesWolf2Ended = true
 			cutscene.play("Return")
 			BoyCutSceneEnd.emit()
+			cutsceneEnd.emit()
 	if BoyWhoCriesWolf2 and !BoyWhoCriesWolf3Ended:
 			BoyWhoCriesWolf3Ended = true
 			cutscene.play("BoyWhoCriesWolfRunninginWoods")
 			cutscene.play("Return")
-			BoyCutSceneEnd.emit()
+			cutsceneEnd.emit()
 
 	if weirdGuyScare1 and !weirdGuyScare1Ended:
 			weirdGuyScare1Ended = true
@@ -60,6 +62,8 @@ func DialogueEnded():
 func _on_boy_who_cries_wolf_body_entered(body):
 	if body.is_in_group("Player"):
 		if ObjectiveManager.day_part_count == 0 and !BoyWhoCriesWolf1:
+			cutsceneStart.emit()
+			cutscene.play("BoyWhoCriesWolfRepos")
 			BoyCutSceneStart.emit()
 			BoyWhoCriesWolf1 = true
 			cutscene.play("BoyWhoCriesWolf1")
@@ -67,6 +71,8 @@ func _on_boy_who_cries_wolf_body_entered(body):
 			DialogueManager.showDialogue(BoyWhoCriesWolfDialogueDay1)
 			BoyAnimations.play("Yelling")
 		if ObjectiveManager.day_part_count == 4 and !BoyWhoCriesWolf2:
+			cutsceneStart.emit()
+			cutscene.play("BoyWhoCriesWolfRepos")
 			BoyCutSceneStart.emit()
 			BoyWhoCriesWolf2 = true
 			cutscene.play("BoyWhoCriesWolf1")
@@ -74,6 +80,8 @@ func _on_boy_who_cries_wolf_body_entered(body):
 			DialogueManager.showDialogue(BoyWhoCriesWolfDialogueDay2)
 			BoyAnimations.play("Yelling")
 		if ObjectiveManager.day_part_count == 8 and !BoyWhoCriesWolf3:
+			cutsceneStart.emit()
+			cutscene.play("BoyWhoCriesWolfRepos")
 			BoyCutSceneStart.emit()
 			BoyWhoCriesWolf3 = true
 			cutscene.play("BoyWhoCriesWolf1")

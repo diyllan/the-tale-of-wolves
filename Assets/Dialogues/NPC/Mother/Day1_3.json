@@ -1,3 +1,4 @@
 [
-	{"Name":"[center]Mother[/center]", "Text":"[center]Did you get the Bread?[/center]", "Voice":"","Sound":""}
+	{"Name":"[center]Mother[/center]", "Text":"[center]Did you get the Bread?[/center]", "Voice":"Mother1_3_1","Sound":""},
+	{"Name":"[center]Mother[/center]", "Text":"[center]Okey Dear, let's go to bed it's late...[/center]", "Voice":"Mother1_3_2","Sound":""}
 ]

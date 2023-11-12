@@ -72,7 +72,7 @@ func setGravity(delta):
 		velocity.y -= gravity * delta
 
 func _on_nav_velocity_computed(safe_velocity: Vector3) -> void:
-	if !interacted and state == WALKING:
+	if !interacted and state == WALKING and !cutscene:
 		velocity = safe_velocity
 		look_at(nav_agent.get_next_path_position())
 		move_and_slide()

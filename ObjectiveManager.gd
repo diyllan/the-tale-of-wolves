@@ -91,4 +91,9 @@ func load_Next_Objective():
 	var new_objective = get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction")
 	new_objective.add_to_group("Objective")
 
-	
+func _input(event):
+#	pass
+#	if event.is_action_pressed("ui_accept"):
+#		lighting_strike = true;
+	if event.is_action_pressed("skiptime"):
+		day_part_count += 1

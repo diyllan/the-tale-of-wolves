@@ -109,8 +109,8 @@ shape = SubResource("CapsuleShape3D_4mkiq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_mbpe4")
-Dialogue_Path = "res://Assets/Dialogues/TestDialogue.json"
-prompt_message = "Talk"
+Dialogue_Path = PackedStringArray("res://Assets/Dialogues/NPC/Baker/Day1_1.json", "res://Assets/Dialogues/NPC/Baker/Day1_2.json", "res://Assets/Dialogues/NPC/Baker/Day1_3.json", "res://Assets/Dialogues/NPC/Baker/Day2.json", "res://Assets/Dialogues/NPC/Baker/Day3_1.json")
+prompt_message = "Talk to Baker"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBodyInteraction"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0787395, 1.96058, -0.531831)

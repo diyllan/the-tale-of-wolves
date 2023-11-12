@@ -110,7 +110,7 @@ shape = SubResource("CapsuleShape3D_r1n5f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.212663, 0, 0.265329)
 collision_layer = 8
 script = ExtResource("3_phbyn")
-Dialogue_Path = "res://Assets/Dialogues/TestDialogue.json"
+Dialogue_Path = PackedStringArray("res://Assets/Dialogues/NPC/Mother/Day1_1.json", "res://Assets/Dialogues/NPC/Mother/Day1_2.json", "res://Assets/Dialogues/NPC/Mother/Day1_3.json", "res://Assets/Dialogues/NPC/Mother/Day2_1.json", "res://Assets/Dialogues/NPC/Mother/Day2_2.json", "res://Assets/Dialogues/NPC/Mother/Day2_3.json", "res://Assets/Dialogues/NPC/Mother/Day3_1.json", "res://Assets/Dialogues/NPC/Mother/Day3_2.json")
 prompt_message = "Mother"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBodyInteraction"]

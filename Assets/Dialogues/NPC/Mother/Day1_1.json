@@ -1,5 +1,5 @@
 [
-	{"Name":"[center]Mother[/center]", "Text":"[center]Good Morning sweety.[/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Mother[/center]", "Text":"[center]Please go to the Bakery and get some Bread for your Grandma.[/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Mother[/center]", "Text":"[center]You know she's been feeling a little weak lately.[/center]", "Voice":"","Sound":""}
+	{"Name":"[center]Mother[/center]", "Text":"[center]Good Morning sweety.[/center]", "Voice":"Mother1_1_1","Sound":""},
+	{"Name":"[center]Mother[/center]", "Text":"[center]Please go to the Bakery and get some Bread for your Grandma.[/center]", "Voice":"Mother1_1_2","Sound":""},
+	{"Name":"[center]Mother[/center]", "Text":"[center]You know she's been feeling a little weak lately.[/center]", "Voice":"Mother1_1_3","Sound":""}
 ]

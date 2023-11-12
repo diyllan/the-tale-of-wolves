@@ -1,4 +1,4 @@
 [
-	{"Name":"[center]Mother[/center]", "Text":"[center]Morning Darling.[/center]", "Voice":"","Sound":""},
-	{"Name":"[center]Mother[/center]", "Text":"[center]Would you be so nice and go to the Winery to fetch a bottle of wine for your Grandma?[/center]", "Voice":"","Sound":""}
+	{"Name":"[center]Mother[/center]", "Text":"[center]Morning Darling.[/center]", "Voice":"Mother2_1_1","Sound":""},
+	{"Name":"[center]Mother[/center]", "Text":"[center]Would you be so nice and go to the Winery to fetch a bottle of wine for your Grandma?[/center]", "Voice":"Mother2_1_2","Sound":""}
 ]
