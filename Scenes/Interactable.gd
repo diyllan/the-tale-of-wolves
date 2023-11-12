@@ -60,6 +60,13 @@ func interact(body):
 	
 	if prompt_message == "Pick up Basket":
 		body.enableLight = true
+	
+	if prompt_message == "Sleep":
+		if ObjectiveManager.day_part_count == 3:
+			SceneManager.wakeUpDay2()
+		
+		if ObjectiveManager.day_part_count == 7:
+			SceneManager.wakeUpDay3()
 #NPC DIALOGUE STUFF
 	if prompt_message == "Mother":
 		Interacted.emit()

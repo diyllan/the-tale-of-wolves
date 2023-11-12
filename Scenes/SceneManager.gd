@@ -28,8 +28,10 @@ func changeSceneWithTransition(scenePath):
 	SoundManager.playAmbience("NatureAmbience")
 	animPlayer.play("TransOut")
 	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI").titleScreen = false
+	wakeUpDay1()
 	await animPlayer.animation_finished
 	fadeoutRect.hide()
+	
 
 func changeScene(scenePath):
 	var child = viewport.get_child(1)
@@ -58,4 +60,22 @@ func playFadeIn():
 func playFadeOut():
 	animPlayer.play("TransOut")
 	await animPlayer.animation_finished
-	fadeoutRect.hide	()
+	fadeoutRect.hide()
+
+func wakeUpDay1():
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = true
+	animPlayer.play("WakeUpDay1")
+	await animPlayer.animation_finished
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = false
+
+func wakeUpDay2():
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = true
+	animPlayer.play("WakeUpDay2")
+	await animPlayer.animation_finished
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = false
+
+func wakeUpDay3():
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = true
+	animPlayer.play("WakeUpDay3")
+	await animPlayer.animation_finished
+	get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player").cutscene = false
