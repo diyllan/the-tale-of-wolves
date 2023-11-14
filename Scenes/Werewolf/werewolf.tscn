@@ -139,6 +139,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.91889, 0)
 shape = SubResource("CapsuleShape3D_6n2ja")
 
 [node name="PlayerTooClose" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="PlayerTooClose"]
 transform = Transform3D(1, 0, 0, 0, 0.0618499, 0.998085, 0, -0.998085, 0.0618499, 0, 2.2034, 1.1569)
@@ -146,6 +148,8 @@ depth = 5.0
 polygon = PackedVector2Array(-0.964603, 0.512069, 0.942863, 0.599505, 2.52664, 8.84695, -2.87089, 8.84601)
 
 [node name="BiteRange" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BiteRange"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.28451, -2.73321)
@@ -153,6 +157,8 @@ shape = SubResource("BoxShape3D_w256i")
 
 [node name="DetectPlayer" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.894861)
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="DetectPlayer"]
 transform = Transform3D(1, 0, 0, 0, 0.0618499, 0.998085, 0, -0.998085, 0.0618499, 0, 2.2034, 1.1569)

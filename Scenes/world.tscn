@@ -1962,60 +1962,6 @@ floor_max_angle = 1.13446
 [node name="LittleRedCapAnim" parent="Player" index="0"]
 transform = Transform3D(-1, 0, -1.04308e-07, 0, 1, 0, 1.04308e-07, 0, -1, 0, 0, 0)
 
-[node name="Hair" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.994974, -0.0493042, 0.0871438, 0.0503659, 0.99868, -0.0100251, -0.0865346, 0.0143638, 0.996145, -0.765471, -1.10674, -0.0141647)
-
-[node name="Hat" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.994974, -0.0493042, 0.0871438, 0.0503659, 0.99868, -0.0100251, -0.0865346, 0.0143638, 0.996145, -0.765471, -1.10674, -0.0141647)
-
-[node name="Head" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.994974, -0.0493042, 0.0871438, 0.0503659, 0.99868, -0.0100251, -0.0865346, 0.0143638, 0.996145, -0.765471, -1.10674, -0.0141647)
-
-[node name="Neck" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="3"]
-transform = Transform3D(0.995193, -0.0139629, 0.0969319, 0.0168883, 0.999424, -0.0294256, -0.0964652, 0.0309211, 0.994856, -0.868015, -1.10426, -0.0608183)
-
-[node name="HandLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.915148, 0.358063, -0.185188, 0.0262617, 0.405457, 0.913737, 0.402261, -0.841068, 0.36165, -1.81676, 0.759576, 1.28189)
-
-[node name="LowerArmLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="5"]
-transform = Transform3D(0.920484, 0.344431, -0.184597, -0.130768, 0.716639, 0.685076, 0.368251, -0.606461, 0.704696, -1.78973, -0.0640037, 1.15566)
-
-[node name="UpperArmLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.992292, 0.0726632, -0.100379, -0.0647403, 0.994686, 0.0800555, 0.105662, -0.0729398, 0.991724, -1.14758, -1.04088, 0.1739)
-
-[node name="HandRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="7"]
-transform = Transform3D(0.618336, 0.598403, 0.509483, 0.325519, 0.395043, -0.859056, -0.715331, 0.697032, 0.0494777, -2.49841, 0.665481, -0.602563)
-
-[node name="LowerArmRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="8"]
-transform = Transform3D(0.74197, 0.562133, 0.365359, -0.205447, 0.709382, -0.674217, -0.63818, 0.425187, 0.641828, -2.30308, -0.0574713, -0.662856)
-
-[node name="UpperArmRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.993744, 0.0481105, 0.100782, -0.0323184, 0.987723, -0.152839, -0.106898, 0.148627, 0.983099, -1.05176, -1.01282, -0.344879)
-
-[node name="Torso" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.998941, 0.010735, 0.0447382, -0.0100701, 0.999836, -0.0150616, -0.0448925, 0.0145952, 0.998885, -0.936161, -1.10162, -0.0233385)
-
-[node name="FeetLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="11"]
-transform = Transform3D(0.860154, 0.490994, 0.138057, -0.48319, 0.87112, -0.0876247, -0.163287, 0.00866306, 0.986538, -0.810784, -1.03655, 0.254894)
-
-[node name="LowerLegLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="12"]
-transform = Transform3D(0.986124, 0.0431814, 0.160296, -0.0902759, 0.949815, 0.299501, -0.139319, -0.309815, 0.940532, -0.707041, -0.874231, 0.30013)
-
-[node name="UpperLegLeft" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.731069, -0.665901, -0.148707, 0.681686, 0.722118, 0.117687, 0.0290158, -0.187408, 0.981851, -0.20747, -0.852463, 0.193705)
-
-[node name="FeetRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="14"]
-transform = Transform3D(0.996283, 0.0837785, 0.0200077, -0.0851144, 0.9932, 0.0794255, -0.0132175, -0.080834, 0.996638, -0.954763, -1.13017, -0.301845)
-
-[node name="LowerLegRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="15"]
-transform = Transform3D(0.990828, 0.12532, -0.050536, -0.135126, 0.918944, -0.370516, 6.77258e-06, 0.373948, 0.927448, -0.926014, -0.872135, -0.364777)
-
-[node name="UpperLegRight" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="16"]
-transform = Transform3D(0.965319, -0.25956, 0.028078, 0.254044, 0.909089, -0.330178, 0.0601757, 0.325861, 0.943499, -0.638817, -0.942341, -0.3415)
-
-[node name="skirt" parent="Player/LittleRedCapAnim/Armature/Skeleton3D" index="17"]
-transform = Transform3D(1, 9.4587e-11, 2.93949e-09, -9.45873e-11, 1, 8.03848e-08, -2.93949e-09, -8.03848e-08, 1, -0.914487, -1.10324, 0.000563968)
-
 [node name="Forest" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -822.2, 0, -691.1)
 mesh_library = ExtResource("47_733ll")
@@ -4379,7 +4325,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_nr2l7")
 
 [node name="Waterplane" parent="." instance=ExtResource("47_yqvkt")]
-transform = Transform3D(-0.999436, 0, -0.0335738, 0, 1, 0, 0.0335738, 0, -0.999436, -486.387, -3.20749, -558.391)
+transform = Transform3D(-1.36868, 0, -0.0228614, 0, 1, 0, 0.0459778, 0, -0.680547, -468.312, -3.20749, -433.3)
 mesh = SubResource("QuadMesh_ewhhc")
 
 [node name="WaterCollision" type="StaticBody3D" parent="."]

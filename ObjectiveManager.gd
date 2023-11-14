@@ -70,8 +70,6 @@ func load_Next_Objective():
 		#next load = not mother
 		general_objective = false
 		return
-		
-	SaveLoad.save_game()
 	
 	if (day_part_count == 3 or day_part_count == 7):
 		#next load = mother
@@ -88,10 +86,10 @@ func load_Next_Objective():
 		new_objective.add_to_group("Objective")
 		#re-enabling all npcs
 		for npc in npc_list:
-			print(npc)
 			var npcitem = get_tree().root.get_node(world_path + npc)
 			npcitem.show()
 			npcitem.get_node("StaticBodyInteraction").set_collision_layer_value(4, true)
+		SaveLoad.save_game()
 		return
 	
 	if (day_part_count == 11):
@@ -104,7 +102,6 @@ func load_Next_Objective():
 	
 	if (day_part_count == 2 or day_part_count == 6 or day_part_count == 10):
 		for npc in npc_list:
-			print(world_path + npc)
 			var npcitem = get_tree().root.get_node(world_path + npc)
 			npcitem.hide()
 			npcitem.get_node("StaticBodyInteraction").set_collision_layer_value(4, false)
@@ -116,6 +113,8 @@ func load_Next_Objective():
 		get_tree().root.get_node(world_path + objective_library.values()[day_part_count]).queue_free()
 	#increase day part by one
 	day_part_count += 1
+	#save
+	SaveLoad.save_game()
 	#set the new objective text
 	set_Objective(objective_library.keys()[day_part_count])
 	#for some objectives - in day 3 - we only now show them
@@ -146,6 +145,18 @@ func load_Current_Objective():
 	if (day_part_count > 10 and get_tree().root.get_node(world_path + objective_library.values()[10]) != null):
 		get_tree().root.get_node(world_path + objective_library.values()[10]).queue_free()
 	
+	var sky = get_tree().root.get_node(world_path + 'sky').get_environment()
+	if (day_part_count > 2):
+		sky.fog_enabled = true
+		sky.fog_density = 0.0005
+		sky.fog_sky_affect = 0.2
+		sky.fog_light_color = Color(0.24, 0.23, 0.39, 1)
+		
+	if (day_part_count > 7):
+		sky.volumetric_fog_enabled = true
+		sky.volumetric_fog_sky_affect = 0.75
+		sky.volumetric_fog_albedo = Color(0.76, 0.64, 0.70, 1)
+	
 	if (day_part_count == 0 or day_part_count == 4 or day_part_count == 8):
 		general_objective = true
 		return
@@ -166,7 +177,6 @@ func load_Current_Objective():
 	
 	if (day_part_count == 3 or day_part_count == 7 or day_part_count == 11):
 		for npc in npc_list:
-			print(npc)
 			var npcitem = get_tree().root.get_node(world_path + npc)
 			npcitem.hide()
 			npcitem.get_node("StaticBodyInteraction").set_collision_layer_value(4, false)

@@ -130,7 +130,8 @@ func _on_silo_hole_body_entered(body):
 		await cutscene.animation_finished
 		SceneManager.playFadeOut()
 		# Load Checkpoint here
-		print_debug("You died / Checkpoint")
+		var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
+		player.death = true
 
 
 func _on_first_forest_scare_body_entered(body):

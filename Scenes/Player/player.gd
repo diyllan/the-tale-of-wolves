@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 const SPEED = 9.0
-const SPRINTSPEED = 12.5
+const SPRINTSPEED = 120.5
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -73,7 +73,7 @@ func _physics_process(delta):
 	
 	if death:
 	#change toreload the checkpoint
-		get_tree().reload_current_scene()
+		SaveLoad.load_game()
 		
 	# Handle Jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -167,18 +167,18 @@ func save():
 	
 var keyPressed = false
 
-func _process(_delta):
-	if Input.is_action_just_pressed("save") and !keyPressed:
-		keyPressed = true
-		SaveLoad.save_game()
-		print("Saved game")
-		
-	if Input.is_action_just_pressed("loadsave") and !keyPressed:
-		keyPressed = true
-		SaveLoad.load_game()
-		print("Loaded game")
-		
-	if Input.is_action_just_released("save") or Input.is_action_just_released("loadsave"):
-		keyPressed = false
-		
-		
+#func _process(_delta):
+#	if Input.is_action_just_pressed("save") and !keyPressed:
+#		keyPressed = true
+#		SaveLoad.save_game()
+#		print("Saved game")
+#
+#	if Input.is_action_just_pressed("loadsave") and !keyPressed:
+#		keyPressed = true
+#		SaveLoad.load_game()
+#		print("Loaded game")
+#
+#	if Input.is_action_just_released("save") or Input.is_action_just_released("loadsave"):
+#		keyPressed = false
+#
+#

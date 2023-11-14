@@ -107,20 +107,20 @@ func _physics_process(delta):
 		CHASE:
 			if "Chase" != anim_player.get_current_animation():
 				anim_player.play("Chase")
-			if _player.hiding and chasePlaying and !playerTooClose:
+			if (_player != null and _player.hiding) and chasePlaying and !playerTooClose:
 				chasePlaying = false
 				var chaseMusicFadeOut = create_tween()
 				chaseMusicFadeOut.tween_property(chaseMusic, "volume_db", -80, 2)
 				await chaseMusicFadeOut.finished
 				chaseMusic.stop()
 				state = IDLE
-			elif _player.hiding and playerTooClose and chasePlaying:
+			elif (_player != null and _player.hiding) and playerTooClose and chasePlaying:
 				chasePlaying = false
 				var chaseMusicFadeOut = create_tween()
 				chaseMusicFadeOut.tween_property(chaseMusic, "volume_db", -80, 2)
 				await chaseMusicFadeOut.finished
 				chaseMusic.stop()
-			elif !_player.hiding and !chasePlaying:
+			elif (_player != null and !_player.hiding) and !chasePlaying:
 				chaseMusic.play()
 				var chaseMusicFadeIn = create_tween()
 				chaseMusicFadeIn.tween_property(chaseMusic, "volume_db", 0, 1)
@@ -139,9 +139,10 @@ func _physics_process(delta):
 			chaseMusic.stop()
 			anim_player.play("NeckBite")
 			camera.make_current()
-			_player.hide()
-			await anim_player.animation_finished
-			_player.death = true
+			if _player != null:
+				_player.hide()
+				await anim_player.animation_finished
+				SaveLoad.load_game()
 	
 func setGravity(delta):
 	if not is_on_floor():
