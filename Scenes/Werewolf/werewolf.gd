@@ -6,6 +6,7 @@ enum {
 	CHASE,
 	GROWL,
 	BITE,
+	KILLED,
 }
 const SPEED = 6
 const CHASE_SPEED = 8
@@ -46,6 +47,8 @@ func _ready():
 func _physics_process(delta):
 	setGravity(delta)
 	match state:
+		KILLED:
+			self.queue_free()
 		IDLE:
 			if !Breathing_SnifflingPLaying:
 				Breathing_SnifflingPLaying = true
@@ -126,7 +129,6 @@ func _physics_process(delta):
 				chaseMusicFadeIn.tween_property(chaseMusic, "volume_db", 0, 1)
 				chasePlaying = true
 			chase()
-			
 		BITE:
 			if Breathing_SnifflingPLaying:
 				Breathing_SnifflingPLaying = false
@@ -142,7 +144,9 @@ func _physics_process(delta):
 			if _player != null:
 				_player.hide()
 				await anim_player.animation_finished
-				SaveLoad.load_game()
+				_player.death = true
+				state = KILLED
+				
 	
 func setGravity(delta):
 	if not is_on_floor():

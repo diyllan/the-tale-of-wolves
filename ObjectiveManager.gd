@@ -176,6 +176,8 @@ func load_Current_Objective():
 	new_objective.add_to_group("Objective")
 	
 	if (day_part_count == 3 or day_part_count == 7 or day_part_count == 11):
+		var spawnpoint = get_tree().root.get_node(world_path + 'NPC/Spawnpoint')
+		spawnpoint.werewolfspawned = false
 		for npc in npc_list:
 			var npcitem = get_tree().root.get_node(world_path + npc)
 			npcitem.hide()
