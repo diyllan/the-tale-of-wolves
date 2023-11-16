@@ -19,6 +19,10 @@ extends Control
 @onready var LogoAnimPlayer = $Bootup/AnimationPlayer
 @onready var bootup = $Bootup
 @onready var titlescreenUi = $TitleScreen
+@onready var morning = $DayCycle/DayCycleFrame/MorningBG
+@onready var day = $DayCycle/DayCycleFrame/DayGradient
+@onready var dawn = $DayCycle/DayCycleFrame/DawnGradient
+@onready var night = $DayCycle/DayCycleFrame/MoonGradient
 
 var isPaused = false
 var bootupPlaying = true
@@ -31,6 +35,7 @@ func _ready():
 	$PS1Start.play()
 	LogoAnimPlayer.play("Logo")
 	DayCycleIconAnim.play("FloatingIcons")
+	ObjectiveManager.objectiveCompleted.connect(swapNextDayCycle)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -139,3 +144,28 @@ func _on_animation_player_animation_finished(anim_name):
 		bootup.hide()
 		get_parent().get_node("Prologue/sky").lighting_strike = true
 		SoundManager.playMusic("Titlescreen")
+
+func swapNextDayCycle():
+	#hide all moons
+	$"DayCycle/DayCycleFrame/MoonGradient/1stDayMoonIconFIll".hide()
+	$"DayCycle/DayCycleFrame/MoonGradient/2ndDayMoonIconFIll".hide()
+	$DayCycle/DayCycleFrame/MoonGradient/FullMoonIconFIll.hide()
+	
+	var day_cycle = [ 
+	morning, 
+	day, 
+	dawn,
+	night
+	]
+	#get daypartcount
+	var daypart = ObjectiveManager.day_part_count
+	#set daycycle
+	day_cycle[(daypart - 1) % 4].hide()
+	day_cycle[daypart % 4].show()
+	#show corrent moon
+	if daypart == 3:
+		$"DayCycle/DayCycleFrame/MoonGradient/1stDayMoonIconFIll".show()
+	if daypart == 7:
+		$"DayCycle/DayCycleFrame/MoonGradient/2ndDayMoonIconFIll".show()
+	if daypart == 11:
+		$DayCycle/DayCycleFrame/MoonGradient/FullMoonIconFIll.show()

@@ -145,17 +145,57 @@ func load_Current_Objective():
 	if (day_part_count > 10 and get_tree().root.get_node(world_path + objective_library.values()[10]) != null):
 		get_tree().root.get_node(world_path + objective_library.values()[10]).queue_free()
 	
-	var sky = get_tree().root.get_node(world_path + 'sky').get_environment()
+	#sky
+	var sky = get_tree().root.get_node(world_path + 'sky')
+	
+	var daycycle = [
+	0.246, 
+	0.45, 
+	0.755,
+	0.85
+	]
+	
+	sky.time_of_day = day_part_count % 4
+	sky.set_time()
+	
+	#enviroment
+	var environment = sky.get_environment()
 	if (day_part_count > 2):
-		sky.fog_enabled = true
-		sky.fog_density = 0.0005
-		sky.fog_sky_affect = 0.2
-		sky.fog_light_color = Color(0.24, 0.23, 0.39, 1)
+		environment.fog_enabled = true
+		environment.fog_density = 0.0005
+		environment.fog_sky_affect = 0.2
+		environment.fog_light_color = Color(0.24, 0.23, 0.39, 1)
 		
 	if (day_part_count > 7):
-		sky.volumetric_fog_enabled = true
-		sky.volumetric_fog_sky_affect = 0.75
-		sky.volumetric_fog_albedo = Color(0.76, 0.64, 0.70, 1)
+		environment.volumetric_fog_enabled = true
+		environment.volumetric_fog_sky_affect = 0.75
+		environment.volumetric_fog_albedo = Color(0.76, 0.64, 0.70, 1)
+	
+	#get the frame path to start daycycle loading
+	var framepath = "/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/UI/DayCycle/DayCycleFrame/"
+	#hide all daycycles
+	get_tree().root.get_node(framepath + "MorningBG").hide()
+	get_tree().root.get_node(framepath + "DayGradient").hide()
+	get_tree().root.get_node(framepath + "DawnGradient").hide()
+	get_tree().root.get_node(framepath + "MoonGradient").hide()
+	get_tree().root.get_node(framepath + "MoonGradient/1stDayMoonIconFIll").hide()
+	get_tree().root.get_node(framepath + "MoonGradient/2ndDayMoonIconFIll").hide()
+	get_tree().root.get_node(framepath + "MoonGradient/FullMoonIconFIll").hide()
+	#ui daycycle
+	if (day_part_count % 4) == 0:
+		get_tree().root.get_node(framepath + "MorningBG").show()
+	if (day_part_count % 4) == 1:
+		get_tree().root.get_node(framepath + "DayGradient").show()
+	if (day_part_count % 4) == 2:
+		get_tree().root.get_node(framepath + "DawnGradient").show()
+	if (day_part_count % 4) == 3:
+		get_tree().root.get_node(framepath + "MoonGradient").show()
+		if day_part_count == 3:
+			get_tree().root.get_node(framepath + "MoonGradient/1stDayMoonIconFIll").show()
+		if day_part_count == 7:
+			get_tree().root.get_node(framepath + "MoonGradient/2ndDayMoonIconFIll").show()
+		if day_part_count == 11:
+			get_tree().root.get_node(framepath + "MoonGradient/FullMoonIconFIll").show()
 	
 	if (day_part_count == 0 or day_part_count == 4 or day_part_count == 8):
 		general_objective = true
