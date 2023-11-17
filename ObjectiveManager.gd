@@ -155,7 +155,8 @@ func load_Current_Objective():
 	0.85
 	]
 	
-	sky.time_of_day = day_part_count % 4
+	sky.time_of_day = daycycle[day_part_count % 4]
+	sky.next_time_of_day = daycycle[day_part_count % 4]
 	sky.set_time()
 	
 	#enviroment
