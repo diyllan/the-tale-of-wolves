@@ -139,7 +139,6 @@ func load_Current_Objective():
 		get_tree().root.get_node(world_path + objective_library.values()[5]).queue_free()
 	if (day_part_count > 8 and get_tree().root.get_node(world_path + objective_library.values()[8]) != null):
 		get_tree().root.get_node(world_path + objective_library.values()[8]).queue_free()
-		get_tree().root.get_node(world_path + "Player/OmniLight3D").show()
 	if (day_part_count > 9 and get_tree().root.get_node(world_path + objective_library.values()[9]) != null):
 		get_tree().root.get_node(world_path + objective_library.values()[9]).queue_free()
 	if (day_part_count > 10 and get_tree().root.get_node(world_path + objective_library.values()[10]) != null):
@@ -209,6 +208,9 @@ func load_Current_Objective():
 	#set the new objective text
 	set_Objective(objective_library.keys()[day_part_count])
 	#for some objectives - in day 3 - we only now show them
+	#show like above daypartcount 8
+	if (day_part_count > 8):
+		get_tree().root.get_node(world_path + "Player/OmniLight3D").show()
 	if (day_part_count == 9 or day_part_count == 10):
 		get_tree().root.get_node(world_path + objective_library.values()[day_part_count]).show()
 		get_tree().root.get_node(world_path + objective_library.values()[day_part_count] + "/StaticBodyInteraction").set_collision_layer_value(4, true)

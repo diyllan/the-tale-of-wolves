@@ -26,7 +26,6 @@ var dialogue_ended = false
 @onready var animPlayer = get_child(0).get_node("AnimationPlayer")
 @onready var nav_agent = $NavigationAgent3D
 @onready var idle_Walking_timer = $Idle_Walking
-@onready var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
 
 var cutscene = false
 
@@ -38,7 +37,7 @@ func _ready():
 	update_target_position()
 
 func _process(delta):
-	
+	var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
 	velocity = Vector3.ZERO
 	setGravity(delta)
 	

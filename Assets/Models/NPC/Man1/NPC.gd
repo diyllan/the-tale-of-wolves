@@ -27,7 +27,6 @@ var randomTime
 @onready var animPlayer = get_child(0).get_node("AnimationPlayer")
 @onready var nav_agent = $NavigationAgent3D
 @onready var idle_Walking_timer = $Idle_Walking
-@onready var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
 
 func _ready():
 	nav_agent.velocity_computed.connect(_on_nav_velocity_computed)
@@ -38,6 +37,7 @@ func _ready():
 	idle_Walking_timer.start(randomTime)
 	
 func _process(delta):
+	var player = get_tree().root.get_node("/root/ViewportShaders/PSXLayer/BlurPostProcess/SubViewport/LCDOverlay/SubViewport/DitherBanding/SubViewport/World/Player")
 	velocity = Vector3.ZERO
 	setGravity(delta)
 	
