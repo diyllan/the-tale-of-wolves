@@ -1,2 +1,44 @@
 # Godot 4+ specific ignores
 .godot/
+.import/
+export.cfg
+export_presets.cfg
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Godot build output
+*.exe
+*.dll
+*.so
+*.dylib
+*.zip
+*.tar.gz
+*.pck
+*.apk
+*.xcodeproj
+*.xcworkspace
+
+# User-specific files
+*.user
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+*.log
+
+# VS Code settings
+.vscode/
+
+# Backup files
+*~
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Python cache (if using Python scripts)
+__pycache__/
+*.pyc
+*.pyo
